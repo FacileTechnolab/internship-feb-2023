@@ -1,0 +1,15 @@
+ * {
+    box-sizing: border-box;
+}
+
+p{
+    margin:20px;
+    padding:0;
+    
+}
+.box{
+    width:100px;
+    height:100px;
+    background-color: gold;
+   box-sizing: border-box;
+}
