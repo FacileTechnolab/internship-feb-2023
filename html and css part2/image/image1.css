@@ -9,6 +9,7 @@
 .make {
   width: 100vw;
 }*/
+/*
 .meal {
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
@@ -18,3 +19,9 @@
   filter: grayscale(30%) blur(30%);
   width: 300vw;
 }
+.ufo {
+  color: aqua;
+}
+body {
+  background: url(endless-constellation.svg);
+}*/
