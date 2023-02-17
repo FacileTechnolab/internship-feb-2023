@@ -1,10 +1,13 @@
+ body{
+    margin: 50px;
+ }
  /* .col-4  {
     padding: 1rem;
     background-color: skyblue;
     border: 2px solid white;
     color: white;
 } */
-.container .col-2{
+/* .container .col-2{
     padding: 1rem;
     background-color: skyblue;
     border: 2px solid white;
@@ -22,6 +25,12 @@ h4{
     width: 18rem;
 }
 .card1{
-    width: 18rem;
+        width: 18rem;
+} */
+
+.res-img-part{
+    border: 20px solid mediumseagreen ;
+    width: 340px;
+
 }
  
