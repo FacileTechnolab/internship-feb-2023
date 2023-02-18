@@ -17,3 +17,27 @@
     overflow: hidden;
    
 }
+.typo-part{
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+.res-img-part {
+    border: 5px solid red;
+     width: 50%;
+ 
+}
+.utilite{
+    border: 1px solid #000;
+    width: 50%;
+    margin: 30px auto;
+}
+.utilite p{ 
+   text-align: justify;
+}
+.text-btn{
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    
+}
