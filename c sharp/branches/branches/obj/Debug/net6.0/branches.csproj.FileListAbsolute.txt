@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\branches\branches\bin\Debug\net6.0\branches.exe
+D:\intership-2023\c sharp\branches\branches\bin\Debug\net6.0\branches.deps.json
+D:\intership-2023\c sharp\branches\branches\bin\Debug\net6.0\branches.runtimeconfig.json
+D:\intership-2023\c sharp\branches\branches\bin\Debug\net6.0\branches.dll
+D:\intership-2023\c sharp\branches\branches\bin\Debug\net6.0\branches.pdb
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.AssemblyInfo.cs
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.dll
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\refint\branches.dll
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.pdb
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\branches.genruntimeconfig.cache
+D:\intership-2023\c sharp\branches\branches\obj\Debug\net6.0\ref\branches.dll
