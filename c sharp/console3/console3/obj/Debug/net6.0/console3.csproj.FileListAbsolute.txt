@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.AssemblyInfo.cs
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\console3\console3\bin\Debug\net6.0\console3.exe
+D:\intership-2023\c sharp\console3\console3\bin\Debug\net6.0\console3.deps.json
+D:\intership-2023\c sharp\console3\console3\bin\Debug\net6.0\console3.runtimeconfig.json
+D:\intership-2023\c sharp\console3\console3\bin\Debug\net6.0\console3.dll
+D:\intership-2023\c sharp\console3\console3\bin\Debug\net6.0\console3.pdb
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.dll
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\refint\console3.dll
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.pdb
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\console3.genruntimeconfig.cache
+D:\intership-2023\c sharp\console3\console3\obj\Debug\net6.0\ref\console3.dll
