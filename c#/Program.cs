@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
- 
+
 namespace demo
 {
     internal class Program
@@ -14,15 +15,15 @@ namespace demo
         {
             Console.WriteLine("good morning " + name);
         }
-        static float avg(int a,int b,int c)
+        static float avg(int a, int b, int c)
         {
             float sum = a + b + c;
             return sum / 3;
         }
         static float avg(int a, int b)
         {
-            
-            return (a+b) / 2;
+
+            return (a + b) / 2;
         }
         static void Main(string[] args)
         {
@@ -220,25 +221,129 @@ namespace demo
             Console.WriteLine(avg(10, 10, 10));
             Console.WriteLine(avg(20, 10));
             Console.ReadLine();*/
-            person p = new person();
-            p.Fname = "virat";
-            p.lname = "kohli";
-            p.intro();
+            //person p = new person();
+            //p.Fname = "virat";
+            //p.lname = "kohli";
+            //p.intro();
             //Class1 tommy = new Class1();
-           
+
             //Console.WriteLine(tommy.gethealth());
             //tommy.sethealth(60);
             //Console.WriteLine(tommy.gethealth());
-            Console.ReadLine();
+            //var numbers = new int[3];
+            //numbers[0] = 10;
+            //numbers[1] = 101;
+            //numbers[2] = 102;
+            //Console.WriteLine(numbers[0]);
+            //Console.WriteLine(numbers[1]);
+            //Console.WriteLine(numbers[2]);
+            //var flags = new bool[3];
+            //flags[0] = true;
+            //Console.WriteLine(flags[0]);
+            //Console.WriteLine(flags[1]);
+            //Console.WriteLine(flags[2]);
+            //var names = new string[3] { "jack", "joker", "mary" };
+            //foreach (string i in names)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //for(int i = 0; i < names.Length; i++)
+            //{
+            //    Console.WriteLine(names[i]);
+            //
+            //var names = new string[3] { "jack", "joker", "mary" };
+            //foreach (string i in names)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //for (int i = 0; i < names.Length; i++)
+            //{
+            //    Console.WriteLine(names[i]);
+            //}
+            // string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            //// Array.Sort(cars);
+            // Array.Sort(cars);
+            // foreach (string i in cars)
+            // {
+            //     Console.WriteLine(i);
+            // }
+            //var num = new int[5] { 23, 52, 14, 98, 10 };
+            //Array.Sort(num);
+            //foreach(int i in num)
+            //{
+            //    Console.WriteLine(num[i]);
+            //}
 
+            //int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } } ;
+
+            //for (int i = 0; i < numbers.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < numbers.GetLength(1); j++)
+            //    {
+            //        Console.WriteLine(numbers[i, j]);
+            //    }
+            //}
+            //var numbers = new int[3] { 21, 12, 112 };
+            //string list = string.Join(",", numbers);
+            //Console.WriteLine(list);
+            //var name = new string[4] { "jack", "jully", "herry", "marry" };
+            //var FormattedNames = string.Join(",", name);
+            //Console.WriteLine(FormattedNames);
+            //var a = 10;
+            //var b = a;
+            //b++;
+            //Console.WriteLine(string.Format("a: {0}, b: {1}",a,b));
+            //Console.WriteLine($"a:{0} , b:{1}");
+            //var array1 = new int[3] { 1, 2, 3 };
+            //var array2 = array1;
+            //array2[0] = 5;
+            //Console.WriteLine(string.Format("array1[0]:{0}, array2[0]:{0}", array1[0], array2[0]));
+            //Console.WriteLine("how many chocalate you want");
+            //string num = Console.ReadLine();
+
+
+            //Console.WriteLine("enter num");
+            // int i = Console.ReadLine();
+            //if (i < 10)
+            //{
+            //    Console.WriteLine("valid");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("invalid");
+            //}
+
+
+            // var name = "virat kohli";
+            // for (var i = 0; i < name.Length; i++)
+            // {
+            //     Console.WriteLine(name[i]);
+            // }
+            //foreach (var character in name){
+
+            //     Console.WriteLine(character);
+            // }
+            //while (true)
+            //{
+            //    Console.WriteLine("enter your name");
+            //    var input = Console.ReadLine();
+            //    if (!string.IsNullOrWhiteSpace(input)) { 
+            //        Console.WriteLine("@Echo" + input);
+            //        continue;
+            //    }
+            //        break;
+
+            //}
+            //var random = new Random();
+            //for(var i = 0; i < 10; i++)
+            //{
+            //   // Console.WriteLine(random.Next(1,10));
+            //    Console.WriteLine((char)random.Next(97, 120));
+            //    Console.WriteLine();
+            //}
+            var name = new string[4] { 'b', 'a', 25, 23 };
+            Console.WriteLine(name[0]);
         }
-
-
-
-
-
-
-
     }
-    }
+}
 
