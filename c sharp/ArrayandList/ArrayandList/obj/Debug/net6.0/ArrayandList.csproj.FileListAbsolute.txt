@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.AssemblyInfo.cs
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\bin\Debug\net6.0\ArrayandList.exe
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\bin\Debug\net6.0\ArrayandList.deps.json
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\bin\Debug\net6.0\ArrayandList.runtimeconfig.json
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\bin\Debug\net6.0\ArrayandList.dll
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\bin\Debug\net6.0\ArrayandList.pdb
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.dll
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\refint\ArrayandList.dll
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.pdb
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ArrayandList.genruntimeconfig.cache
+D:\intership-2023\c sharp\ArrayandList\ArrayandList\obj\Debug\net6.0\ref\ArrayandList.dll
