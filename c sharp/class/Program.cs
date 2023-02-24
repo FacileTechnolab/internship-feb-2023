@@ -65,7 +65,6 @@ C:\folder3\folder4";
             var Mod = (Shipping)Enum.Parse(typeof(Shipping), Methodname);
 
             
-            Console.WriteLine(Math.Sqrt(144));
 
         }
     }
