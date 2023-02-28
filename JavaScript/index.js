@@ -104,3 +104,30 @@ if(firstName)
 // //not operation
 // let know=!both;
 // console.log(know);
+
+//betwise operators
+
+console.log(1|2);
+console.log(2&1);
+
+// operators precedence 
+var x=40;
+var y=78,z=56;
+var a=x+y*z-x;
+console.log("the value is :"+a);
+
+// swaping value ;
+a=5;
+b=6;
+console.log("value of a is "+a+" and b is "+b);
+
+
+a=a+b;
+b=a-b;
+a=a-b;
+
+
+
+console.log(a);
+console.log(b);
+
