@@ -147,17 +147,99 @@ console.log("hello");
 // const circle1 = createCircle(1);
 // console.log(circle1);
 
-let obj = { value: 10 };
-function incerease(obj) {
-  obj.value++;
-}
-incerease(obj);
-console.log(obj);
+// let obj = { value: 10 };
+// function incerease(obj) {
+//   obj.value++;
+// }
+// incerease(obj);
+// console.log(obj);
 
-const circle = {
-  radius: 1,
-  draw() {
-    console.log("draw");
-  },
-};
-for (let key in circle) console.log(key, circle[key]);
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log("draw");
+//   },
+// };
+// for (let key in circle) console.log(key, circle[key]);
+
+//templete literals
+
+const message = "this is my\n" + "'first' message";
+console.log(message);
+
+//print the object throght address
+// const address = {
+//   street: "a",
+//   city: "b",
+//   zipCode: "c",
+// };
+// function showAddress(address) {
+//   for (let key in address) console.log(key, address[key]);
+// }
+// showAddress(address);
+
+//factory function
+// function createAddress(street, city, zipcode) {
+//   return {
+//     street,
+//     city,
+//     zipcode,
+//   };
+// }
+// let address1 = new Address("g", "h", "j");
+// let address2 = new Address("g", "h", "j");
+// let address3 = address1;
+
+// // console.log(address);
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+// console.log(areSame(address1, address3));
+// //constructor function
+
+// function Address(street, city, zipCode) {
+//   this.street = street;
+//   this.city = city;
+//   this.zipCode = zipCode;
+// }
+// function areEqual(address1, address2) {
+//   return (
+//     address1.street === address2.street &&
+//     address1.city === address2.city &&
+//     address1.zipCode === address2.zipCode
+//   );
+// }
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
+
+// let post = {
+//   title: "a",
+//   body: "g",
+//   author: "d",
+//   views: 10,
+//   comments: [
+//     { author: "a", body: "f" },
+//     { author: "u", body: "k" },
+//   ],
+//   isLive: true,
+// };
+// let post = new Post("a", "b", "c");
+
+// function Post(title, author, body) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.view = 0;
+//   this.comments = [];
+//   this.isLive = false;
+// }
+// console.log(post);
+
+//price range object
+let priceRange = [
+  { label: "$", tooltip: "Inexpensive", minPerson: 0, maxPerPerson: 10 },
+  { label: "$$", tooltip: "moderate", minPerson: 11, maxPerPerson: 20 },
+  { label: "$$$", tooltip: "Expensive", minPerson: 21, maxPerPerson: 50 },
+];
+let restaurants = [{ averagePerPerson: 5 }];
+console.log(restaurants);
