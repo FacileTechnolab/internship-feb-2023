@@ -382,3 +382,277 @@ console.log(square(3));
 // const food = {beef: '🥩', bacon: '🥓'};
 // const cloneFood = JSON.parse(JSON.stringify(food));
 // console.log(cloneFood);
+
+//templat literals
+// const nameUn = 'Dipali';
+// const message = 'Hi' + nameUn + ',\n';
+// const another = 
+// `Hi ${nameUn} ${2+3},
+
+// Thank you for joining my mailing List. 
+
+// Regards, 
+// Dipali`;
+
+// console.log(another);
+
+// //date object
+// const now = new Date();
+// const date1 = new Date('May 11 2023 09:00');
+// now.setFullYear(2023);
+
+
+//exer-address -obje
+// let address = {
+//     street : 'a',
+//     city: 'b',
+//     zipcode: 'c'
+// };
+// function showAddress(address)
+// {
+//     for(let key in address)
+//     {
+//         console.log(key, address[key]);
+//     }
+// }
+// showAddress(address);
+
+//exer-factory and counstructor function
+//factory
+// let address = createAddress('a', 'b', 'c');
+// console.log(address);
+// function createAddress(street, city, zipcode)
+// {
+//     return{
+//         street,
+//         city,
+//         zipcode
+//     };
+// }
+// //counstructor
+// let address = new Address('a' , 'b', 'c');
+// function Address(street, city, zipcode)
+// {
+//     this.street = street;
+//     this.city = city;
+//     this.zipcode = zipcode;
+// }
+// console.log(address);
+
+
+//exer-object-equality
+// let add1 = new Address('a', 'b', 'c');
+// let add2 = new Address('a', 'b', 'c');
+
+// function Address(street, city, zipcode)
+// {
+//     this.street = street;
+//     this.city = city;
+//     this.zipcode = zipcode;
+// }
+// function areEqual(add1, add2)
+// {
+//     return add1.street === add2.street && 
+//     add1.city === add2.city && 
+//     add1.zipcode === add2.zipcode;
+// }
+// function areSame(add1, add2)
+// {
+//     return add1 === add2;
+// }
+// console.log(areEqual(add1, add2));
+// console.log(areSame(add1, add2));
+
+//exer- blog-post-object
+// let post =
+// {
+//  title : 'a',
+//  body : 'b',
+//  author: 'c',
+//  views: 30,
+//  comments: [
+//     { author: 'a', body: 'b'},
+//     { author: 'a', body: 'b'},
+
+//  ],
+//  isLive: true
+// };
+
+//Array- Adding element
+// const addEle = [3, 4];
+// //end
+// addEle.push(5, 6);
+// //begging
+// addEle.unshift(1, 2);
+// //middle
+// addEle.splice(2, 0, 'b', 'c');
+// console.log(addEle);
+
+//Array- Finding ele
+// const findEle = [1, 2, 3, 4 , 3, 5];
+// console.log(findEle.indexOf(4));
+// console.log(findEle.indexOf('a'));
+// console.log(findEle.lastIndexOf(3));
+// console.log(findEle.indexOf(3) !== -1);
+
+//Array- Arrow function
+// const courses = [
+//     {id: 1, name: 'a'},
+//     {id: 2, name: 'b'},
+
+//  ];
+
+//  const course = courses.find(function(course)
+// {
+// return course.name === 'a';
+// });
+// console.log(course);
+
+//Array- Arrow function
+// const courses = [
+//     {id: 1, name: 'a'},
+//     {id: 2, name: 'b'},
+
+//  ];
+// const course = courses.find(course => course.name === 'a');
+// console.log(course);
+
+//Array -Removing ele
+// const remEle = [1, 2, 3, 4];
+//end
+// remEle.pop(4);
+//begging
+// remEle.shift(3);
+//middle
+// remEle.splice(2, 0, 1);
+
+// console.log(remEle);
+
+//Array- combining & slicing
+// const first = [1, 2, 3];
+// const second = [3, 5, 6];
+
+// const combing = first.concat(second);
+// const slice = combing.slice(3,6);
+// console.log(combing);
+// console.log(slice);
+
+//Array- iterating
+// const numbers = [1, 2, 3];
+// for (let number of numbers)
+// {
+//     console.log(number);
+// }
+// numbers.forEach((number, index) => console.log(index, number));
+
+//Array - join
+// const numbers = [1, 2, 3];
+// const joined = numbers.join(',');
+// console.log(joined);
+
+// const message = 'This is my first message';
+// const parts = message.split(' ');
+// console.log(parts);
+
+// const combing = parts.join('/');
+// console.log(combing); 
+
+//Array - sorting
+// const sort = [4, 6, 9];
+// sort.sort();
+// console.log(sort);
+
+// const rever = [6.7, 7.9, 8.6];
+// rever.reverse();
+// console.log(rever);
+
+// sort.reverse();
+// console.log(sort);
+
+//filter-array
+// const filter = [1, -2, -4, 5];
+// const filtered = filter.filter(n => n <= 0);
+// console.log(filtered);
+
+//maping -array
+// const map = [1, 2, 3];
+// const items = map 
+//    .filter(n => n >= 0)
+//    .map(n => ({ value: n}));
+
+// console.log(items);
+
+//redusing - array
+// const number = [1, -2, 4, 5];
+// const sum = number.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// }, 0);
+// console.log(sum);
+
+//function -declaration and expresion
+// function walk()
+// {
+//     console.log('walk');
+// }
+// const run = function()
+// {
+//     console.log('run');
+// };
+// let move = run;
+// run();
+// move();
+
+//argument
+// function sum()
+// {
+//     let total = 0;
+//     for(let value of arguments)
+//     {
+//         total += value;
+//     }
+//     return total;
+
+// }
+// console.log(sum(1, 2, 3, 4, 8));
+
+//global & local scope
+// const color = 'red';
+// function start()
+// {
+//   const message = 'hi';
+//   const color = 'blue';
+//   console.log(color);
+// }
+// function stop ()
+// {
+//   const message = 'bye';
+// }
+// start();
+
+
+//this keyword 
+//method => obj
+// const video = {
+//   title : 'a',
+//   Play()
+//   {
+//     console.log(this);
+//   }
+
+// };
+// video.stop = function()
+// {
+//   console.log(this);
+// };
+// video.stop();
+
+
+//exer-sum of arguments
+// function sum(...items)
+// {
+//   return items.reduce((a , b) => a + b);
+// }
+// console.log(sum(1, 2, 3, 4));
+
+//exer-area of circle
+
