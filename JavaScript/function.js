@@ -111,17 +111,35 @@
 // start();
 
 //let and var keyword
-function start() {
-  for (let i = 0; i < 5; i++) {
-    // console.log(i);
-    if (true) {
-      var color = "red";
-    }
-  }
-  console.log(i);
-}
+// function start() {
+//   for (let i = 0; i < 5; i++) {
+//     // console.log(i);
+//     if (true) {
+//       var color = "red";
+//     }
+//   }
+//   console.log(i);
+// }
 // start();
 //var=>function-scoped
 //ES6(ES2015):let,const=>block-scoped
 // let key word is only accessible in that define code of block
 //and var keyword and there variable is accessible anywhere in file.
+
+// this keyword
+// const video={
+//   title:'a',
+//   play(){
+//     console.log(this);
+
+//   }
+// };
+// video.stop=function(){
+
+// }
+// video.play()
+
+function sum(...items) {
+  return items.reduce((a, b) => a + b);
+}
+console.log(sum(1, 2, 3, 4));
