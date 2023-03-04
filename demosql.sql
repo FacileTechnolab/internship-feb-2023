@@ -170,9 +170,154 @@ LIMIT 4 , 4
 
 
 -- join
+USE sakila;
 SELECT *
-FROM city
-JOIN country ON  city.ID = country.Code
+FROM address
+JOIN city 
+     ON  address.city_id = city.city_id
+     
+SELECT address_id, phone
+FROM address
+JOIN city 
+     ON  address.city_id = city.city_id
+
+USE EMPLOYEE;
+CREATE table SELFJOIN2
+(
+  Emp_ID INTEGER ,
+  Emp_Name TEXT NOT NULL,
+  Mnager_ID INTEGER 
+
+);
+INSERT INTO SELFJOIN2 VALUES (0001, 'Ramesh', 4);
+INSERT INTO SELFJOIN VALUES (0002, 'Suresh',4);
+INSERT INTO SELFJOIN VALUES (0003, 'Mahesh', 1);
+INSERT INTO SELFJOIN VALUES (0004, 'Shyamu', 2);
+INSERT INTO SELFJOIN VALUES (0005, 'Ramu', 2);
+USE EMPLOYEE;
+CREATE table SELFJOIN
+(
+  Emp_ID INTEGER ,
+  Emp_Name TEXT NOT NULL,
+  Mnager_ID INTEGER 
+
+);
+INSERT INTO SELFJOIN VALUES (0001, 'Ramesh', 4);
+INSERT INTO SELFJOIN VALUES (0002, 'Suresh',4);
+INSERT INTO SELFJOIN VALUES (0003, 'Mahesh', 5);
+INSERT INTO SELFJOIN VALUES (0004, 'Shyamu', 6);
+INSERT INTO SELFJOIN VALUES (0005, 'Ramu', );
+USE EMPLOYEE;
+CREATE table EMP_MANA
+(
+  Emp_ID INTEGER ,
+  Emp_Name TEXT NOT NULL,
+  Mnager_ID INTEGER 
+
+);
+INSERT INTO EMP_MANA VALUES (0001, 'Ramesh', 4);
+INSERT INTO EMP_MANA VALUES (0002, 'Suresh',4);
+INSERT INTO EMP_MANA VALUES (0003, 'Mahesh', 5);
+INSERT INTO EMP_MANA VALUES (0004, 'Shyamu', 6);
+INSERT INTO EMP_MANA VALUES (0005, 'Ramu', 1);
+INSERT INTO EMP_MANA VALUES (0006, 'Samu', 1);
+
+
+SELECT * FROM EMP_MANA;
+
+-- selfjoin
+SELECT A.EMP_Name AS MANAGER , B.EMP_Name AS EMPLOYEE 
+FROM EMP_MANA AS A
+INNER JOIN EMP_MANA AS B
+ON A.Mnager_ID = B.Emp_ID;
+
+-- cross join
+SELECT *
+FROM employeesinfo
+CROSS JOIN EMP_MANA;
+
+-- compound join
+use sakila;
+select * 
+from payment as p
+join rental as r
+on p.staff_id = r.staff_id
+and p.rental_id = r.rental_id;
+
+-- using cluase
+use sakila;
+select * 
+from payment 
+join rental 
+using (staff_id);
+
+-- natural join
+USE EMPLOYEE;
+CREATE TABLE DEPARTMENT
+(
+  DEPT_ID INT,
+  DEPT_NAME VARCHAR(10)
+);
+INSERT INTO DEPARTMENT 
+VALUES (1, 'JANVI'), (2, 'Dipali'), (3, 'Krishika'), (4, 'Shivangi'),(5, 'Priyanki');
+SELECT * FROM DEPARTMENT;
+
+CREATE TABLE EMPLOYEESTATE
+(
+  Emp_ID INT,
+  DEPT_ID INT,
+  Emp_NAME VARCHAR(10)
+);
+INSERT INTO EMPLOYEESTATE 
+VALUES (1,1, 'Tom'), (2,2, 'Som'), (3,2, 'Dom'), (4,4, 'Gom'),(5,3,'Mom'),(6,4,'Pom'),(7,5,'Wom');
+SELECT * FROM EMPLOYEESTATE;
+
+-- NATURAL JOIN
+SELECT *
+FROM EMPLOYEESTATE 
+NATURAL JOIN DEPARTMENT;
+
+USE EMPLOYEE;
+CREATE TABLE STUDENT
+(
+  ID INT,
+  NAME VARCHAR(10),
+  AGE INT,
+  GENDER VARCHAR(10),
+  CITY INT,
+  COURSES INT
+);
+INSERT INTO STUDENT 
+VALUES (1,'Ram', 20, 'M', 1, 1), (2,'Sam', 12, 'F', 2, 2), (3,'Salman', 42, 'M', 1, 1), (4,'Juhi', 18, 'f', 3, 3),(5,'Anil', 12, 'm', 1, 3),(6,'SUNIL', 12, 'm', 1, 3);
+SELECT * FROM STUDENT;
+
+USE EMPLOYEE;
+CREATE TABLE LECTURERS
+(
+  ID INT,
+  NAME VARCHAR(10),
+  AGE INT,
+  GENDER VARCHAR(10),
+  CITY INT,
+  COURSES INT
+);
+INSERT INTO LECTURERS
+VALUES (1,'RAJ', 20, 'M', 1, 1), (2,'SADHNA', 12, 'F', 2, 2), (3,'RAM', 42, 'M', 1, 1), (4,'SALIM', 18, 'f', 3, 3),(5,'NAGMA', 12, 'm', 1, 3);
+SELECT * FROM LECTURERS;
+
+-- UNION/UNION ALL OPERATOR
+SELECT * FROM STUDENT
+UNION 
+SELECT * FROM LECTURERS
+SELECT NAME FROM STUDENT
+UNION 
+SELECT NAME FROM LECTURERS
+SELECT NAME FROM STUDENT
+UNION ALL
+SELECT  NAME FROM LECTURERS
 
 
-DESC EMPLOYEESINFO;
+
+
+
+
