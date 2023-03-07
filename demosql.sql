@@ -316,6 +316,85 @@ SELECT NAME FROM STUDENT
 UNION ALL
 SELECT  NAME FROM LECTURERS
 
+-- insert row
+USE EMPLOYEE;
+INSERT INTO department 
+VALUES (6, 'Sweta')
+INSERT INTO department 
+VALUES (7,'null')
+-- INSERT MULTIPLE ROW
+INSERT INTO department(DEPT_NAME)
+VALUES ('NAME1'),
+	   ('NAME2'),
+	   ('NAME3')
+       
+-- CREATING COPY TABLE
+USE EMPLOYEE;
+CREATE TABLE EMPLOYEESINFO1 AS
+SELECT * 
+FROM EMPLOYEESINFO
+
+INSERT INTO EMPLOYEESINFO1 
+SELECT * 
+FROM EMPLOYEESINFO
+WHERE Emp_date > '2000-09-10'
+
+-- updating single row
+UPDATE EMPLOYEESINFO
+SET SALARY = 226000, Emp_date = '2012-05-21'
+where Emp_no = 7
+-- updating multiple row
+UPDATE EMPLOYEESINFO
+SET SALARY = 22000 , Dept_No = 'D30'
+where Emp_no in (3, 5)
+
+-- USING SUBQUERY IN UPDATES
+UPDATE EMPLOYEESINFO
+SET SALARY = 22000 , Dept_No = 'D30'
+where Emp_Name = (SELECT Emp_no
+                FROM EMPLOYEESINFO
+                WHERE Salary IN  (22000, 'Ramesh'))
+
+-- delete row
+DELETE FROM department
+WHERE DEPT_ID = 7
+
+DELETE FROM department
+WHERE DEPT_ID = (SELECT * 
+				 FROM employeesinfo1
+                 WHERE Emp_Name = 'Shyamu')
+                 
+-- Aggregate Functions
+SELECT MAX(AGE) AS MAX,
+	   MIN(AGE) AS MIN,
+	   AVG(AGE) AS AVG,
+       SUM(NAME) AS SUM,
+       COUNT(NAME) AS COUNT
+FROM  student
+
+-- GROUP BY CLUSE
+USE EMPLOYEE;
+SELECT * FROM student WHERE AGE IN (
+
+SELECT AGE
+FROM  student
+
+GROUP BY AGE
+ORDER BY AGE
+)
+ORDER BY NAME
+
+-- HAVING BY CLUSE
+USE EMPLOYEE;
+SELECT * FROM student
+
+
+DESC STUDENT
+
+
+
+
+
 
 
 
