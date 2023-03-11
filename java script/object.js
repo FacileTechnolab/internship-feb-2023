@@ -74,6 +74,67 @@ const circle={
 
 //const another= Object.assign({},circle);
 
- const another={...circle};
+//  const another={...circle};
 
-console.log(another); 
+// console.log(another); 
+
+/*ARRAY*/
+//  const numbers=[3,4];
+//  numbers.push(5,6);
+//  numbers.unshift(1,2);
+//  numbers.splice(2,0,'a','b');
+//  console.log(numbers);
+  
+// const numbers=[1,4,3,1,5];
+// console.log(numbers.indexOf(2));
+// console.log(numbers.lastIndexOf(5));
+// console.log(numbers.indexOf(3) !==  1);
+// console.log(numbers.includes(5));
+
+// const courses=[
+//     {id:1, name:'a'},
+//     {id:2, name:'b'},
+//];
+// const course = courses. findIndex(function(course)
+// {
+//     return course.name ==='a';
+// });
+// const course = courses. find(course => course.name ==='a');
+// console.log(course);
+
+//  const numbers=[1,2,3,4];
+//  const last=numbers.pop();
+//  console.log(numbers);
+//  console.log(last);
+ //const first=numbers.shift();
+ //numbers.splice(2,2);
+
+let numbers=[6,7,8,9];
+let another= numbers;
+
+numbers=[];
+
+numbers.length=0;
+
+numbers.splice(0, numbers, length);
+
+while(numbers.length>0)
+numbers.pop();
+console.log(numbers);
+console.log(another);
+
+const first=[1,2,3];
+const second=[4,5,6];
+
+//const combined = first.concat(second);
+const combined =[...first,'a',...second,'b'];
+const slice= combined.slice();
+
+//  console.log(combined);
+//  console.log(slice);
+
+
+
+
+
+
