@@ -51,12 +51,12 @@
 // const message='This is my first message';
 // const another = new String('hi');
 
-const circle={
-    radius:1,
-    draw(){
-        console.log('draw');
-    }
-};
+// const circle={
+//     radius:1,
+//     draw(){
+//         console.log('draw');
+//     }
+// };
 // for(let key in circle)
 // console.log(key, circle[key]);
  
@@ -109,32 +109,74 @@ const circle={
  //const first=numbers.shift();
  //numbers.splice(2,2);
 
-let numbers=[6,7,8,9];
-let another= numbers;
+// let numbers=[6,7,8,9];
+// let another= numbers;
 
-numbers=[];
+// numbers=[];
 
-numbers.length=0;
+// numbers.length=0;
 
-numbers.splice(0, numbers, length);
+// numbers.splice(0, numbers, length);
 
-while(numbers.length>0)
-numbers.pop();
-console.log(numbers);
-console.log(another);
+// while(numbers.length>0)
+// numbers.pop();
+// console.log(numbers);
+// console.log(another);
 
-const first=[1,2,3];
-const second=[4,5,6];
+// const first=[1,2,3];
+// const second=[4,5,6];
 
 //const combined = first.concat(second);
-const combined =[...first,'a',...second,'b'];
-const slice= combined.slice();
+// const combined =[...first,'a',...second,'b'];
+// const slice= combined.slice();
 
 //  console.log(combined);
 //  console.log(slice);
 
+//const numbers=[1,-1,2,-3,-6,3];
+// for(let number of numbers)
+// console.log(number);
+
+// numbers.forEach((index, number)=> console.log(index, number));
+
+// const message = 'This is my first message';
+//  const parts = message.split(' ');
+// console.log(parts);
+
+// const combined = parts.join('-');
+// console.log(combined);
+
+// const courses=[
+//     {id:1, name:'krishika'},
+//     {id:2, name:'Maurya'},
+// ];
+
+// courses.sort(function(a,b){
+//     // const nameA=a.name.toLowerCase();
+//     // const nameB=b.name.toLowerCase();
+
+//     if(a.name < b.name)return -1;
+//     if(a.name > b.name)return 1;
+//     return 0;
+// });
+// console.log(courses);
+
+// const atLeastOnePositive = numbers.some(function(value){
+// return value >= 0;
+// });
+
+// console.log(atLeastOnePositive);
 
 
+// const filtered = numbers.filter(n=>n>=0);
+// console.log(filtered);
 
+// const numbers=[1,-1,2,3];
+//  const sum=numbers.reduce(
+//     (accumulator, currentValue) => accumulator + currentValue);
+ 
+//     let sum=0;
+//     for(let n of numbers)
+//     sum +=n; 
 
-
+//     console.log(sum);
