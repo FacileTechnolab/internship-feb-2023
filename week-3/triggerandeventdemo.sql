@@ -1,0 +1,66 @@
+CREATE TABLE EMP
+(
+ID INT PRIMARY KEY,
+NAME VARCHAR(10),
+AGE INT
+);
+INSERT INTO EMP VALUES(1,'ALI', 22);
+INSERT INTO EMP VALUES(2,'OSAMA', 27);
+INSERT INTO EMP VALUES(3,'OBAMA', 37);
+INSERT INTO EMP VALUES(4,'CBM', 37);
+INSERT INTO EMP VALUES(5,'OBA', 38);
+INSERT INTO EMP VALUES(6,'OBA', 38);
+SELECT * FROM EMP;
+DROP TABLE EMP1;
+DROP TABLE EMP;
+CREATE TABLE EMP_AUDIT
+(
+ID INT PRIMARY KEY ,
+AUDIT_DES VARCHAR(500)
+);
+SELECT * FROM EMP_AUDIT;
+
+-- trigger create
+USE EMPLOYEE;
+DELIMITER //
+CREATE TRIGGER TR_AFTERTRIGGER
+AFTER INSERT ON EMP
+FOR EACH ROW
+BEGIN 
+INSERT INTO EMP_AUDIT VALUES(6, CONCAT('A NEW ROW IS INSERTED AT', DATE_FORMATE(NOW(), '%d-%m-%y %h:%i:%s %p')));
+END //
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS TR_AFTERTRIGGER;
+
+
+
+ create table college_student( nmae varchar(20),
+    id int(10),
+    age int(10),
+    primary key(id));
+ select * from college_student ;
+ 
+  create table audit(
+ id int(10),
+ audit_desc varchar(200),
+ primary key(id));
+  select * from audit;
+
+
+CREATE TRIGGER AFTERINSERTCOL
+  AFTER INSERT ON COLLEGE_STUDENT
+  FOR EACH ROW
+  INSERT INTO AUDIT values( 1 ,CONCAT('NEW ROW',DATE_FORMAT(NOW(),'%D %M %y %h %i %s %p')));
+  
+  insert into college_student values('manish',2,23);
+
+
+
+
+
+
+
+
+
+
