@@ -268,6 +268,24 @@ where id = c.id );
      )as sales_summary
      where price is not null;
      
-     
-     
+DESC CUSTOMER;     
+ALTER TABLE CUSTOMER
+ADD PROPERTIES JSON;   
+
   
+UPDATE CUSTOMER 
+SET PROPERTIES=json_object(
+'weight',10,
+'dimesion',json_array(1,2,3),
+'manufactor',json_object('name','sony')
+)
+where id=3;
+
+select id ,json_extract(properties,'$.weight')
+from customer
+where id=3;
+SELECT * FROM CUSTOMER;
+
+select id,properties ->> '$.manufactor.name'
+from customer
+where id= 2;  
