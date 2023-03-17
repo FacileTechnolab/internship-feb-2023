@@ -1,6 +1,4 @@
 use sakila;
-
- 
 -- select  
 -- payment_id,
 -- customer_id,
@@ -20,8 +18,14 @@ use sakila;
 -- select * from customer
 -- where last_name regexp '[thdjsbfl*]'
 
-select * from address
-where district IS NULL
+-- select * from address
+-- where address2 IS NULL
+
+-- select * from customer
+-- limit 3;
+
+select * from customer
+order by store_id 
 
 
 
