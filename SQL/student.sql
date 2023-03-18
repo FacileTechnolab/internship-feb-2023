@@ -58,4 +58,6 @@ insert into studentdetail values
 ( 5 , 'Shiva' , 'JavaScript' , 65 , 'Surat' , 'shiva@gmail.com' , 878564),
 ( 6 , 'Priya' , '.net' , 87 , 'Ahemdabad' , 'priya@gmail.com' , 4655413);
 
+use student;
+
 

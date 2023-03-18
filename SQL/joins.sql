@@ -14,13 +14,35 @@ select   b.name from studentinfo a
  where s.stu_id = o.profe_id;
  
  -- outer join
+ -- left join
  select * 
  from studentdetail l left join studentmarks s 
  on l.stu_id = s.stu_id;
- 
+  
+-- right join
  select * 
  from studentdetail l right join studentmarks s 
  on l.stu_id = s.stu_id;
+ 
+ select * 
+ from studentdetail l  join studentmarks s 
+ using (stu_id);
+ 
+ -- natural join
+  select * 
+ from studentdetail 
+ natural join studentinfo;
+ 
+ -- cross join
+ select * 
+ from studentdetail
+ cross join studentmarks;
+ 
+ -- union 
+SELECT stu_id  FROM studentmarks
+UNION
+SELECT stu_id FROM studentdetail;
+ 
  
  
 
