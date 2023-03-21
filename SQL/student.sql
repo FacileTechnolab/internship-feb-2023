@@ -59,5 +59,26 @@ insert into studentdetail values
 ( 6 , 'Priya' , '.net' , 87 , 'Ahemdabad' , 'priya@gmail.com' , 4655413);
 
 use student;
+select * from studentdetail;
+insert into  studentdetail values
+( 7 , 'Pappu' , 'hindi' , 32 , 'Ahemdabad' , 'pappu@gmail.com' , 843198);
+
+create table stu_add
+(
+	stu_id int ,
+    city varchar(30),
+    address varchar(40)
+);
+select * from stu_add;
+insert into stu_add values
+(1, 'Ahemdabad', 'Gujarat' ),
+(2, 'surat' , 'Bhopal'),
+(3, 'Nagpur',  'MP' ),
+(4, 'Abu','Rajsthan' ),
+(5, 'Nagpur',  'Maharastra' ),
+(6, 'Ahemdabad', 'Gujarat' );
+
+
+
 
 

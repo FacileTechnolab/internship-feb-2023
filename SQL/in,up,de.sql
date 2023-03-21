@@ -23,4 +23,20 @@ create table studentinfo1 as
 select * from studentinfo;
 select * from studentinfo1;
 
+-- Updating a Single Row
+use student;
+update studentmarks 
+set marks=89 , name= 'shivangi'
+where stu_id=4;
+
+-- updating a multiple Row
+update studentmarks
+set marks=85 , name = 'raju' 
+where stu_id in (8 , 6);
+
+-- delete row
+delete from studentdetail
+where name = 'pappu';
+
+
 
