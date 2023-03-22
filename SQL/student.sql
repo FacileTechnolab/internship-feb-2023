@@ -52,11 +52,15 @@ select * from studentdetail;
 insert into studentdetail values
 ( 1 , 'krishika' , 'ux/ui' , 80 , 'Ahmedabad' , 'kisu@gmail.com' , 5484651  );
 insert into studentdetail values
-( 2 , 'Jahanvi' , 'Python' , 60 , 'Surat' , 'jahanvi@gmailcom' , 1615262 ),
+insert into studentdetail values
 ( 3 , 'Dipali' , 'SQL' , 70 , 'Nagpur' , 'dipali@gmail.com' , 515615),
 ( 4 , 'Shivangi' , 'HTML' , 40 , 'abu' , 'shivangi@gmail.com' , 554135),
 ( 5 , 'Shiva' , 'JavaScript' , 65 , 'Surat' , 'shiva@gmail.com' , 878564),
 ( 6 , 'Priya' , '.net' , 87 , 'Ahemdabad' , 'priya@gmail.com' , 4655413);
+insert into studentdetail values
+( 7 , 'Riddhi' , 'SQL' , 70 , 'Nagpur' , 'dipali@gmail.com' , 515615),
+( 8 , 'Siddhi' , 'JavaScript' , 65 , 'Surat' , 'shiva@gmail.com' , 878564);
+
 
 use student;
 select * from studentdetail;
@@ -77,7 +81,6 @@ insert into stu_add values
 (4, 'Abu','Rajsthan' ),
 (5, 'Nagpur',  'Maharastra' ),
 (6, 'Ahemdabad', 'Gujarat' );
-
 
 
 

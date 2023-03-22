@@ -15,12 +15,27 @@ where marks > 70
 group by name;
 
 -- Having clause
--- select address, count(city)
--- from stu_add inner join studentdetail
--- where name = 'Dipali'
--- group by city
--- -- having count(city) > 1
--- -- order by count(city) desc; 
+use student;
+
+select subject, sum(marks) as mk
+from studentdetail 
+group by subject
+having mk > 80;
+
+-- Roll up
+select subject, sum(marks)
+from studentmarks
+group by (subject) with rollup;
+
+
+
+
+
+
+
+
+
+
 
 
 
