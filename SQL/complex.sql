@@ -26,4 +26,32 @@ select * from studentmarks where marks > any
 from studentmarks 
 where marks <  70 and stu_id >1);
 
--- Correlated subqueries 
+-- Correlated subqueries
+select marks, name from  studentmarks p where 1 =
+( select count(marks)
+from studentmarks q where p.marks <= q.marks);
+
+-- The EXISTS operator 
+select * from studentmarks
+where  EXISTS
+( select name
+from studentdetail
+where studentmarks.name = studentdetail.name);
+
+-- Subqueries in the FROM Clause
+select * from (
+select Email , avg(marks) as avg
+from studentdetail 
+group by email ) as tb1
+where avg > 85;
+
+-- Subqueries in the SELECT Clause
+select profe_id, stu_id ,
+(
+	select count(*)
+    from studentdetail
+    where studentdetail.stu_id = studentinfo.profe_id
+) as id
+  from studentinfo; 
+
+
