@@ -1,0 +1,24 @@
+ maximum number find:-
+
+using System;
+class HelloWorld {
+  static void Main() {
+    int i=4,g=6;
+    Console.WriteLine(Math.Max(i,g));
+  }
+}
+
+second  :-
+
+using System;
+class HelloWorld {
+  static void Main() {
+    int i=4,g=6;
+   if (i<g){
+       Console.WriteLine("maximum number is g");
+   }
+   else {
+        Console.WriteLine("maximum number is i");
+   }
+  }
+}
