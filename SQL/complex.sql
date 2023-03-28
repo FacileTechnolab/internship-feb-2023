@@ -27,7 +27,7 @@ from studentmarks
 where marks <  70 and stu_id >1);
 
 -- Correlated subqueries
-select marks, name from  studentmarks p where 1 =
+select marks, name from  studentmarks p where 2 =
 ( select count(marks)
 from studentmarks q where p.marks <= q.marks);
 
