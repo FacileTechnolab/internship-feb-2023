@@ -11,6 +11,7 @@ namespace firstdemonewmvcasp.Controllers
         // GET: View
         public ActionResult Index()
         {
+           
             return View();
         }
         public ActionResult Contact()
