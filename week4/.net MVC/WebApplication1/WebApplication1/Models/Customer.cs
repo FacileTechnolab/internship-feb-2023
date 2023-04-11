@@ -22,6 +22,8 @@ namespace WebApplication1.Models
         [Display(Name = "Membership Type")]
         public byte  MembershipTypeId { get; set; }
         [Display(Name = "Date of Birth")]
+
+        [Min1IfMember]
         public DateTime?Birthdate { get; set; }
     }
 }
