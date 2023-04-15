@@ -342,7 +342,7 @@ WHERE Emp_date > '2000-09-10'
 -- updating single row
 UPDATE EMPLOYEESINFO
 SET SALARY = 226000, Emp_date = '2012-05-21'
-where Emp_no = 7
+where Emp_no = 7 
 -- updating multiple row
 UPDATE EMPLOYEESINFO
 SET SALARY = 22000 , Dept_No = 'D30'
@@ -400,6 +400,7 @@ INSERT INTO PERSONAL VALUES (0004, 'Shyamu', 47, 18, 'F', 3, 1);
 INSERT INTO PERSONAL VALUES (0005, 'Ramu', 75, 22, 'M', 1, 3);
 
 SELECT * FROM  PERSONAL;
+DROP TABLE PERSONAL;
 
 CREATE table CITY
 (
@@ -484,6 +485,7 @@ SELECT * FROM COURSES;
 
 
 -- EXISTS OPERATOR
+use employee;
 SELECT Emp_Name 
 FROM personal 
 WHERE EXISTS (SELECT COUR_ID 
@@ -576,6 +578,8 @@ CASE
 END AS RESULT
 FROM personal;
 
+
+show engines
 
 
 

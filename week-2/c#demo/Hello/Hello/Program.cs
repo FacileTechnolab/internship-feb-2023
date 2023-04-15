@@ -457,11 +457,7 @@ namespace Hello
             Console.WriteLine(builder);
 
             //string-builder-end
-            //files
-
-            File.Copy("C:\\Dipali-internship-2023\\week-1\\file1.txt", "Desktop\\D.txt");
-               
-            //files-end
+           
 
             Console.ReadLine();
 

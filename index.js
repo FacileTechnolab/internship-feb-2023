@@ -615,18 +615,44 @@ console.log(square(3));
 // }
 // console.log(sum(1, 2, 3, 4, 8));
 
+//global & local scope
+// const color = 'red';
+// function start()
+// {
+//   const message = 'hi';
+//   const color = 'blue';
+//   console.log(color);
+// }
+// function stop ()
+// {
+//   const message = 'bye';
+// }
+// start();
 
-function myFunction() {
-    const message = document.getElementById("message");
-    message.innerHTML = "";
-    let x = document.getElementById("demo").value;
-    try {
-      if(x == "") throw "is Empty";
-      if(isNaN(x)) throw "not a number";
-      if(x > 10) throw "too high";
-      if(x < 5) throw "too low";
-    }
-    catch(err) {
-      message.innerHTML = "Input " + err;
-    }
-  }
+
+//this keyword 
+//method => obj
+// const video = {
+//   title : 'a',
+//   Play()
+//   {
+//     console.log(this);
+//   }
+
+// };
+// video.stop = function()
+// {
+//   console.log(this);
+// };
+// video.stop();
+
+
+//exer-sum of arguments
+// function sum(...items)
+// {
+//   return items.reduce((a , b) => a + b);
+// }
+// console.log(sum(1, 2, 3, 4));
+
+//exer-area of circle
+
