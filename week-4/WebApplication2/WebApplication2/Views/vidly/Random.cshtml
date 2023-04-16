@@ -1,0 +1,9 @@
+﻿@using WebApplication2.Controllers
+@model  WebApplication2.Controllers.Movie
+{
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@(((Movie)ViewData["Movie"]).name)</h2>
