@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using System.Net;
+using System.Web.Http;
 
 namespace WebApplication1.Controllers
 {
@@ -22,7 +24,7 @@ namespace WebApplication1.Controllers
             _context.Dispose();
         }
         [ValidateAntiForgeryToken]
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         public ActionResult Save(Customer customer)
         {
             if (!ModelState.IsValid)
@@ -61,11 +63,14 @@ namespace WebApplication1.Controllers
             };
             return View(ViewModel);
         }
-
+        //[OutputCache(Duration =0/*Location =OutputCacheLocation.Server*/,VaryByParam ="*")]
         public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+           var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
+           // return View();
+
+
         }
         public ActionResult Details(int id) {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id); 
@@ -87,6 +92,16 @@ namespace WebApplication1.Controllers
              MembershipTypes = _context.MembershipTypes.ToList()
             };
             return View("New",viewModel);
+        }
+
+       
+        public void DeleteCustomer(int id)
+        {
+            var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customerInDb == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            _context.Customers.Remove(customerInDb);
+            _context.SaveChanges();
         }
     }
 }
