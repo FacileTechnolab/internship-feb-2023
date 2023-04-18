@@ -1,0 +1,70 @@
+﻿@model List<WebApplication2.Models.Customer> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+@*@foreach (var item in Model)
+{
+    <p>@item.Name</p>
+}*@
+
+@if (!Model.Any())
+            {
+                <p>We don't have any customers yet.</p>
+            }
+else
+{
+    <table id="Customers" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th> Customer</th>
+                <th>Discount Rate</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var customer in Model)
+            {
+                    <tr>
+                        <td>@Html.ActionLink(customer.Name, "Edit", "Customer",new { id = customer.Id },null) </td>
+                        <td>@customer.MembershipType.DiscountRate%</td>
+                        <td> <button data-Customer-id="@customer.Id" class="btn-link js-delete ">Delete </button></td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#customers").DataTable();
+            $("#Customers .js-delete").on("click", ".js-delete",  function () 
+            {
+                bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
+                    if(result)
+                {
+                    $.ajax({
+                        url: "/api/customers/" + $(this).attr("data-Customer-id"),
+                        method: "DELETE",
+
+                        success: function () {
+                            console.log("success");
+
+                        }
+                    });  
+                    }
+                });
+               
+
+
+                
+
+            });
+        });
+    </script>
+    }
