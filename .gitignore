@@ -1,6 +1,11 @@
 
-.net/WebApplication2/packages/
-.net/Test/packages/
-.net/Test/.vs/
+week-4/.net/Test/Test/bin/
+week-4/.net/Test/Test/obj/
 
+
+week-4/.net/WebApplication2/WebApplication2/bin/
+week-4/.net/WebApplication2/WebApplication2/obj/
+
+week-4/.net/Test/WebApplication2/packages/
+week-4/.net/WebApplication2/packages/
 
