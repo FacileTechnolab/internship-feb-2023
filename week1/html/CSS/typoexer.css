@@ -1,0 +1,27 @@
+body{
+     border:3px solid black;
+    font-weight:100;
+    font-size:62.5%;
+ 
+}
+h1{
+    margin:3rem 0 1rem;
+}
+p {  padding:30px;
+    font-style:italic;
+}
+p1 { 
+    font-weight:bold;
+    text-align: left;
+    text-indent:1rem;
+    white-space: nowrap;
+    padding:50px;
+    margin:10px;
+}
+p2 {  
+    margin:10px;
+    padding:50px;
+    text-indent:1rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:600;
+}
