@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\class\bin\Debug\net6.0\class.exe
+D:\intership-2023\c sharp\class\bin\Debug\net6.0\class.deps.json
+D:\intership-2023\c sharp\class\bin\Debug\net6.0\class.runtimeconfig.json
+D:\intership-2023\c sharp\class\bin\Debug\net6.0\class.dll
+D:\intership-2023\c sharp\class\bin\Debug\net6.0\class.pdb
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.AssemblyInfo.cs
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.dll
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\refint\class.dll
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.pdb
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\class.genruntimeconfig.cache
+D:\intership-2023\c sharp\class\obj\Debug\net6.0\ref\class.dll

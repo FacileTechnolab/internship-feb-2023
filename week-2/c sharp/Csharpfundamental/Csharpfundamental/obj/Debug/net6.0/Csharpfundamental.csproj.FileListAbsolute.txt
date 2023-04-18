@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\bin\Debug\net6.0\Csharpfundamental.exe
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\bin\Debug\net6.0\Csharpfundamental.deps.json
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\bin\Debug\net6.0\Csharpfundamental.runtimeconfig.json
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\bin\Debug\net6.0\Csharpfundamental.dll
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\bin\Debug\net6.0\Csharpfundamental.pdb
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.AssemblyInfo.cs
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.dll
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\refint\Csharpfundamental.dll
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.pdb
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\Csharpfundamental.genruntimeconfig.cache
+D:\intership-2023\c sharp\Csharpfundamental\Csharpfundamental\obj\Debug\net6.0\ref\Csharpfundamental.dll

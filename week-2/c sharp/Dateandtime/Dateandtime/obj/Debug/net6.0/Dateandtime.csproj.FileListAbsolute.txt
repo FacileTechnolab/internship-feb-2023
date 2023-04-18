@@ -1,0 +1,15 @@
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\bin\Debug\net6.0\Dateandtime.exe
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\bin\Debug\net6.0\Dateandtime.deps.json
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\bin\Debug\net6.0\Dateandtime.runtimeconfig.json
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\bin\Debug\net6.0\Dateandtime.dll
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\bin\Debug\net6.0\Dateandtime.pdb
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.csproj.AssemblyReference.cache
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.GeneratedMSBuildEditorConfig.editorconfig
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.AssemblyInfoInputs.cache
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.AssemblyInfo.cs
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.csproj.CoreCompileInputs.cache
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.dll
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\refint\Dateandtime.dll
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.pdb
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\Dateandtime.genruntimeconfig.cache
+D:\intership-2023\c sharp\Dateandtime\Dateandtime\obj\Debug\net6.0\ref\Dateandtime.dll
