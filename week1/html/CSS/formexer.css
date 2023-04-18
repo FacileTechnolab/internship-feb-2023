@@ -1,0 +1,35 @@
+body {
+    background:url(/image/images/bg-paper.jpg);
+    padding:1rem;
+    text-align: center;
+}
+
+
+form
+{
+    width:50%;
+    padding:2rem;
+}
+input[type='email'] {
+    border:1px solid blue;
+    border-radius: 5px;
+    padding:0.5rem 0.7rem;
+    margin:10px;
+    transition: border-color 0.15s,box-shadow 0.15s;
+}
+input[type='password'] {
+    border:1px solid blue;
+    border-radius: 5px;
+    padding:0.5rem 0.7rem;
+    transition: border-color 0.15s,box-shadow 0.15s;
+}
+button {
+    background: #0d6efd;
+    color:#fff;
+    border:0;
+    padding:0.5rem 0.7rem;
+    border-radius: 0.5px;
+    outline:0;
+    margin:10px;
+    width:200px;
+}

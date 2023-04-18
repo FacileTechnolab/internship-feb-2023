@@ -1,0 +1,16 @@
+body{
+  margin:10px;
+}
+
+p {
+  color: red;
+}
+#product ~ p{
+  color:greenyellow;
+}  
+a[href="https://google.com"] 
+{
+  color:blue ;
+} 
+
+
