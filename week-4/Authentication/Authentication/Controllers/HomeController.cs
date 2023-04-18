@@ -4,16 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Webapp.Controllers
+namespace Authentication.Controllers
 {
     public class HomeController : Controller
     {
-
-        public String Dindex()
-        {
-            return "hello";
-        }
-
         public ActionResult Index()
         {
             return View();
