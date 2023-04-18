@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "partialview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>partialview</h2>
+@Html.Partial("_partial")
+<br />
+<br />
+@{ 
+
+    Html.RenderPartial("_partial");
+}
+
