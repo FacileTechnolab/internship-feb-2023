@@ -1,2 +1,7 @@
 .net/WebApplication2/packages/
 .net/Test/packages/
+.net/Test/.vs/
+.net/WebApplication2/.vs/
+.net/Test/Test/obj/
+.net/WebApplication2/WebApplication2/bin/
+.net/WebApplication2/WebApplication2/obj/
