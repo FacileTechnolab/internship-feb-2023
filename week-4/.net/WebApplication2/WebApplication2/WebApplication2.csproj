@@ -62,7 +62,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
@@ -191,13 +193,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202304150154379_Initial_Created.cs" />
-    <Compile Include="Migrations\202304150154379_Initial_Created.designer.cs">
-      <DependentUpon>202304150154379_Initial_Created.cs</DependentUpon>
+    <Compile Include="Migrations\202304182238532_Customer.cs" />
+    <Compile Include="Migrations\202304182238532_Customer.designer.cs">
+      <DependentUpon>202304182238532_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202304150157517_Added_MemberShipType_Table.cs" />
-    <Compile Include="Migrations\202304150157517_Added_MemberShipType_Table.designer.cs">
-      <DependentUpon>202304150157517_Added_MemberShipType_Table.cs</DependentUpon>
+    <Compile Include="Migrations\202304190035092_AddedCustomers.cs" />
+    <Compile Include="Migrations\202304190035092_AddedCustomers.designer.cs">
+      <DependentUpon>202304190035092_AddedCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304190035522_SeedUsers.cs" />
+    <Compile Include="Migrations\202304190035522_SeedUsers.designer.cs">
+      <DependentUpon>202304190035522_SeedUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -215,9 +221,9 @@
     <Compile Include="ViewModels\RandomDemoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-WebApplication2-20230414124126.mdf" />
-    <Content Include="App_Data\aspnet-WebApplication2-20230414124126_log.ldf">
-      <DependentUpon>aspnet-WebApplication2-20230414124126.mdf</DependentUpon>
+    <Content Include="App_Data\WebApplication2.Models.AppDbContext.mdf" />
+    <Content Include="App_Data\WebApplication2.Models.AppDbContext_log.ldf">
+      <DependentUpon>WebApplication2.Models.AppDbContext.mdf</DependentUpon>
     </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
@@ -402,8 +408,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\New.cshtml" />
+    <Content Include="Views\Customer\Read-Only.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
@@ -436,14 +443,15 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202304150154379_Initial_Created.resx">
-      <DependentUpon>202304150154379_Initial_Created.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202304182238532_Customer.resx">
+      <DependentUpon>202304182238532_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304150157517_Added_MemberShipType_Table.resx">
-      <DependentUpon>202304150157517_Added_MemberShipType_Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202304190035092_AddedCustomers.resx">
+      <DependentUpon>202304190035092_AddedCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\WebApplication2.Migrations.Added_MemberShipType_Table.resources" />
-    <EmbeddedResource Include="obj\Debug\WebApplication2.Migrations.Initial_Created.resources" />
+    <EmbeddedResource Include="Migrations\202304190035522_SeedUsers.resx">
+      <DependentUpon>202304190035522_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
