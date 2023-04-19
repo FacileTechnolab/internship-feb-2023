@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+    int a = 10;
+    var date = DateTime.Now.ToShortDateString();
+    var message = "Hello World";
+}
+
+<h2>Show</h2>
+
+@{
+    for (int i = 0; i < 10; i++)
+    {
+        @*<span>pakistan @i</span>*@
+        @*<input type="text" value="@i" /> <br/>*@
+        <input type="text" value="@a" />
+        <br />
+    }
+}
+
+@Html.TextBox("txtName")
+
+<h2>Today's date is: @date </h2>
+<h3>@message</h3>
+
+
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    @DateTime.Now.Year @:is a leap year.
+}
+else
+{
+    @DateTime.Now.Year @:is not a leap year.
+}
+
+@for (int i = 0; i < 5; i++)
+{
+    @i.ToString()
+    <br />
+}
+
+@{
+    string str = "";
+
+    if (1 > 0)
+    {
+        str = "Kuhad Dipali";
+    }
+}
+
+<p>@str</p>
