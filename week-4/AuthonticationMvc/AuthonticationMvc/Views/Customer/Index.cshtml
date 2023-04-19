@@ -1,0 +1,78 @@
+﻿@model List<AuthonticationMvc.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table id="Customers"  class=" table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Discount Rate</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody> 
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(customer.Cus_Name, "Edit", "Customer", new { id = customer.Cus_Id }, null)</td>
+                    <td>@customer.MemberShipTypes.DiscountRate</td>
+                    <td>
+                       <button data-Customer-id="@customer.Cus_Id" class="btn-link js-delete">Delete</button>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function ()
+        {
+            $("#Customers").Datatable();
+
+            $("#Customers").on("click",".js-delete", function ()
+            {
+                var button = $(this);
+
+                bootbox.confirm("Are You Sure Delete this Customer?" , function ()
+                {
+                    if (result)
+                    {
+                        $.ajax({
+                            url: "/api/customers/" + button.attr("data-Customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+
+                //if (confirm("Are You Sure Delete this Customer?"))
+                //{
+                //   $.ajax({
+                //       url: "/api/customers/" + button.attr("data-Customer-id"),
+                //        method: "DELETE",
+
+                //        success: function ()
+                //        {
+                //            button.parents("tr").remove();
+                //        }
+                //    });
+                //}
+            });
+        });
+    </script>
+}

@@ -1,0 +1,21 @@
+﻿@Model AuthonticationMvc.Models.Student
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+Id is : @ViewBag.Id
+<br />
+Name is : @ViewBag.Name
+<br />
+
+@{
+    var obj = (AuthonticationMvc.Models.Student)ViewBag.Std;
+    <span> Name is : @obj.Name </span>
+
+}
+
+<br />
+<span>@Model.Name </span>
