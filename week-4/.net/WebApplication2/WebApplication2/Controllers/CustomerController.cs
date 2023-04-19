@@ -30,6 +30,7 @@ namespace WebApplication2.Controllers
 
             _context.Dispose();
         }
+        [Authorize(Roles = RoleName.Manage)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipType.ToList();
@@ -65,12 +66,12 @@ namespace WebApplication2.Controllers
                 customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
             }
             _context.SaveChanges();
-            return RedirectToAction("Index", "Customer");
+            return RedirectToAction("List", "Customer");
         }
-        public ViewResult Index()
+        public ViewResult list()
         {
-            //* var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            if (User.IsInRole("Manage"))
+             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            if (User.IsInRole(RoleName.Manage))
                 return View("List");
 
             return View("Read-OnlyList");

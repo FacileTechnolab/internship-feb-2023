@@ -205,6 +205,14 @@
     <Compile Include="Migrations\202304190035522_SeedUsers.designer.cs">
       <DependentUpon>202304190035522_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304191750525_to_add_rename_as_IdentityDbContext.cs" />
+    <Compile Include="Migrations\202304191750525_to_add_rename_as_IdentityDbContext.designer.cs">
+      <DependentUpon>202304191750525_to_add_rename_as_IdentityDbContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304191857363_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\202304191857363_AddDrivingLicenseToApplicationUser.designer.cs">
+      <DependentUpon>202304191857363_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbContext.cs" />
@@ -213,6 +221,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -221,6 +230,10 @@
     <Compile Include="ViewModels\RandomDemoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-WebApplication2-20230414124126.mdf" />
+    <Content Include="App_Data\aspnet-WebApplication2-20230414124126_log.ldf">
+      <DependentUpon>aspnet-WebApplication2-20230414124126.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\WebApplication2.Models.AppDbContext.mdf" />
     <Content Include="App_Data\WebApplication2.Models.AppDbContext_log.ldf">
       <DependentUpon>WebApplication2.Models.AppDbContext.mdf</DependentUpon>
@@ -410,7 +423,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\New.cshtml" />
-    <Content Include="Views\Customer\Read-Only.cshtml" />
+    <Content Include="Views\Customer\Read-OnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
@@ -451,6 +464,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304190035522_SeedUsers.resx">
       <DependentUpon>202304190035522_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304191750525_to_add_rename_as_IdentityDbContext.resx">
+      <DependentUpon>202304191750525_to_add_rename_as_IdentityDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304191857363_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>202304191857363_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
