@@ -25,7 +25,7 @@ namespace WebApplication2.Models
         {
         }
 
-        //public DbSet<Customer> Customers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<MembershipType> MembershipType { get; set; }
 
         public static ApplicationDbContext Create()

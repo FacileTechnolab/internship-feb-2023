@@ -69,8 +69,11 @@ namespace WebApplication2.Controllers
         }
         public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            return View(customers);
+            //* var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            if (User.IsInRole("Manage"))
+                return View("List");
+
+            return View("Read-OnlyList");
         }
 
         // GET: Customer/Details/5
