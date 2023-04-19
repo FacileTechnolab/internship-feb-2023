@@ -1,0 +1,53 @@
+﻿@model Authentication.viewModel.NewEmployeeViewModel
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Employee</h2>
+
+
+@using (Html.BeginForm("Save", "Partialview"))
+{
+    @Html.ValidationSummary(true, "please folowing the errors .")
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Employee.name)
+        @Html.TextBoxFor(m => m.Employee.name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Employee.name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Employee.Addess)
+        @Html.TextBoxFor(m => m.Employee.Addess, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Employee.Addess)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Employee.Birthdate)
+        @Html.TextBoxFor(m => m.Employee.Birthdate, "{0: d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Employee.Birthdate)
+
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Employee.IsSubscribedToNewsletter) Subscribed to news letter?
+            @Html.ValidationMessageFor(m => m.Employee.IsSubscribedToNewsletter)
+        </label>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Employee.MemberShipTypeId)
+        @Html.DropDownListFor(m => m.Employee.MemberShipTypeId, new SelectList(Model.MemberShipTypes, "Id", "DiscountRate"), "Select MemberShip Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Employee.MemberShipTypeId)
+    </div>
+    @Html.HiddenFor(m => m.Employee.EmployeeId)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts
+    {
+         @Scripts.Render("~/bundles/jqueryval")
+    }
+

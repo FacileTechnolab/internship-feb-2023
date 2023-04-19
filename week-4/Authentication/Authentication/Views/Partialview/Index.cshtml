@@ -1,0 +1,64 @@
+﻿@model List<Authentication.Models.Employee>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Model</h2>
+@if (!Model.Any())
+{
+    <p>We don't  have any Employee yet.</p>
+}
+else
+{
+
+    <table id="Partialview" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Discount Rate</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Employee in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(Employee.name, "Edit", "Employees", new { id = Employee.EmployeeId }, null)</td>
+                    <td>@Employee.MemberShipType.DiscountRate</td>
+                    <td>
+                        <button data-Employee-id="@Employee.EmployeeId" class="btn-link js-delete">Delete</button>
+                    </td>
+
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#Partialview").DataTable();
+
+            $("#Partialview ").on("click",".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete ?", function (results) {
+
+                    if (results) {
+                        $.ajax({
+                            url: "/api/Employee/" + button.attr("data-Employee-id"),
+                            method: "DELETE",
+                            success: function () {
+                                 button.parents("tr").remove();
+                            }
+                        });
+                    }
+                });
+
+            });
+        });
+    </script>
+}
+
