@@ -195,9 +195,13 @@
     <Compile Include="Migrations\202304182213261_MemberShipType.designer.cs">
       <DependentUpon>202304182213261_MemberShipType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202304182324132_SeedUsers.cs" />
-    <Compile Include="Migrations\202304182324132_SeedUsers.designer.cs">
-      <DependentUpon>202304182324132_SeedUsers.cs</DependentUpon>
+    <Compile Include="Migrations\202304191701363_SeedUsers.cs" />
+    <Compile Include="Migrations\202304191701363_SeedUsers.designer.cs">
+      <DependentUpon>202304191701363_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304192050176_AddDrivingLicenseToApplicationUser.cs" />
+    <Compile Include="Migrations\202304192050176_AddDrivingLicenseToApplicationUser.designer.cs">
+      <DependentUpon>202304192050176_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -205,6 +209,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RandomViewModel.cs" />
@@ -281,9 +286,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\New.cshtml" />
+    <Content Include="Views\Customer\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,8 +328,11 @@
     <EmbeddedResource Include="Migrations\202304182213261_MemberShipType.resx">
       <DependentUpon>202304182213261_MemberShipType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304182324132_SeedUsers.resx">
-      <DependentUpon>202304182324132_SeedUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202304191701363_SeedUsers.resx">
+      <DependentUpon>202304191701363_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304192050176_AddDrivingLicenseToApplicationUser.resx">
+      <DependentUpon>202304192050176_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

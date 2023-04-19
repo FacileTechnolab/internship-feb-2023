@@ -8,6 +8,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcAuthontication.Controllers
 {
@@ -26,6 +27,7 @@ namespace MvcAuthontication.Controllers
             _context.Dispose();
         }
         //markup //dropdownlist
+        [Authorize(Roles = RoleName.Manage)]
         public ActionResult New()
         {
             var membershiptypes = _context.MemberShipTypes.ToList();
@@ -88,12 +90,19 @@ namespace MvcAuthontication.Controllers
         //
         // GET: Customer
         
-        public ViewResult Index()
+        public ViewResult List()
         {
             var customers = _context.Customers.Include(c => c.MemberShipTypes).ToList();
 
 
             return View(customers);
+
+
+            if (User.IsInRole(RoleName.Manage))
+
+                return View("List");
+
+           return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
