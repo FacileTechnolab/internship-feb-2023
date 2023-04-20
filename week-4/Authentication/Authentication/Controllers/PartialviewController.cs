@@ -68,7 +68,7 @@ namespace Authentication.Controllers
             //return View(Employee);
             if (User.IsInRole("CanManageEmployee"))
                 return View("List");
-            return View("Read-Only");
+            return View("Read-Only", Employee);
         }
         public ActionResult Detail(int id)
         {
