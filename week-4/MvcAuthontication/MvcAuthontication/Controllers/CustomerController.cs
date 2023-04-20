@@ -94,15 +94,11 @@ namespace MvcAuthontication.Controllers
         {
             var customers = _context.Customers.Include(c => c.MemberShipTypes).ToList();
 
-
-            return View(customers);
-
-
             if (User.IsInRole(RoleName.Manage))
 
                 return View("List");
 
-           return View("ReadOnlyList");
+           return View("ReadOnlyList", customers);
         }
 
         public ActionResult Details(int id)
