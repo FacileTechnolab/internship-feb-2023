@@ -21,6 +21,7 @@ namespace Authentication.Controllers
         {
             _context.Dispose();
         }
+        //[Authorize(Roles = "CanManageEmployee")]
         public ActionResult New()
         {
             var membershiptypes = _context.MemberShipTypes.ToList();
@@ -61,10 +62,13 @@ namespace Authentication.Controllers
             return RedirectToAction("Index", "Partialview");
         }
         [Authorize]
-        public ActionResult Index()
+        public ActionResult List()
         {
             var Employee = _context.Employees.Include(P => P.MemberShipType).ToList();
-            return View(Employee);
+            //return View(Employee);
+            if (User.IsInRole("CanManageEmployee"))
+                return View("List");
+            return View("Read-Only");
         }
         public ActionResult Detail(int id)
         {

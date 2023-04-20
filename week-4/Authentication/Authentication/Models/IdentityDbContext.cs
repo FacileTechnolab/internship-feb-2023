@@ -16,4 +16,5 @@ namespace Authentication.Models
        // public DbSet<Customer> Customers { get; set; }
         public DbSet<MemberShipType> MemberShipTypes { get; set; }
     }
+  
 }
