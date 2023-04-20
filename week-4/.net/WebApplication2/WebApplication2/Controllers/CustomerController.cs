@@ -68,13 +68,13 @@ namespace WebApplication2.Controllers
             _context.SaveChanges();
             return RedirectToAction("List", "Customer");
         }
-        public ViewResult list()
+        public ViewResult List()
         {
              var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             if (User.IsInRole(RoleName.Manage))
                 return View("List");
 
-            return View("Read-OnlyList");
+            return View("Read-OnlyList", customers);
         }
 
         // GET: Customer/Details/5
