@@ -1,3 +1,7 @@
-logs/
-main.log
-*.log
+
+week-2/c#demo/.vscode/
+week-2/c#demo/bin/
+week-2/c#demo/Hello/.vs/
+week-2/c#demo/Hello/Hello/bin/
+week-2/c#demo/Hello/Hello/obj/
+week-2/c#demo/obj/
