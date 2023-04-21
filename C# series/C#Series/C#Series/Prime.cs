@@ -10,19 +10,30 @@ namespace C_Series
     {
         public void Pri() 
         {
-            int  num;
+            int num, prime = 1;
             Console.WriteLine("Enter Prime : ");
             num = Convert.ToInt32(Console.ReadLine());
 
-            if (num % 2 == 0)
+            for (int i = 2; i < num; i++)
             {
-                Console.WriteLine("This number is Not Prime: ");
+
+                if (num % i == 0)
+                {
+                    prime = 0;
+                    break;
+                }
+            }
+            if (prime > 0)
+            {
+                Console.WriteLine("This number is Prime: " + num);
             }
             else
             {
-                Console.WriteLine("This number is Prime: ");
+                Console.WriteLine("This number is Not Prime: " + num);
             }
             Console.ReadLine();
+
+
         }
     }
 }

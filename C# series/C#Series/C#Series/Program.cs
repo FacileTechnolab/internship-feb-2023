@@ -32,9 +32,9 @@ namespace C_Series
             //swap s =new swap();
             //s.Swapnum();
 
-            //* Reverse number
-            //Reverse R = new Reverse();
-            //R.Rev();
+            ////Reverse number
+            Reverse R = new Reverse();
+            R.Rev();
 
             //*SumofDigit
             //SumDigit SD = new SumDigit();
@@ -57,8 +57,8 @@ namespace C_Series
             //FB.Fibo();
 
             //*Prime
-            Prime PN = new Prime();
-            PN.Pri();
+            //Prime PN = new Prime();
+            //PN.Pri();
         }
     }
 }
