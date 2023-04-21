@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amstrong.cs" />
     <Compile Include="Factorial.cs" />
     <Compile Include="Fibonaci.cs" />
     <Compile Include="Pallindrom.cs" />

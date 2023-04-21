@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Services;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace C_series
@@ -11,16 +13,24 @@ namespace C_series
         public void Prime()
         {
             int num;
-            Console.WriteLine("Enter number:");
-            num = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            Console.WriteLine("Enter Number:");
+            num= int.Parse(Console.ReadLine());
 
-            if (num % 2 == 0)
+            for(int i = 1; i<=num; i++)
             {
-                Console.WriteLine("Enter Number is not  Prime :" + num);
+                if(num % i == 0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                Console.WriteLine("Is Prime Number");
             }
             else
             {
-                Console.WriteLine("Enter Number Prime :" + num);
+                Console.WriteLine("Not Prime Number");
             }
             Console.ReadLine();
         }

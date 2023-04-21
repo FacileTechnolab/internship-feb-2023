@@ -8,20 +8,21 @@ namespace C_series
 {
     internal class Fibonaci
     {
-        public  void Fibo(int range) 
-        { 
-            int a =0, b =1, c;
-            while(a <= range) 
+        public  void Fibo() 
+        {
+            int a = 0, b = 1, c;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            for(int i = 0; i <= 5; i++)
             {
-                Console.WriteLine(a);
                 c = a + b;
+                Console.WriteLine(c);
                 a = b;
-                b = c;   
+                b= c;
             }
-          
-           
-            Console.WriteLine("fibonaci series");
             Console.ReadLine();
+           
         }
     }
 }

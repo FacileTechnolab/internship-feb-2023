@@ -56,9 +56,16 @@ namespace C_series
             //Primenum pr = new Primenum();
             //pr.Prime();
 
-            
-            Fibonaci fib = new Fibonaci();
-            fib.Fibo(20);
+            //fibonaci
+            //Fibonaci fib = new Fibonaci();
+            //fib.Fibo();
+            //fibonaci-end
+
+            //Armstrong
+            Armstrong arms = new Armstrong();
+            arms.Arm();
+
+
         }
 
     }
