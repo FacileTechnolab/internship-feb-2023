@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#IntermediateClass", "C#IntermediateClass\C#IntermediateClass.csproj", "{FD9E1063-AC77-4611-B338-37CACC63377D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#IntermediateClass-1", "C#IntermediateClass\C#IntermediateClass-1.csproj", "{FD9E1063-AC77-4611-B338-37CACC63377D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

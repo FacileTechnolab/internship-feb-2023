@@ -18,10 +18,13 @@ namespace C_IntermediateClass
     {
         static void Main(string[] args)
         {
-            var person = new Person();
-            person.Name = "shivangi";
-            person.Introduction("shah");
-            Console.ReadLine();
+            //var person = new Person();
+            //person.Name = "shivangi";
+            //person.Introduction("shah");
+            //Console.ReadLine();
+            Cunstrutor cunstrutor = new Cunstrutor();
+            cunstrutor.Details();
+
         }
     }  
 }
