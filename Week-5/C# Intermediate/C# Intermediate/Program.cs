@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -10,7 +11,7 @@ using System.Xml.Linq;
 
 namespace C__Intermediate
 {
-    public class Person
+    public class AbstractClass
     {
         public string Name { get; set; }
 
@@ -19,9 +20,9 @@ namespace C__Intermediate
             Console.WriteLine("Hi {0} , I am {1}",to, Name);
         }
 
-        public static Person Parse(string str)
+        public static AbstractClass Parse(string str)
         {
-            var  person = new Person();
+            var  person = new AbstractClass();
             person.Name = str;
 
             return person;
@@ -90,13 +91,28 @@ namespace C__Intermediate
             //}
             ////object-initializers-end
 
-            //method
-           
 
-
-
-
+            //abstract-class-call
+                //student class call
+                Student Annas = new Student();
+                Annas.FirstName = "Dipali";
+                Annas.LastName = "Kuhad";
+                Annas.Age = 21;
+                Annas.RollNo = 1;
+                Annas.Fees = 30000;
+            Annas.PrintDetails();
+            Console.ReadLine();
+            //teacher class call
+            Teacher teach = new Teacher();
+            teach.FirstName = "Shonal";
+            teach.LastName = "Rana";
+            teach.Age = 30;
+            teach.Qulification = "Master in Qulification";
+            teach.Salary = 25000;
+            teach.PrintDetails();
+            Console.ReadLine();
         }
+        //method
         static void UserParams()
         {
             var cal = new Calculator();
@@ -124,6 +140,7 @@ namespace C__Intermediate
             }
             Console.ReadLine();
         }
+        //method-end
 
     }
 }

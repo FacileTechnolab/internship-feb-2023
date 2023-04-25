@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClass.cs" />
+    <Compile Include="Calculator.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="ObjInitializer.cs" />
     <Compile Include="Order.cs" />
