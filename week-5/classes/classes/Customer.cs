@@ -10,7 +10,7 @@ namespace classes
     {
         public int Id;
         public string Name;
-        public List<Order> Orders;
+        public List<Order> Orders = new List<Order>();
         public Customer() 
         { 
           Orders = new List<Order>();
@@ -18,7 +18,7 @@ namespace classes
         }
 
         public Customer(int id)
-            : this()
+            //: this()
         { 
           this.Id = id;
         
@@ -28,6 +28,10 @@ namespace classes
         {
             //this.Id = id;
             this.Name = name;
+        }
+        public void Promote()
+        {
+            Orders = new List<Order>();
         }
     }
 }
