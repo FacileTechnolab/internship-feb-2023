@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//    public class Person
+//    {
+//        public string Name;
+//        public void Introduction(string to)
+//        {
+//            Console.WriteLine("hi {0}, I  am {1}", to, Name);
+//        }
+//    }
+
 namespace C_IntermediateClass
 {
-    public class Person
-    {
-        public string Name;
-        public void Introduction(string to)
-        {
-            Console.WriteLine("hi {0}, I  am {1}", to, Name);
-        }
-    }
     internal class Program
     {
         static void Main(string[] args)
@@ -22,15 +23,18 @@ namespace C_IntermediateClass
             //person.Name = "shivangi";
             //person.Introduction("shah");
             //Console.ReadLine();
-            //Cunstrutor cunstrutor = new Cunstrutor();
+            //Constructor cunstrutor = new Constructor();
             //cunstrutor.Details();
 
 
             //ObjectIntialize obj= new ObjectIntialize();
             //obj.Method();
 
-            Methods methods= new Methods();
-             methods.MethodsDetails();
+            //Methods methods= new Methods();
+            // methods.MethodsDetails();
+
+            AccessModifers accessModifers = new AccessModifers();
+            AccessModifers.Equals();
         }
     }  
 }
