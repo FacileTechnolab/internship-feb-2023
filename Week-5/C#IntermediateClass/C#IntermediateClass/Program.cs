@@ -22,9 +22,15 @@ namespace C_IntermediateClass
             //person.Name = "shivangi";
             //person.Introduction("shah");
             //Console.ReadLine();
-            Cunstrutor cunstrutor = new Cunstrutor();
-            cunstrutor.Details();
+            //Cunstrutor cunstrutor = new Cunstrutor();
+            //cunstrutor.Details();
 
+
+            //ObjectIntialize obj= new ObjectIntialize();
+            //obj.Method();
+
+            Methods methods= new Methods();
+             methods.MethodsDetails();
         }
     }  
 }
