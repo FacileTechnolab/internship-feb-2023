@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -27,7 +28,6 @@ namespace C__Intermediate
         }
       
     }
-
     class Program
     {
         static void Main(string[] args)
@@ -71,26 +71,59 @@ namespace C__Intermediate
             //    Console.WriteLine("{0} and {1}", pair.Key, pair.Value);
             //}
 
-            //meth-3
-            List<ObjInitializer> objIniti = new List<ObjInitializer>()
-                {
-                      new ObjInitializer { autId = 1, autName = "Dipali Kuhad ", autValue = 2001, Email ="dipi.kuhad@gmail.com"  },
-                      new ObjInitializer { autId = 2, autName = "Krishika Maurya ", autValue = 2023, Email = "krishi.maurya@gmail.com" },
-                      new ObjInitializer { autId = 3, autName = "Shivangi Shah ", autValue = 2022, Email = "shivangi.shah@gmail.com" },
-                      new ObjInitializer { autId = 4, autName = "Jahnvi Parmar ", autValue = 2021, Email = "jahanvi.parmar@gmail.com" }
-                };
+            ////meth-3
+            //List<ObjInitializer> objIniti = new List<ObjInitializer>()
+            //    {
+            //          new ObjInitializer { autId = 1, autName = "Dipali Kuhad ", autValue = 2001, Email ="dipi.kuhad@gmail.com"  },
+            //          new ObjInitializer { autId = 2, autName = "Krishika Maurya ", autValue = 2023, Email = "krishi.maurya@gmail.com" },
+            //          new ObjInitializer { autId = 3, autName = "Shivangi Shah ", autValue = 2022, Email = "shivangi.shah@gmail.com" },
+            //          new ObjInitializer { autId = 4, autName = "Jahnvi Parmar ", autValue = 2021, Email = "jahanvi.parmar@gmail.com" }
+            //    };
 
-            foreach (ObjInitializer obj in objIniti)
-            {
-                Console.Write(obj.autId + " ");
-                Console.Write(obj.autName + " ");
-                Console.Write(obj.autValue + " ");
-                Console.Write(obj.Email + " ");
-                Console.WriteLine();
-            }
-            //object-initializers-end
-            Console.ReadLine();
+            //foreach (ObjInitializer obj in objIniti)
+            //{
+            //    Console.Write(obj.autId + " ");
+            //    Console.Write(obj.autName + " ");
+            //    Console.Write(obj.autValue + " ");
+            //    Console.Write(obj.Email + " ");
+            //    Console.WriteLine();
+            //}
+            ////object-initializers-end
+
+            //method
+           
+
+
+
 
         }
+        static void UserParams()
+        {
+            var cal = new Calculator();
+            Console.WriteLine(cal.Add(1, 2));
+            Console.WriteLine(cal.Add(1, 2, 3));
+            Console.WriteLine(cal.Add(1, 2, 3, 4));
+            Console.WriteLine(cal.Add(new int[] { 1, 2, 3, 4, 5 }));
+        }
+        static void UserPoint()
+        {
+            try
+            {
+
+                var point = new Point(10, 20);
+                point.Move(null);
+                Console.WriteLine("Point is: ({0}, {1})", point.X, point.Y);
+
+                point.Move(400, 600);
+                Console.WriteLine("Point is: ({0}, {1})", point.X, point.Y);
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("An unexpected error occured");
+            }
+            Console.ReadLine();
+        }
+
     }
 }
