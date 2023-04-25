@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractClass.cs" />
+    <Compile Include="Accessmodifier.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Feild.cs" />
     <Compile Include="ObjInitializer.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Point.cs" />

@@ -29,24 +29,26 @@ namespace C__Intermediate
         }
       
     }
-    class Program
+
+    partial class Program
     {
         static void Main(string[] args)
         {
+           
             //class
             //var  person = Person.Parse("Test");
             //person.Introduce("Dipali");
 
             //counstructor
-            var customer = new Customer(); //default counst call
-            customer.Id = 1; //parameter counst call
-            customer.Name = "Dipali";//parameter counst call
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
+            //var customer = new Customer(); //default counst call
+            //customer.Id = 1; //parameter counst call
+            //customer.Name = "Dipali";//parameter counst call
+            //Console.WriteLine(customer.Id);
+            //Console.WriteLine(customer.Name);
 
-            var order = new Order();
-            customer.Orders = new List<Order>();
-            customer.Orders.Add(order);
+            //var order = new Order();
+            //customer.Orders = new List<Order>();
+            //customer.Orders.Add(order);
             //counstructor-end
 
             //object-initializers
@@ -93,8 +95,8 @@ namespace C__Intermediate
 
 
             //abstract-class-call
-                //student class call
-                Student Annas = new Student();
+            //student class call
+            Student Annas = new Student();
                 Annas.FirstName = "Dipali";
                 Annas.LastName = "Kuhad";
                 Annas.Age = 21;
@@ -111,7 +113,35 @@ namespace C__Intermediate
             teach.Salary = 25000;
             teach.PrintDetails();
             Console.ReadLine();
+            //
+
+            //feild
+            Feild fie = new Feild(1);
+            fie.Orders.Add(new Order());
+            fie.Orders.Add(new Order());
+
+            fie.Promote();
+            Console.WriteLine(fie.Orders.Count);
+            Console.ReadLine();
+            //
+
+            //accessmodifier
+            Accessmodifier accessmodi = new Accessmodifier();
+            accessmodi.SetBirthdate(new DateTime(2001, 10, 29));
+            Console.WriteLine(accessmodi.GetBirthdate());
+            Console.ReadLine();
+            //
         }
+
+       
+
+   
+
+
+
+
+
+
         //method
         static void UserParams()
         {
@@ -141,6 +171,8 @@ namespace C__Intermediate
             Console.ReadLine();
         }
         //method-end
+
+        
 
     }
 }
