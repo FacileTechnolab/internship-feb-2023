@@ -33,8 +33,16 @@ namespace C_IntermediateClass
             //Methods methods= new Methods();
             // methods.MethodsDetails();
 
-            AccessModifers accessModifers = new AccessModifers();
-            AccessModifers.Equals();
+            //AccessModifers accessModifers = new AccessModifers();
+            //accessModifers.Equals();
+
+
+            //Properties properties = new Properties();
+            //properties.Details();
+                  
+
+            Indexers indexers = new Indexers();
+            indexers.Index();
         }
     }  
 }

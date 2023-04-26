@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessModifers.cs" />
     <Compile Include="Constructor.cs" />
-    <Compile Include="Fields.cs" />
+    <Compile Include="Indexers.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="ObjectIntialize.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
