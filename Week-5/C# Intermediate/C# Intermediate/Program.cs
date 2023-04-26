@@ -127,15 +127,42 @@ namespace C__Intermediate
 
             //accessmodifier
             Accessmodifier accessmodi = new Accessmodifier();
-            accessmodi.SetBirthdate(new DateTime(2001, 10, 29));
+            accessmodi.SetBirthdate(new DateTime(2002, 2, 23));
             Console.WriteLine(accessmodi.GetBirthdate());
             Console.ReadLine();
             //
+
+            //properties
+            Properties prop = new Properties(new DateTime(2001, 11, 18));
+           
+            Console.WriteLine(prop.Age);
+            Console.ReadLine();
+            //
+
+            //indexers
+            Indexers inde = new Indexers();
+            //meth-1
+            //inde["name"] = "Jahanvi";
+            //Console.WriteLine(inde["name"]);
+            //
+            //meth-2
+            inde[0] = "Dipali";
+            inde[1] = "Krishika";
+            inde[2] = "Shivangi";
+            inde[3] = "Jahanvi";
+            inde[4] = "Priyanka";
+            for(int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(inde[i]);
+            }
+            Console.ReadLine();
+            //
+            //
         }
 
-       
 
-   
+
+
 
 
 
