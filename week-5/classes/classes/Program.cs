@@ -12,6 +12,12 @@ namespace classes
     {
         static void Main(string[] args)
         {
+            var dbMigrate = new DbMigrator(new Logger());
+            var logger = new Logger();
+            var installer = new Installer(logger);
+            dbMigrate.migrate();
+            installer.Install();
+
             Example.Details();
             Console.WriteLine("User name:{0}   " +  Example.name);
             Console.WriteLine("last name:{1}   " + Example.lname);

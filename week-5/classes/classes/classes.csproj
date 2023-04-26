@@ -44,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="DbMigrator.cs" />
     <Compile Include="Example.cs" />
     <Compile Include="HttpCookie.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PresentationObject.cs" />
