@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using amazon2;
+using System;
 
 namespace classes
 {
-   
+
     public  class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            var client = new Client();
+            amazon2.RateCalculator calculator = new RateCalculator();
+
+            //var rating=client.CalculateRating();
+
+
+
             var dbMigrate = new DbMigrator(new Logger());
             var logger = new Logger();
             var installer = new Installer(logger);

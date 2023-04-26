@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classes", "classes\classes.csproj", "{959277F2-E887-4F49-9518-450BE3720A6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "amazon2", "amazon2\amazon2.csproj", "{09FE950D-E9BD-4D16-AEBB-ABB8D21244AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructor", "..\Constructor\Constructor.csproj", "{2C49C895-1800-4ADF-A615-68D27538B7C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{959277F2-E887-4F49-9518-450BE3720A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{959277F2-E887-4F49-9518-450BE3720A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{959277F2-E887-4F49-9518-450BE3720A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FE950D-E9BD-4D16-AEBB-ABB8D21244AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FE950D-E9BD-4D16-AEBB-ABB8D21244AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FE950D-E9BD-4D16-AEBB-ABB8D21244AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FE950D-E9BD-4D16-AEBB-ABB8D21244AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C49C895-1800-4ADF-A615-68D27538B7C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C49C895-1800-4ADF-A615-68D27538B7C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C49C895-1800-4ADF-A615-68D27538B7C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C49C895-1800-4ADF-A615-68D27538B7C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
