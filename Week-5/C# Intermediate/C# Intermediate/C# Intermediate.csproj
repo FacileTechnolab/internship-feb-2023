@@ -46,9 +46,14 @@
     <Compile Include="AbstractClass.cs" />
     <Compile Include="Accessmodifier.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="Composition.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="DbMigrator.cs" />
     <Compile Include="Feild.cs" />
     <Compile Include="Indexers.cs" />
+    <Compile Include="Inheritbase.cs" />
+    <Compile Include="Inheritderived.cs" />
+    <Compile Include="Installer.cs" />
     <Compile Include="ObjInitializer.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Point.cs" />

@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -17,20 +18,20 @@ namespace C__Intermediate
 
         public void Introduce(string to)
         {
-            Console.WriteLine("Hi {0} , I am {1}",to, Name);
+            Console.WriteLine("Hi {0} , I am {1}", to, Name);
         }
 
         public static AbstractClass Parse(string str)
         {
-            var  person = new AbstractClass();
+            var person = new AbstractClass();
             person.Name = str;
 
             return person;
         }
-      
+
     }
 
-    partial class Program
+     class Program
     {
         static void Main(string[] args)
         {
@@ -158,6 +159,28 @@ namespace C__Intermediate
             Console.ReadLine();
             //
             //
+
+            //ineritance
+            Inheritderived initder = new Inheritderived();
+            initder.Width = 100;
+            initder.Height = 200;
+            initder.Copy();
+            Console.ReadLine();
+            //
+
+            //composition
+            DbMigrator db = new DbMigrator(new Composition());
+
+            var logger = new Composition();
+            var installer = new Installer(logger);
+
+            db.Migrate();
+            installer.Install();
+            Console.ReadLine();
+          
+            //
+
+            
         }
 
 

@@ -2,8 +2,10 @@
 
 namespace C__Intermediate
 {
-    partial class Program
-    {
+    
+    
+      
+
         //field
         public class Feild 
         { 
@@ -30,4 +32,4 @@ namespace C__Intermediate
         }
 
     }
-}
+
