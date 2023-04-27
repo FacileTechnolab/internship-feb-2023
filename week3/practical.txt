@@ -1,0 +1,27 @@
+**max number
+using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Hello World");
+    int a=10;
+    int b=20;
+    if(a>b)
+    {
+        Console.WriteLine(" a is max");
+    }
+    else
+    {
+        Console.WriteLine("b is max");
+    }
+  }
+}
+
+****using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Hello World");
+    int a = 10,  b=20;
+  Console.WriteLine(Math.Max(a,b));
+    }
+  
+}

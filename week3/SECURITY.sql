@@ -1,0 +1,36 @@
+create table stu
+(
+id int,
+name varchar(20));
+insert into stu values(16,'krupa'),
+(2,'krupa'),
+(3,'krupa'),
+(4,'krupa');
+select *from stu
+start transaction;
+delete from stu;
+rollback;
+ set autocommit=0;
+ 
+ CREATE USER MOSH@LOCALHOST;
+ CREATE USER MOQ IDENTIFIED BY '123';
+ USE SAKILA;
+CREATE   TABLE USER AS SELECT * FROM CUSTOMER;
+ SELECT * FROM SAKILA.USER;
+ 
+ CREATE USER MARY@LOCALHOST;
+ SET PASSWORD FOR MARY = '1235';
+ DROP USER MARY@LOCALHOST;
+ 
+ CREATE USER MOON_APP IDENTIFIED BY '1234';
+ GRANT SELECT,INSERT,UPDATE,DELETE,EXECUTE ON SAKILA.*
+ TO MOON_APP;
+ 
+ GRANT ALL
+ ON *.*
+ TO MOON_APP;
+ SHOW GRANTS FOR MOON_APP;
+ SHOW GRANTS;
+ REVOKE CREATE VIEW 
+ ON SAKILA.*
+ FROM MOON_APP;
