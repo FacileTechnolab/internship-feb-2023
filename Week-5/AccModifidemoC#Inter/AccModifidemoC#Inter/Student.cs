@@ -2,8 +2,7 @@
 
 namespace AccModifidemoC_Inter
 {
-    partial class Program
-    {
+    
         public class Student
         {
             public int Id;
@@ -26,5 +25,5 @@ namespace AccModifidemoC_Inter
             }
 
         }
-    }
 }
+

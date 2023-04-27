@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AccModifidemoC_Inter
 {
-    partial class Program
+     class Program
     {
         
         static void Main(string[] args)
@@ -24,7 +24,6 @@ namespace AccModifidemoC_Inter
             //
 
             //private
-            
             Parent parent = new Parent();
             parent.setValue(4);
             Console.WriteLine("-------private modifier-------");
@@ -54,7 +53,7 @@ namespace AccModifidemoC_Inter
             Derived der = new Derived();
             der.Number = 2;
             Console.WriteLine("Value :" +  der.Number);
-            Console.ReadLine();
+
         }
     }
 }
