@@ -9,7 +9,7 @@ namespace C_IntermediateClass
 
     public class HttpCookie
     {
-        private Dictionary<string, string> _dictionary;
+        private readonly Dictionary<string, string> _dictionary;
 
         public HttpCookie()
         {
