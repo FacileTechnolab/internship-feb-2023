@@ -1,5 +1,0 @@
-﻿Build started...
-1>------ Build started: Project: demo, Configuration: Debug Any CPU ------
-1>  demo -> C:\Users\Admin\source\repos\demo\demo\bin\Debug\demo.exe
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-========== Elapsed 00:00.342 ==========
