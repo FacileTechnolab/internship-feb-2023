@@ -11,12 +11,12 @@ namespace Modifiers
 
 
         protected int x;
-        public void value ()
-        {
+         public Protected()
+         {
             x = 10;
-            Console.WriteLine(x);
+         
 
-        }
+         }
         public void Animal()
         {
             Console.WriteLine("here are protected fields");

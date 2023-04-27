@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Modifiers
 {
-    internal class Program
+    class Y :Protected
+    {
+        public int GetX()
+        {
+            return x;
+
+        }
+  
+    }
+    internal class Program 
     {
         static void Main(string[] args)
         {
@@ -18,8 +27,14 @@ namespace Modifiers
 
             Console.WriteLine(obj.name);
             Console.ReadLine();
-            var obj2= new Car();
-            obj2.Company(2,"shivangi");
+            var obj2 = new Car();
+            obj2.Company(2, "shivangi");
+
+            //var obj2 = new Protected();
+            //var obj = new Y();
+
+            //Console.WriteLine(obj.GetX());
+            //Console.ReadLine();
 
         }
     }
