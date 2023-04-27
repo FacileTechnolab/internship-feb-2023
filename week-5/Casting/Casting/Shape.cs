@@ -11,6 +11,7 @@ namespace Casting
         public override void Draw()
         {
             Console.WriteLine("Draw a circle");
+            Console.ReadLine();
         }
 
     }
@@ -19,17 +20,37 @@ namespace Casting
         public override void Draw()
         {
             Console.WriteLine("Draw a Rectangle");
+            Console.ReadLine();
         }
     }
-    public class Shape
+    public class Triangle : Shape
+    {
+        public override void Draw()
+        {
+            Console.WriteLine("Draw a Triangle");
+            Console.ReadLine(); 
+        }
+    }
+    public abstract class Shape
     {
         public int Height { get; set; }
         public int Width { get; set; }
-        public Position position { get; set; }
+       
    
-        public virtual void Draw()
-        {
+        //public virtual void Draw()
+        //{
 
+        //}
+
+        public abstract void Draw();
+        public void copy()
+        {
+            Console.WriteLine("copy shape of clipboard");
         }
+        public void select()
+        {
+                Console.WriteLine("select the shape");
+        }
+
     }
 }

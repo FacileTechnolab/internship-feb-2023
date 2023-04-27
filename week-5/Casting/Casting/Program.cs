@@ -40,13 +40,19 @@ namespace Casting
             //var names=new List<string>();
            
            //*********Method OVERRIDING*****************
-           var shapes=new List<Shape>();
-            shapes.Add(new Circle());
-            shapes.Add(new Rectangle());
-            var canvas=new canvas();
-            canvas.DrawShapes(shapes);
+           //var shapes=new List<Shape>();
+           // shapes.Add(new CIrcle());
+           // shapes.Add(new Rectangle());
+           // shapes.Add(new Triangle());
+           // var canvas=new canvas();
+           // canvas.DrawShapes(shapes);
 
 
+           // ***********ABSTRACT CLASS AND MEMBER*****************
+           var circle=new CIrcle();
+            circle.Draw();
+            var rectangle=new Rectangle();
+            rectangle.Draw();
         }
     }
 }
