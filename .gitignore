@@ -1,36 +1,50 @@
-Week-5/ConsoleApp1/.vs/ConsoleApp1/FileContentIndex/bfe46e5e-e496-4c7e-8d69-8af38cd247ed.vsidx
-Week-5/ConsoleApp1/.vs/ConsoleApp1/FileContentIndex/read.lock
-Week-5/ConsoleApp1/.vs/ConsoleApp1/v17/.suo
-Week-5/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.exe
-Week-5/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.exe.config
-Week-5/ConsoleApp1/ConsoleApp1/bin/Debug/ConsoleApp1.pdb
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csproj.AssemblyReference.cache
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csproj.CoreCompileInputs.cache
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csproj.FileListAbsolute.txt
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.csproj.SuggestedBindingRedirects.cache
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.exe
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/ConsoleApp1.pdb
-Week-5/ConsoleApp1/ConsoleApp1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/3d141a60-e5fe-43ff-939f-515198b2b72f.vsidx
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/read.lock
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/v17/.suo
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.csproj.AssemblyReference.cache
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/23536160-8a50-4a20-a143-b8496b22ecac.vsidx
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/6a2244d9-fa6c-44f9-b4a2-a5fded2fdb23.vsidx
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/6cdd2a18-f59f-47d3-80e0-c921e19756e0.vsidx
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/f65afe6a-317e-4d81-9578-4fcdf98a5a4c.vsidx
-Week-5/C#IntermediateClass/C#IntermediateClass/bin/Debug/C#IntermediateClass.exe
-Week-5/C#IntermediateClass/C#IntermediateClass/bin/Debug/C#IntermediateClass.exe.config
-Week-5/C#IntermediateClass/C#IntermediateClass/bin/Debug/C#IntermediateClass.pdb
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.csproj.CoreCompileInputs.cache
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.csproj.FileListAbsolute.txt
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.csproj.SuggestedBindingRedirects.cache
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.exe
-Week-5/C#IntermediateClass/C#IntermediateClass/obj/Debug/C#IntermediateClass.pdb
-Week-5/C#IntermediateClass/.vs/C#IntermediateClass/FileContentIndex/57a91af3-7ba8-43c4-87b5-7d2935e9ff8d.vsidx
+Week-5/ConsoleApp1/.vs/
+
+Week-5/ConsoleApp1/ConsoleApp1/bin/
+
+Week-5/ConsoleApp1/ConsoleApp1/obj/
+
 Week-5/C#IntermediateClass/.vs/
+
 Week-5/C#IntermediateClass/C#IntermediateClass/obj/
 
+Week-5/C#IntermediateClass/.vs/
+Week-5/C#IntermediateClass/C#IntermediateClass/bin/
+
+Week-5/C#IntermediateClass/C#IntermediateClass/obj/
+
+Week-5/C#IntermediateClass/.vs/
+
+Week-5/C#IntermediateClass/C#IntermediateClass/obj/
+
+Week-5/Modifiers/.vs/
+Week-5/Modifiers/Modifiers/bin/
+Week-5/Modifiers/Modifiers/obj/
+Week-5/RelationShip_Between_Classes/.vs/
+Week-5/RelationShip_Between_Classes/RelationShip_Between_Classes/bin/
+
+Week-5/RelationShip_Between_Classes/RelationShip_Between_Classes/obj/
+Week-5/Section -1 (Introduction of All)/C#IntermediateClass/.vs/
+Week-5/Section -1 (Introduction of All)/C#IntermediateClass/C#IntermediateClass/bin/
+
+Week-5/Section -1 (Introduction of All)/C#IntermediateClass/C#IntermediateClass/obj/
+Week-5/Section-2 (RelationShip_Between_Classes)/RelationShip_Between_Classes/.vs/
+Week-5/Section-2 (RelationShip_Between_Classes)/RelationShip_Between_Classes/RelationShip_Between_Classes/bin/
+
+Week-5/Section-2 (RelationShip_Between_Classes)/RelationShip_Between_Classes/RelationShip_Between_Classes/obj/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Const_And_inheritance/.vs/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Const_And_inheritance/Const_And_inheritance/bin/
+
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Const_And_inheritance/Const_And_inheritance/obj/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Modifiers/.vs/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Modifiers/Modifiers/bin/
+
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/Modifiers/Modifiers/obj/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/wpfApplication/.vs/
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/wpfApplication/wpfApplication/bin/
+
+Week-5/Section-3(Access Modifiers,Constructure Inheritance,Casting,Boxing)/wpfApplication/wpfApplication/obj/
+Week-5/Section-4(Polymorphism,Method Overriding,Abstract Class and Member,Sealed Class and Member)/Methods_And_Classes/.vs/
+Week-5/Section-4(Polymorphism,Method Overriding,Abstract Class and Member,Sealed Class and Member)/Methods_And_Classes/Methods_And_Classes/bin/
+
+Week-5/Section-4(Polymorphism,Method Overriding,Abstract Class and Member,Sealed Class and Member)/Methods_And_Classes/Methods_And_Classes/obj/

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FAE4AA34-494A-47BB-9F4E-3A9EB9817D11}</ProjectGuid>
+    <ProjectGuid>{73E3B14E-B583-4CA6-970D-94F26B9C3713}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Modifiers</RootNamespace>
-    <AssemblyName>Modifiers</AssemblyName>
+    <RootNamespace>Const_And_inheritance</RootNamespace>
+    <AssemblyName>Const_And_inheritance</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,8 +46,9 @@
     <Compile Include="Car.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Protected.cs" />
-    <Compile Include="Public.cs" />
+    <Compile Include="Shape.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
