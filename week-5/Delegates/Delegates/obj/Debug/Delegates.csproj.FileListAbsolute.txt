@@ -1,0 +1,8 @@
+D:\krishika-internship2023\week-5\Delegates\Delegates\bin\Debug\Delegates.exe.config
+D:\krishika-internship2023\week-5\Delegates\Delegates\bin\Debug\Delegates.exe
+D:\krishika-internship2023\week-5\Delegates\Delegates\bin\Debug\Delegates.pdb
+D:\krishika-internship2023\week-5\Delegates\Delegates\obj\Debug\Delegates.csproj.AssemblyReference.cache
+D:\krishika-internship2023\week-5\Delegates\Delegates\obj\Debug\Delegates.csproj.SuggestedBindingRedirects.cache
+D:\krishika-internship2023\week-5\Delegates\Delegates\obj\Debug\Delegates.csproj.CoreCompileInputs.cache
+D:\krishika-internship2023\week-5\Delegates\Delegates\obj\Debug\Delegates.exe
+D:\krishika-internship2023\week-5\Delegates\Delegates\obj\Debug\Delegates.pdb
