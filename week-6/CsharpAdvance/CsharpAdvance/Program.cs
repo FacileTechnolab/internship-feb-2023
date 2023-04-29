@@ -43,6 +43,12 @@ namespace CsharpAdvance
             greet("World");
             Console.ReadLine();
             //
+
+            //events
+            //Events e = new Events();
+            //string res = e.Myevent("Jack", "Science");
+            //Console.WriteLine("RESULT...\n" + res);
+            //
         }
     }
 }
