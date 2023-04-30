@@ -46,9 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bookrepo.cs" />
     <Compile Include="Delegate.cs" />
     <Compile Include="Events.cs" />
+    <Compile Include="Extenderived.cs" />
+    <Compile Include="Extensionmethod.cs" />
     <Compile Include="Generic.cs" />
+    <Compile Include="Linq.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

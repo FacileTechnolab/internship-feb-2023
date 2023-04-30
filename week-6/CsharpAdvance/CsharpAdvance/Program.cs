@@ -49,6 +49,31 @@ namespace CsharpAdvance
             //string res = e.Myevent("Jack", "Science");
             //Console.WriteLine("RESULT...\n" + res);
             //
+
+            //extensionmethod
+            Extensionmethod extension = new Extensionmethod();
+            extension.Display();
+            extension.Description();
+            extension.Newmethod();
+            Console.ReadLine();
+            //
+
+            //LINQ
+            var LI = new Bookrepo().GetLinqs();
+            var chipbox = new List<Linq>();
+            foreach(var link in LI)
+            {
+                if(link.Price< 10)
+                chipbox.Add(link);
+            }
+            foreach (var link in chipbox)
+            {
+              Console.WriteLine(link.Title + " " + link.Price);
+                Console.ReadLine();
+            }
+            
+
+            //
         }
     }
 }
