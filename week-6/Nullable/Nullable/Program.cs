@@ -14,7 +14,8 @@ namespace Nullable
             DateTime date2 = date ?? DateTime.Today;
 
             DateTime? date3 = (date != null) ? date.GetValueOrDefault() : DateTime.Today;
-            Console.WriteLine(date2);
+            Console.WriteLine(date3);
+            Console.ReadLine();
         }
     }
 }
