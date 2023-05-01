@@ -59,18 +59,48 @@ namespace CsharpAdvance
             //
 
             //LINQ
-            var LI = new Bookrepo().GetLinqs();
-            var chipbox = new List<Linq>();
-            foreach(var link in LI)
-            {
-                if(link.Price< 10)
-                chipbox.Add(link);
-            }
-            foreach (var link in chipbox)
-            {
-              Console.WriteLine(link.Title + " " + link.Price);
-                Console.ReadLine();
-            }
+            var books = new Bookrepo().GetLinqs();
+            //var count = books.Count();
+            var count = books.Max();
+            Console.WriteLine(count);
+            //var LI = new Bookrepo().GetLinqs();
+            //var pageBooks = LI.Skip(2).Take(3);
+            //foreach (var pageBook in pageBooks) 
+            //{
+            //  Console.WriteLine(pageBook.Title);
+            //}
+         //var book = LI.First(b => b.Title == "C# Advanced topics");
+         //Console.WriteLine(book.Title + " " + book.Price);
+            //var book = LI.SingleOrDefault(b => b.Title == "ASP.NET MVC++");
+            //Console.WriteLine(book == null);
+            //var book = LI.Single(b => b.Title == "ASP.NET MVC");
+            //Console.WriteLine(book.Title);
+            Console.ReadLine();
+            //linq query operator
+            //var chipbox = from b in LI
+            //              where b.Price < 10
+            //              orderby b.Title
+            //              select b;
+
+            //linq extension method
+            //var cheapbooks = LI 
+            //                   .Where(b => b.Price < 10)
+            //                   .OrderBy(b => b.Title)
+            //                   .Select(b => b.Title);
+
+            //var chipbox = new List<Linq>();
+
+            //foreach(var link in LI)
+            //{
+            //    if(link.Price< 10)
+            //    chipbox.Add(link);
+            //}
+            //foreach (var link in chipbox)
+            //{
+                //Console.WriteLine(link);
+              //Console.WriteLine(link.Title + " " + link.Price);
+              //Console.ReadLine();
+            //}
             
 
             //

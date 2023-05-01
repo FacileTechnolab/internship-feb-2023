@@ -15,6 +15,8 @@ namespace CsharpAdvance
                 new Linq() { Title = "ADO.NET STEP BY STEP", Price = 5},
                 new Linq() { Title = "ASP.NET MVC", Price = 4.05F },
                 new Linq() { Title = "ASP.NET WEP API", Price = 12 },
+                new Linq() { Title = "C# Advanced topics", Price=2 },
+                new Linq() { Title = "C# Advanced topics", Price = 5.6f }
             };
         }
       
