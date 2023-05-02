@@ -14,9 +14,9 @@ namespace ExecptionHandling
         {
             try
             {
-                int j = 40;
-                int k = 41;
-                int l = j=k ;
+                int j = 10;
+                int k = 0;
+                int l = j / k ;
             }
             catch (Exception ex)
             {
