@@ -29,16 +29,28 @@ namespace Asynchronus
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DowloadHtml("http://msdn.microsoft.com");
+            DownloadHtml("http://msdn.microsoft.com");
         }
-        public void DowloadHtml(string url)
+
+        public async Task DownloadHtmlAsync(string url)
         {
-            var webclient=new WebClient();
+
+            WebClient webclient = new WebClient();
+            var html = await webclient.DownloadStringTaskAsync(url);
+
+            using (var streamWriter = new StreamWriter(@"c:\projects\result.html"))
+            {
+                await  streamWriter.WriteAsync(html);
+            }
+        }
+        public void DownloadHtml(string url)
+        {
+            WebClient webclient =new WebClient();
             var html = webclient.DownloadString(url);
 
             using  (var streamWriter = new StreamWriter(@"c:\projects\result.html"))
             {
-                streamWriter.WriteLine(html);
+                streamWriter.Write(html);
             }
         }
     }
