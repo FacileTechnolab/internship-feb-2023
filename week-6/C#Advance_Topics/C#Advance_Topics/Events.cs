@@ -10,17 +10,17 @@ namespace C_Advance_Topics
 
     internal class Events
     {
-        public event Mydel MyEvent;
+      //  public event Mydel MyEvent;
 
-        public Events()
-        {
-            this.MyEvent += new Mydel(this.Welcome);
+      //  public Events()
+      //  {
+      //      this.MyEvent += new Mydel(this.Welcome);
 
-        }
-      public string Welcome(string name)
-        {
-            return "user " + name;
-        }
+      //  }
+      //public string Welcome(string name)
+      //  {
+      //      return "user " + name;
+      //  }
    
 
     }
