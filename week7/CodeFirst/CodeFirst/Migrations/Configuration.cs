@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirst.BlogDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CodeFirst.PlutoContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CodeFirst.BlogDbContext context)
+        protected override void Seed(CodeFirst.PlutoContext context)
         {
             //  This method will be called after migrating to the latest version.
 

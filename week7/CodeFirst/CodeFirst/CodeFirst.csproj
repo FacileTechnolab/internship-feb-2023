@@ -57,6 +57,10 @@
     <Compile Include="Migrations\202305021015080_CreatePost.designer.cs">
       <DependentUpon>202305021015080_CreatePost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305040752383_InitialModel.cs" />
+    <Compile Include="Migrations\202305040752383_InitialModel.designer.cs">
+      <DependentUpon>202305040752383_InitialModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305021015080_CreatePost.resx">
       <DependentUpon>202305021015080_CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305040752383_InitialModel.resx">
+      <DependentUpon>202305040752383_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
