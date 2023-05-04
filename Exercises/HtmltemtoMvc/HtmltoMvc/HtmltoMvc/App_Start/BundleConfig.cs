@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Optimization;
+using System.Web.UI.WebControls;
 
 namespace HtmltoMvc
 {
@@ -20,11 +21,17 @@ namespace HtmltoMvc
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.bundle.min.js")
+                      );
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                        "~/Content/site.css",
+                        "~/Content/bootstrap.min.css",
+                      "~/Content/style.css"
+                      
+                      ));
         }
     }
 }

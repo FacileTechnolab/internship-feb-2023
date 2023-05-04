@@ -8,10 +8,10 @@ namespace HtmltoMvc.Controllers
 {
     public class HomeController : Controller
     {
-        //public actionresult index()
-        //{
-        //    return view();
-        //}
+        public ActionResult Index()
+        {
+            return View();
+        }
 
         //public actionresult about()
         //{
