@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=34.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bogus.34.0.2\lib\net40\Bogus.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -53,13 +56,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Author.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="Cours.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="CourseSection.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoursLevel.cs">
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="funcGetAuthorCourses_Result.cs">
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCourses_Result.cs">
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSON.cs">
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="PlutoModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -77,18 +92,57 @@
       <DependentUpon>PlutoModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sql.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sql.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sql.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sql.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sql.edmx</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
     <Compile Include="tblUser.cs">
-      <DependentUpon>PlutoModel.tt</DependentUpon>
+      <DependentUpon>sql.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USER.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USER.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USER.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <DependentUpon>sql.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +155,20 @@
     <None Include="PlutoModel.edmx.diagram">
       <DependentUpon>PlutoModel.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="USER.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>USER.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="sql.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>sql.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="sql.edmx.diagram">
+      <DependentUpon>sql.edmx</DependentUpon>
+    </None>
+    <None Include="USER.edmx.diagram">
+      <DependentUpon>USER.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="PlutoModel.Context.tt">
@@ -112,6 +180,26 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>PlutoModel.edmx</DependentUpon>
       <LastGenOutput>PlutoModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="sql.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>sql.edmx</DependentUpon>
+      <LastGenOutput>sql.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="sql.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>sql.edmx</DependentUpon>
+      <LastGenOutput>sql.cs</LastGenOutput>
+    </Content>
+    <Content Include="USER.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>USER.edmx</DependentUpon>
+      <LastGenOutput>USER.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="USER.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>USER.edmx</DependentUpon>
+      <LastGenOutput>USER.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
