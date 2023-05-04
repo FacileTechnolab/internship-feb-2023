@@ -10,11 +10,13 @@
         <EntityTypeShape EntityType="PlutoModel.CourseSection" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PlutoModel.Post" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PlutoModel.Tag" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="PlutoModel.tblUser" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="PlutoModel.FK_Courses_Authors" ManuallyRouted="false" />
         <AssociationConnector Association="PlutoModel.FK_CourseSections_Courses" ManuallyRouted="false" />
         <AssociationConnector Association="PlutoModel.CourseTags" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="PlutoModel.UserProfile" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="PlutoModel.CourseSection1" Width="1.5" PointX="11.875" PointY="3.375" />
+        <EntityTypeShape EntityType="PlutoModel.Tag1" Width="1.5" PointX="11.875" PointY="1" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
