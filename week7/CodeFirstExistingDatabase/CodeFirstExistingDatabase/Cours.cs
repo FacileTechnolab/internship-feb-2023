@@ -10,16 +10,18 @@ namespace CodeFirstExistingDatabase
     [Table("Courses")]
     public partial class Course
     {
+        internal string Name;
+
         public Course() {
             HashSet<Tag> Tags = new HashSet<Tag>();
         }
         public int Id { get; set; }
 
-        public string T{ get; set; }
-
+        public string Title{ get; set; }
+       
         public string Description { get; set; }
-        public Category Category { get; set; }
-        public  DateTime? DatePublished { get; set; }
+        //public Category Category { get; set; }
+        //public  DateTime? DatePublished { get; set; }
 
         public int Level { get; set; }
 

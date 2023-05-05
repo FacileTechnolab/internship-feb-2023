@@ -1,6 +1,7 @@
 ﻿namespace CodeFirstExistingDatabase.Migrations
 {
     using System;
+    using System.Collections.ObjectModel;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,6 +15,16 @@
 
         protected override void Seed(CodeFirstExistingDatabase.PlutoContext context)
         {
+            context.Authors.AddOrUpdate(a => a.Name,
+                new Author
+                {
+                    Name="Author1",
+                    Courses=new Collection<Course>()
+                    {
+                        new Course() {
+                        Name="Cours for Author1" , Description="Description"}
+                    }
+                });
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

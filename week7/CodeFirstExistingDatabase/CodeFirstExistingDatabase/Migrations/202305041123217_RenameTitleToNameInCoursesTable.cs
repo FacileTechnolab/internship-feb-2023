@@ -8,8 +8,9 @@
         public override void Up()
         {
             AddColumn("dbo.Courses", "Name", c => c.String(nullable:false));
-            DropColumn("dbo.Courses", "Title");
             Sql("Update Courses SET Name=Title");
+            DropColumn("dbo.Courses", "Title");
+          
             //RenameColumn("dbo.Courses", "Title", "Name");
         }
         
