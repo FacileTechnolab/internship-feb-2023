@@ -18,8 +18,8 @@ namespace Dbfirst
             //{
             //    Console.WriteLine(c.Title);
             //}
-            var course = new Cours();
-            course.Level = CoursLevel.Beginner;
+            //var course = new Cours();
+            //course.Level = CoursLevel.Beginner;
         }
 
        
