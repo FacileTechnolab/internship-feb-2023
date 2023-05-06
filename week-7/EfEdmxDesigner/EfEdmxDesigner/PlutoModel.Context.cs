@@ -18,7 +18,7 @@ namespace EfEdmxDesigner
     public partial class PlutoDbContext : DbContext
     {
         public PlutoDbContext()
-            : base("name=PlutoDbContext")
+            : base("name=DefaultConnection")
         {
         }
     
