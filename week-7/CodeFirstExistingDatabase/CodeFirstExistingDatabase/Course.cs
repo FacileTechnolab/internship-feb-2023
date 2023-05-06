@@ -17,13 +17,15 @@ namespace CodeFirstExistingDatabase
 
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         public string Description { get; set; }
+       
+       
 
         public int level { get; set; }
 
-        public float FullPrice { get; set; }
+         public float FullPrice { get; set; }
 
         public int? Author_Id { get; set; }
 
