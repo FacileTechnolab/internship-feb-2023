@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{534A10C8-85AE-4376-8620-A0F8B871B5D5}</ProjectGuid>
+    <ProjectGuid>{727328BF-1579-4A23-AF67-701EC58D7DA4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Code_First</RootNamespace>
-    <AssemblyName>Code_First</AssemblyName>
+    <RootNamespace>Code_first_2</RootNamespace>
+    <AssemblyName>Code_first-2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,8 +45,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,79 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Author.cs">
-      <DependentUpon>PlutoContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuthorBase.cs" />
-    <Compile Include="AuthorBase1.cs" />
-    <Compile Include="AuthorBase2.cs" />
-    <Compile Include="Course.cs">
-      <DependentUpon>PlutoContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CourseBase.cs" />
-    <Compile Include="CourseBase1.cs" />
-    <Compile Include="CourseBase2.cs" />
-    <Compile Include="CourseBase3.cs" />
-    <Compile Include="CourseBase4.cs" />
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>PlutoContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202305042315104_initialModel.cs" />
-    <Compile Include="Migrations\202305042315104_initialModel.designer.cs">
-      <DependentUpon>202305042315104_initialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PlutoContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PlutoContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PlutoContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PlutoContext.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tag.cs">
-      <DependentUpon>PlutoContext.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="PlutoContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PlutoContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="PlutoContext.edmx.diagram">
-      <DependentUpon>PlutoContext.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202305042315104_initialModel.resx">
-      <DependentUpon>202305042315104_initialModel.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PlutoContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PlutoContext.edmx</DependentUpon>
-      <LastGenOutput>PlutoContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="PlutoContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PlutoContext.edmx</DependentUpon>
-      <LastGenOutput>PlutoContext.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
