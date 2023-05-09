@@ -45,14 +45,13 @@ namespace Code_first_1
     //    public DbSet<Course> Courses { get; set; }
     //    public DbSet<Author> Authors { get; set; }
     //    public DbSet<Tag> Tags { get; set; }
-
     //    public PlutoContext()
     //        : base("name=CarConnection")
     //    {
 
     //    }
     //}
-     class Program
+    class Program
     {
         static void Main(string[] args)
         {
