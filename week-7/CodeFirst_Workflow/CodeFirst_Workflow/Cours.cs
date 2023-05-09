@@ -6,20 +6,36 @@ namespace CodeFirst_Workflow
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Tg")]
-    public partial class Tg
+    [Table("Courses")]
+    public partial class Cours
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tg()
+        public Cours()
         {
-            Cours = new HashSet<Cours>();
+            Tags = new HashSet<Tag>();
         }
 
         public int Id { get; set; }
 
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
+       
+        public int Level { get; set; }
+
+        public int? Author_Id { get; set; }
+
+        public virtual Author Author { get; set; }
+        public float FullPrice { get; set; }
+
+
+
+       
+
+       
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Cours { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }
