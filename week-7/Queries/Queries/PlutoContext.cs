@@ -1,7 +1,7 @@
-﻿using FluentAPI.EntityConfiguration;
 using System.Data.Entity;
+using Queries.EntityConfigurations;
 
-namespace DataAnnotations
+namespace Queries
 {
     public class PlutoContext : DbContext
     {
@@ -11,13 +11,12 @@ namespace DataAnnotations
         }
 
         public virtual DbSet<Author> Authors { get; set; }
-        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Course> Course { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new Courseconfiguration());
-          
+            modelBuilder.Configurations.Add(new CourseConfiguration());
         }
     }
 }

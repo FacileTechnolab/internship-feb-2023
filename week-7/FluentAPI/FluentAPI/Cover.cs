@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAnnotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace FluentAPI
     public class Cover
     {
         public int Id { get; set; }
-        public Cover Course { get; set; }
+       public Course Course { get; set; }
 
     }
 }
