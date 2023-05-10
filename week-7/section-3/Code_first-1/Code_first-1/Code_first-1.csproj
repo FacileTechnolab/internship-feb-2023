@@ -178,6 +178,10 @@
     <Compile Include="Migrations\202305090120440_PopulateCategoriesTable.designer.cs">
       <DependentUpon>202305090120440_PopulateCategoriesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305091733497_foo.cs" />
+    <Compile Include="Migrations\202305091733497_foo.designer.cs">
+      <DependentUpon>202305091733497_foo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Program.cs" />
@@ -221,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305090120440_PopulateCategoriesTable.resx">
       <DependentUpon>202305090120440_PopulateCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305091733497_foo.resx">
+      <DependentUpon>202305091733497_foo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
