@@ -101,6 +101,10 @@
     <Compile Include="Migrations\202305090159371_PopulatedCategoriesTable.designer.cs">
       <DependentUpon>202305090159371_PopulatedCategoriesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305091729508_foo.cs" />
+    <Compile Include="Migrations\202305091729508_foo.designer.cs">
+      <DependentUpon>202305091729508_foo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoModel.cs" />
     <Compile Include="Program.cs" />
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305090159371_PopulatedCategoriesTable.resx">
       <DependentUpon>202305090159371_PopulatedCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305091729508_foo.resx">
+      <DependentUpon>202305091729508_foo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

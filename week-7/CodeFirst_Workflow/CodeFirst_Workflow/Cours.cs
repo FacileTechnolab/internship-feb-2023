@@ -19,6 +19,7 @@ namespace CodeFirst_Workflow
 
         public string Name { get; set; }
 
+       
         public string Description { get; set; }
 
        
