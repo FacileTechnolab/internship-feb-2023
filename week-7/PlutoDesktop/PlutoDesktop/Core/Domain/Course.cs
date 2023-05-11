@@ -1,12 +1,12 @@
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
-namespace Queries
+namespace PlutoDesktop.Core.Domain
 {
     public class Course
     {
         public Course()
         {
-            Tags = new HashSet<Tag>();
+            Tags = new ObservableCollection<Tag>();
         }
 
         public int Id { get; set; }
@@ -19,17 +19,12 @@ namespace Queries
 
         public float FullPrice { get; set; }
 
-        public virtual Author Instructor { get; set; }
+        public virtual Author Author { get; set; }
 
         public int AuthorId { get; set; }
 
-        public virtual ICollection<Tag> Tags { get; set; }
+        public virtual ObservableCollection<Tag> Tags { get; set; }
 
         public Cover Cover { get; set; }
-
-        public bool IsBeginnerCourse
-        {
-            get { return Level == 1; }
-        }
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Queries
+namespace Queries.Core.Domain
 {
     public class Course
     {
@@ -19,7 +19,7 @@ namespace Queries
 
         public float FullPrice { get; set; }
 
-        public virtual Author Instructor { get; set; }
+        public virtual Author Author { get; set; }
 
         public int AuthorId { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Runtime.ConstrainedExecution;
 using System.Threading;
@@ -12,25 +13,43 @@ namespace Queries
         static void Main(string[] args)
         {
             var context = new PlutoContext();
+            //IEnumerable<Course> courses = context.Course;
+            //var filtered = courses.Where(c => c.Level == 1);    
+            //foreach (var course in filtered)
+            //{
+            //    Console.WriteLine(course.Name);
+            //}
 
-            var courses = context.Course.Skip(10).Take(10);
-
-            context.Course.OrderBy(c => c.Level).FirstOrDefault(c => c.FullPrice > 100);
-            context.Course.SingleOrDefault(c => c.Id == 1);
-
-            var allAbove10Dollars = context.Course.All(c => c.FullPrice > 10);
-            context.Course.Any(c => c.Level == 1);
-
-            var count = context.Course.Where(c => c.Level == 1).Count();
-            context.Course.Max(c => c.FullPrice);
-            context.Course.Min(c => c.FullPrice);
-            context.Course.Average(c => c.FullPrice);
+            //IEnumerable<Course> x;
+            //x.Where(c => c.Level == 1).OrderBy(c => c.Name);
 
 
 
 
 
+            //var course = context.Course.Where(c => c.IsBeginnerCourse == true);
+            // foreach(var c in course)
+            //{
+            //    Console.WriteLine(c. Name);
+            //} 
 
+            //************************************************************************
+
+            //var courses = context.Course.Skip(10).Take(10);
+
+            //context.Course.OrderBy(c => c.Level).FirstOrDefault(c => c.FullPrice > 100);
+            //context.Course.SingleOrDefault(c => c.Id == 1);
+
+            //var allAbove10Dollars = context.Course.All(c => c.FullPrice > 10);
+            //context.Course.Any(c => c.Level == 1);
+
+            //var count = context.Course.Where(c => c.Level == 1).Count();
+            //context.Course.Max(c => c.FullPrice);
+            //context.Course.Min(c => c.FullPrice);
+            //context.Course.Average(c => c.FullPrice);
+
+
+            //************************************************************************
 
             // var courses = context.Course;
 
@@ -142,8 +161,39 @@ namespace Queries
 
 
 
+            //var course = context.Course.Single(c => c.Id == 2);
+            //foreach( var tag in course.Tags)
+            //{
+            //    Console.WriteLine(tag.Name);
+            //}
 
-            Console.ReadLine();
+            //var courses = context.Course.Include(x => x.Instructor).ToList();
+            //foreach (var course in courses) 
+            //{
+            //    Console.WriteLine("{0} by {1}", course.Name, course.Instructor.Name);
+            //}
+
+            var author = context.Authors.Single(a => a.Id == 1);
+
+            context.Entry(author).Collection(a => a.Courses).Load();
+
+            context.Course.Where(c => c.AuthorId == author.Id).Load();
+
+
+            var authors =  context.Authors.ToList();
+            var authorIds = authors.Select(a => a.Id);
+
+            context.Course.Where(c => authorIds.Contains(c.AuthorId) && c.FullPrice == 0). Load();
+          
+
+
+
+
+
+
+
+                Console.ReadLine();
+            
 
                 
             

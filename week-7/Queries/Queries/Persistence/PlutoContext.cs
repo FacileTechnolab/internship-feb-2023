@@ -1,7 +1,8 @@
+using Queries.Core.Domain;
+using Queries.Persistence.EntityConfigurations;
 using System.Data.Entity;
-using Queries.EntityConfigurations;
 
-namespace Queries
+namespace Queries.Persistence
 {
     public class PlutoContext : DbContext
     {
@@ -12,7 +13,7 @@ namespace Queries
         }
 
         public virtual DbSet<Author> Authors { get; set; }
-        public virtual DbSet<Course> Course { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
