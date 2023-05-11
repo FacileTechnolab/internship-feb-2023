@@ -1,15 +1,15 @@
 using System.Data.Entity;
-using Queries.EntityConfigurations;
+using PlutoWeb.Core.Domain;
+using PlutoWeb.Persistence.EntityConfigurations;
 
-namespace Queries
+namespace PlutoWeb.Persistence
 {
     public class PlutoContext : DbContext
     {
         public PlutoContext()
             : base("name=PlutoContext")
         {
-
-             //this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<Author> Authors { get; set; }

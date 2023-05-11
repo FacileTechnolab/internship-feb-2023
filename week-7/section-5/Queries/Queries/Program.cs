@@ -1,6 +1,7 @@
 ﻿using OpenTracing.Tag;
 using System;
 using System.Linq;
+using System.Data.Entity;
 namespace Queries
 {
     class Program
@@ -8,7 +9,7 @@ namespace Queries
         static void Main(string[] args)
         {
 
-            var context = new PlutoContext();
+            //var context = new PlutoContext();
 
 
 
@@ -207,6 +208,88 @@ namespace Queries
             //    Courses= courses.Count(),
             //});
 
+            //courses return second page 
+            //var courses=  context.Courses.Skip(10).Take(10);
+
+
+            //Element Operators
+
+            //context.Courses.OrderBy(c => c.Level).FirstOrDefault(c => c.FullPrice > 100);
+            //context.Courses.SingleOrDefault(c => c.Id == 1);    
+
+
+            //Quantifying
+
+            //var allAbove10Dollars = context.Courses.All(c => c.FullPrice > 10);
+            //context.Courses.Any(c => c.Level == 1);
+
+            //Aggregating
+
+            //var count = context.Courses.Count();
+            //context.Courses.Max(c => c.FullPrice);
+            //context.Courses.Min(c => c.FullPrice);
+            //context.Courses.Average(c => c.FullPrice);
+
+
+
+            //deffered execution
+
+            //var courses=context.Courses;
+
+            //var courses = context.Courses.ToList().Where(c => c.IsBeginnerCourse == true);
+            //foreach(var course in courses )
+            //{
+            //    Console.WriteLine(course.Name);
+            //}
+
+            //iQueryable explain
+
+            //IQueryable<Course> courses=context.Courses;
+            //var filtered = courses.Where(c => c.Level == 1);
+
+            //foreach (var c in filtered)
+            //     Console.WriteLine(c.Name);
+
+
+
+
+            //Lazy loading 
+            //var context = new PlutoContext();
+
+            //var course= context.Courses.Single(c=>c.Id==2);
+            //foreach(var tag  in course.Tags)
+            //    Console.WriteLine(tag.Name);
+            //Console.ReadLine();
+            //n+1
+
+            //var context = new PlutoContext();
+
+            //var courses = context.Courses.Include(x => x.Author).ToList();
+
+            //foreach (var c in courses)
+            //    Console.WriteLine("{0} by{1}", c.Name, c.Author.Name);
+
+
+            //Console.ReadLine();
+
+
+
+            //explicit Loading
+
+
+            var context = new PlutoContext();
+
+            var author = context.Authors.Include(x => x.Courses).Single(a => a.Id == 2);
+            //MSDN way
+            context.Entry(author).Collection(a => a.Courses).Query().Where(c=>c.FullPrice==0).Load();
+
+            context.Courses.Where(c => c.AuthorId == author.Id && c.FullPrice==0).Load();
+
+            foreach (var c in author.Courses)
+                Console.WriteLine("{0}", c.Name, c.Name);
+
+
+            Console.ReadLine();
         }
     }
 }
