@@ -1,7 +1,8 @@
+using PlutoDesktop.Core.Domain;
+using PlutoDesktop.Persistence.EntityConfigurations;
 using System.Data.Entity;
-using Queries.EntityConfigurations;
 
-namespace Queries
+namespace PlutoDesktop.Persistence
 {
     public class PlutoContext : DbContext
     {

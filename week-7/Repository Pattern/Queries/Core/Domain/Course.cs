@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Queries
+namespace Queries.Core.Domain
 {
     public class Course
     {
@@ -29,10 +29,7 @@ namespace Queries
 
         public bool IsBeginnerCourse
         {
-            get
-            {
-                return Level == 1;
-            }
+            get { return Level == 1; }
         }
     }
 }

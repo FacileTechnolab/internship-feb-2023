@@ -1,7 +1,8 @@
 using System.Data.Entity;
-using Queries.EntityConfigurations;
+using PlutoWeb.Core.Domain;
+using PlutoWeb.Persistence.EntityConfigurations;
 
-namespace Queries
+namespace PlutoWeb.Persistence
 {
     public class PlutoContext : DbContext
     {

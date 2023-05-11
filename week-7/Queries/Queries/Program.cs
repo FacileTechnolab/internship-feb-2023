@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 namespace Queries
@@ -7,6 +9,7 @@ namespace Queries
     {
         static void Main(string[] args)
         {
+            //var author = new Author() { Id = 1, Name = "Mosh Hamedani" };
             var context = new PlutoContext();
             //linq syntax
             //var query = 
@@ -120,11 +123,11 @@ namespace Queries
             //});
 
             //linq extension method Crossjoin
-           // context.Authors.SelectMany(a => context.Courses, (author, course) => new 
-           //    {
-           //    AuthorName = author.Name,
-           //    CourseName = course.Name
-           //});
+            // context.Authors.SelectMany(a => context.Courses, (author, course) => new 
+            //    {
+            //    AuthorName = author.Name,
+            //    CourseName = course.Name
+            //});
 
             //var courses = context.Courses.Skip(10).Take(10);
 
@@ -138,6 +141,137 @@ namespace Queries
             //context.Courses.Min(c => c.FullPrice);
             //context.Courses.Average(c => c.FullPrice);
 
+
+            //deferred education
+            //var course = context.Courses.ToList().Where(c => c.IsBeginnerCourse == true);
+
+            //foreach (var c in course)
+            //{ 
+            //    Console.WriteLine(c.Name);
+            //}
+
+
+            //Iqueryable
+            //IQueryable<Course> courses = context.Courses;
+            //var filtered = courses.Where(c => c.Level == 1);
+
+            //foreach(var c in filtered)
+            //{
+            //    Console.WriteLine(c.Name);
+            //}
+
+
+            //IEnumerable
+            //IEnumerable<Course> courses = context.Courses;
+            //var filtered = courses.Where(c => c.Level == 1);
+
+            //foreach (var c in filtered)
+            //{
+            //    Console.WriteLine(c.Name);
+
+            //}
+            //Console.ReadLine();
+
+
+
+
+            //loading realeted object
+            //lazy loading
+            //var course = context.Courses.Single(c => c.Id == 2);
+
+            //    foreach(var tag in course.Tags)
+            //    {
+            //       Console.WriteLine(tag.Name);
+            //    }
+
+            //N + 1 problem
+            //var courses = context.Courses.Include(x => x.Author).ToList();
+
+            //foreach (var c in courses)
+            //{
+            //   // var aa = context.Authors.Where(x => x.Id == c.AuthorId).FirstOrDefault();
+            //    Console.WriteLine("{0} by {1}", c.Name, c.Author.Name);
+            //}
+
+            //eager loading
+            //var courses = context.Courses.Include(x => x.Author).ToList();
+            //foreach (var c in courses)
+            //{
+            //   // var aa = context.Authors.Where(x => x.Id == c.AuthorId).FirstOrDefault();
+            //    Console.WriteLine("{0} by {1}", c.Name, c.Author.Name);
+            //}
+
+            //explicit loading
+
+            //var author = context.Authors.Single(a => a.Id == 1);
+
+            //context.Entry(author).Collection(a => a.Courses).Query().Where(c => c.FullPrice == 0).Load();
+
+            //context.Courses.Where(c => c.AuthorId == author.Id && c.FullPrice == 0).Load();
+
+            //foreach (var course in author.Courses)
+            //{
+
+            //    Console.WriteLine("{0}", course.Name);
+            //}
+
+
+
+            //add object
+            //context.Authors.Attach(author);
+            //var authors = context.Authors.ToList();
+
+            //var author = context.Authors.Single(a => a.Id == 1);
+
+            //var course = new Course
+            //{
+            //   Name = "New Course 2",
+            //   Description = "New Description",
+            //   FullPrice = 19.95f,
+            //   Level = 1,
+            //   Author = author
+            //};
+            //context.Courses.Add(course);
+
+            //update data
+            //var course = context.Courses.Find(4);
+            //course.Name = "New Name";
+            //course.AuthorId = 1;
+
+            //context.SaveChanges();
+
+            //remove data
+            //var course = context.Courses.Find(6);
+            //context.Courses.Remove(course);
+            //var author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 2);
+            //context.Courses.RemoveRange(author.Courses);
+            //context.Authors.Remove(author);
+
+            //context.SaveChanges();
+
+
+
+            //change-traker
+            //add-object
+            context.Authors.Add(new Author { Name = "New Author" });
+
+            //update-object
+            var author = context.Authors.Find(3);
+            author.Name = "Updated";
+
+            //remove-object
+            var another = context.Authors.Find(4);
+            context.Authors.Remove(another);
+
+            var entries = context.ChangeTracker.Entries();
+
+            foreach(var entry in entries)
+            {
+                entry.Reload();
+                Console.WriteLine(entry.State);
+            }
+
+            Console.ReadLine();
 
         }
     }
