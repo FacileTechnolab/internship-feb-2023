@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,10 +26,16 @@ namespace AspnetCoreMvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IGreeter, Greeter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app,
+                              IWebHostEnvironment env,
+                              IGreeter greeter, ILogger<Startup> logger
+
+            )
+            //IConfiguration configuration,
         {
             if (env.IsDevelopment())
             {
@@ -39,6 +47,39 @@ namespace AspnetCoreMvc
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.Use(next =>
+            {
+                return async context =>
+                {
+                    logger.LogInformation("Request Comming");
+                    if (context.Request.Path.StartsWithSegments("/mym"))
+                    {
+                        await context.Response.WriteAsync("Hit!!!");
+                        logger.LogInformation("Request Handled");
+                    }
+                    else 
+                    {
+                        await next(context);
+                        logger.LogInformation("Request Outgoing");
+
+                    }
+                };
+            });
+            app.UseWelcomePage(new WelcomePageOptions
+            {
+                Path = "/wp"
+            });
+            app.Run(async (context) =>
+            {
+               // throw new Exception("error");
+                //gret-ser
+                var greetingser = greeter.GetMessageOfTheDay();
+                await context.Response.WriteAsync($"{greetingser} : {env.EnvironmentName}");
+                //add-config
+                //var greeting = configuration["Greeting"];
+                //    await context.Response.WriteAsync(greeting);
+            }
+            );
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
