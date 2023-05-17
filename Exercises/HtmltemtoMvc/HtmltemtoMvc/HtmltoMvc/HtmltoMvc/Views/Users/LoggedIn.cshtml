@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>
+         @if (Session["UserName"] != null)
+            {
+                <text>
+                    Welcome! @Session["UserName"].ToString()
+                </text>
+            }
+
+    </legend>
+</fieldset>
+
