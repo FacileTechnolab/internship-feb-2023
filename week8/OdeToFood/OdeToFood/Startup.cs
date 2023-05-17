@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OdeToFood.Services;
 
 namespace OdeToFood
 {
@@ -24,6 +26,8 @@ namespace OdeToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,39 +36,59 @@ namespace OdeToFood
                              /* IConfiguration configuration*/,
                              IGreeter gretter,ILogger<Startup>logger)
         {
-            //if (env.IsDevelopment())
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            //app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseMvc(ConfigureRoutes);
+            //app.UseFileServer();
+          //  app.UseMvcWithDefaultRoute();
+            //else
             //{
-            //    app.UseDeveloperExceptionPage();
+            //    app.UseExceptionHandler();
             //}
-            app.Use(next =>
-            {
-                return async context =>
-                {
-                    logger.LogInformation("Request Incoming");
-                    if(context.Request.Path.StartsWithSegments("/mym"))
-                    {
-                        await context.Response.WriteAsync("Hit!!");
-                        logger.LogInformation("Request handle");
-                    }
-                    else
-                    {
-                        await next(context);
-                        logger.LogInformation("Response outgoing");
-                    }
-                };
+            //app.Use(next =>
+            //{
+            //    //return async context =>
+            //    //{
+            //    //    logger.LogInformation("Request Incoming");
+            //    //    //if(context.Request.Path.StartsWithSegments("/mym"))
+            //    //    //{
+            //    //    //    await context.Response.WriteAsync("Hit!!");
+            //    //    //    logger.LogInformation("Request handle");
+            //    //    //}
+            //    //    //else
+            //    //    //{
+            //    //    //    await next(context);
+            //    //    //    logger.LogInformation("Response outgoing");
+            //    //    //}
+            //    //};
 
-            });
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path="/wp"
-            });
+            //});
+            //app.UseWelcomePage(new WelcomePageOptions
+            //{
+            //    Path="/wp"
+            //});
 
             app.Run(async (context) =>
             {
+                //throw new Exception("error!");
                 var greeting = gretter.GetMessageOfTheDay();
-              //  var greeting = configuration["Greeting"];
-                await context.Response.WriteAsync(greeting);
+                //  var greeting = configuration["Greeting"];
+                // await context.Response.WriteAsync($"{greeting}:{env.EnvironmentName}");
+               // context.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync($"Not Found");
             });
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            //Home/Index/4
+            // throw new NotImplementedException();
+            routeBuilder.MapRoute("Default",
+                "{controller}/{action}/");
         }
     }
 }
