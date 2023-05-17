@@ -1,10 +1,21 @@
-﻿namespace OddToFood.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using OddToFood.Model;
+using OddToFood.Services;
+
+namespace OddToFood.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index()
+        private IRestaurantData _restaurantData;
+
+        public HomeController(IRestaurantData restaurantData)
         {
-            return "Heloo from the HomeCntroller!";
+            _restaurantData = restaurantData;
+        }
+        public IActionResult Index()
+        {
+            var model = _restaurantData.GetAll();
+            return View(model);
         }
     }
 }

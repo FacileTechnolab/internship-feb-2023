@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 namespace OddToFood.Controllers
 {
     //[Route("company/[controller]/[action]")]
+    [Route("about")]
     public class AboutController
     {
        
-        //[Route("")]
+        [Route("")]
         public string Phone()
         {
             return "1+55555+55+444";
         }
-        //[Route("address")]
+
+        [Route("address")]
         public string Address()
         {
             return "usa";

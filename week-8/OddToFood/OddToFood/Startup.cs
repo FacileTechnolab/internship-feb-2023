@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using OddToFood.Services;
 
 namespace OddToFood
 {
@@ -25,6 +26,7 @@ namespace OddToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
             services.AddMvc();
         }
 
@@ -62,14 +64,14 @@ namespace OddToFood
             //    app.UseExceptionHandler("/Error");
             //}
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
             app.UseMvc(ConfigureRoutes);
 
-            app.UseDefaultFiles();
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path = "/wp"
-            });
+            //app.UseDefaultFiles();
+            //app.UseWelcomePage(new WelcomePageOptions
+            //{
+            //    Path = "/wp"
+            //});
            
             app.Run(async (context) =>
             {
