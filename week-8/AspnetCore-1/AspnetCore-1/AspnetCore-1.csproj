@@ -4,6 +4,17 @@
 	<TargetFramework>net6.0</TargetFramework>
 	<RootNamespace>AspnetCore_1</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="obj\AspnetCore-1.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\AspnetCore-1.csproj.nuget.g.props" />
+    <None Include="obj\AspnetCore-1.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
 		<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.8" />
 		<PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
