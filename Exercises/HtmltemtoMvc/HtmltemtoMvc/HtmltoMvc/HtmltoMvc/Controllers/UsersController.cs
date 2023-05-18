@@ -7,12 +7,14 @@ using HtmltoMvc.Models;
 
 namespace HtmltoMvc.Controllers
 {
-   
+    [Authorize]
     public class UsersController : Controller
     {
+       
         DataContext db = new DataContext();
         public ActionResult Login()
         {
+
             return View();
         }
         [HttpPost]
@@ -43,7 +45,6 @@ namespace HtmltoMvc.Controllers
         {
             if(ModelState.IsValid == true)
             {
-
                 db.Users.Add(user); //insert data
                int a = db.SaveChanges();  //save data
                 if(a > 0)
@@ -61,8 +62,8 @@ namespace HtmltoMvc.Controllers
         public ActionResult Signout()
         {
             Session.Abandon();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Users");
         }
 
     }
-} 
+}

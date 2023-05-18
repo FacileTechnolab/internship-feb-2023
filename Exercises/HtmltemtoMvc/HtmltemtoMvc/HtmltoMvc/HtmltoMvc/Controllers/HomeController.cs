@@ -9,7 +9,7 @@ namespace HtmltoMvc.Controllers
     //[Authorize]
     public class HomeController : Controller
     {
-        [AllowAnonymous]
+        
         public ActionResult Index()
         {
             //if(Session["UserId"] == null)
