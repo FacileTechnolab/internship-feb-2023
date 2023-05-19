@@ -8,14 +8,15 @@
 		<span asp-validation-for="Name"></span>
 		</div>
 
-	 <div>
-		 <label asp-for="Cuisine"></label>
-		 <select asp-for="Cuisine"
-			   asp-items="@Html.GetEnumSelectList<@OdeToFood.Models.CuisineType>()">
-			   <soan asp-validation for="Cuisine"></soan>
-	 </div>
-	
+    <div>
+        <label asp-for="Cuisine"></label>
+        <select asp-for="Cuisine"
+                asp-items="@Html.GetEnumSelectList<@OdeToFood.Models.CuisineType>()">
+            <soan asp-validation for="Cuisine"></soan>
 
-	</select>
+
+
+        </select>
+    </div>
 	<input type="submit" name="save" value="Save"/>
 </form>
