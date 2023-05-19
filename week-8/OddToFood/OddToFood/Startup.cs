@@ -10,14 +10,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using OddToFood.Services;
+using OddToFood.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace OddToFood
 {
     public class Startup
     {
+        private IConfiguration _configuration;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -26,7 +30,8 @@ namespace OddToFood
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IGreeter, Greeter>();
-            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
+            services.AddDbContext<OddToFoodDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("OddToFood")));
+            services.AddSingleton<IRestaurantData, SqlRestaurantData>();
             services.AddMvc();
         }
 

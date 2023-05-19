@@ -19,8 +19,6 @@ namespace OddToFood.Services
 
 
 
-       
-
         public IEnumerable<Restaurant> GetAll()
         {
             return _restaurants.OrderBy(r => r.Name);
@@ -29,6 +27,13 @@ namespace OddToFood.Services
         public Restaurant Get(int id)
         {
             return _restaurants.FirstOrDefault(r => r.Id == id);
+        }
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
+            _restaurants.Add(newRestaurant);
+            return newRestaurant;
         }
 
         List<Restaurant> _restaurants;
