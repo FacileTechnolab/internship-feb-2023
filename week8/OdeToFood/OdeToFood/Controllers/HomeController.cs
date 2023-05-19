@@ -48,6 +48,7 @@ namespace OdeToFood.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(RestaurantEditModel model)
         {
             if(ModelState.IsValid) { 
