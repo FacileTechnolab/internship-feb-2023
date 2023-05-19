@@ -1,4 +1,6 @@
 ﻿using CodeToFood.Models;
+using CodeToFood.Services;
+using CodeToFood.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;  
@@ -9,10 +11,25 @@ namespace CodeToFood.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private IRestaurant _restaurant;
+        private IGreeter _greeter;
+
+        public HomeController(IRestaurant restaurant, IGreeter greeter)
         {
-            var model = new Restaurant { Id = 1, Name = "Scott's Pizza Place"};
+            _restaurant = restaurant;
+            _greeter = greeter;
+        }
+        public IActionResult Index() 
+        {
+            var model = new HomeIndexViewModel();
+            model.Restaurants = _restaurant.GetAll();
+            model.CurrentMessage = _greeter.GetMessageOfTheDay();
             return View(model); 
+        }
+        public IActionResult Details(int id)
+        {
+            var model = _restaurant.Get(id);
+            return View(model);
         }
     }
 } 
