@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-namespace CodeToFood
+namespace CodeToFood.Services
+
 {
     public interface IGreeter
     {
@@ -16,7 +17,7 @@ namespace CodeToFood
 
         public string GetMessageOfTheDay()
         {
-           return _configuration["Greetings"];
+           return _configuration["Greeting"];
         }
     }
 }
