@@ -1,12 +1,17 @@
 ﻿@model OddToFood.Model.Restaurant
 
+
+@{
+    ViewBag.Title = Model.Name;
+
+}
 <h1>@Model.Name</h1>
 
 <div>
     Id = @Model.Id
 </div>
 <div>
-    Name = @Model.Name
+    Cuisine: @Model.Cuisine
 </div>
 <div>....Details....</div>
 

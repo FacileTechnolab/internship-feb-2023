@@ -1,41 +1,45 @@
-﻿using OddToFood.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using OddToFood.Model;
 using System.Collections.Generic;
 using System.Linq;
+using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 
 namespace OddToFood.Services
 {
-    public class InMemoryRestaurantData : IRestaurantData
-    {
-        public InMemoryRestaurantData()
-        {
-            _restaurants = new List<Restaurant>
-            {
-                new Restaurant{ Id = 1, Name= "Scott pizza place"},
-                new Restaurant { Id = 2, Name = "Tersiguels" },
-                new Restaurant { Id = 3, Name = "King's of Contrivance" }
+    //public class InMemoryRestaurantData : IRestaurantData
+    //{
+    //    public InMemoryRestaurantData()
+    //    {
+    //        _restaurants = new List<Restaurant>
+    //        {
+    //            new Restaurant{ Id = 1, Name= "Scott pizza place"},
+    //            new Restaurant { Id = 2, Name = "Tersiguels" },
+    //            new Restaurant { Id = 3, Name = "King's of Contrivance" }
 
-            };
-        }
+    //        };
+    //    }
 
 
 
-        public IEnumerable<Restaurant> GetAll()
-        {
-            return _restaurants.OrderBy(r => r.Name);
-        }
+    //    public IEnumerable<Restaurant> GetAll()
+    //    {
+    //        return _restaurants.OrderBy(r => r.Name);
+    //    }
 
-        public Restaurant Get(int id)
-        {
-            return _restaurants.FirstOrDefault(r => r.Id == id);
-        }
+    //    public Restaurant Get(int id)
+    //    {
+    //        return _restaurants.FirstOrDefault(r => r.Id == id);
+    //    }
 
-        public Restaurant Add(Restaurant newRestaurant)
-        {
-            newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
-            _restaurants.Add(newRestaurant);
-            return newRestaurant;
-        }
+    //    public Restaurant Add(Restaurant newRestaurant)
+    //    {
+    //        newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
+    //        _restaurants.Add(newRestaurant);
+    //        return newRestaurant;
+    //    }
 
-        List<Restaurant> _restaurants;
-    }
+     
+
+    //    List<Restaurant> _restaurants;
+    //}
 }
