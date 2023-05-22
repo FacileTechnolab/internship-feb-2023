@@ -4,3 +4,7 @@ week8/OdeToFood/OdeToFood/bin/
 week8/OdeToFood/OdeToFood/obj/
 .vs/VSWorkspaceState.json
 .vs/
+week8/Authentication/Authentication/bin/Debug/netcoreapp2.0/Authentication.deps.json
+week8/Authentication/Authentication/bin/
+week8/Authentication/Authentication/obj/
+week8/Authentication/Authentication/wwwroot/lib/
