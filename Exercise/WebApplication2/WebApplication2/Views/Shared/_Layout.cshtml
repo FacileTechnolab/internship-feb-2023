@@ -1,0 +1,148 @@
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @Styles.Render("~/Content/home.css")
+    @Styles.Render("~/bundle/modernizr")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    @*<link rel="stylesheet" href="~/Content/home.css" />*@
+
+</head>
+
+<body>
+
+    <header>
+        <section class="header-sec">
+            <div class="container">
+                <div class="header_menu_wrap">
+                    <ul class="menu menu_left">
+                        @*<li><a href="~/Views/Home/Index.cshtml">Main</a></li>*@
+                        <li>@Html.ActionLink("Main", "Index", "Home")</li>
+                        @*<li><a href="~/Views/Home/Features.cshtml">Features</a></li>*@
+                        <li>@Html.ActionLink("Features", "Features", "Home")</li>
+                        @*<li><a href="~/Views/Home/Review.cshtml">Reviews</a></li>*@
+                        <li>@Html.ActionLink("Review", "Review", "Home")</li>
+
+                    </ul>
+                    <div class="header_logo"><a href="#"><img src="~/Content/image/logo_icon.png" class="img-fluid" alt=""> RefreshM5</a></div>
+                    <ul class="menu menu_right">
+                        @*<li><a href="~/Views/Home/AboutUs.cshtml">About Us</a></li>*@
+                        <li>@Html.ActionLink("AboutUs", "AboutUs", "Home")</li>
+                        @*<li><a href="~/Views/Home/Princing.cshtml">Pricing</a></li>*@
+                        <li>@Html.ActionLink("Princing", "Princing", "Home")</li>
+                        @*<li><a href="~/Views/Home/Contact.cshtml">Contacts</a></li>*@
+                        <li>@Html.ActionLink("Contacts", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    @*<div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("AboutUs", "AboutUs", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        </ul>
+    </div>*@
+    <div id="body">
+        @RenderBody()
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="footer_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Claire Clean</li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Cleaning Services</li>
+                            <li>Book Appointment</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Cancellation Policy</li>
+                            <li>Our Pricing</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 text-center mt-5 mb-4">
+                        <p class="foot_notes">Keeping it clean since 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_2 text-center">
+            <div class="container">
+                <p class="copyright_text">© Copyright 2025 Mobirise - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
