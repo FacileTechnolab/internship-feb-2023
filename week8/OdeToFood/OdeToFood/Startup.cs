@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -33,6 +36,17 @@ namespace OdeToFood
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddAuthentication(options =>                                          
+            //    {
+            //        options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            //    })
+            ////.AddOpenIdConnect(Options =>
+            //{
+            //    _configuration.Bind("AzureAd", Options);
+            //})
+            //.AddCookie();
+                  
             services.AddSingleton<IGreeter, Greeter>();
             services.AddDbContext<OdeToFoodDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("OdeToFood")));
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
@@ -49,8 +63,12 @@ namespace OdeToFood
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseRewriter(new RewriteOptions()
+                .AddRedirectToHttpsPermanent());
             //app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseNodeModules(env.ContentRootPath);
+            app.UseAuthentication();
             app.UseMvc(ConfigureRoutes);
             //app.UseFileServer();
           //  app.UseMvcWithDefaultRoute();
@@ -97,7 +115,7 @@ namespace OdeToFood
             //Home/Index/4
             // throw new NotImplementedException();
             routeBuilder.MapRoute("Default",
-                "{controller}/{action}/{id?}");
+                "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }

@@ -4,8 +4,20 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+
+<link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
-<body>
+<body class="panel">
+    @*<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">OdeToFood</a>
+            </div>
+            <div class="navbar-right">
+                <vc:login-logout></vc:login-logout>
+            </div>
+        </div>
+    </nav>*@
     <div>
         @RenderBody()
     </div>
@@ -16,6 +28,26 @@
         @RenderSection("footer",required:false)
         @*@await  Component.InvokeAsync("Greeter")*@
         <vc:greeter></vc:greeter>
+        <vc:login-logout></vc:login-logout>
+        @*@if(User.Identitiy.IsAuthenticated)
+        {
+            foreach(var identity in User.Identities)
+            {
+            <h3>@Identity Name</h3>
+            <ul
+              @foreach(var claim in identity.Claims)
+            {
+            <li>@Claim.Type - @Claim.Values</li>
+            }
+            </ul>
+            }
+
+        }
+        else
+        {
+            <div>You Are Anonymous.</div>
+        }*@
+       
     </footer>
 </body>
 </html>
