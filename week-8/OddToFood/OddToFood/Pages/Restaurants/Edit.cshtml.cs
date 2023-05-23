@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OddToFood.Model;
@@ -5,8 +6,10 @@ using OddToFood.Services;
 
 namespace OddToFood.Pages.Restaurants
 {
+    [Authorize]
     public class EditModel : PageModel
     {
+        
         private IRestaurantData _restaurantData;
         [BindProperty]
         public Restaurant Restaurant { get; set; }
@@ -17,6 +20,7 @@ namespace OddToFood.Pages.Restaurants
         }
         public IActionResult OnGet(int id)
         {
+
             Restaurant = _restaurantData.Get(id);
             if (Restaurant == null) 
             {

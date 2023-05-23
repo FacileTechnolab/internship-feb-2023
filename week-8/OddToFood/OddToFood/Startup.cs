@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using OddToFood.Services;
 using OddToFood.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 namespace OddToFood
 {
@@ -29,6 +31,16 @@ namespace OddToFood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            })
+            //.AddOpenIdConnect(options =>
+            //{
+            //    _configuration.Bind("Authority", options);
+            //})
+            .AddCookie();
             services.AddSingleton<IGreeter, Greeter>();
             services.AddDbContext<OddToFoodDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("OddToFood")));
             services.AddScoped<IRestaurantData, SqlRestaurantData>();
@@ -69,6 +81,7 @@ namespace OddToFood
             //    app.UseExceptionHandler("/Error");
             //}
             app.UseStaticFiles();
+            app.UseAuthentication();
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(ConfigureRoutes);
 

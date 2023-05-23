@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using OddToFood.Model;
@@ -7,6 +8,7 @@ using OddToFood.ViewModles;
 
 namespace OddToFood.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IRestaurantData _restaurantData;
@@ -19,6 +21,7 @@ namespace OddToFood.Controllers
 
 
         }
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var model = new HomeIndexViewModel();
@@ -37,6 +40,7 @@ namespace OddToFood.Controllers
             return View(model);
         }
         [HttpGet]
+        
         public IActionResult Create()
         {
            
