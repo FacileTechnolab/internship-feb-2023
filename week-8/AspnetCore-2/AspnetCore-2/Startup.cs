@@ -1,3 +1,4 @@
+using AspnetCore2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace AspnetCore_2
 {
-	public class Startup
+    public class Startup
 	{
 		public Startup(IConfiguration configuration)
 		{
@@ -34,7 +36,7 @@ namespace AspnetCore_2
 			});
 
 			services.AddSingleton<IGreeter, Greeter>();
-		
+		    services.AddSingleton<IRestaurantData,InMemoryRestaurantData>();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}

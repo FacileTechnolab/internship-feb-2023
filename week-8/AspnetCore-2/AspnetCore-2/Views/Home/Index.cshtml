@@ -1,0 +1,34 @@
+﻿@*@model IEnumerable<AspnetCore2.Model.Restaurant>*@
+	@model AspnetCore2.ViewModel.HomeIndexViewModel
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	@*	
+	<h1>@Model.Name</h1>
+			<div>This is a Index view </div>
+			<div>Id is @Model.Id</div>
+		*@
+			
+
+		<h1>@Model.CurrentMessage</h1>
+		<table>
+			@foreach(var restaurant in Model.Restaurants)
+			{
+
+				<tr>
+					<td>@restaurant.Id</td>
+					<td>@restaurant.Name</td>
+					<td>
+						@*<a href="/home/details/@restaurant.Id">Details</a>
+						@Html.ActionLink("Go","Details",new{id=restaurant.Id})*@
+					<a asp-action="Details" asp-route-id="@restaurant.Id">More</a>
+					</td>
+				</tr>
+		    }
+			
+		</table>
+		<a asp-action="Create">Add Restaurant</a>
+	</body>
+</html>
