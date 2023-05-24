@@ -1,3 +1,4 @@
+using AspnetCore2.Data;
 using AspnetCore2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,20 +14,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace AspnetCore_2
 {
     public class Startup
 	{
+		private readonly IConfiguration _configuration;
+
 		public Startup(IConfiguration configuration)
 		{
-			Configuration = configuration;
+			//Configuration = configuration;
+			_configuration = configuration;
 		}
 
 		public IConfiguration Configuration { get; }
+       
 
-		// This method gets called by the runtime. Use this method to add services to the container.
-		public void ConfigureServices(IServiceCollection services)
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
 		{
 			services.Configure<CookiePolicyOptions>(options =>
 			{
@@ -36,7 +43,8 @@ namespace AspnetCore_2
 			});
 
 			services.AddSingleton<IGreeter, Greeter>();
-		    services.AddSingleton<IRestaurantData,InMemoryRestaurantData>();
+			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("Aspnetcore2")));
+		    services.AddScoped<IRestaurantData,SqlRestaurantData>();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
@@ -44,7 +52,7 @@ namespace AspnetCore_2
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app,
 			                  IHostingEnvironment env,
-							  IGreeter greeter, ILogger<Startup> logger)
+							  IGreeter greeter)
 		{
 			if (env.IsDevelopment())
 			{

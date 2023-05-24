@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AspnetCore2.Model;
+
+using System.ComponentModel.DataAnnotations;
 
 namespace AspnetCore2.Model
 {
-    public class Restaurant
+
+	public class Restaurant 
 	{
 
 		public int Id { get; set; }

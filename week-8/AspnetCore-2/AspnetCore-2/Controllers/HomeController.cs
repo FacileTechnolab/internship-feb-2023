@@ -21,7 +21,7 @@ namespace AspnetCore2.Controllers
         //public string Index()
         //{
 
-        //	return "this is controller";
+        //	return "this is controller";[Restaurants]
         //}
         public IActionResult Index()
 		{
