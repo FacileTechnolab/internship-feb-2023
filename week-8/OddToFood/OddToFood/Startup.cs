@@ -14,6 +14,7 @@ using OddToFood.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace OddToFood
 {
@@ -81,6 +82,9 @@ namespace OddToFood
             //    app.UseExceptionHandler("/Error");
             //}
             app.UseStaticFiles();
+            app.UseRewriter(new RewriteOptions().AddRedirectToHttpsPermanent());
+
+            //app.UseNodeModules(env.ContentRootPath);
             app.UseAuthentication();
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(ConfigureRoutes);
@@ -91,17 +95,17 @@ namespace OddToFood
             //    Path = "/wp"
             //});
            
-            app.Run(async (context) =>
-            {
+           // app.Run(async (context) =>
+           // {
                 //throw new Exception("error");
-                var greeting = greeter.GetMessageOfTheDay();
-                context.Response.ContentType= "text/plain";
-                await context.Response.WriteAsync($"Not found");
+                //var greeting = greeter.GetMessageOfTheDay();
+                //context.Response.ContentType= "text/plain";
+                //await context.Response.WriteAsync($"Not found");
                 //await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName}");
                 //add-config
                 //var greeting = configuration["Greeting"];
                 //    await context.Response.WriteAsync(greeting);
-            });
+            //});
 
             //app.UseStaticFiles();
 

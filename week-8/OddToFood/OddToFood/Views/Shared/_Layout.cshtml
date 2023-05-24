@@ -5,32 +5,33 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+   
 </head>
 <body>
     <div>
         @RenderBody()
     </div>
-    <div>
+    <footer class="container">
         @RenderSection("footer", required: false)
         @*@await Component.InvokeAsync("Greeter")*@
         <vc:greeter></vc:greeter>
-        @if(User.Identity.IsAuthenticated)
-        {
-            foreach(var identity in User.Identities)
-                {
-                    <h3>@identity.Name</h3>
-                    <ul>
-                        @foreach(var claim in identity.Claims)
+        @*@if(User.Identity.IsAuthenticated)
+            {
+                foreach(var identity in User.Identities)
                     {
-                        <li>@claim.Type - @claim.Value</li>
+                        <h3>@identity.Name</h3>
+                        <ul>
+                            @foreach(var claim in identity.Claims)
+                        {
+                            <li>@claim.Type - @claim.Value</li>
+                        }
+                        </ul>
                     }
-                    </ul>
-                }
-        }
-        else
-        {
-                <div>You are anonymous</div>
             }
-    </div>
-</body>
+            else
+            {
+                    <div>You are anonymous</div>
+                }*@
+    </footer>
+    
 </html>
