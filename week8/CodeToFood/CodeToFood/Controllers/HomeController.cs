@@ -13,6 +13,7 @@ namespace CodeToFood.Controllers
     {
         private IRestaurant _restaurant;
         private IGreeter _greeter;
+        private object _restaurantData;
 
         public HomeController(IRestaurant restaurant, IGreeter greeter)
         {
@@ -29,7 +30,36 @@ namespace CodeToFood.Controllers
         public IActionResult Details(int id)
         {
             var model = _restaurant.Get(id);
+            if(model == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+           // return Content(id.ToString());
             return View(model);
+        }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(RestaurantEditModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var newRestaurant = new Restaurant();
+                newRestaurant.Name = model.Name;
+                newRestaurant.Cuisine = model.Cuisine;
+
+                newRestaurant = _restaurant.Add(newRestaurant);
+                return RedirectToAction(nameof(Details), new { id = newRestaurant.Id });
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 } 

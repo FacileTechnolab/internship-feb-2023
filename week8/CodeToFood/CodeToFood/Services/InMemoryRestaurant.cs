@@ -27,6 +27,12 @@ namespace CodeToFood.Services
             return _restaurant.FirstOrDefault(r => r.Id == id);
         }
 
+        public Restaurant Add(Restaurant restaurant)
+        {
+            restaurant.Id = _restaurant.Max(r => r.Id) + 1;
+            _restaurant.Add(restaurant);
+            return restaurant;
+        }
         List<Restaurant> _restaurant;
     }
 }
