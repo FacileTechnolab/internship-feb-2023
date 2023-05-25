@@ -1,5 +1,6 @@
 ﻿using AspnetCore2.Data;
 using AspnetCore2.Model;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,6 +29,14 @@ namespace AspnetCore2.Services
 		public IEnumerable<Restaurant> GetAll()
 		{
 			return _context.Restaurants.OrderBy(x => x.Id);
+		}
+
+		public Restaurant Update(Restaurant restaurant)
+		{
+			_context.Attach(restaurant).State=
+				EntityState.Modified;
+			_context.SaveChanges();
+			return restaurant;
 		}
 	}
 }

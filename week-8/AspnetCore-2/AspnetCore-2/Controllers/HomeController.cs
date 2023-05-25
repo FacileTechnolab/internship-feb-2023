@@ -8,8 +8,8 @@ namespace AspnetCore2.Controllers
 {
 	public class HomeController :Controller
 	{
-		private IRestaurantData _restaurantData;
-		private IGreeter _greeter;
+		private readonly IRestaurantData _restaurantData;
+		private readonly IGreeter _greeter;
 
 		public HomeController(IRestaurantData restaurantData,
 			IGreeter greeter)
@@ -27,7 +27,7 @@ namespace AspnetCore2.Controllers
 		{
 			//var model= new Restaurant { Id = 1 ,Name="Dipali"};
 			//return new ObjectResult(model);
-			var model = new HomeIndexViewModel();
+			var model =new HomeIndexViewModel();
 			model.Restaurants=_restaurantData.GetAll();
 			model.CurrentMessage = _greeter.GetMessageOfTheDay();
 			return View(model);
@@ -54,7 +54,7 @@ namespace AspnetCore2.Controllers
 		{
 			if(ModelState.IsValid)
 			{
-				var newRestaurant = new Restaurant();
+				var newRestaurant =new Restaurant();
 				newRestaurant.Name = model.Name;
 				newRestaurant.Cuisine = model.Cuisine;
 				newRestaurant = _restaurantData.Add(newRestaurant);
