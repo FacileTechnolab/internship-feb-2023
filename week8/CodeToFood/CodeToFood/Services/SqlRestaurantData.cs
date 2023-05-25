@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodeToFood.Data;
 using CodeToFood.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeToFood.Services
 {
@@ -31,6 +32,15 @@ namespace CodeToFood.Services
         public IEnumerable<Restaurant> GetAll()
         {
             return  _context.Restaurants.OrderBy(r => r.Name);
+        }
+
+        public Restaurant Update(Restaurant restaurant)
+        {
+            _context.Attach(restaurant).State = 
+                EntityState.Modified;
+            _context.SaveChanges();
+            return restaurant;
+
         }
     }
 }

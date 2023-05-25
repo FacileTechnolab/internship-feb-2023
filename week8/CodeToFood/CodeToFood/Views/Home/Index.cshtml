@@ -1,27 +1,23 @@
-﻿@model CodeToFood.ViewModels.HomeIndexViewModel 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title> </title>
-</head>
-<body>
-    <h1>@Model.CurrentMessage </h1>
-    <table>
-        @foreach( var restaurant in Model.Restaurants)
-        {
-            <tr>
-                <td>@restaurant.Id</td>
-                <td>@restaurant.Name</td>
-                <td>
-                    
-                    <a asp-action="Details" asp-route-id="@restaurant.Id">More</a>
-                </td>
-             </tr>
-        }
+﻿@model CodeToFood.ViewModels.HomeIndexViewModel
 
-    </table>
-    <a asp-action="Create">Add Restaurant</a>
-</body>
-</html>
+@{ 
+    ViewBag.Title = "Home page";
+}
+<h1>All Restaurants </h1>
 
+@foreach(var restaurant in Model.Restaurants)
+{
+    @Html.Partial("_Summary", restaurant)
+}
+<div>
+<a asp-action="Create">Add Restaurant</a>
+
+</div>
+<div>
+
+@section footer{ 
+    @Model.CurrentMessage
+}
+</div>
 
 
