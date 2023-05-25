@@ -13,25 +13,36 @@
 //     console.log('finally'+i);
 // }
 // doSomething();
-// let count1 = 5;
-// count1 = 'j';
-var c1 = 2;
-c1 = 'h';
-var a;
-var b;
-var c;
-var d;
-var e = [1, 2, 3];
-var f = [1, true, 'a,false'];
-var Colorred = 0;
-var Colorgreen = 1;
-var Colorblue = 2;
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["green"] = 1] = "green";
-    Color[Color["blue"] = 2] = "blue";
-    Color[Color["purple"] = 3] = "purple";
-})(Color || (Color = {}));
-;
-var backgroundColor = Color.Red;
+var count1 = 5;
+count1 = 'j';
+// var c1=2;
+// c1='h';
+// let a:number;
+// let b:boolean;
+// let c:string;
+// let d:any;
+// let e:number[]=[1,2,3];
+// let f:any[]=[1,true,'a,false'];
+// const Colorred=0;
+// const Colorgreen=1;
+// const Colorblue=2;
+// enum Color{Red=0,green=1,blue=2,purple=3};
+// let backgroundColor=Color.Red;
+// let message
+// message='abc';
+// let endsWithC=(<string>message).endsWith('c');
+// let alternativeWay =  (message as string).endsWith('c');
+//Arrow Function
+// let doLog=(message)=>console.log(message);
+//interface
+// interface Point{
+//     x:number,
+//     y:number
+// }
+// let drawPoint = (point:Point)=> {
+//     console.log("hello");
+// }
+// drawPoint({
+//     x:1,
+//     y:2
+// })
