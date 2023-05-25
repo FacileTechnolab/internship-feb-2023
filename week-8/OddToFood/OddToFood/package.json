@@ -3,8 +3,9 @@
   "name": "oddtofood",
   "private": true,
   "devDependencies": {
+
   },
   "dependencies": {
-    "bootstrap": "3.3.7"
+    "bootbox": "5.0.2"
   }
 }

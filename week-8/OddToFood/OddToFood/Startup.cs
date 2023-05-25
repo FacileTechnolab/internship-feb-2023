@@ -15,12 +15,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.AspNetCore.Razor;
+using System.Net;
+
 
 namespace OddToFood
 {
     public class Startup
     {
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
         {
@@ -32,26 +35,26 @@ namespace OddToFood
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
             })
-            //.AddOpenIdConnect(options =>
-            //{
-            //    _configuration.Bind("Authority", options);
-            //})
+               
+            .AddOpenIdConnect(options =>
+           {
+               _configuration.Bind("Azured", options);
+
+           })
             .AddCookie();
-            services.AddSingleton<IGreeter, Greeter>();
-            services.AddDbContext<OddToFoodDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("OddToFood")));
-            services.AddScoped<IRestaurantData, SqlRestaurantData>();
-            services.AddMvc();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app,
-                              IHostingEnvironment env,
-                              IGreeter greeter, ILogger<Startup> logger)
+                              IHostingEnvironment env
+                             )
         //IConfiguration configuration
         {
 
@@ -84,10 +87,10 @@ namespace OddToFood
             app.UseStaticFiles();
             app.UseRewriter(new RewriteOptions().AddRedirectToHttpsPermanent());
 
-            //app.UseNodeModules(env.ContentRootPath);
+            app.UseNodeModules(env.ContentRootPath);
             app.UseAuthentication();
             //app.UseMvcWithDefaultRoute();
-            app.UseMvc(ConfigureRoutes);
+            //app.UseMvc(ConfigureRoutes);
 
             //app.UseDefaultFiles();
             //app.UseWelcomePage(new WelcomePageOptions
@@ -122,5 +125,6 @@ namespace OddToFood
             routeBuilder.MapRoute("Default",
                "{controller}/{action}/{id?}");
         }
+
     }
 }

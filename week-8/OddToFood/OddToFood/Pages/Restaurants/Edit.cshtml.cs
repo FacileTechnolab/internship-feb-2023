@@ -10,7 +10,7 @@ namespace OddToFood.Pages.Restaurants
     public class EditModel : PageModel
     {
         
-        private IRestaurantData _restaurantData;
+        private  readonly IRestaurantData _restaurantData;
         [BindProperty]
         public Restaurant Restaurant { get; set; }
 

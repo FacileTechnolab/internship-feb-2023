@@ -11,8 +11,8 @@ namespace OddToFood.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private IRestaurantData _restaurantData;
-        private IGreeter _greeter;
+        private readonly IRestaurantData _restaurantData;
+        private readonly IGreeter _greeter;
 
         public HomeController(IRestaurantData restaurantData, IGreeter greeter)
         {
@@ -39,8 +39,8 @@ namespace OddToFood.Controllers
             }
             return View(model);
         }
+
         [HttpGet]
-        
         public IActionResult Create()
         {
            

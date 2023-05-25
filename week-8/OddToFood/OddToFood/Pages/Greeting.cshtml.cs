@@ -6,7 +6,7 @@ namespace OddToFood.Pages
 {
     public class GreetingModel : PageModel
     {
-        private IGreeter _greeter;
+        private readonly IGreeter _greeter;
         public string CurrentGreeting { get; set; }
 
         public GreetingModel(IGreeter greeter)

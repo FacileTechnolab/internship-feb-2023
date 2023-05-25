@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
+
 namespace OddToFood.Services
 {
     public interface IGreeter
@@ -8,7 +9,7 @@ namespace OddToFood.Services
     }
     public class Greeter : IGreeter
     {
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
         public Greeter(IConfiguration configuration)
         {
             _configuration = configuration;
