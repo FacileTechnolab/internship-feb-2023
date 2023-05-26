@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Rewrite;
 
 namespace AspnetCore_2
 {
@@ -89,17 +89,19 @@ namespace AspnetCore_2
 			{
 				Path = "/wp"
 			});
-			app.Run(async (context) =>
-			{
-			//	throw new Exception("error!");
-				var greeting = greeter.GetMessageOfTheDay();
+			//app.Run(async (context) =>
+			//{
+			////	throw new Exception("error!");
+			//	var greeting = greeter.GetMessageOfTheDay();
 
-				//await context.Response.WriteAsync($"{greeting}:{env.EnvironmentName}");
-				context.Response.ContentType = "text/html";
-			   await context.Response.WriteAsync($"Not found");
-			});
+			//	//await context.Response.WriteAsync($"{greeting}:{env.EnvironmentName}");
+			//	context.Response.ContentType = "text/html";
+			//   await context.Response.WriteAsync($"Not found");
+			//});
 
 			app.UseHttpsRedirection();
+			app.UseRewriter(new RewriteOptions()
+							  .AddRedirectToHttpsPermanent());
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
 

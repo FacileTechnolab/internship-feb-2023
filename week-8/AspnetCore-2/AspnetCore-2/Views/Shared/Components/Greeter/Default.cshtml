@@ -1,2 +1,13 @@
-﻿@model string
-<div>@Model</div>
+﻿@*@model string
+<div>@Model</div>*@
+@if(User.Identity.IsAuthenticated)
+{
+	<div>Hello,@User.Identity.Name</div>
+	<a class="btn btn-default" asp-controller="Home" asp-action="Index">Logout</a>
+
+
+}
+else
+{
+	<a class="btn btn-default" asp-controller="Home"asp-action="index">Login</a>
+}

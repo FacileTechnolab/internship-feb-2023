@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "aspnetcore2",
+  "private": true,
+  "devDependencies": {
+  },
+
+  "dependencies": {
+    "bootstrap": "3.1.1"
+  }
+
+}
