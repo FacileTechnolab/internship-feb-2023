@@ -5,33 +5,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-        @RenderBody()
-    </div>
-    <footer>
-        @RenderSection("footer", required: false)
-       <vc:greeter></vc:greeter>
-        @if(User.Identity.IsAuthenticated)
-        {
-            foreach(var identity in User.Identities)
-            {
-                <h3>@identity.Name</h3>
-                <ul>@foreach (var claim in identity.Claims)
-                {
-                    <li>@claim.Type  - @claim.Value</li>
-                }
-                    
-        </ul>
-            }
-        }
-        else
-        {
-           <div> You Are Anonymous</div>
-        }
-    </footer>
-   
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body>
+    <nav class=" navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">CodeToFood </a>
+            </div>
+            <div class="navbar-right">
+                <vc:login-logout></vc:login-logout>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+        <footer>
+            @RenderSection("footer", required: false)
+
+
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="~/node_modules/jquery/dist/jquery.js"></script>
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.js"></script>
 </body>
 </html>

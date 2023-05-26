@@ -48,8 +48,11 @@ namespace CodeToFood
                 app.UseDeveloperExceptionPage();
 
             }
-           app.UseStaticFiles();
-           app.UseMvc(ConfigureRoutes);
+            app.UseStaticFiles();
+
+            //app.UseNodeModules(env.ContentRootPath);
+
+            app.UseMvc(ConfigureRoutes);
             //app.UseFileServer();
             //app.UseDefaultFiles();
             //else
@@ -78,14 +81,14 @@ namespace CodeToFood
             //    Path = "/Wp"
             //});
             //});
-            app.Run(async (context) =>
-            {
-                //throw new Exception("error!");
+            //app.Run(async (context) =>
+            //{
+            //    //throw new Exception("error!");
 
-                var greeting = greeter.GetMessageOfTheDay();
-                context.Response.ContentType = "text/plain";
-                await context.Response.WriteAsync($"not Found");
-            });
+            //    var greeting = greeter.GetMessageOfTheDay();
+            //    context.Response.ContentType = "text/plain";
+            //    await context.Response.WriteAsync($"not Found");
+            //});
         }
         private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
