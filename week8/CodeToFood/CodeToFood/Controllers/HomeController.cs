@@ -1,6 +1,7 @@
 ﻿using CodeToFood.Models;
 using CodeToFood.Services;
 using CodeToFood.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;  
@@ -10,10 +11,10 @@ using System.Threading.Tasks;
 namespace CodeToFood.Controllers
 {
     public class HomeController : Controller
+
     {
-        private IRestaurant _restaurant;
-        private IGreeter _greeter;
-        private object _restaurantData;
+        private readonly IRestaurant _restaurant;
+        private readonly IGreeter _greeter;
 
         public HomeController(IRestaurant restaurant, IGreeter greeter)
         {
@@ -38,8 +39,10 @@ namespace CodeToFood.Controllers
             return View(model);
         }
         [HttpGet]
+        
         public IActionResult Create()
         {
+           
             return View();
         }
         [HttpPost]
