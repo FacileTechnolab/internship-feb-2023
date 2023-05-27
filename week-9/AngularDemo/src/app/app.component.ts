@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularDemo';
+  message = 'Angular is the best javascript framework for building for alient-side application'
 }
