@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var point_1 = require("./point");
+var point = new point_1.Point(1, 2);
+// point.x=1;
+// point.y=2;
+// point.x=3;
+// let x=point.getX();
+// let x =point.x;
+// point.setX(10);
+// point.x=10;
+point.draw();
