@@ -43,3 +43,5 @@ console.log(len);
 //Arrow functio
 let sum = (a: number, b: number) => a + b;  
 console.log("SUM: " +sum(5, 15));  
+
+
