@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
-import { AuthorComponent } from './author/author.component';
+import {FormsModule} from '@angular/forms';
+import { FormStyle } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    AuthorComponent,
+  
    
    
     
@@ -20,7 +21,9 @@ import { AuthorComponent } from './author/author.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+  
   ],
   providers: [
     CoursesService,
