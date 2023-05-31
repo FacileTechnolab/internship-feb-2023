@@ -1,0 +1,82 @@
+﻿
+@{
+	ViewBag.Title = "Media";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="media" class="slider-sec-img slider-bg">
+	<div class="container">
+		<div class="slider-part-inner">
+			<div class="slider-inner-tilte text-center">
+				<h2>As it was before</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quia sequi omnis error,<br /> porro obcaecati <b>aut temporibus voluptates.</b> Qui, rem!
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="slider-part-img">
+		<div class="owl-carousel owl-theme owl-carousel-1">
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/1.jpg" class="card-img-top" alt="" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/partici-slider.jpg"
+						 class="card-img-top"
+						 alt="" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/3.jpg" class="card-img-top" alt="" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/4.jpg" class="card-img-top" alt="" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/1.jpg" class="card-img-top" alt="" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="card">
+
+					<img src="~/Content/image/partici-slider.jpg"
+						 class="card-img-top"
+						 alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+		$(".owl-carousel-1").owlCarousel({
+			loop: true,
+			margin: 30,
+			nav: true,
+			dots: false,
+			responsive: {
+				0: {
+					items: 1,
+				},
+				600: {
+					items: 3,
+				},
+				1000: {
+					items: 3,
+				},
+			},
+		});
+</script>
+
