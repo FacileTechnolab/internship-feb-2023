@@ -52,10 +52,42 @@
 
 // drawpoint ({x:23,y:3})
 //how to define class
+// class Person{
+//     x:number;
+//     y:number;
+//     constructor(x?:number , y?:number){
+//     //    this.x =x;
+//     //    this.y =y;
+//     //    x=7;
+//     //    y=8;
+//     console.log("x : "+x+"y : "+y);
+
+//     }
+//     draw(){
+//         console.log("X is "+this.x+" Y is "+ this.y);
+//         //.....
+//     }
+//     // getDistance(another:Person)
+//     // {
+//     //     //....
+//     // }
+// }
+// let person= new Person();
+// // person.x=65;
+// // person.y=67;
+// person.draw();
+
+class Animal {
+    constructor(){
+        console.log("hello is constructor");
+    }
+}
+
+let animal=new Animal();
+
 class Person{
-    x:number;
-    y:number;
-    constructor(x?:number , y?:number){
+  
+    constructor( private x?:number ,private y?:number){
     //    this.x =x;
     //    this.y =y;
     //    x=7;
@@ -67,20 +99,18 @@ class Person{
         console.log("X is "+this.x+" Y is "+ this.y);
         //.....
     }
-    // getDistance(another:Person)
-    // {
-    //     //....
-    // }
-}
-let person= new Person();
-// person.x=65;
-// person.y=67;
-person.draw();
+    getX()
+    {
+       return this.x;
 
-class Animal {
-    constructor(){
-        console.log("hello is constructor");
+    }
+    setx(value){
+        if(value<0)
+             throw new Error("value cannot be less than 0");
+        this.x=value; 
     }
 }
+let point =new Person(4,4);
+let x=point.getX();
+point.setx(67);
 
-let animal=new Animal();
