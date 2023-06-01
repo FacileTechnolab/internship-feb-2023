@@ -1,9 +1,11 @@
 import { Component } from "@angular/core";
 @Component({
-    selector:'courses',
+    selector:'app-courses',
     template:'<h2>Courses</h2>',
     
 })
-export class CoursesComponent{
-
+export class CoursesService{
+getCourses(){
+    return ["course1","course2","course3"];
+}
 }
