@@ -8,12 +8,13 @@ import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import {FormsModule} from '@angular/forms';
 import { FormStyle } from '@angular/common';
+import { summaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-  
+    summaryPipe
    
    
     
