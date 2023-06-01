@@ -39,22 +39,17 @@
 // let sum = (x: number, y:number)  =>   x+y;
 // console.log("Sum:" +sum (10,20));
 
-class Point{
-    private x: number;
-    y: number;
 
-    constructor (x: number, y: number)
-    {
-        this.x = x;
-        this.y = y;
-    }
-    draw()
-    {
-        console.log('X: ' + this.x + ' Y: ' + this.y); 
-    }
-// getDistance(another: Point){
-//     //..
-//  }
-}
+//  get x (){
+//     return this._x;
+//    }
+//  set x (value){
+//     if (value < 0)
+//     throw new Error('value cannot be less than 0.');
+//     this._x = value;
+//  } 
+import { Point } from './point';
 let point = new Point(1,2);
-point.draw();
+point.draw();    
+// let x =point.x;
+// point.x=10;
