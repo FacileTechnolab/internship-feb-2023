@@ -4,6 +4,7 @@ import {UserAuthModule} from './user-auth/user-auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
+import { CoursesService } from './courses.services';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { CoursesComponent } from './courses/courses.component';
     BrowserModule,
     UserAuthModule
   ],
-  providers: [],
+  providers: [
+    CoursesService
+  ],
   bootstrap:[AppComponent]
 })
 export class AppModule { }
