@@ -9,12 +9,16 @@ import { CourseComponent } from './course/course.component';
 import {FormsModule} from '@angular/forms';
 import { FormStyle } from '@angular/common';
 import { summaryPipe } from './summary.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    summaryPipe
+    summaryPipe,
+    FavoriteComponent,
+    TitleCasePipe
    
    
     
@@ -32,4 +36,7 @@ import { summaryPipe } from './summary.pipe';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  
+}

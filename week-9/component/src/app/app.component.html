@@ -1,4 +1,4 @@
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
 <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
@@ -523,6 +523,10 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- <router-outlet></router-outlet> -->
-<h1>Angular</h1>
+<!-- <h1>Angular</h1>
 <courses></courses>
-<input type="text" [(ngModel)]="name" />
+<input type="text" [(ngModel)]="name" /> -->
+<favorite [isFavorite]="post.isFavorite"></favorite>
+<input type="text" [(ngModel)]="title" />
+<br />
+{{ title | titlecase }}

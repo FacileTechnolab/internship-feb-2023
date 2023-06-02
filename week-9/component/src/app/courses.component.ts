@@ -33,6 +33,7 @@ import { Component } from "@angular/core";
    </div> -->
    <!-- <input (keyup.enter)="onKeyUp()"> event filter-->
    <!-- <input #email (keyup.enter)="onKeyUp(email.value)"/> -->
+   
    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/><br>
    {{course.title | lowercase}} <br>
    {{course.students | number}} <br>
