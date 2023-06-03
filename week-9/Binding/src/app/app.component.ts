@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Binding';
+  book:any={
+    Athorname:"Adamsmith",
+    bookname:"computer fundamentals",
+    rupees:100
+  }
+  
+  imageSource:string="../assets/images/first.png";
 }
