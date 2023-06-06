@@ -13,7 +13,16 @@ import { Component, OnInit } from '@angular/core';
                   {{ course}}
                  </li>
              </ul>
-             <img src="{{imageUrl}}"/>
+             <h6>{{getName()}}</h6>
+             <h6>{{obj.name}}, {{obj.age}}</h6>
+             <h6>{{arr.length}}</h6>
+             <h6>{{siteUrl}}</h6>
+             <h6>{{10/10}}</h6>
+
+             <div>
+                <div><img src="{{imageUrl}}" class="rounded"/></div>
+                <div><button class="btn btn-primary mt-4">Save</button></div>
+              </div>
              <!-- <img  [src] = " imageUrl"/> -->
              <!-- <table>
               <tr>
@@ -22,8 +31,6 @@ import { Component, OnInit } from '@angular/core';
              </table> -->
              `
    
-
- 
 })
 export class CoursesComponent  {
   title = "List of courses";
@@ -35,4 +42,14 @@ export class CoursesComponent  {
   }
   imageUrl = "https://hips.hearstapps.com/hmg-prod/images/small-fuffy-dog-breeds-1623362663.jpg?crop=1.00xw:0.753xh;0,0.0719xh&resize=1200:*";
   colSpan = 2;
+  getName()
+  {
+    return "peter"
+  }
+  obj = {
+    name : 'kelly',
+    age: 21
+  }
+  arr = ['tony', 'kakar', 'peter']
+  siteUrl = window.location.href
 }
