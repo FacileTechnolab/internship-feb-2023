@@ -32,7 +32,22 @@ export class AppComponent {
   Myevent(evt:any){
     console.warn(evt);
   }
-  getvalue($event:any){
-    console.warn($event.target.value);
+  // getvalue($event:any){
+  //   console.warn($event.target.value);
+  // }
+  currentval="";
+  getvalue(val:any){
+    console.warn(val);
+    this.currentval=val;
   }
+  getval($event:any){
+    console.warn($event.target.value);
+    this.currentval=$event.target.value;
+  }
+  bestfraiendname="Nirupa";
+  disablebox=true;
+  enableBox(){
+    this.disablebox=false;
+  }
+  show=true;
 }

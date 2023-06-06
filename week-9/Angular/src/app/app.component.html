@@ -7,7 +7,7 @@
 <h1>{{ SiteUrl }}</h1>
 <app-user-list></app-user-list>
 <app-signup></app-signup>
-<button (click)="Myevent('this is click event')">click me!</button><br />
+<!-- <button (click)="Myevent('this is click event')">click me!</button><br />
 <br />
 <br />
 <input type="text" #box (keydown.enter)="Myevent(box.value)" />
@@ -27,8 +27,23 @@
   (mouseenter)="Myevent('mouseenter')"
 >
   mouse event
-</h1>
+</h1> -->
 
 <br />
 <input type="text" #box />
-<button (keyup)="Myevent(box.value)">click</button>
+<button (click)="getvalue(box.value)">click</button><br />
+<br />
+<br />
+<input type="text" (keyup)="getval($event)" />
+<h2>{{ currentval }}</h2>
+<input type="text" [value]="bestfraiendname" />
+<br />
+<br />
+<input type="text" [disabled]="disablebox" [value]="bestfraiendname" />
+<br />
+<br />
+<input type="text" disabled="{{ disablebox }}" value="{{ bestfraiendname }}" />
+<br />
+<br />
+<button (click)="enableBox()">Enable box</button>
+<h1 *ngIf="show">If Block</h1>
