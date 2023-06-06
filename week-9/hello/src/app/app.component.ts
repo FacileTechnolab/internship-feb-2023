@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello world';
+  title = 'Hello world';
+  name= 'Maurya';
+  obj= {
+    name:'krishika',
+    age:21
+  }
+  arr=['bruce','tony','peter']
+
+  getName() {
+    alert("It's me")
+
+  // myEvent(evt)
+  // {
+  //   console.warn(evt)
+  // }
+  }
 }

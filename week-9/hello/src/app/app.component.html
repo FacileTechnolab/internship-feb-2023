@@ -1,2 +1,12 @@
 <h1>Angular</h1>
 <app-courses></app-courses>
+<h2>{{title}}</h2>
+<h2>{{name}}</h2>
+<h2>{{obj.name}}</h2>
+<h2>{{obj.age}}</h2>
+<h2>{{arr.length}}</h2>
+
+<button (click)="getName()">Who is this</button>
+<br> <br>
+<input type="text" #box (keyup.space)="myEvent(box.value)"/>
+<br> <br>
