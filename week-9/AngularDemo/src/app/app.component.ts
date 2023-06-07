@@ -7,5 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularDemo';
-  message = 'Angular is the best javascript framework for building for alient-side application'
+  message = 'Angular is the best javascript framework for building for alient-side application';
+  myName = "kela kela kela.....";
+  getName(name:any)
+  {
+    alert(name)
+  }
+  myEvent(evt:any){
+    console.warn(evt)
+  }
+  currentVal = "";
+  getVal($event:any){
+     console.warn($event.target.value)
+     this.currentVal = $event.target.value
+  }
 }

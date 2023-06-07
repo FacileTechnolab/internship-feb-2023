@@ -7,3 +7,15 @@
     color: brown;
     font-size: 45px;
 }
+.mouse-evt h1{
+   background-color: skyblue;
+   margin-top: 20px;
+   font-size: 30px;
+   padding: 10px 0;
+   color: red;
+}
+.mouse-evt h1:last-child{
+  background-color: red;
+  color: skyblue;
+
+}

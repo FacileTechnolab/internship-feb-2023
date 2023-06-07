@@ -9,8 +9,41 @@
     <p>{{message}}</p>
     <app-login></app-login> 
     <app-courses></app-courses>
-</div> 
 
+    <!-- call-function-on-event -->
+      <!-- <button (click)="getName('Dipali Kuhad')" class="mt-3">My name is</button> -->
+      <button (click)="getName(myName)" class="mt-3">My name is</button>
+    <!-- call-function-on-event-end -->
+
+    <!-- call-event -->
+      <div>
+        <!-- call-event-key(up-down) -->
+        <!-- <input type="text"  (keyup)="myEvent('keyup event')"/> -->
+        <input type="text" #box (keyup)="myEvent(box.value)"/>
+        <input type="text" #boxenter (keyup.enter)="myEvent(boxenter.value)" class="mx-3"/>
+        <input type="text" #boxspace (keyup.space)="myEvent(boxspace.value)" />
+
+        <!-- call-event-blur-->
+        <input type="text" #boxblur (blur)="myEvent('blur event')" class="mx-3"/>
+
+        <!-- call-event-click -->
+        <button (click)="myEvent('this is click event')" class="mt-3 mx-1">Click me</button>
+         
+        <!-- call-event-mouse-->
+        <div class="mouse-evt">
+          <h1 (mouseover)="myEvent('mouse over')">Mouse Event Over</h1>
+          <h1 (mouseleave)="myEvent('mouse leave')">Mouse Event Leave</h1>
+        </div>
+        <!-- <input type="text" (keyup)="getVal($event)"/>
+        <button (click)="getVal(box.value)" class="mt-3 mx-1">Get Value</button> -->
+        <input type="text" #boxgetval />
+        <button (click)="getVal(boxgetval.value)" class="mt-3 mx-1">Get Value</button>
+        <h4>{{currentVal}}</h4>
+      
+      </div>
+    <!-- call-event-end -->
+    
+</div>
  
 
 
