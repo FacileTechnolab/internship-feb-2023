@@ -49,5 +49,44 @@ export class AppComponent {
   enableBox(){
     this.disablebox=false;
   }
-  show=true;
+  // show="yes";
+  show="blue";
+   color="red";
+  // color="green";
+  // color="yellow";
+  // color="blue";
+  // color="gray";
+
+  // for loop print elements with the help of array
+  // data=['shivangi','dipali','krishika','jahanvi'];
+// for loop print elements with the help of object
+  data=[
+    {
+      name:'shivangi',
+      age:22,
+      nickname:'nirupa'
+
+    },
+    {
+      name:'krishika',
+      age:22,
+      nickname:'nirupa'
+
+    },
+    {
+      name:'dipali',
+      age:22,
+      nickname:'nirupa'
+
+    },
+    {
+      name:'jahnvi',
+      age:22,
+      nickname:'nirupa'
+
+    }
+  ]
+  getValues(val:any){
+console.warn(val);
+  }
 }

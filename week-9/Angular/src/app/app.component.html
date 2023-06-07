@@ -30,6 +30,7 @@
 </h1> -->
 
 <br />
+<h1>button make and function call in button click event in Angular</h1>
 <input type="text" #box />
 <button (click)="getvalue(box.value)">click</button><br />
 <br />
@@ -39,6 +40,7 @@
 <input type="text" [value]="bestfraiendname" />
 <br />
 <br />
+<h1>property binding in Angular</h1>
 <input type="text" [disabled]="disablebox" [value]="bestfraiendname" />
 <br />
 <br />
@@ -46,4 +48,90 @@
 <br />
 <br />
 <button (click)="enableBox()">Enable box</button>
-<h1 *ngIf="show">If Block</h1>
+<h1>condition statement in Angular</h1>
+<!-- <h1 *ngIf="show; else elseBlock">If Block</h1>
+<ng-template #elseBlock>
+  
+  <h1>Member has not added skills yet.</h1>
+</ng-template> -->
+
+<!-- <h1 *ngIf="show == 'yes'; then ifBlock; else elseBlock">If Block</h1>
+
+<ng-template #ifBlock>
+  <h1>if block</h1>
+</ng-template>
+<ng-template #elseBlock>
+  <h1>else block</h1>
+</ng-template> -->
+<ng-template [ngIf]="show == 'red'">
+  <h1>Red Block</h1>
+</ng-template>
+<ng-template [ngIf]="show == 'green'">
+  <h1>Green Block</h1>
+</ng-template>
+<ng-template [ngIf]="show == 'blue'">
+  <h1>Blue Block</h1>
+</ng-template>
+<h1>Switchcase in Angular</h1>
+<div [ngSwitch]="color">
+  <h1 style="color: red" *ngSwitchCase="'red'">red color</h1>
+  <h1 style="color: green" *ngSwitchCase="'green'">green color</h1>
+  <h1 style="color: yellow" *ngSwitchCase="'yellow'">yellow color</h1>
+  <h1 style="color: blue" *ngSwitchCase="'blue'">blue color</h1>
+  <h1 style="color: gray" *ngSwitchDefault="'gray'">gray color</h1>
+</div>
+<h1>For Loop in Angular</h1>
+<h4>for loop print the elements with the help of array</h4>
+<h4 *ngFor="let item of data">
+  <li>{{ item }}</li>
+</h4>
+<h4>for loop print the elements with the help of object</h4>
+<!-- <h4 *ngFor="let item of data">
+  <li>
+    <!-- {{ item.name }}<br />
+    {{ item.age }}<br />
+    {{ item.friendname }} 
+    {{ item.name }}
+    {{ item.age }}
+    {{ item.friendname }}
+  </li>
+  <!-- <li>{{ item.age }}</li>
+  <li>{{ item.friendname }}</li> 
+</h4> -->
+<table border="5">
+  <tr>
+    <td>name</td>
+    <td>age</td>
+    <td>nickname</td>
+  </tr>
+  <tr *ngFor="let items of data">
+    <td>{{ items.name }}</td>
+    <td>{{ items.age }}</td>
+    <td>{{ items.nickname }}</td>
+  </tr>
+</table>
+<br />
+<div>
+  <img
+    style="height: 500px; width: 1570px"
+    src="\assets\images\BUTTERFLY.PNG"
+  />
+</div>
+
+<h1>Simple Form in Angular</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+  <input type="text" ngModel name="user" placeholder="enter the user name" />
+  <br />
+  <br />
+  <input type="text" ngModel name="age" placeholder="enter the user age" />
+  <br />
+  <br />
+  <input
+    type="text"
+    ngModelname="Address"
+    placeholder="enter the user Address"
+  />
+  <br />
+  <br />
+  <button>Get Users Value</button>
+</form>
