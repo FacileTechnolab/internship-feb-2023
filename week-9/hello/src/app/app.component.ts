@@ -16,10 +16,20 @@ export class AppComponent {
 
   getName() {
     alert("It's me")
-
-  // myEvent(evt)
-  // {
-  //   console.warn(evt)
-  // }
   }
-}
+  myEvent(evt:any)
+  {
+    console.warn(evt);
+  }
+  currentVal="";
+  getValue(val:any)
+  {
+    
+    console.warn(val);
+    this.currentVal=val;
+  }
+
+
+  }
+
+

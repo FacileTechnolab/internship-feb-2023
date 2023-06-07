@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { CoursesService } from './courses.services';
-@Component({
-    selector:'app-courses',
-     template:`<h2>{{ title }}</h2>
+ import { Component } from '@angular/core';
+ import { CoursesService } from './courses.services';
+// @Component({
+//     selector:'app-courses',
+//     //  template:`<h2>{{ title }}</h2>
     
-     <h2 [textContent]="title"></h2>
-    <img src="{{ imageUrl }}" />
-    `
+    //  <h2 [textContent]="title"></h2>
+    // <img src="{{ imageUrl }}" />
+    // `
 
 
     // <ul> 
@@ -15,16 +15,16 @@ import { CoursesService } from './courses.services';
     //     </li>
     // </ul>
 
-})
-export class CoursesComponent{
-    title = "List of courses";
-    imageUrl = "../assets/image/moon-night-nature-house-wallpaper-preview.jpg"
+// })
+// export class CoursesComponent{
+//     title = "List of courses";
+//     // imageUrl = "../assets/image/moon-night-nature-house-wallpaper-preview.jpg"
 
-    courses: any;
+//     courses: any;
 
-    // constructor( service: CoursesService){
+//     // constructor( service: CoursesService){
        
-    //     this.courses = service.getCourses();
-    }
+//     //     this.courses = service.getCourses();
+//     }
 
 // }
