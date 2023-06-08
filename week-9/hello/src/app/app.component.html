@@ -10,8 +10,8 @@
 <br> <br>
 <button (click)="myEvent('this is button')">click it </button>
 <br> <br>
-<!-- <input type="text" #box (keydown)="myEvent(box.value)"/> -->
-<br> <br> 
+ <!-- <input type="text" #boxdown  (keydown)="myEvent(box.value)"/> -->
+ <br> <br> 
 
 <h1 
 (mouseover) = "myEvent('mouseover')"
@@ -24,7 +24,70 @@ style="background-color:darkseagreen;">
 mouse leave
 </h1>
 
-<input type="text" #box/>
-<button (click)="getValue(box.value)">Got it</button>
+<input type="text" #boxval/>
+<button (click)="getValue(boxval.value)">Got it</button>
+<h2>{{currentVal}}</h2>
 
-<h2>{{currentVal }}</h2>
+<input type="text" [disabled]="disabledBox" [value]="name"/>
+<br> <br>
+<input type="text" [disabled]="disabledBox" value={{name}}/>
+<br> <br>
+<button (click)="enableBox()">Enable TextBox</button>
+
+<!-- <h1 *ngIf="show=='yes'; then ifBlock else elseBlock">
+</h1>
+<ng-template #ifBlock>
+    <h1>if block</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else block</h1>
+</ng-template> -->
+
+<ng-template [ngIf]="show=='red'">
+    <h1>Red block</h1>
+</ng-template>
+
+<ng-template [ngIf]="show=='green'">
+    <h1>Green block</h1>
+</ng-template>
+
+<ng-template [ngIf]="show=='blue'">
+    <h1>Blue block</h1>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <h2 style="color: red;" *ngSwitchCase="'Red'">red color</h2>
+    
+    <h2 style="color: blue;" *ngSwitchCase="'Blue'">Blue color</h2>
+    
+    <h2 style="color: green;" *ngSwitchCase="'Green'">green color</h2>
+    
+    <h2 style="color: pink;" *ngSwitchCase="'Pink'">pink color</h2>
+</div>
+
+<table border="1">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>marks</td>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.marks}}</td>
+        </tr>
+    </table>
+<br> <br> <br>
+<form #simpleForm="ngForm" (ngSubmit)="getValue(simpleForm.value)">
+    <input type="text" ngModel name="user" placeholder="enter user name" >
+    <br> <br>
+    <input type="text" ngModel name="email-id" placeholder="enter user email-id" >
+    <br> <br>
+    <input type="text" ngModel name="Birth date" placeholder="enter user Birth date" >
+    <br> <br>
+    <input type="text" ngModel name="age" placeholder="enter user age" >
+    <br> <br>
+    <input type="password" ngModel name="password" placeholder="enter user password" >
+    <br> <br>
+    <button>Get user value</button> 
+</form>

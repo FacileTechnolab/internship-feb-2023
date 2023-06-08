@@ -24,12 +24,47 @@ export class AppComponent {
   currentVal="";
   getValue(val:any)
   {
-    
     console.warn(val);
-    this.currentVal=val;
+    this.currentVal=val
   }
-
-
+   
+  disabledBox=true
+  enableBox()
+  {
+      this.disabledBox=false
   }
+  
+  // show="yes"
+  show="red"
+  color="Blue"
+  
+  data=
+  [{
+     name:'Mauryaji',
+     age:21,
+     marks:56
+    },
+    {
+      name:'Maratha',
+      age:22,
+      marks:51
+     },
+     {
+      name:'Patel',
+      age:23,
+      marks:74
+     },
+     {
+      name:'Shahi',
+      age:24,
+      marks:75
+     },
+  ]
+
+  getvalues(val:any)
+  {
+    console.warn(val) 
+  }
+}
 
 
