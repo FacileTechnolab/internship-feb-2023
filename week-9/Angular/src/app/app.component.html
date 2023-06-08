@@ -1,5 +1,6 @@
+<app-header></app-header>
 <h1>Hello World</h1>
-<h2>{{ title }}</h2>
+<h2 style="margin-top: 100px">{{ title }}</h2>
 <h1>{{ name }}</h1>
 <h2>{{ get() }}</h2>
 <h1>{{ obj.bookname }}</h1>
@@ -119,19 +120,135 @@
 </div>
 
 <h1>Simple Form in Angular</h1>
-<form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
-  <input type="text" ngModel name="user" placeholder="enter the user name" />
-  <br />
-  <br />
-  <input type="text" ngModel name="age" placeholder="enter the user age" />
-  <br />
-  <br />
-  <input
-    type="text"
-    ngModelname="Address"
-    placeholder="enter the user Address"
-  />
-  <br />
-  <br />
-  <button>Get Users Value</button>
-</form>
+<div id="forms">
+  <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+    <input type="text" ngModel name="user" placeholder="enter the user name" />
+    <br />
+    <br />
+    <input type="text" ngModel name="age" placeholder="enter the user age" />
+    <br />
+    <br />
+    <input
+      type="text"
+      ngModelname="Address"
+      placeholder="enter the user Address"
+    />
+    <br />
+    <br />
+    <button>Get Users Value</button>
+  </form>
+</div>
+<!-- style binding -->
+<h1 style="color: aqua">Headin 1!</h1>
+<h1 [style.color]="'blue'">Headin 1!</h1>
+<h1 [style.color]="color">Headin 1!</h1>
+<button (click)="getcolor()" style="margin-bottom: 10px">Update Color</button>
+<h1 [style.color]="error ? 'red' : 'blue'">conditional style</h1>
+<button (click)="gettoggle()" style="margin-bottom: 10px">Update</button>
+<h1>bootstrap in angular</h1>
+<button class="btn btn-danger">save</button>
+<div class="w-25 p-3" style="background-color: #5b66da">Width 25%</div>
+<div class="w-50 p-3" style="background-color: #5b66da">Width 50%</div>
+<div class="w-75 p-3" style="background-color: #5b66da">Width 75%</div>
+<div class="w-100 p-3" style="background-color: #5b66da">Width 100%</div>
+<div class="w-auto p-3" style="background-color: #5b66da">Width auto</div>
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
+  </ngb-alert>
+</p>
+<div ngbAccordion>
+  <div ngbAccordionItem [collapsed]="false">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Simple</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+          skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+          single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+          you probably haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div ngbAccordionItem>
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>
+        <span>&#9733; <b>Fancy</b> title &#9733;</span>
+      </button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+          skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+          single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+          you probably haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div ngbAccordionItem [disabled]="true">
+    <h2 ngbAccordionHeader>
+      <button ngbAccordionButton>Disabled</button>
+    </h2>
+    <div ngbAccordionCollapse>
+      <div ngbAccordionBody>
+        <ng-template>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+          terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+          skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+          single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+          you probably haven't heard of them accusamus labore sustainable VHS.
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide" />
+    </div>
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide" />
+    </div>
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide" />
+    </div>
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<app-footer></app-footer>

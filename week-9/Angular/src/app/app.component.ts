@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1500/500`);
   // use a title property
   title = 'Angular app';
   //use a variable name
@@ -51,7 +53,7 @@ export class AppComponent {
   }
   // show="yes";
   show="blue";
-   color="red";
+  //  color="red";
   // color="green";
   // color="yellow";
   // color="blue";
@@ -88,5 +90,16 @@ export class AppComponent {
   ]
   getValues(val:any){
 console.warn(val);
+  }
+  color="green";
+  error=false;
+  getcolor(){
+    this.color="orange";
+
+   
+    
+  }
+  gettoggle(){
+    this.error=!this.error;
   }
 }
