@@ -21,4 +21,27 @@ export class AppComponent {
      console.warn($event.target.value)
      this.currentVal = $event.target.value
   }
+  show = "green";
+  color = "chocolate";
+  data = [
+    {
+      name:'Krishi',
+      age: 20,
+      standard: 9
+    },
+    {
+      name:'Dipi',
+      age: 21,
+      standard: 10
+    },
+    {
+      name:'Jani',
+      age: 22,
+      standard: 12
+    },
+    {
+      name:'Shivi',
+      age: 22,
+      standard: 12
+    }]
 }
