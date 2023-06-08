@@ -93,6 +93,7 @@
   </tr>
 </table>
 
+<app-header> </app-header>
 <h1>Form</h1>
 <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
   <input type="text" ngModel name="user" placeholder="enter user name" />
@@ -104,5 +105,44 @@
   <input type="text" ngModel name="address" placeholder="enter address" />
   <br /><br />
   <input type="password" ngModel name="password" placeholder="enter password" />
+  <br /><br />
   <button>Get User Values</button>
 </form>
+<app-footer></app-footer>
+<br /><br />
+<h1>Style Binding in Angular</h1>
+<h1 style="color: red">Heading 1</h1>
+<h1 [style.color]="'green'">Heading 1</h1>
+<h1 [style.color]="color">Heading 1</h1>
+<h1 [style.color]="err ? 'red' : 'green'">Conditional style</h1>
+<button (click)="UpdateColor()">Update Color</button>
+<br /><br />
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
+  </ngb-alert>
+</p>
+
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (closed)="close(alert)">{{
+    alert.message
+  }}</ngb-alert>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p>
+<br /><br />
+<button mat-button color="primary">Angular Mat Button</button>
+<br /><br />
+<button mat-flat-button color="accent">Accent</button><br /><br />
+<button mat-flat-button color="primary">primary</button><br /><br />
+<button mat-flat-button color="warn">Warn</button><br /><br />
+
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-slider>
+  <input matSliderThumb />
+</mat-slider>
+<div *ngFor="let data of information">
+  <app-user [hero]="data"></app-user>
+</div>
