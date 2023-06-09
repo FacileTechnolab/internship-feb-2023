@@ -1,0 +1,16 @@
+<h1>Angular</h1>
+<app-users [value]="title"></app-users>
+<h1>reusable component in angular</h1>
+<div *ngFor="let data of title">
+  <app-user [value]="data"></app-user>
+</div>
+<app-user-output (parentFunction)="parentFunction($event)"></app-user-output>
+<h1>{{ name }}</h1>
+<h1>{{ Company | uppercase }}</h1>
+<h1>{{ Company | lowercase }}</h1>
+<h1>{{ today | date }}</h1>
+<h1>{{ today | date : "fullDate" }}</h1>
+<h1>{{ str | slice : 3 }}</h1>
+<h1>{{ money | currency : "USD" }}</h1>
+<h1>{{ money | currency : "CAD " }}</h1>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>

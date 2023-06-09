@@ -5,10 +5,12 @@ import { SignupComponent } from './signup/signup.component';
 
 
 
+
 @NgModule({
   declarations: [
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+
   ],
   imports: [
     CommonModule
