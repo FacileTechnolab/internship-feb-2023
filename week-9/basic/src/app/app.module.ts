@@ -15,6 +15,7 @@ import{MatButtonModule} from '@angular/material/button'
 import{MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { UserComponent } from './user/user.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { UserComponent } from './user/user.component';
     AutherComponent,
     HeaderComponent,
     FooterComponent,
-    UserComponent
+    UserComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

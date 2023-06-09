@@ -47,6 +47,16 @@ const ALERTS: Alert[] = [
 export class AppComponent {
   title = 'basic_app';
   name="Jahanvi"
+   surname="";
+   subject="java"
+   str="Hello Angular"
+   money=100;
+   today=Date.now();
+  parentsFunction(parent)
+  {
+  console.warn(parent)
+  this.surname=parent.surname;
+}
   getname()
   {
     // return "Virat"
@@ -140,5 +150,7 @@ information=[{
   age:20,
   email:'West@test.com'
 }
+
+
 ]
 }

@@ -146,3 +146,21 @@
 <div *ngFor="let data of information">
   <app-user [hero]="data"></app-user>
 </div>
+<!-- <app-user parentFunction="parentsFunction($event)"></app-user> -->
+<app-child (parentFunction)="parentsFunction($event)"></app-child>
+<br /><br /><br />
+<h1>{{ surname }}</h1>
+
+<h1>{{ subject | uppercase }}</h1>
+
+<h1>{{ subject | lowercase }}</h1>
+
+<h1>{{ subject | titlecase }}</h1>
+
+<h2>{{ today | date }}</h2>
+<h2>{{ today | date : "fullDate" }}</h2>
+<h2>{{ str | slice : 2 }}</h2>
+<h2>{{ str | slice : 2 : 6 }}</h2>
+<h2>{{ money | currency : "USD" }}</h2>
+<h2>{{ money | currency : "CAD" }}</h2>
+<p>{{ today | date | uppercase }}</p>
