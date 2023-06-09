@@ -1,3 +1,5 @@
+<app-header></app-header>
+<div class="Data">
 <h1>Angular</h1>
 <!-- <app-courses></app-courses> -->
 <h2>{{title}}</h2>
@@ -79,15 +81,32 @@ mouse leave
     </table>
 <br> <br> <br>
 <form #simpleForm="ngForm" (ngSubmit)="getValue(simpleForm.value)">
+    <label for="Name" class="from-label">name</label><br>
     <input type="text" ngModel name="user" placeholder="enter user name" >
     <br> <br>
+    <label for="email-id" class="from-label">Email-id</label><br>
     <input type="text" ngModel name="email-id" placeholder="enter user email-id" >
     <br> <br>
+    <label for="Birth date" class="from-label">Birth date</label><br>
     <input type="text" ngModel name="Birth date" placeholder="enter user Birth date" >
     <br> <br>
+    <label for="age" class="from-label">Age</label><br>
     <input type="text" ngModel name="age" placeholder="enter user age" >
     <br> <br>
+    <label for="password" class="from-label">Password</label><br>
     <input type="password" ngModel name="password" placeholder="enter user password" >
     <br> <br>
     <button>Get user value</button> 
 </form>
+
+<h1>Style Binding in angular</h1>
+<!-- <h1 style="boja:red">Heading</h1> -->
+<h1 [style.color]="'green'">Heading</h1>
+<h1 [style.color]="boja">Heading</h1>
+<h1 [style.color]="err? 'red':'green' ">Conditional Style</h1>
+<button (click) = "Updatecolor()">Update color</button>
+
+
+
+<app-footer></app-footer>
+</div>

@@ -65,6 +65,14 @@ export class AppComponent {
   {
     console.warn(val) 
   }
+
+  boja="orange";
+  err=true;
+  Updatecolor()
+  {
+    this.err = !this.err
+
+  }
 }
 
 
