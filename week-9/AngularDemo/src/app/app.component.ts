@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -44,4 +45,39 @@ export class AppComponent {
       age: 22,
       standard: 12
     }]
+
+    //tdf
+      // name : any;
+      // email: any;
+      // password: any;
+      // messagetext : any ; 
+      // submitForm(){
+      //   alert(`${this.name} ${this.email} ${this.messagetext}`)
+      // }
+
+    //react-form
+    //create a form control for the username
+    nameControl = new FormControl('');
+    emailControl = new FormControl('');
+    messagetextControl = new FormControl('');
+
+
+    //create a form control for the username
+   form = new FormGroup({
+      name: this.nameControl,
+      email : this.emailControl,
+      mesagetext : this.messagetextControl
+    });
+    
+    submitForm(){
+      alert(this.nameControl.value)
+    }
+    //listion for changes to the form and perform validation
+    // form.valueChanges.subscribe(value => {
+    //  if (!value.username) {
+    //   name.setErrors({required: true});
+    //  }else{
+    //   name.setErrors(null);
+    //  }
+    // });
 }

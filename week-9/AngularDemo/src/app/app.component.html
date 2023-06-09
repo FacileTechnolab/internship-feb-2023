@@ -1,7 +1,7 @@
 
 
 
-
+<app-header></app-header>
 <div class="content" role="main">
   <div class="main-head">
     <h2>Welcome to {{title}} </h2>
@@ -83,8 +83,8 @@
         {{item.name}},
         {{item.age}}
       </p></b> -->
-      <table border="1">
-        <tr>
+      <table class="table-border" border="5">
+        <tr >
           <td>Name</td>
           <td>age</td>
           <td>Standard</td>
@@ -100,13 +100,67 @@
      <!-- loops-end -->
       </div>
 
-    
-    
+     
+
 </div>
- 
+ <!-- tdf-form -->
+  <div class="react-form container bg-black p-5 rounded text-white">
+    <h5 class="fs-2 text-center ">Simpal Form</h5>
+  <!-- <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="email" [(ngModel)]="name" class="form-control" id="name" aria-describedby="emailHelp" name="name">
+      
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" [(ngModel)]="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" [(ngModel)]="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea [(ngModel)]="messagetext" id="message" name="messagetext"></textarea>
+    </div>
+
+    <button type="submit" (click)="submitForm()" class="btn btn-primary">Submit</button>
+  </form> -->
+ <!-- tdf-form-end -->
+  <!-- reactive-form -->
+  <form [formGroup] = "form" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="email" formControlName="name" required class="form-control" id="name" aria-describedby="emailHelp" name="name">
+      
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea formControlName="messagetext" id="message" name="messagetext"></textarea>
+    </div>
+
+    <button type="submit" (click)="submitForm()" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+ <!-- react-form-end -->
 
 
+ <!-- style-binding -->
+ <p style="color:brown">Style binding</p>
+ <p [style.color]="'red'">Style binding</p>
 
+ <!-- style-binding-end -->
+
+ <app-footer></app-footer>
  
 
  

@@ -5,19 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesService } from './courses.services';
-import {FormModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent
+    CoursesComponent,
+    HeaderComponent,
+    FooterComponent
 
 
   ],
   imports: [
     BrowserModule,
     UserAuthModule,
-    FormModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CoursesService

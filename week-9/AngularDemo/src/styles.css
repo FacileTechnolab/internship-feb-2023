@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css" ;
+/* header  */
+.header-bg{
+  background-color: #e6ffff;
+}
+
+/* footer */
+.footer-bg{
+    background-color:#b3eeee ;
+}
