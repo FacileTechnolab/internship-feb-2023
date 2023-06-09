@@ -156,7 +156,13 @@
 
  <!-- style-binding -->
  <p style="color:brown">Style binding</p>
- <p [style.color]="'red'">Style binding</p>
+ <p [style.color]="'green'">Style binding</p>
+ <p [style.color]="color">Style binding</p>
+ <p [style.color]="err?'red':'blue'">Style binding</p>
+
+ <button (click)="Updatecolor()">Update Color</button>
+
+
 
  <!-- style-binding-end -->
 

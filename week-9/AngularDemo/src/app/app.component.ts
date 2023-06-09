@@ -23,7 +23,7 @@ export class AppComponent {
      this.currentVal = $event.target.value
   }
   show = "green";
-  color = "chocolate";
+  // color = "chocolate";
   data = [
     {
       name:'Krishi',
@@ -72,12 +72,12 @@ export class AppComponent {
     submitForm(){
       alert(this.nameControl.value)
     }
-    //listion for changes to the form and perform validation
-    // form.valueChanges.subscribe(value => {
-    //  if (!value.username) {
-    //   name.setErrors({required: true});
-    //  }else{
-    //   name.setErrors(null);
-    //  }
-    // });
+ 
+
+    color = "yellow";
+    err = true;
+    Updatecolor(){
+      // this.color = "blue";
+      this.err= !this.err
+    }
 }
