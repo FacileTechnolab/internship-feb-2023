@@ -1,0 +1,97 @@
+<header>
+  <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="container">
+      <div class="d-flex  align-items-center justify-content-between p-2">
+        <!-- <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a> -->
+        <div>
+          <h4>Simpal Header</h4>
+        </div>
+
+        <div>
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-white">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                Customers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-3 py-2 border-bottom mb-3">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-light text-dark me-2">Login</button>
+        <button type="button" class="btn btn-primary">Sign-up</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <!-- simple-alert -->
+    <h2>Alert</h2>
+    <p>
+      <ngb-alert [dismissible]="false">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      </ngb-alert>
+    </p>
+    <!-- Closable-Alert -->
+    <h2 class="mt-4">Closable Alert</h2>
+    <p *ngFor="let alert of alerts">
+      <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+    </p>
+     <!-- Closable-Alert -->
+     <h2 class="mt-4">Button</h2>
+     <div class="ang-btn d-flex align-items-center justify-content-between">
+      <button mat-button color="primary">Basic</button>
+      <button mat-raised-button color="accent">Raised</button>
+      <button mat-stroked-button color="warn">Stroked</button>
+      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-flat-button color="primary">Flat</button>
+      <button mat-fab color="warn">Fab</button>
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+      <mat-slider showTickMarks>
+        <input matSliderThumb>
+      </mat-slider>
+     </div>
+
+     <app-user></app-user>
+  </div>
+
+</body>
