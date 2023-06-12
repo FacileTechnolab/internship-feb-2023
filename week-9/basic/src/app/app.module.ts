@@ -16,6 +16,8 @@ import{MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { UserComponent } from './user/user.component';
 import { ChildComponent } from './child/child.component';
+import { CustomStyleDirective } from './custom-style.directive';
+
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ChildComponent } from './child/child.component';
     HeaderComponent,
     FooterComponent,
     UserComponent,
-    ChildComponent
+    ChildComponent,
+    CustomStyleDirective,
+  
   ],
   imports: [
     BrowserModule,
