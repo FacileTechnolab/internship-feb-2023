@@ -1,0 +1,415 @@
+﻿@model WebApplication2.Models.Users
+<add namespace="System.Web.Optimization" />
+
+
+@*@Html.Raw(ViewBag.InsertMessage)*@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @Styles.Render("~/Content/home.css")
+    @*@Styles.Render("~/bundle/modernizr")*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="~/Content/home.css" />
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <section class="header-sec">
+            <div class="container">
+                <div class="header_menu_wrap">
+                    <ul class="menu menu_left">
+                        <li>  @Html.ActionLink("Home", "Index", "Home")</li>
+
+                        <li> @Html.ActionLink("Features", "Features", "Home")</li>
+                        <li> @Html.ActionLink("Review", "Review", "Home")</li>
+                        <li> @Html.ActionLink("About Us", "AboutUs", "Home")</li>
+                    </ul>
+                    <div class="header_logo"><a href="#"><img src="~/Content/image/logo_icon.png" class="img-fluid" alt=""> RefreshM5</a></div>
+                    <ul class="menu menu_right">
+                        <li> @Html.ActionLink("Princing", "Princing", "Home")</li>
+
+                        <li> @Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal ">
+                            Sign In
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Sign Up
+                        </button>
+
+                        @*<li> @Html.ActionLink("Sign Up", "Signup", "User")</li>*@
+
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div id="body">
+        @RenderBody()
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+        </section>
+    </div>
+
+
+    <!-- Modal -->
+    @using (Html.BeginForm("Signup", "User", FormMethod.Post, new { @id = "signupModel" }))
+    {
+        HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.User, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.User, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.User, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        @Html.ActionLink("Sign Up", "Index", "Home")
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+    <!--Model-->
+    <!-- Modal -->
+
+    @using (Html.BeginForm("Signin", "User", FormMethod.Post, new { @id = "signinModel" }))
+    {
+        HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sign IN</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                </div>
+                            </div>*@
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Sign In</button>
+
+
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        @Html.ActionLink("Sign In", "Index", "Home")
+                    </div>
+                </div>
+
+            </div>
+        </div>}
+
+
+    <footer>
+        <div class="footer_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Claire Clean</li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Cleaning Services</li>
+                            <li>Book Appointment</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <ul class="foot_list_col">
+                            <li>Cancellation Policy</li>
+                            <li>Our Pricing</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 text-center mt-5 mb-4">
+                        <p class="foot_notes">Keeping it clean since 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_2 text-center">
+            <div class="container">
+                <p class="copyright_text">© Copyright 2025 Mobirise - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>*@
+    @*<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>*@
+
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            ClientValidation()
+
+
+        });
+
+        function ClientValidation() {
+            $("#signupModel").validate({
+                rules: {
+
+                    'FirstName': {
+                        required: true
+                    },
+                    'LastName': {
+                        required: true
+                    },
+                    'User': {
+                        required: true
+                    },
+                    'Phone': {
+                        required: true,
+                        number: true
+                    },
+                    'Email': {
+                        required: true,
+
+                    },
+                    'Password': {
+                        required: true,
+
+                    },
+                    'ConfirmPassword': {
+                        required: true,
+                        equalTo: '#Password'
+
+                    },
+
+                },
+                message: {
+                    'FirstName': {
+                        required: 'First Name is Required field'
+                    },
+                    'LastName': {
+                        required: 'Last Name is Required field'
+                    },
+                    'User': {
+                        required: 'User is Required field'
+                    },
+                    'Phone': {
+                        required: 'Phone is Required field',
+                        number: 'Phone number is type digit',
+                        required: 'Phone is only 10 digit'
+                    },
+                    'Email': {
+                        required: 'Email is Required field',
+                        email: 'Enter valid email address',
+
+                    },
+                    'Password': {
+                        required: 'Password is Required field',
+
+                    },
+                    'ConfirmPassword': {
+                        required: 'ConfirmPassword is Required field',
+                        equalTo: 'Password and Confirm Password sould be same'
+
+                    },
+
+                }
+            });
+        }
+    </script>
+
+
+    @*//SIGNIN*@
+    <script>
+
+        $(document).ready(function () {
+            ClientValidation()
+
+
+        });
+
+        function ClientValidation() {
+            $("#signinModel").validate({
+                rules: {
+
+                    'User': {
+                        required: true
+                    },
+
+                    'Email': {
+                        required: true,
+
+                    },
+                    'Password': {
+                        required: true,
+
+                    },
+
+
+                },
+                message: {
+
+                    'User': {
+                        required: 'User is Required field'
+                    },
+
+                    'Email': {
+                        required: 'Email is Required field',
+                        email: 'Enter valid email address',
+
+                    },
+                    'Password': {
+                        required: 'Password is Required field',
+
+                    },
+
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
