@@ -3,7 +3,7 @@
     {{ user.title }}
   </li>
 </ul> -->
-<table border="1">
+<!-- <table border="1">
   <tr>
     <td>Id</td>
     <td>Title</td>
@@ -14,5 +14,17 @@
     <td>{{ item.id }}</td>
     <td>{{ item.title }}</td>
   </tr>
-</table>
+</table> -->
+<h1>Recap Routing and Module in angular</h1>
+<!-- <app-login></app-login>
+<app-list></app-list> -->
+<ul>
+  <li>
+    <a routerLink="login">Go to Login page</a>
+  </li>
+  <li>
+    <a routerLink="list">Go to List Page</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
