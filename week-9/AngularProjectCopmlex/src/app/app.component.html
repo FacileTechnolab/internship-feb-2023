@@ -91,7 +91,61 @@
       </mat-slider>
      </div>
 
-     <app-user></app-user>
+
+     <!-- parent to child -->
+     <app-user  [Nvalue]="Value" [Cdata]="data"></app-user>
+     <!-- reusable-compo -->
+     <div *ngFor="let data of detail">
+     <app-produts [heros]="data"></app-produts>
+     </div>
+      
+      <!-- child to parent -->
+     <app-author (formParent) = "formParent($event)" ></app-author>
+
+    <br><br>
+    <b><h4 class="text-primary">{{name}}</h4></b>
+
+    <!-- built-in pipe -->
+    <div class="bg-dark text-white p-4 rounded mb-4">
+    <h3 class="text-center fs-1 mb-4">Pipes</h3>
+    <h3>This is built-in pipes : {{authorname | uppercase}}</h3>
+    <h3>This is built-in pipes : {{authorname | titlecase}}</h3>
+    <h3>This is built-in pipes : {{authorname | lowercase}}</h3>
+    <h3>This is built-in pipes : {{today | date}}</h3>
+    <h3>This is built-in pipes : {{today | date : 'fullDate'}}</h3>
+
+    <h3>This is built-in pipes : {{str}}</h3>
+    <h3>This is built-in pipes : {{str | slice : 1:2}}</h3>
+    <h3>This is built-in pipes : {{money | currency: 'USD' }}</h3>
+    <h3>This is built-in pipes : {{money | currency: 'CAD' }}</h3>
+
+  </div>
+
+
+    <!-- pipes-custom -->
+    <!-- <h3>This is custom pipe : {{4 | square}}</h3> -->
+    <h3>This is custom pipe : {{8 | power: 2}}</h3>
+
+
+
+      <!-- routing -->
+  <div>
+    <b><h2>Routing</h2></b>
+    <!-- <a routerLink="admin">Admin</a> -->
+ 
+    <!-- <a routerLink="routuser">RoutUser</a> -->
+  
+    <router-outlet routerLink="admin">Admin</router-outlet> <br>
+    <router-outlet routerLink="routuser">routuser</router-outlet><br>
+    <router-outlet routerLink="invalid">Page not found</router-outlet>
+
+ </div>
+
+ <!-- directive -->
+ <h3 class="fs-4 mb-2">Directive</h3>
+ <h4 class="mb-0">Normal Heading</h4>
+ <h4 appCustomstyle>Custom Heading</h4>
+
   </div>
 
 </body>

@@ -9,11 +9,25 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSliderModule} from '@angular/material/slider';
 import { UserComponent } from './user/user.component';
+import { ProdutsComponent } from './produts/produts.component';
+import { AuthorComponent } from './author/author.component';
+import { CustomPipe } from './custom.pipe';
+import { AdminComponent } from './admin/admin.component';
+import { RoutuserComponent } from './routuser/routuser.component';
+import { PageNfComponent } from './page-nf/page-nf.component';
+import { CustomstyleDirective } from './customstyle.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    ProdutsComponent,
+    AuthorComponent,
+    CustomPipe,
+    AdminComponent,
+    RoutuserComponent,
+    PageNfComponent,
+    CustomstyleDirective
   ],
   imports: [
     BrowserModule,

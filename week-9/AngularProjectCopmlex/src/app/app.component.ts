@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UsersserviceService} from './usersservice.service';
 interface Alert {
 	type: string;
 	message: string;
@@ -30,6 +31,7 @@ const ALERTS: Alert[] = [
 export class AppComponent {
   title = 'AngularProjectCopmlex';
 
+
   alerts: Alert[];
 
 	constructor() {
@@ -43,4 +45,43 @@ export class AppComponent {
 	reset() {
 		this.alerts = Array.from(ALERTS);
 	}
+   
+	// pass to data parent to child
+	Value = "This is parent data ";
+
+	// reusable comp
+	data = {
+		name: 'Ashish',
+		chanel: 'Testy codeiz'
+	}
+
+	detail = [{
+		pname: 'Mono',
+		pprize : 300000
+	},
+	{
+		pname: 'Kono',
+		pprize : 90430
+	},
+	{
+		pname: 'Dono',
+		pprize : 3007800
+	}
+
+]
+
+// send child to parent comp
+name = "";
+formParent(info : any){
+console.log(info);
+
+ this.name = info.name;
+}
+
+
+// built-in pipe
+authorname = "Peter parker";
+today = Date.now();
+str = "Hellll.... Angular";
+money = 100
 }
