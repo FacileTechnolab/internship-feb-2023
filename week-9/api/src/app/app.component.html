@@ -1,0 +1,18 @@
+<!-- <ul>
+  <li *ngFor="let user of users">
+    {{ user.title }}
+  </li>
+</ul> -->
+<table border="1">
+  <tr>
+    <td>Id</td>
+    <td>Title</td>
+    <td>User Id</td>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td>{{ item.userId }}</td>
+    <td>{{ item.id }}</td>
+    <td>{{ item.title }}</td>
+  </tr>
+</table>
+<app-footer></app-footer>
