@@ -16,4 +16,25 @@
 <div *ngFor="let data of user">
     <app-user [hero]="data"></app-user>
 </div>
+
+<app-client (parentFunction)="parentFunction($event)"></app-client>
+<br> <hr>
+
+<h1>Pipe in Angular</h1>
+<h2>{{Name}}</h2>
+<h2>{{Name | uppercase}}</h2>
+<h2>{{Name | lowercase}}</h2>
+<h2>{{Today | date}}</h2>
+<h2>{{Today | date:'fullDate'}}</h2>
+<h2>{{str | slice:2:5 }}</h2>
+<h2>{{money | currency :'USD'}}</h2>
+<h2>{{value | percent }}</h2>
+
+
+
+
+
+
+
+
 <app-footer></app-footer>
