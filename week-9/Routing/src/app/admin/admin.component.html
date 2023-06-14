@@ -1,2 +1,8 @@
 <p>admin works!</p>
 <h1>This is Admin Component</h1>
+<div class="footer">
+  <h1>footer</h1>
+  <ul>
+    <li *ngFor="let user of data">{{ user.name }}---- {{ user.id }}</li>
+  </ul>
+</div>

@@ -8,7 +8,9 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomstyleDirective } from './customstyle.directive';
 import{UsersService} from './users.service'
-import {HttpClientModule} from '@angular/common/http'
+import{UserServiceService}from './user-service.service'
+import {HttpClientModule} from '@angular/common/http';
+import { ModelcComponent } from './app/model/modelc/modelc.component'
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http'
     AdminComponent,
     PageNotFoundComponent,
     CustomstyleDirective,
+    ModelcComponent,
     
   ],
   imports: [
