@@ -18,7 +18,7 @@
 <h1>Recap Routing and Module in angular</h1>
 <!-- <app-login></app-login>
 <app-list></app-list> -->
-<ul>
+<!-- <ul>
   <li>
     <a routerLink="login">Go to Login page</a>
   </li>
@@ -27,4 +27,27 @@
   </li>
 </ul>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
+<h2>Admin Pages</h2>
+<ul>
+  <li><a routerLink="admin/list1">Login</a></li>
+  <li><a routerLink="admin/register1">register</a></li>
+</ul>
+<h2>Users Pages</h2>
+<ul>
+  <li><a routerLink="users/login">Login</a></li>
+  <li><a routerLink="users/register">register</a></li>
+</ul>
+
+<h1>Lazy loading in angular</h1>
+<h2>Lazy Links</h2>
+<ul>
+  <li><a routerLink="Lazy/signin">Sign in</a></li>
+  <li><a routerLink="Lazy/signup">Sign Up</a></li>
+</ul>
+<h2>Pogo Links</h2>
+<ul>
+  <li><a routerLink="pogo/input">Input</a></li>
+  <li><a routerLink="pogo/output">Output</a></li>
+</ul>
+<router-outlet></router-outlet>
