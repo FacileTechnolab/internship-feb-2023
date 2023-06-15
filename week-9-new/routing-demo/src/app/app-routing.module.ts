@@ -3,15 +3,19 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
+import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
 const routes: Routes = [
   {
   path :'user',
-  Component:UserComponent
-
+  component:UserComponent
+  },
+{
+  path:'admin', 
+  component:AdminComponent
 },
 {
-  path:'admin',
-  Component:AdminComponent
+  path:'**',
+  component: PageNotFoundComponent
 }
 
 ];
@@ -21,3 +25,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+ 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UsersService} from './users.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-demo';
+  name="";
+
+  constructor(private user:UsersService)
+  {
+    console.warn(this.user.getData())
+    let data=this.user.getData();
+    this.name=data.name
+  }
 }
