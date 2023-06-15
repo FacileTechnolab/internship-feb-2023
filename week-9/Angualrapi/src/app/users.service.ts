@@ -3,13 +3,15 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class UsersService {
 
   constructor() { }
-  getdata(){
-    return {
-      name:'jahanvi',
-      age:23
+  getData()
+  {
+    return{
+      name : 'preter',
+      age: 35,
+      id: 100
     }
   }
 }
