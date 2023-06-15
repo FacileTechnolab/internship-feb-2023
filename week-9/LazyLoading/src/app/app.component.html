@@ -1,0 +1,15 @@
+<h1>Angular</h1>
+<h1>admin links</h1>
+
+<ul>
+  <li><a routerLink="admin/login">login</a></li>
+  <li><a routerLink="admin/list">list</a></li>
+</ul>
+
+<ul>
+  <li><a routerLink="user/login">login</a></li>
+  <li><a routerLink="user/list">list</a></li>
+</ul>
+<router-outlet></router-outlet>
+<button (click)="loadAdmin()">Admin</button>
+<button (click)="loadUser()">User</button>

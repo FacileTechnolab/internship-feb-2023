@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "shivangi":[{
+    "id":4,
+    "name":"shivangi shah",
+    "location":"ahemdabad"
+  },
+  {
+    "id":8,
+    "name":"shivangi shah",
+    "location":"ahemdabad"
+  },
+  {
+    "id":6,
+    "name":"shivangi shah",
+    "location":"ahemdabad"
+  },
+  {
+    "id":5,
+    "name":"shivangi shah",
+    "location":"ahemdabad"
+  }]
+}

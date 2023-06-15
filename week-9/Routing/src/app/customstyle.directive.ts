@@ -5,7 +5,7 @@ import { Directive,ElementRef } from '@angular/core';
 })
 export class CustomstyleDirective {
 
-  constructor(private el:ElementRef) {
+  constructor(private el:ElementRef<any>) {
     el.nativeElement.style.color="red"
    }
 

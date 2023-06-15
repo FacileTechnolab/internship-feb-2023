@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import{UsersModule} from './users/users.module'
 import{AdminModule} from './admin/admin.module'
 import{UserModule}from './user/user.module'
+import {HttpClientModule}from '@angular/common/http'
+import {UserService} from './user.service'
+ 
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import{UserModule}from './user/user.module'
     BrowserModule,
     AppRoutingModule,
     NgbModule,UsersModule,AdminModule,
-    UserModule
+    UserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
