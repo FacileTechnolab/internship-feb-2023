@@ -12,8 +12,10 @@ export class AppComponent {
 
   constructor(private user:UsersService)
   {
-    console.warn(this.user.getData())
-    let data=this.user.getData();
-    this.name=data.name
+    // console.warn(this.user.getData())
+    // let data=this.user.getData();
+    // this.name=data.name
+    this.user.getData().subscribe(data=>{console.warn(data)})
+
   }
 }

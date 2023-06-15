@@ -7,18 +7,21 @@ import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomStyleDirective } from './custom-style.directive';
-
+import {  HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     AdminComponent,
     PageNotFoundComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
