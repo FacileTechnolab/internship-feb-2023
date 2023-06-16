@@ -1,0 +1,73 @@
+<div class="col-sm-6">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <label>Email address</label>
+      <input
+        required
+        #email="ngModel"
+        type="email"
+        class="form-control"
+        name="Email"
+        placeholder="Enter email"
+        ngModel
+        email
+      />
+      <span *ngIf="email.invalid && email.touched" class="error"
+        >Email field is required</span
+      >
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        required
+        #password="ngModel"
+        type="password"
+        class="form-control"
+        name="Password"
+        placeholder="Password"
+        ngModel
+        minlength="3"
+        maxlength="10"
+      />
+      <span *ngIf="password.invalid && password.touched" class="error"
+        >Password field is required</span
+      >
+    </div>
+    <div class="form-group">
+      <label>Address </label>
+      <input
+        required
+        #Address="ngModel"
+        type="text"
+        class="form-control"
+        name="Address"
+        placeholder="Enter Address"
+        ngModel
+        pattern="[a-zA-Z]*"
+      />
+      <span *ngIf="Address.invalid && Address.touched" class="error"
+        >Address field is required</span
+      >
+    </div>
+
+    <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>
+<form [formGroup]="loginFrom" (ngSubmit)="collectData()">
+  <input
+    type="text"
+    name="username"
+    formControlName="username"
+    placeholder="enter the name"
+  /><br /><br />
+  <input
+    type="password"
+    name="password"
+    formControlName="userpassword"
+    placeholder=" enter the password"
+  /><br /><br />
+  <button type="submit">Login</button>
+</form>

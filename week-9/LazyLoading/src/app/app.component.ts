@@ -8,6 +8,10 @@ import { Component,ViewContainerRef,ComponentFactoryResolver} from '@angular/cor
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+onSubmit(data:any) {
+console.warn(data);
+
+}
   title = 'LazyLoading';
   constructor(private vcr:ViewContainerRef,
     private cfr:ComponentFactoryResolver){
@@ -16,8 +20,11 @@ export class AppComponent {
  async loadAdmin(){
 this.vcr.clear();
 const{AdminlistComponent}=await import('./adminlist/adminlist.component'); 
+this.vcr.createComponent(this.cfr.resolveComponentFactory(AdminlistComponent))
   }
-  loadUser(){
-
+   async loadUser(){
+    this.vcr.clear();
+    const{UserlistComponent}=await import('./userlist/userlist.component'); 
+    this.vcr.createComponent(this.cfr.resolveComponentFactory(UserlistComponent))
   }
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LazyLoading": {
+    "form": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lazy-loading",
+            "outputPath": "dist/form",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
+              {
+                "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
+              },
               {
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
               },
@@ -72,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "LazyLoading:build:production"
+              "browserTarget": "form:build:production"
             },
             "development": {
-              "browserTarget": "LazyLoading:build:development"
+              "browserTarget": "form:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LazyLoading:build"
+            "browserTarget": "form:build"
           }
         },
         "test": {
@@ -108,6 +112,6 @@
     }
   },
   "cli": {
-    "analytics": "f2a1b116-f551-4b23-bacd-b1c92eb6d1dc"
+    "analytics": "fa9eab15-0b62-4d13-9deb-90048bc2825f"
   }
 }

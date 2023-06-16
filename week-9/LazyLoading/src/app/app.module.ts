@@ -7,6 +7,8 @@ import{AdminModule}from'./admin/admin.module';
 import{UserModule}from './user/user.module';
 import { AdminlistComponent } from './adminlist/adminlist.component';
 import { UserlistComponent } from './userlist/userlist.component'
+import{FormsModule}from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UserlistComponent } from './userlist/userlist.component'
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    UserModule
+    UserModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

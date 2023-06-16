@@ -13,3 +13,20 @@
 <router-outlet></router-outlet>
 <button (click)="loadAdmin()">Admin</button>
 <button (click)="loadUser()">User</button>
+<div style="background-color: aqua; padding: 10px; margin: 5px">
+  <form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <input
+      type="text"
+      name="email"
+      style="padding: 2px; margin: 10px"
+      ngModel
+    /><br />
+    <input
+      type="password"
+      name="password"
+      style="padding: 2px; margin: 10px"
+      ngModel
+    />
+    <button type="submit">login</button>
+  </form>
+</div>
