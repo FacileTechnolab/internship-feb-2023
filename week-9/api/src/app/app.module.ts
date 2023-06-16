@@ -10,10 +10,14 @@ import { AdminModule } from './admin/admin.module';
 import { UsersModule } from './users/users.module';
 import { LazyModule } from './lazy/lazy.module';
 import { PogoModule } from './pogo/pogo.module';
+import { AdminlistComponent } from './adminlist/adminlist.component';
+import { UserlistComponent } from './userlist/userlist.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
+    AdminlistComponent,
+    UserlistComponent,
 
   ],
   imports: [

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { UserlistComponent } from './userlist/userlist.component';
+import { AdminlistComponent } from './adminlist/adminlist.component';
+import { Component, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 import { UsersService } from './users.service'
 import { UsersDataService } from './services/users-data.service'
 interface dataType {
@@ -21,18 +23,40 @@ export class AppComponent {
     }
     return info;
   }
+
+  constructor(
+    private vcr: ViewContainerRef,
+    private cfr: ComponentFactoryResolver
+  ) { }
+  async loadAdmin() {
+    this.vcr.clear();
+    const { AdminlistComponent } = await import('./adminlist/adminlist.component');
+    this.vcr.createComponent(
+      this.cfr.resolveComponentFactory(AdminlistComponent)
+    )
+  }
+  async loadUser() {
+    this.vcr.clear();
+    const { UserlistComponent } = await import('./userlist/userlist.component');
+    this.vcr.createComponent(
+      this.cfr.resolveComponentFactory(UserlistComponent)
+    )
+  }
+
+
+
   // constructor(private user:UsersService)
   // {
   //   this.user.getData().subscribe(data=>{
   //     console.warn(data);
   //   })
   //users: any;
-  data: any = []
-  constructor(private userdata: UsersDataService) {
-    this.userdata.users().subscribe((data) => {
-      console.warn(data);
-      this.data = data;
-    })
-  }
+  // data: any = []
+  // constructor(private userdata: UsersDataService) {
+  //   this.userdata.users().subscribe((data) => {
+  //     console.warn(data);
+  //     this.data = data;
+  //   })
+  // }
 
 }

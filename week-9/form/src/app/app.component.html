@@ -1,0 +1,107 @@
+<h1 class="btn-success">Angular Template Driven Form</h1>
+
+<div class="col-sm-6">
+  <form #userform="ngForm" (ngSubmit)="onSubmit(userform.value)">
+    <div class="mb-3">
+      <label>Email address</label>
+      <input
+        required
+        #email="ngModel"
+        type="email"
+        email
+        ngModel
+        class="form-control"
+        name="useremail"
+        placeholder="Enter email"
+      />
+
+      <span *ngIf="email.invalid && email.touched" class="error"
+        >Email field is required</span
+      >
+    </div>
+
+    <div class="mb-3">
+      <label>Password</label>
+      <input
+        required
+        #password="ngModel"
+        minlength="3"
+        maxlength="10"
+        type="password"
+        ngModel
+        class="form-control"
+        name="password"
+        placeholder="Enter password"
+      />
+      <span *ngIf="password.invalid && password.touched" class="error"
+        >password field is required</span
+      >
+    </div>
+
+    <div class="mb-3">
+      <label>Address</label>
+      <input
+        pattern="[a-zA-Z ]*"
+        #address="ngModel"
+        type="text"
+        ngModel
+        class="form-control"
+        name="address"
+        placeholder="enter address"
+      />
+      <span *ngIf="address.invalid && address.touched" class="error"
+        >Address field is required</span
+      >
+    </div>
+    <button [disabled]="userform.invalid" type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+</div>
+<br /><br />
+
+<h1 class="btn-primary">Angular Reactive form</h1>
+<form [formGroup]="loginform" (ngSubmit)="collectData()">
+  <input
+    type="text"
+    name="username"
+    formControlName="username"
+    placeholder="username"
+  /><br /><br />
+  <input
+    type="password"
+    name="password"
+    formControlName="password"
+    placeholder="password"
+  /><br /><br />
+  <button type="submit">Log In</button>
+</form>
+
+<br /><br />
+<h2>Reactive form validation</h2>
+<div class="col-sm-6">
+  <form [formGroup]="login">
+    <div class="form-group">
+      <label>Email Address</label>
+
+      <input
+        type="email"
+        class="form-control"
+        formControlName="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <label>Password</label>
+
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        placeholder="Enter password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
