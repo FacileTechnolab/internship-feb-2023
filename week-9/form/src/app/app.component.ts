@@ -22,12 +22,16 @@ export class AppComponent {
       
     // }
     loginform= new FormGroup({
-      email:new FormControl('',Validators.required),
+      email:new FormControl('',[Validators.required,Validators.email]),
       password: new FormControl('',Validators.required)
     })
-password: any;
+
    get email(){
       return this.loginform.get('email');
     }
+    get password(){
+      return this.loginform.get('password');
+    }
+
     
 }
