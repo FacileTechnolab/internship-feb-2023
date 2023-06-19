@@ -14,4 +14,19 @@
 
 <h2>{{name}}</h2>
 
+
+<table border="1">
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>User Id</td>
+    </tr>
+    
+    <tr *ngFor="let item of data"> 
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.userId}}</td>
+    </tr> 
+</table>
+
 <router-outlet></router-outlet>
