@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
 
   ],
+  exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

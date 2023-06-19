@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,24 +13,34 @@ export class AppComponent {
 
   onSubmit(data: any) {
     console.warn(data);
-
-    login = new FormGroup(
-      {
-        email: new FormControl('', Validators.required),
-        password: new FormControl('', Validators.required)
-
-      }
-    )
-
-
-
   }
-  loginform = new FormGroup({
+  loginform = new FormGroup(
+    {
+      email: new FormControl('', [Validators.required, Validators.email]),
+      address: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+      password: new FormControl('', Validators.required)
+
+    }
+  )
+  get email() {
+    return this.loginform.get('email');
+  }
+  get address() {
+    return this.loginform.get('address');
+  }
+
+
+  onLogin() {
+    console.warn(this.loginform.value);
+  }
+
+
+  login = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   })
 
   collectData() {
-    console.warn(this.loginform.value);
+    console.warn(this.login.value);
   }
 }
