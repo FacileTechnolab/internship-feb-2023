@@ -1,23 +1,22 @@
-import { PublicModule } from './public/public.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserModule } from './user/user.module';
-import { AdminModule} from './admin/admin.module';
+import { AdminlistComponent } from './adminlist/adminlist.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
+console.warn("admin module loaded ")
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminlistComponent,
+    UserlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    UserModule,
-    AdminModule,
-    PublicModule
-    
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
