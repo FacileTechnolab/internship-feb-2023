@@ -1,0 +1,40 @@
+<header class="header-main">
+  <div class="container-fluid">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <img
+          src="assets/images/logo-festivale.png"
+          style="height: 50px"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="header-menu">
+        <ul>
+          <li>
+            <a routerLink="app-home"><sup>01</sup> Home</a>
+          </li>
+          <li>
+            <a routerLink="app-media"><sup>02</sup> Media</a>
+          </li>
+          <li>
+            <a routerLink="app-tickets"><sup>03</sup> Tickets</a>
+          </li>
+          <li>
+            <a routerLink="app-cities"><sup>04</sup> Cities</a>
+          </li>
+          <li>
+            <a routerLink="app-faqs"><sup>05</sup> FAQ</a>
+          </li>
+          <li>
+            <a routerLink="app-comments"><sup>06</sup> Comments</a>
+          </li>
+          <li>
+            <a routerLink="sponsorship"><sup>07</sup> Sponsorship</a>
+            <router-outlet></router-outlet>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

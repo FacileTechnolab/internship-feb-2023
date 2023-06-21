@@ -1,0 +1,68 @@
+﻿
+@{
+	ViewBag.Title = "Comments";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="comments" class="partci-slider">
+	<div class="container">
+		<div class="testimonial_slider_card">
+			<span class="avatar_icon">
+
+				
+				<img src="~/Content/image/festival-of-colors11-120x120.jpg"  class="img-fluid" alt="">
+			</span>
+			<h4>Participant</h4>
+			<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum, quos voluptas fugiat blanditiis, temporibus expedita cumque doloribus!"</p>
+			<div class="testimonial_slider_btn">
+				<a href="#"><i class="las la-long-arrow-alt-left"></i></a>
+				<a href="#"><i class="las la-long-arrow-alt-right"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+		$(".owl-carousel-2").owlCarousel({
+			loop: true,
+			margin: 10,
+			nav: true,
+			dots: false,
+			responsive: {
+				0: {
+					items: 1,
+				},
+				600: {
+					items: 3,
+				},
+				1000: {
+					items: 1,
+				},
+			},
+		});
+</script>
+
+
+<section class="video_section">
+	<div class="container">
+		<div class="row video_row">
+			<div class="col-md-6">
+				<div class="sec-2-pic">
+					
+					<img src="~/Content/image/festival-of-colors5-1200x800.jpg"
+					alt=""
+					class="img-fluid" />
+					<div class="playicon-bg">
+						<i class="las la-play"></i>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="sec-2-second">
+					<p>00 : 00 : 00 : 00</p>
+					<h2>Time left</h2>
+					<h3>Until Festival</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
