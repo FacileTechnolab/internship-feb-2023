@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularProject": {
+    "Angularproject": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-project",
+            "outputPath": "dist/angularproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,13 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-              
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -64,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularProject:build:production"
+              "browserTarget": "Angularproject:build:production"
             },
             "development": {
-              "browserTarget": "AngularProject:build:development"
+              "browserTarget": "Angularproject:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularProject:build"
+            "browserTarget": "Angularproject:build"
           }
         },
         "test": {
@@ -100,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "e3ea0c58-fa50-49b0-90c1-d3dbbf7694ab"
+    "analytics": "3b2a8f55-dfa0-4d2f-85d3-ef62e3d1b76e"
   }
 }
