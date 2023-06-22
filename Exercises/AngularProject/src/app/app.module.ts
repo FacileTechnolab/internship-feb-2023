@@ -8,6 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PartnersComponent } from './partners/partners.component';
+import { MarketingComponent } from './marketing/marketing.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PartnersComponent } from './partners/partners.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    PartnersComponent
+    PartnersComponent,
+    MarketingComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
