@@ -13,6 +13,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { CommentsComponent } from './comments/comments.component';
 import { SponsorshipComponent } from './Sponsorship/Sponsorship.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import{CarouselModule}from 'ngx-owl-carousel-o'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
