@@ -1,0 +1,23 @@
+<h2>Reactive form</h2>
+
+<div class="col-sm-6">
+  <form [formGroup]="LoginForm" (ngSubmit)="collectData()">
+    <div class="formGroup">
+      <label>Email Id</label>
+      <input type="email" formControlName="email" placeholder=" user name"> 
+      <span class="error" *ngIf="email.invalid && email.touched">email is invalid</span>
+    </div>
+    <div class="formGroup">
+      <label>Address</label>
+      <input type="text" formControlName="address" placeholder="Address"> 
+      <span class="error" *ngIf="address.invalid && address.touched">Address is invalid</span>
+    </div>
+
+    <br>
+    <div class="formGroup">
+      <label>password</label>
+      <input type="password" formControlName="password" placeholder=" password "> <br><br>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>

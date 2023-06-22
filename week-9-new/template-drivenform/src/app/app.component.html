@@ -1,0 +1,40 @@
+<h1>Template-Driven Form</h1>
+<div class="col-md-6">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+
+    <div class="form-group">
+      <label>Email</label>
+      <input required #email="ngModel" email ngModel class="form-control" name="EmailId" placeholder="Enter Email id">
+      <span *ngIf="email.invalid && email.touched " class="error">Email is not valid</span>
+
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input required #password="ngModel" minlength="3" maxlength="10" ngModel class="form-control" type="Password"
+        placeholder="Enter password">
+      <span *ngIf="password.invalid && password.touched " class="error">Password is not valid</span>
+
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <input pattern="[a-zA-Z]*" #Address="ngModel" ngModel class="form-control" type="text" name="Address"
+        placeholder="Enter Address">
+      <span *ngIf="Address.invalid && Address.touched " class="error">Address is not valid</span>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label>Phone</label> 
+      <input type="text" name="Phone" [ngModel]="userData.phone"><br><br>
+    </div>
+
+    <div class="form-group">
+      <label>birthdate</label>
+      <input type="text" name="birthdate" [ngModel]="userData.birthdate"><br><br>
+    </div>
+
+    <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">login </button>
+</form>
+</div>
