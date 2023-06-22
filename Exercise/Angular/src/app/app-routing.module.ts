@@ -9,9 +9,15 @@ import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
+  },
+  {
     path: 'main',
     component: MainComponent
   },
+
   {
     path: 'features',
     component: FeaturesComponent
