@@ -220,25 +220,8 @@ body {
   transform: translateY(-50%);
 }
 
-.box-1 {
-  /* margin: left;
-    width: 200px;
-    height: 200px; */
-}
-
 section.cities {
   position: relative;
-}
-
-.images {
-  /* width: 250px;
-    height: 200px;
-    right: 0;
-    position: absolute;
-    top: 0;
-    left: -130px;
-    margin: 0px;
-    padding: 0px; */
 }
 
 .sec3-row2-part .sec3-inner-head-part {

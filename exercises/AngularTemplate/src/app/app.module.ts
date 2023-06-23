@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +13,9 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { CommentsComponent } from './comments/comments.component';
 import { SponsorshipComponent } from './Sponsorship/Sponsorship.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import{CarouselModule}from 'ngx-owl-carousel-o'
+import{CarouselModule} from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +28,16 @@ import{CarouselModule}from 'ngx-owl-carousel-o'
     CitiesComponent,
     FaqsComponent,
     CommentsComponent,
-    SponsorshipComponent
+    SponsorshipComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    BrowserAnimationsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

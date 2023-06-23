@@ -9,8 +9,14 @@ import { CommentsComponent } from './comments/comments.component';
 import { SponsorshipComponent } from './Sponsorship/Sponsorship.component';
 
 const routes: Routes = [
-  { path:"home",component:HomeComponent},
-  { path:"media",component:MediaComponent},
+  {
+    path: '',component:HomeComponent
+  },
+  { path:"home",
+  component:HomeComponent
+},
+  { path:"media",component:MediaComponent
+},
   { path:"tickets",component:TicketsComponent},
   { path:"cities",component:CitiesComponent},
   { path:"faqs",component:FaqsComponent},

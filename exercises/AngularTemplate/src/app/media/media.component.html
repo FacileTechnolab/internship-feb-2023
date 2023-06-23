@@ -11,46 +11,11 @@
       </div>
     </div>
   </div>
-  <div class="slider-part-img">
-    <div class="owl-carousel owl-theme owl-carousel-1">
-      <div class="item">
-        <div class="card">
-          <img src="assets/images/1.jpg" class="card-img-top" alt="" />
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img
-            src="assets/images/partici-slider.jpg"
-            class="card-img-top"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img src="assets/images/3.jpg" class="card-img-top" alt="" />
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img src="assets/images/4.jpg" class="card-img-top" alt="" />
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img src="assets/images/1.jpg" class="card-img-top" alt="" />
-        </div>
-      </div>
-      <div class="item">
-        <div class="card">
-          <img
-            src="assets/images/partici-slider.jpg"
-            class="card-img-top"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of slides">
+      <ng-template carouselSlide [id:any]="slide.id">
+        <img [src]="slide.img" />
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
 </section>
