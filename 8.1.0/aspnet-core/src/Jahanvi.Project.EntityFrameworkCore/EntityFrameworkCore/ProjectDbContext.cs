@@ -3,6 +3,7 @@ using Abp.Zero.EntityFrameworkCore;
 using Jahanvi.Project.Authorization.Roles;
 using Jahanvi.Project.Authorization.Users;
 using Jahanvi.Project.MultiTenancy;
+using Jahanvi.Project.Courses;
 
 namespace Jahanvi.Project.EntityFrameworkCore
 {

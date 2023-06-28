@@ -6,9 +6,10 @@ using Jahanvi.Project.Configuration;
 
 namespace Jahanvi.Project.Web.Host.Startup
 {
+
     [DependsOn(
        typeof(ProjectWebCoreModule))]
-    public class ProjectWebHostModule: AbpModule
+    public class ProjectWebHostModule : AbpModule
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfigurationRoot _appConfiguration;
@@ -22,6 +23,10 @@ namespace Jahanvi.Project.Web.Host.Startup
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(ProjectWebHostModule).GetAssembly());
+
+
         }
+
     }
-}
+
+    }
