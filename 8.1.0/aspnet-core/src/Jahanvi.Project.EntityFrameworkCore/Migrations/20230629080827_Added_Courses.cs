@@ -1,11 +1,11 @@
-﻿   using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Jahanvi.Project.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCourse : Migration
+    public partial class Added_Courses : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,10 +14,10 @@ namespace Jahanvi.Project.Migrations
                 name: "course",
                 columns: table => new
                 {
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Sem = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Professor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Professor = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1")
                 },

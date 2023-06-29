@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jahanvi.Project.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20230627093248_Add-Course")]
-    partial class AddCourse
+    [Migration("20230629080827_Added_Courses")]
+    partial class Added_Courses
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1457,14 +1457,17 @@ namespace Jahanvi.Project.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnOrder(2);
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnOrder(0);
 
                     b.Property<string>("Professor")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnOrder(3);
 

@@ -6,15 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jahanvi.Project.Courses
+namespace Jahanvi.Project
 {
     public interface ICourseService:IApplicationService
     {
-        IEnumerable<GetCourseOutput> ListAll();
+        Task<IEnumerable<GetCourseOutput>> ListAll();
         Task Create(CreateCourseInput input);
-        void Update(UpdateCourseInput input);
-        void Delete(DeleteCourseInput input);
-        GetCourseOutput GetCourseById(GetCourseInput input);
-
+        Task Update(UpdateCourseInput input);
+        Task Delete(DeleteCourseInput input);
+        Task<GetCourseOutput> GetCourseById(GetCourseInput input);
     }
 }

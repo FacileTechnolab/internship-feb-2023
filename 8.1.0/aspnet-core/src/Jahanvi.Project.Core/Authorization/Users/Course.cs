@@ -1,11 +1,15 @@
 ﻿using Abp.Domain.Entities;
-using Newtonsoft.Json;
-using System.ComponentModel.DataAnnotations;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Jahanvi.Project.Courses
+namespace Jahanvi.Project.Authorization.Users
 {
-    public class Course : Entity<int>
+    public class Course:Entity<int>
     {
         [Required]
         [Column(Order = 0)]
@@ -29,8 +33,7 @@ namespace Jahanvi.Project.Courses
 
 
 
-        //[ForeignKey(User)]
-        //public int TenantId { get; set; }
-        //I 
-    }
+       
+    
+}
 }

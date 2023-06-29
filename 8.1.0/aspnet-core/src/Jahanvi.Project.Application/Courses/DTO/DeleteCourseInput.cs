@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jahanvi.Project.Courses.DTO
 {
-    public  class DeleteCourseInput
+    public class DeleteCourseInput
     {
         public int Id { get; set; }
     }
