@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jahanvi.Project.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20230629080827_Added_Courses")]
-    partial class Added_Courses
+    [Migration("20230630075431_addedForeignKeyStudent")]
+    partial class addedForeignKeyStudent
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1480,6 +1480,41 @@ namespace Jahanvi.Project.Migrations
                     b.ToTable("course");
                 });
 
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EnrollmentNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("student");
+                });
+
             modelBuilder.Entity("Jahanvi.Project.Authorization.Users.User", b =>
                 {
                     b.Property<long>("Id")
@@ -1867,6 +1902,17 @@ namespace Jahanvi.Project.Migrations
                     b.Navigation("DeleterUser");
 
                     b.Navigation("LastModifierUser");
+                });
+
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Student", b =>
+                {
+                    b.HasOne("Jahanvi.Project.Authorization.Users.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("Jahanvi.Project.Authorization.Users.User", b =>

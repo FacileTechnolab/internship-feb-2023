@@ -4,6 +4,7 @@ using Jahanvi.Project.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jahanvi.Project.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    partial class ProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230630053712_Add-Course")]
+    partial class AddCourse
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1472,7 +1475,12 @@ namespace Jahanvi.Project.Migrations
                         .HasColumnType("int")
                         .HasColumnOrder(1);
 
+                    b.Property<int?>("StudentId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
 
                     b.ToTable("course");
                 });
@@ -1486,9 +1494,6 @@ namespace Jahanvi.Project.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -1506,8 +1511,6 @@ namespace Jahanvi.Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
 
                     b.ToTable("student");
                 });
@@ -1901,15 +1904,13 @@ namespace Jahanvi.Project.Migrations
                     b.Navigation("LastModifierUser");
                 });
 
-            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Student", b =>
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Course", b =>
                 {
-                    b.HasOne("Jahanvi.Project.Authorization.Users.Course", "Course")
+                    b.HasOne("Jahanvi.Project.Authorization.Users.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId");
 
-                    b.Navigation("Course");
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("Jahanvi.Project.Authorization.Users.User", b =>

@@ -18,6 +18,7 @@ namespace Jahanvi.Project.Authorization.Users
 
 
         [Required]
+      
         [Column(Order = 1)]
         public int Sem { get; set; }
 
@@ -30,10 +31,14 @@ namespace Jahanvi.Project.Authorization.Users
         [Required]
         [Column(Order = 3)]
         public string Professor { get; set; }
+   
+
+
+      
+     
 
 
 
-       
-    
-}
+
+    }
 }

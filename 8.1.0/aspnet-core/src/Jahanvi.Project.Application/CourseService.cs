@@ -1,17 +1,13 @@
-﻿using Abp.Application.Services;
-using Abp.Domain.Repositories;
+﻿using Abp.Domain.Repositories;
 using AutoMapper;
 using Jahanvi.Project.Authorization.Users;
 using Jahanvi.Project.Courses.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Jahanvi.Project
 {
-    public class CourseService: ProjectAppServiceBase, ICourseService
+    public class CourseService : ProjectAppServiceBase, ICourseService
     {
         private readonly IMapper _mapper;
         private readonly IRepository<Course> _cource1Repository;

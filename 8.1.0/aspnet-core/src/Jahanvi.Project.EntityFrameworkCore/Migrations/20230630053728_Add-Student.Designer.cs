@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jahanvi.Project.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20230629080354_Added")]
-    partial class Added
+    [Migration("20230630053728_Add-Student")]
+    partial class AddStudent
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1448,6 +1448,73 @@ namespace Jahanvi.Project.Migrations
                     b.ToTable("AbpRoles");
                 });
 
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Course", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnOrder(2);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnOrder(0);
+
+                    b.Property<string>("Professor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnOrder(3);
+
+                    b.Property<int>("Sem")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    b.Property<int?>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("course");
+                });
+
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EnrollmentNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("student");
+                });
+
             modelBuilder.Entity("Jahanvi.Project.Authorization.Users.User", b =>
                 {
                     b.Property<long>("Id")
@@ -1835,6 +1902,15 @@ namespace Jahanvi.Project.Migrations
                     b.Navigation("DeleterUser");
 
                     b.Navigation("LastModifierUser");
+                });
+
+            modelBuilder.Entity("Jahanvi.Project.Authorization.Users.Course", b =>
+                {
+                    b.HasOne("Jahanvi.Project.Authorization.Users.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId");
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("Jahanvi.Project.Authorization.Users.User", b =>

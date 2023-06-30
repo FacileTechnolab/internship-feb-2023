@@ -5,7 +5,7 @@
 namespace Jahanvi.Project.Migrations
 {
     /// <inheritdoc />
-    public partial class Added : Migration
+    public partial class AddStudent : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

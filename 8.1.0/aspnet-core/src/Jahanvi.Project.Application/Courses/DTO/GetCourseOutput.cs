@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Jahanvi.Project.Courses.DTO
+﻿namespace Jahanvi.Project.Courses.DTO
 {
     public class GetCourseOutput
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public int Sem { get; set; }
-
-
-
 
         public string Description { get; set; }
 
