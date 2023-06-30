@@ -9,21 +9,18 @@ using System.Threading.Tasks;
 
 namespace Krishika.Project.Modal
 {
-    public class Projects: Entity<int>
+    public class ProjectResource: Entity<int>
     {
         [Key]
         [Required]
-        //[ForeignKey("ProjectResource")]
-        public string Name { get; set; }
-        public ProjectResource project { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public string LastName { get; set; }
 
         [Required]
-        public DateTime StartDate { get; set; }
+        public string Project { get; set; }
 
-        [Required]
-        public DateTime EndDate { get; set; }
+        public ICollection<Projects> project { get; set; }
     }
 }
