@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Krishika.Project.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20230628175405_Projects")]
-    partial class Projects
+    [Migration("20230630195238_Added_Projects_Table")]
+    partial class Added_Projects_Table
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1576,7 +1576,7 @@ namespace Krishika.Project.Migrations
                     b.ToTable("AbpUsers");
                 });
 
-            modelBuilder.Entity("Krishika.Project.Modal.Projects", b =>
+            modelBuilder.Entity("Krishika.Project.Modal.Project", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1588,7 +1588,7 @@ namespace Krishika.Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")

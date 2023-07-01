@@ -9,7 +9,7 @@ namespace Krishika.Project.EntityFrameworkCore
 {
     public class ProjectDbContext : AbpZeroDbContext<Tenant, Role, User, ProjectDbContext>
     {
-         public DbSet<Projects> Project { get; set; }
+         public DbSet<Modal.Project> Projects { get; set; }
         public DbSet<ProjectResource> ProjectResources { get; set; }
 
         public ProjectDbContext(DbContextOptions<ProjectDbContext> options)

@@ -12,13 +12,13 @@ namespace Krishika.Project.Projects
     {
         public ProjectsMapProfiles()
         {
-            CreateMap<CreateProjectsInput, Krishika.Project.Modal.Projects>().ReverseMap();
+            CreateMap<CreateProjectsInput, Krishika.Project.Modal.Project>().ReverseMap();
 
-            CreateMap<Krishika.Project.Modal.Projects, GetProjectsOutput>().ReverseMap();
+            CreateMap<Krishika.Project.Modal.Project, GetProjectsOutput>().ReverseMap();
 
-            CreateMap<GetProjectsOutput, Krishika.Project.Modal.Projects>().ReverseMap();
+            CreateMap<GetProjectsOutput, Krishika.Project.Modal.Project>().ReverseMap();
 
-            CreateMap<UpdateProjectsInput, Krishika.Project.Modal.Projects>().ReverseMap();
+            CreateMap<UpdateProjectsInput, Krishika.Project.Modal.Project>().ReverseMap();
 
         }
     }

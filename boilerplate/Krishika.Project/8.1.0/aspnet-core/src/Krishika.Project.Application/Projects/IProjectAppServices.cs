@@ -12,9 +12,9 @@ namespace Krishika.Project.Projects
     {
         IEnumerable<GetProjectsOutput> ListAll();
         Task Create(CreateProjectsInput input);
-        void Update(UpdateProjectsInput input);
-        void Delete(DeleteProjectsInput input);
-        GetProjectsOutput GetProjectsById(GetProjectsInput input);
+        Task Update(UpdateProjectsInput input);
+        Task Delete(DeleteProjectsInput input);
+        Task<GetProjectsOutput> GetProjectsById(GetProjectsInput input);
 
     }
 }

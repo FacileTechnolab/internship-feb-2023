@@ -1,22 +1,18 @@
 ﻿using Abp.Application.Services;
 using Abp.Domain.Repositories;
 using AutoMapper;
-using Krishika.Project.Modal;
 using Krishika.Project.Projects.DTO;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Krishika.Project.Projects
 {
-    public class ProjectAppServices: IApplicationService
+    public class ProjectAppServices : IApplicationService
     {
-        private readonly IRepository<Krishika.Project.Modal.Projects> _projectsService;
+        private readonly IRepository<Krishika.Project.Modal.Project> _projectsService;
         private readonly IMapper _mapper;
 
-        public ProjectAppServices(IRepository<Krishika.Project.Modal.Projects> projectsService, IMapper mapper )
+        public ProjectAppServices(IRepository<Krishika.Project.Modal.Project> projectsService, IMapper mapper)
         {
             _projectsService = projectsService;
             _mapper = mapper;
@@ -27,9 +23,9 @@ namespace Krishika.Project.Projects
         //    IProjectsService = ProjectsService;
         //    _mapper = mapper;
         //}
-         public async Task Create(CreateProjectsInput input)
+        public async Task Create(CreateProjectsInput input)
         {
-            Krishika.Project.Modal.Projects output = _mapper.Map<CreateProjectsInput, Krishika.Project.Modal.Projects>(input);
+            Krishika.Project.Modal.Project output = _mapper.Map<CreateProjectsInput, Krishika.Project.Modal.Project>(input);
             await _projectsService.InsertAsync(output);
         }
 
@@ -38,17 +34,17 @@ namespace Krishika.Project.Projects
             _projectsService.Delete(input.Id);
         }
 
-        public async  Task<GetProjectsOutput> GetProjectsById(GetProjectsInput input)
+        public async Task<GetProjectsOutput> GetProjectsById(GetProjectsInput input)
         {
             var getProject = await _projectsService.GetAsync(input.Id);
-            GetProjectsOutput output = _mapper.Map<Krishika.Project.Modal.Projects, GetProjectsOutput>(getProject);
+            GetProjectsOutput output = _mapper.Map<Krishika.Project.Modal.Project, GetProjectsOutput>(getProject);
             return output;
-         }
+        }
 
-        public async Task< IEnumerable<GetProjectsOutput>> ListAll()
+        public async Task<IEnumerable<GetProjectsOutput>> ListAll()
         {
             var getAll = await _projectsService.GetAllListAsync();
-            List<GetProjectsOutput> output = _mapper.Map<List<Krishika.Project.Modal.Projects>,List<GetProjectsOutput>>(getAll);
+            List<GetProjectsOutput> output = _mapper.Map<List<Krishika.Project.Modal.Project>, List<GetProjectsOutput>>(getAll);
             return output;
         }
 
@@ -59,13 +55,13 @@ namespace Krishika.Project.Projects
             {
                 output.Name = input.Name;
                 output.Description = input.Description;
-                await _projectsService.UpdateAsync(output); 
+                await _projectsService.UpdateAsync(output);
 
             }
 
 
 
-            
+
         }
     }
 }

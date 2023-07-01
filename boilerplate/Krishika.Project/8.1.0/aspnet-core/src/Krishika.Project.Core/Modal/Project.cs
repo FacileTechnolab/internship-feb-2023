@@ -9,13 +9,10 @@ using System.Threading.Tasks;
 
 namespace Krishika.Project.Modal
 {
-    public class Projects: Entity<int>
-    {
-        [Key]
+    public class Project : Entity<int>
+    {     
         [Required]
-        //[ForeignKey("ProjectResource")]
         public string Name { get; set; }
-        public ProjectResource project { get; set; }
 
         [Required]
         public string Description { get; set; }
@@ -23,7 +20,7 @@ namespace Krishika.Project.Modal
         [Required]
         public DateTime StartDate { get; set; }
 
-        [Required]
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
     }
 }
+
