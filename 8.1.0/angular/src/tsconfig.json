@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -21,6 +22,7 @@
       "@shared/*": [ "./shared/*" ],
       "@node_modules/*": [ "../node_modules/*" ],
       "@angular/*": ["../node_modules/@angular/*"],
+      
     }
   },
   "files": [

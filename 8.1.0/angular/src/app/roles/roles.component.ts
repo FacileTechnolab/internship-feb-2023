@@ -13,7 +13,7 @@ import {
 } from '@shared/service-proxies/service-proxies';
 import { CreateRoleDialogComponent } from './create-role/create-role-dialog.component';
 import { EditRoleDialogComponent } from './edit-role/edit-role-dialog.component';
-
+import { FormsModule } from '@angular/forms';
 class PagedRolesRequestDto extends PagedRequestDto {
   keyword: string;
 }
@@ -68,7 +68,7 @@ export class RolesComponent extends PagedListingComponentBase<RoleDto> {
                 this.refresh();
               })
             )
-            .subscribe(() => {});
+            .subscribe(() => { });
         }
       }
     );

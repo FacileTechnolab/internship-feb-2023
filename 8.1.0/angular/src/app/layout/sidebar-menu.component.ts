@@ -1,14 +1,14 @@
-import {Component, Injector, OnInit} from '@angular/core';
-import {AppComponentBase} from '@shared/app-component-base';
+import { Component, Injector, OnInit } from '@angular/core';
+import { AppComponentBase } from '@shared/app-component-base';
 import {
     Router,
     RouterEvent,
     NavigationEnd,
     PRIMARY_OUTLET
 } from '@angular/router';
-import {BehaviorSubject} from 'rxjs';
-import {filter} from 'rxjs/operators';
-import {MenuItem} from '@shared/layout/menu-item';
+import { BehaviorSubject } from 'rxjs';
+import { filter } from 'rxjs/operators';
+import { MenuItem } from '@shared/layout/menu-item';
 
 @Component({
     selector: 'sidebar-menu',
@@ -52,6 +52,12 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
                 'Pages.Roles'
             ),
             new MenuItem(
+                this.l('Course'),
+                '/app/Course',
+                'fas fa-graduation-cap',
+                'Pages.Roles'
+            ),
+            new MenuItem(
                 this.l('Tenants'),
                 '/app/tenants',
                 'fas fa-building',
@@ -63,6 +69,7 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
                 'fas fa-users',
                 'Pages.Users'
             ),
+
             new MenuItem(this.l('MultiLevelMenu'), '', 'fas fa-circle', '', [
                 new MenuItem('ASP.NET Boilerplate', '', 'fas fa-dot-circle', '', [
                     new MenuItem(

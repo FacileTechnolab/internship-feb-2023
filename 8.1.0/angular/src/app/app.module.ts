@@ -38,7 +38,9 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
-
+import { CourseComponent } from './Course/Course.component';
+import { EditCourseDialogComponentComponent } from './Course/EditCourseDialogComponent/EditCourseDialogComponent.component';
+import { CreateCourseDialogComponent } from './Course/CreateCourseDialog/CreateCourseDialog.component'
 @NgModule({
     declarations: [
         AppComponent,
@@ -67,7 +69,11 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
         SidebarComponent,
         SidebarLogoComponent,
         SidebarUserPanelComponent,
-        SidebarMenuComponent
+        SidebarMenuComponent,
+        //Course
+        CourseComponent,
+        CreateCourseDialogComponent,
+        EditCourseDialogComponentComponent
     ],
     imports: [
         CommonModule,
@@ -86,4 +92,4 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     ],
     providers: []
 })
-export class AppModule {}
+export class AppModule { }

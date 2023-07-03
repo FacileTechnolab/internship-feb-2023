@@ -50,6 +50,7 @@ namespace Jahanvi.Project
                 student.FirstName = input.FirstName;
                 student.LastName = input.LastName;
                 student.DateOfBirth = input.DateOfBirth;
+
                 student.Age = input.Age;
                 await _studentRepository.UpdateAsync(student);
             }
