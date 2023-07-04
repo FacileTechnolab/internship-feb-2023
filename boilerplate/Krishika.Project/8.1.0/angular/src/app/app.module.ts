@@ -1,3 +1,5 @@
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,6 +30,12 @@ import { CreateUserDialogComponent } from '@app/users/create-user/create-user-di
 import { EditUserDialogComponent } from '@app/users/edit-user/edit-user-dialog.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { ResetPasswordDialogComponent } from './users/reset-password/reset-password.component';
+
+// project
+
+import { ProjectComponent } from './Project/Project.component';
+import { CreateProjectComponent } from './Project/create-Project/create-Project.component';
+import { EditProjectComponent} from './Project/edit-project/edit-project.component';
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -40,7 +48,7 @@ import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
 
 @NgModule({
-    declarations: [
+    declarations: [	
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -67,8 +75,14 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
         SidebarComponent,
         SidebarLogoComponent,
         SidebarUserPanelComponent,
-        SidebarMenuComponent
-    ],
+        SidebarMenuComponent,
+
+        //project
+      ProjectComponent,
+      CreateProjectComponent,
+      EditProjectComponent
+  
+   ],
     imports: [
         CommonModule,
         FormsModule,
