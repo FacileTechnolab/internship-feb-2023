@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./EditCourseDialogComponent.component.css']
 })
 export class EditCourseDialogComponentComponent implements OnInit {
-  id: number;
-  constructor() { }
 
+  constructor() { }
+  id: number;
   ngOnInit() {
   }
 

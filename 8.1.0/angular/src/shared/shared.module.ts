@@ -17,12 +17,14 @@ import { LayoutStoreService } from './layout/layout-store.service';
 // import { CourseServiceServiceProxy, GetCourseOutput, CreateCourseInput, UpdateCourseInput } from './../../shared/service-proxies/service-proxies';
 import { BusyDirective } from './directives/busy.directive';
 import { EqualValidator } from './directives/equal-validator.directive';
+import { CourseServiceServiceProxy } from './service-proxies/service-proxies';
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+
     ],
     declarations: [
         AbpPaginationControlsComponent,
@@ -53,12 +55,7 @@ export class SharedModule {
                 AppAuthService,
                 AppRouteGuard,
                 LayoutStoreService,
-                // CourseServiceServiceProxy,
-                // GetCourseOutput,
-                // CreateCourseInput,
-                // UpdateCourseInput
-
-
+                CourseServiceServiceProxy,
             ]
         };
     }

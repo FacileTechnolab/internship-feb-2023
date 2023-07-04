@@ -1,3 +1,4 @@
+import { CourseServiceServiceProxy } from '@shared/service-proxies/service-proxies';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -38,9 +39,11 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CourseComponent } from './Course/Course.component';
+import { CreateCourseDialogComponentComponent } from './Course/CreateCourseDialogComponent/CreateCourseDialogComponent.component';
 import { EditCourseDialogComponentComponent } from './Course/EditCourseDialogComponent/EditCourseDialogComponent.component';
-import { CreateCourseDialogComponent } from './Course/CreateCourseDialog/CreateCourseDialog.component'
 @NgModule({
     declarations: [
         AppComponent,
@@ -72,8 +75,11 @@ import { CreateCourseDialogComponent } from './Course/CreateCourseDialog/CreateC
         SidebarMenuComponent,
         //Course
         CourseComponent,
-        CreateCourseDialogComponent,
+        CreateCourseDialogComponentComponent,
         EditCourseDialogComponentComponent
+
+
+
     ],
     imports: [
         CommonModule,
@@ -84,11 +90,13 @@ import { CreateCourseDialogComponent } from './Course/CreateCourseDialog/CreateC
         ModalModule.forChild(),
         BsDropdownModule,
         CollapseModule,
+
         TabsModule,
         AppRoutingModule,
         ServiceProxyModule,
         SharedModule,
         NgxPaginationModule,
+        // BrowserAnimationsModule
     ],
     providers: []
 })

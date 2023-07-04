@@ -485,6 +485,72 @@ export class CourseServiceServiceProxy {
         }
         return _observableOf(null as any);
     }
+
+    /**
+     * @param filter (optional) 
+     * @param skipCount (optional) 
+     * @param maxResultCount (optional) 
+     * @return Success
+     */
+    getCourses(filter: string | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetCourseOutputPagedResultDto> {
+        let url_ = this.baseUrl + "/api/services/app/CourseService/GetCourses?";
+        if (filter === null)
+            throw new Error("The parameter 'filter' cannot be null.");
+        else if (filter !== undefined)
+            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
+        if (skipCount === null)
+            throw new Error("The parameter 'skipCount' cannot be null.");
+        else if (skipCount !== undefined)
+            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
+        if (maxResultCount === null)
+            throw new Error("The parameter 'maxResultCount' cannot be null.");
+        else if (maxResultCount !== undefined)
+            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("get", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetCourses(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetCourses(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GetCourseOutputPagedResultDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GetCourseOutputPagedResultDto>;
+        }));
+    }
+
+    protected processGetCourses(response: HttpResponseBase): Observable<GetCourseOutputPagedResultDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GetCourseOutputPagedResultDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
 }
 
 @Injectable()
@@ -3284,6 +3350,61 @@ export interface IGetCourseOutput {
     sem: number;
     description: string | undefined;
     professor: string | undefined;
+}
+
+export class GetCourseOutputPagedResultDto implements IGetCourseOutputPagedResultDto {
+    items: GetCourseOutput[] | undefined;
+    totalCount: number;
+
+    constructor(data?: IGetCourseOutputPagedResultDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            if (Array.isArray(_data["items"])) {
+                this.items = [] as any;
+                for (let item of _data["items"])
+                    this.items.push(GetCourseOutput.fromJS(item));
+            }
+            this.totalCount = _data["totalCount"];
+        }
+    }
+
+    static fromJS(data: any): GetCourseOutputPagedResultDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GetCourseOutputPagedResultDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        if (Array.isArray(this.items)) {
+            data["items"] = [];
+            for (let item of this.items)
+                data["items"].push(item.toJSON());
+        }
+        data["totalCount"] = this.totalCount;
+        return data;
+    }
+
+    clone(): GetCourseOutputPagedResultDto {
+        const json = this.toJSON();
+        let result = new GetCourseOutputPagedResultDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IGetCourseOutputPagedResultDto {
+    items: GetCourseOutput[] | undefined;
+    totalCount: number;
 }
 
 export class GetCurrentLoginInformationsOutput implements IGetCurrentLoginInformationsOutput {

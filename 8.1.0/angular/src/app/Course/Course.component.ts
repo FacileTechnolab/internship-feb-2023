@@ -1,44 +1,79 @@
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
+import { CreateRoleDialogComponent } from '@app/roles/create-role/create-role-dialog.component';
+import { EditRoleDialogComponent } from '@app/roles/edit-role/edit-role-dialog.component';
+import { appModuleAnimation } from '@shared/animations/routerTransition';
+import { PagedListingComponentBase, PagedRequestDto } from '@shared/paged-listing-component-base';
+import { CourseServiceServiceProxy, GetCourseOutput, GetCourseOutputPagedResultDto, UpdateCourseInput } from '@shared/service-proxies/service-proxies';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { finalize } from 'rxjs/operators';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { CourseServiceServiceProxy, UserDto } from '@shared/service-proxies/service-proxies';
-import { FormsModule, FormGroup } from '@angular/forms';
-import { CreateCourseDialogComponent } from './CreateCourseDialog/CreateCourseDialog.component';
+import { CreateCourseDialogComponentComponent } from './CreateCourseDialogComponent/CreateCourseDialogComponent.component';
 import { EditCourseDialogComponentComponent } from './EditCourseDialogComponent/EditCourseDialogComponent.component';
+class PagedRolesRequestDto extends PagedRequestDto {
+  keyword: string;
+}
 @Component({
   selector: 'app-Course',
   templateUrl: './Course.component.html',
-  styleUrls: ['./Course.component.css']
+  styleUrls: ['./Course.component.css'],
+  animations: [appModuleAnimation()]
 })
-export class CourseComponent implements OnInit {
+export class CourseComponent extends PagedListingComponentBase<GetCourseOutput> {
   keyword = '';
-  refresh: any;
-  cour: CourseServiceServiceProxy[] = [];
-  isActive: boolean | null;
-  advancedFiltersVisible = false;
+  course: GetCourseOutput[] = [];
+  protected list(request: PagedRolesRequestDto, pageNumber: number, finishedCallback: Function): void {
+    request.keyword = this.keyword;
+    this._courseService.getCourses(request.keyword, request.skipCount, request.maxResultCount)
+      .pipe(
+        finalize(() => {
+          finishedCallback();
+        })
+      )
+      .subscribe((result: any) => {
+        console.warn("COURSES", result);
+        this.course = result;
 
-  constructor(private _modalService: BsModalService) { }
-  ngOnInit() {
+        this.showPaging(result, pageNumber);
+      });
+
+    this._courseService.getCourses(request.keyword, request.skipCount, request.maxResultCount)
+      .pipe(
+        finalize(() => {
+          finishedCallback();
+        })
+      )
+      .subscribe((result: GetCourseOutputPagedResultDto) => {
+        console.warn("COURSES", result);
+        this.course = result.items;
+
+        this.showPaging(result, pageNumber);
+      });
+
   }
-  createCourse(): void {
+  protected delete(roles: GetCourseOutput): void {
+
+    throw new Error('Method not implemented.');
+  }
+
+
+
+  constructor(
+    injector: Injector,
+    private _modalService: BsModalService,
+    private _courseService: CourseServiceServiceProxy
+  ) {
+    super(injector);
+  }
+  createRole(): void {
     this.showCreateOrEditCourseDialog();
   }
-  clearFilters(): void {
-    this.keyword = '';
-    this.isActive = undefined;
-    this.getDataPage(1);
+  editRole(role: UpdateCourseInput): void {
+    this.showCreateOrEditCourseDialog(role.id);
   }
-  getDataPage(args: any) {
-
-  }
-  // editUser(course:CourseServiceServiceProxy): void {
-  //   this.showCreateOrEditCourseDialog(course.id);
-  // }
-  private showCreateOrEditCourseDialog(id?: number): void {
+  showCreateOrEditCourseDialog(id?: number): void {
     let createOrEditCourseDialog: BsModalRef;
     if (!id) {
       createOrEditCourseDialog = this._modalService.show(
-        CreateCourseDialogComponent,
+        CreateCourseDialogComponentComponent,
         {
           class: 'modal-lg',
         }
@@ -50,6 +85,7 @@ export class CourseComponent implements OnInit {
           class: 'modal-lg',
           initialState: {
             id: id,
+
           },
         }
       );
@@ -59,4 +95,5 @@ export class CourseComponent implements OnInit {
       this.refresh();
     });
   }
+
 }

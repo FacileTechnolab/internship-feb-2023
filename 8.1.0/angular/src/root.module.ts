@@ -18,7 +18,6 @@ import { API_BASE_URL } from '@shared/service-proxies/service-proxies';
 
 import { RootComponent } from './root.component';
 import { AppInitializer } from './app-initializer';
-
 export function getCurrentLanguage(): string {
   if (abp.localization.currentLanguage.name) {
     return abp.localization.currentLanguage.name;
@@ -30,7 +29,6 @@ export function getCurrentLanguage(): string {
 
 @NgModule({
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     SharedModule.forRoot(),
@@ -58,4 +56,4 @@ export function getCurrentLanguage(): string {
   ],
   bootstrap: [RootComponent],
 })
-export class RootModule {}
+export class RootModule { }
