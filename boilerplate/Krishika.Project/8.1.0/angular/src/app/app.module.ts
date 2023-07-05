@@ -34,8 +34,6 @@ import { ResetPasswordDialogComponent } from './users/reset-password/reset-passw
 // project
 
 import { ProjectComponent } from './Project/Project.component';
-import { CreateProjectComponent } from './Project/create-Project/create-Project.component';
-import { EditProjectComponent} from './Project/edit-project/edit-project.component';
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -46,6 +44,7 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
+import { ProjectAppResourceServiceProxy } from '@shared/service-proxies/service-proxies';
 
 @NgModule({
     declarations: [	
@@ -78,9 +77,7 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
         SidebarMenuComponent,
 
         //project
-      ProjectComponent,
-      CreateProjectComponent,
-      EditProjectComponent
+      ProjectComponent
   
    ],
     imports: [

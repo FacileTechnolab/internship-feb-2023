@@ -1,13 +1,19 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
+using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
 using AutoMapper;
 using Krishika.Project.Projects.DTO;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Krishika.Project.Projects
 {
-    public class ProjectAppServices : IApplicationService
+    public class ProjectAppServices : ApplicationService
     {
         private readonly IRepository<Krishika.Project.Modal.Project> _projectsService;
         private readonly IMapper _mapper;
@@ -58,10 +64,29 @@ namespace Krishika.Project.Projects
                 await _projectsService.UpdateAsync(output);
 
             }
+        }
+        public async Task<PagedResultDto<GetProjectsOutput>> GetProject(GetProjectsInput input)
+        {
+            var query = _projectsService.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter)).AsQueryable();
 
+            var projectCount = await query.CountAsync();
+            var project = await query.PageBy(input).ToListAsync();
 
-
-
+            return new PagedResultDto<GetProjectsOutput>(
+            projectCount,
+                ObjectMapper.Map<List<GetProjectsOutput>>(project)
+                );
         }
     }
+
 }
+public class GetProjectsInput : PagedResultRequestDto
+{
+    public string Filter { get; set; }
+    public int Id { get; set; }
+}
+
+
+
+
+

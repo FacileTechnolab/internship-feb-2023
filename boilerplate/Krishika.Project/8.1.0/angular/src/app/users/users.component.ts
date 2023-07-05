@@ -27,7 +27,7 @@ class PagedUsersRequestDto extends PagedRequestDto {
 export class UsersComponent extends PagedListingComponentBase<UserDto> {
   users: UserDto[] = [];
   keyword = '';
-  isActive: boolean | null;
+  isActive: boolean | null; 
   advancedFiltersVisible = false;
 
   constructor(
