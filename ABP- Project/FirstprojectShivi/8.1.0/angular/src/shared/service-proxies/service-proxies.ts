@@ -2853,9 +2853,9 @@ export class CreateRestaurantInput implements ICreateRestaurantInput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
-    readonly capacity: number;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
+    capacity: number;
 
     constructor(data?: ICreateRestaurantInput) {
         if (data) {
@@ -2873,7 +2873,7 @@ export class CreateRestaurantInput implements ICreateRestaurantInput {
             this.location = _data["location"];
             this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
             this.closedTime = _data["closedTime"] ? moment(_data["closedTime"].toString()) : <any>undefined;
-            (<any>this).capacity = _data["capacity"];
+            this.capacity = _data["capacity"];
         }
     }
 
@@ -2907,8 +2907,8 @@ export interface ICreateRestaurantInput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
     capacity: number;
 }
 
@@ -3431,9 +3431,9 @@ export class GetRestaurantOutput implements IGetRestaurantOutput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
-    readonly capacity: number;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
+    capacity: number;
 
     constructor(data?: IGetRestaurantOutput) {
         if (data) {
@@ -3451,7 +3451,7 @@ export class GetRestaurantOutput implements IGetRestaurantOutput {
             this.location = _data["location"];
             this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
             this.closedTime = _data["closedTime"] ? moment(_data["closedTime"].toString()) : <any>undefined;
-            (<any>this).capacity = _data["capacity"];
+            this.capacity = _data["capacity"];
         }
     }
 
@@ -3485,8 +3485,8 @@ export interface IGetRestaurantOutput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
     capacity: number;
 }
 
@@ -4588,9 +4588,9 @@ export class UpdateRestaurantInput implements IUpdateRestaurantInput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
-    readonly capacity: number;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
+    capacity: number;
 
     constructor(data?: IUpdateRestaurantInput) {
         if (data) {
@@ -4608,7 +4608,7 @@ export class UpdateRestaurantInput implements IUpdateRestaurantInput {
             this.location = _data["location"];
             this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
             this.closedTime = _data["closedTime"] ? moment(_data["closedTime"].toString()) : <any>undefined;
-            (<any>this).capacity = _data["capacity"];
+            this.capacity = _data["capacity"];
         }
     }
 
@@ -4642,8 +4642,8 @@ export interface IUpdateRestaurantInput {
     id: number;
     name: string | undefined;
     location: string | undefined;
-    openingTime: moment.Moment;
-    closedTime: moment.Moment;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
     capacity: number;
 }
 

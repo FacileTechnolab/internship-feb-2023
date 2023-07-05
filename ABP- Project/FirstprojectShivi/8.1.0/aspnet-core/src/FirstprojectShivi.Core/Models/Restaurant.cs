@@ -19,10 +19,10 @@ namespace FirstprojectShivi.Models
 			[Required]
 			public string Location { get; set; }
 			
-			[Required]
-			public DateTime OpeningTime { get; set; }
-			[Required]
-			public DateTime ClosedTime { get; set; }
+		
+			public DateTime? OpeningTime { get; set; }
+		
+			public DateTime? ClosedTime { get; set; }
 			[Required]
 			public int Capacity { get; set; }
 

@@ -1613,7 +1613,7 @@ namespace FirstprojectShivi.Migrations
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ClosedTime")
+                    b.Property<DateTime?>("ClosedTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Location")
@@ -1624,7 +1624,7 @@ namespace FirstprojectShivi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("OpeningTime")
+                    b.Property<DateTime?>("OpeningTime")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

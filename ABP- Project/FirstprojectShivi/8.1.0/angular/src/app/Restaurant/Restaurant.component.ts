@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Injector, OnInit, Output } from '@angular/core';
 import { CreateRestaurantComponent } from './create-restaurant/Create-Restaurant/Create-Restaurant.component';
 import { EditRestaurantComponent } from './edit-restaurant/Edit-Restaurant/Edit-Restaurant.component';
-import { GetRestaurantOutput, GetRestaurantOutputPagedResultDto, RestaurantServiceProxy, UpdateOrderInput } from '@shared/service-proxies/service-proxies';
+import { GetRestaurantOutput, GetRestaurantOutputPagedResultDto, RestaurantServiceProxy } from '@shared/service-proxies/service-proxies';
 import {
   PagedListingComponentBase,
   PagedRequestDto
@@ -12,7 +12,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
 
 class PagedResultRequestDto extends PagedRequestDto {
-  keyword: string;
+ 
 }
 @Component({
   selector: 'app-Restaurant',
@@ -20,92 +20,112 @@ class PagedResultRequestDto extends PagedRequestDto {
   styleUrls: ['./Restaurant.component.css'],
   animations: [appModuleAnimation()]
 })
-export class RestaurantComponent  extends PagedListingComponentBase<GetRestaurantOutput> {
-  protected delete(entity: GetRestaurantOutput): void {
+export class RestaurantComponent  {
+  // protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
+  //   throw new Error('Method not implemented.');
+
+  // }
+  // extends PagedListingComponentBase<GetRestaurantOutput>
+  // protected delete(entity: GetRestaurantOutput): void {
+  //   throw new Error('Method not implemented.');
+  // }
+//   protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
+//         this._restaurantService
+//       .getRestaurants('',0, request.skipCount, request.maxResultCount)
+//       .pipe(
+//         finalize(() => {
+//           finishedCallback();
+//         })
+//       )
+//       .subscribe((result:GetRestaurantOutputPagedResultDto) => {
+//         this.restaurant = result.items;
+//         this.showPaging(result, pageNumber);
+//       });
+//   }
+//   protected delete(entity: GetRestaurantOutput): void {
   
-  }
+//   }
 
  
-  keyword = '';
+//   keyword = '';
  
-  restaurant: GetRestaurantOutput[] = [];
+//   restaurant: GetRestaurantOutput[] = [];
 
-  id: any;
  
-  constructor(
-    injector: Injector,
-    private _restaurantService: RestaurantServiceProxy,
-    private _modalService: BsModalService
-  ) {
-    super(injector);
-  }
-  list(
-    request: PagedResultRequestDto,
-    pageNumber: number,
-    finishedCallback: Function
-  ): void {
-    request.keyword = this.keyword;
+ 
+//   constructor(
+//     injector: Injector,
+//     private _restaurantService: RestaurantServiceProxy,
+//     private _modalService: BsModalService
+//   ) {
+//     super(injector);
+//   }
+// //  protected list(
+// //     request: PagedResultRequestDto,
+// //     pageNumber: number,
+// //     finishedCallback: Function
+// //   ): void {
+// //     request.keyword = this.keyword;
 
-    this._restaurantService
-      .getRestaurants(request.keyword,0, request.skipCount, request.maxResultCount)
-      .pipe(
-        finalize(() => {
-          finishedCallback();
-        })
-      )
-      .subscribe((result:GetRestaurantOutputPagedResultDto) => {
-        this.restaurant = result.items;
-        this.showPaging(result, pageNumber);
-      });
-  }
-  @Output() onSave = new EventEmitter<any>();
-  ngOnInit() {
-  }
-  createRestaurant(): void {
-    this.showCreateOrEditRestaurant();
-  }
-  ViewRestaurant(): void {
-    this.showCreateOrEditRestaurant();
-  }
+// //     this._restaurantService
+// //       .getRestaurants(request.keyword,0, request.skipCount, request.maxResultCount)
+// //       .pipe(
+// //         finalize(() => {
+// //           finishedCallback();
+// //         })
+// //       )
+// //       .subscribe((result:GetRestaurantOutputPagedResultDto) => {
+// //         this.restaurant = result.items;
+// //         this.showPaging(result, pageNumber);
+// //       });
+// //   }
+//   @Output() onSave = new EventEmitter<any>();
 
-  editRestaurant(restaurant: GetRestaurantOutput): void {
-    this.showCreateOrEditRestaurant(restaurant.id);
-  }
+//   createRestaurant(): void {
+//     //this.showCreateOrEditRestaurant();
+//   }
+//   ViewRestaurant(): void {
+//     //this.showCreateOrEditRestaurant();
+//   }
+
+//   editRestaurant(restaurant: GetRestaurantOutput): void {
+//     //this.showCreateOrEditRestaurant(restaurant.id);
+//   }
  
 
-  private showCreateOrEditRestaurant(id?: number): void {
-    let createOrEditRestaurant: BsModalRef;
-    if (!id) {
-      createOrEditRestaurant = this._modalService.show(
-        CreateRestaurantComponent,
-        {
-          class: 'modal-lg',
-        }
-      );
-    } else {
-      createOrEditRestaurant = this._modalService.show(
-        EditRestaurantComponent,
-        {
-          class: 'modal-lg',
-          initialState: {
-            id: id,
-          },
-        }
-      );
-    }
+//   // private showCreateOrEditRestaurant(id?: number): void {
+//   //   let createOrEditRestaurant: BsModalRef;
+//   //   if (!id) {
+//   //     createOrEditRestaurant = this._modalService.show(
+//   //       CreateRestaurantComponent,
+//   //       {
+//   //         class: 'modal-lg',
+//   //       }
+//   //     );
+//   //   } else {
+//   //     createOrEditRestaurant = this._modalService.show(
+//   //       EditRestaurantComponent,
+//   //       {
+//   //         class: 'modal-lg',
+//   //         initialState: {
+//   //           id: id,
+//   //         },
+//   //       }
+//   //     );
+//   //   }
 
 
 
 
-  }
-  clearFilters(): void {
-    this.keyword = '';
-    // this.isActive = undefined;
-    this.getDataPage(1);
-  }
-  getDataPage(arg0: number) {
+//   // }
+//   clearFilters(): void {
+//     this.keyword = '';
+//     // this.isActive = undefined;
+//     this.getDataPage(1);
+//   }
+//   getDataPage(arg0: number) {
     
-  }
+//   }
 
 }
 

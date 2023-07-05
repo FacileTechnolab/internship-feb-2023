@@ -10,6 +10,7 @@ import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { RestaurantComponent } from './Restaurant/Restaurant.component';
 import { CommonModule } from '@angular/common';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
                     { path: 'restaurant', component: RestaurantComponent,canActivate: [AppRouteGuard] },
+                    { path: 'restaurants', component: RestaurantsComponent,canActivate: [AppRouteGuard] },
                 ]
             }
         ])

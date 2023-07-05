@@ -34,10 +34,11 @@ export class RolesComponent extends PagedListingComponentBase<RoleDto> {
     super(injector);
   }
 
-  list(
+  protected list(
     request: PagedRolesRequestDto,
     pageNumber: number,
-    finishedCallback: Function
+    finishedCallback: Function,
+    
   ): void {
     request.keyword = this.keyword;
 

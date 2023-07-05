@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FirstprojectShivi.Migrations
 {
     /// <inheritdoc />
-    public partial class AddRestaurant : Migration
+    public partial class add_restaurant : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,8 +19,8 @@ namespace FirstprojectShivi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OpeningTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ClosedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    OpeningTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ClosedTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Capacity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

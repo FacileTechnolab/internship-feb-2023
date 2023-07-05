@@ -5,7 +5,7 @@
 namespace FirstprojectShivi.Migrations
 {
     /// <inheritdoc />
-    public partial class AddOrders : Migration
+    public partial class add_order : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

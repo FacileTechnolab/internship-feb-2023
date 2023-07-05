@@ -43,12 +43,13 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
-import { RestaurantServiceProxy } from '@shared/service-proxies/service-proxies';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { NgbDateStruct, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { JsonPipe } from '@angular/common';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+
 @NgModule({
-    declarations: [	
+    declarations: [		
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -81,8 +82,7 @@ import { JsonPipe } from '@angular/common';
         RestaurantComponent ,
         CreateRestaurantComponent ,
         EditRestaurantComponent,
-        
-   
+      RestaurantsComponent
    ],
     imports: [
         CommonModule ,
@@ -101,10 +101,10 @@ import { JsonPipe } from '@angular/common';
         
         AppRoutingModule,
         ServiceProxyModule,
-      
+       
         SharedModule,
         NgxPaginationModule,
     ],
-    providers: [RestaurantServiceProxy, provideAnimations()]
+    providers: [ provideAnimations()]
 })
 export class AppModule {}

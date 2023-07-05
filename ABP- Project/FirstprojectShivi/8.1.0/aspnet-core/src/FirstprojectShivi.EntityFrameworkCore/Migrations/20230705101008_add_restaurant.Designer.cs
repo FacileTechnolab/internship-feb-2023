@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstprojectShivi.Migrations
 {
     [DbContext(typeof(FirstprojectShiviDbContext))]
-    [Migration("20230701013728_Add-Orders")]
-    partial class AddOrders
+    [Migration("20230705101008_add_restaurant")]
+    partial class add_restaurant
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1576,35 +1576,6 @@ namespace FirstprojectShivi.Migrations
                     b.ToTable("AbpUsers");
                 });
 
-            modelBuilder.Entity("FirstprojectShivi.Models.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("FoodName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<bool>("IsDelivery")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RestaurantId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RestaurantId");
-
-                    b.ToTable("Orders");
-                });
-
             modelBuilder.Entity("FirstprojectShivi.Models.Restaurant", b =>
                 {
                     b.Property<int>("Id")
@@ -1616,7 +1587,7 @@ namespace FirstprojectShivi.Migrations
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ClosedTime")
+                    b.Property<DateTime?>("ClosedTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Location")
@@ -1627,7 +1598,7 @@ namespace FirstprojectShivi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("OpeningTime")
+                    b.Property<DateTime?>("OpeningTime")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1915,17 +1886,6 @@ namespace FirstprojectShivi.Migrations
                     b.Navigation("DeleterUser");
 
                     b.Navigation("LastModifierUser");
-                });
-
-            modelBuilder.Entity("FirstprojectShivi.Models.Order", b =>
-                {
-                    b.HasOne("FirstprojectShivi.Models.Restaurant", "Restaurants")
-                        .WithMany()
-                        .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Restaurants");
                 });
 
             modelBuilder.Entity("FirstprojectShivi.MultiTenancy.Tenant", b =>

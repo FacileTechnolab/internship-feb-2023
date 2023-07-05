@@ -65,7 +65,7 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
             ),
             new MenuItem(
                 this.l('Restaurant'),
-                '/app/restaurant',
+                '/app/restaurants',
                 'fa-solid fa-utensils',
                 'Pages.Roles'
             ),

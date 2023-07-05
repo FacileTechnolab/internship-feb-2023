@@ -12,10 +12,10 @@ namespace FirstprojectShivi.Restaurant.Dto
 		public string Name { get; set; }
 		public string Location { get; set; }
 
-		public DateTime OpeningTime { get; set; }
+		public DateTime? OpeningTime { get; set; }
 
-		public DateTime ClosedTime { get; set; }
+		public DateTime? ClosedTime { get; set; }
 
-		public int Capacity { get; }
+		public int Capacity { get; set; }
 	}
 }

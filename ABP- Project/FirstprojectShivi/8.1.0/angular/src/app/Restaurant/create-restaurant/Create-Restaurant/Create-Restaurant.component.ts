@@ -4,24 +4,21 @@ import { CreateRestaurantInput, GetRestaurantOutput, RestaurantServiceProxy, } f
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { forEach as _forEach, map as _map } from 'lodash-es';
 import { NgbDateStruct, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { appModuleAnimation } from '@shared/animations/routerTransition';
 @Component({
   selector: 'app-Create-Restaurant',
   templateUrl: './Create-Restaurant.component.html',
-  styleUrls: ['./Create-Restaurant.component.css']
+  styleUrls: ['./Create-Restaurant.component.css'],
+  animations: [appModuleAnimation()],
 })
-export class CreateRestaurantComponent  extends AppComponentBase implements OnInit {
-  items: GetRestaurantOutput[] | undefined;
+export class CreateRestaurantComponent  extends AppComponentBase
+implements OnInit {
+ 
 id:number;
 keyword = '';
 isActive: boolean | null;
-advancedFiltersVisible = false;
-restaurant = new CreateRestaurantInput();
-roles: GetRestaurantOutput[] = [];
-checkedRolesMap: { [key: string]: boolean } = {};
-defaultRoleCheckedStatus = false;
-
-  saving: boolean;
- name:string;
+saving = false;
+ 
 
 constructor(
   injector: Injector,
@@ -31,57 +28,15 @@ private calendar: NgbCalendar
 ) {
   super(injector);
 }
-
-ngOnInit(): void {
-  // this.restaurant.isActive = true;
-
-  this. _restaurantService.listAll().subscribe((result) => {
-    // this.roles = result.items;
-    this.setInitialRolesStatus();
-  });
-}
-setInitialRolesStatus(): void {
-  _map(this.roles, (item:GetRestaurantOutput) => {
-    // this.checkedRolesMap[item.GetRestaurantOutput.name] = this.isRoleChecked(
-    //   item.name
-    // );
-  });
-}
-onRoleChange(role: GetRestaurantOutput, $event) {
-  this.checkedRolesMap[role.name] = $event.target.checked;
-}
-isRoleChecked(name: string): boolean {
-  // just return default role checked status
-  // it's better to use a setting
-  return this.defaultRoleCheckedStatus;
-}
-save(): void {
-  this.saving = true;
-
- // this.restaurant.GetRestaurantOutput = this.getCheckedRoles();
-
-  this._restaurantService.create(this.restaurant).subscribe(
-    () => {
-      this.notify.info(this.l('SavedSuccessfully'));
-      this.bsModalRef.hide();
-      this.onSave.emit();
-    },
-    () => {
-      this.saving = false;
-    }
-  );
-}
-  getCheckedRoles(): any {
+  ngOnInit(): void {
    
   }
-  model: NgbDateStruct;
-	date: { year: number; month: number };
+
+restaurant = new GetRestaurantOutput();
 
 
-	selectToday() {
-		this.model = this.calendar.getToday();
-	}
-  @Output() onSave = new EventEmitter<any>();
+
+
   clearFilters(): void {
     this.keyword = '';
     this.isActive = undefined;
@@ -89,5 +44,30 @@ save(): void {
   }
   getDataPage(arg0: number) {
 
+  }
+  @Output() onSave = new EventEmitter<any>();
+  save(): void {
+    this.saving = true;
+   
+    console.log(this.restaurant);
+
+
+    const restaurant = new CreateRestaurantInput();
+    restaurant.init(this.restaurant);
+   // restaurant.grantedPermissions = this.getCheckedPermissions();
+
+    this._restaurantService
+
+      .create(restaurant)
+      .subscribe(
+        () => {
+          this.notify.info(this.l('SavedSuccessfully'));
+          this.bsModalRef.hide();
+          this.onSave.emit();
+        },
+        () => {
+          this.saving = false;
+        }
+      );
   }
 }
