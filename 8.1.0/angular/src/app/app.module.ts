@@ -1,3 +1,5 @@
+import { EditStudentComponent } from './Student/EditStudent/EditStudent.component';
+
 import { CourseServiceServiceProxy } from '@shared/service-proxies/service-proxies';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -45,8 +47,10 @@ import { CourseComponent } from './Course/Course.component';
 import { CreateCourseDialogComponentComponent } from './Course/CreateCourseDialogComponent/CreateCourseDialogComponent.component';
 import { EditCourseDialogComponentComponent } from './Course/EditCourseDialogComponent/EditCourseDialogComponent.component';
 import { StudentComponent } from './Student/Student.component';
+import { CreateStudentComponent } from './Student/CreateStudent/CreateStudent.component';
+
 @NgModule({
-    declarations: [	
+    declarations: [
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -79,8 +83,11 @@ import { StudentComponent } from './Student/Student.component';
         CreateCourseDialogComponentComponent,
         EditCourseDialogComponentComponent,
         ViewCourseComponent,
-      StudentComponent
-   ],
+        //Student
+        StudentComponent,
+        CreateStudentComponent,
+        EditStudentComponent
+    ],
     imports: [
         CommonModule,
         FormsModule,

@@ -10,6 +10,7 @@ import { TenantsComponent } from './tenants/tenants.component';
 import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { CourseComponent } from './Course/Course.component';
+import { StudentComponent } from './Student/Student.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
@@ -21,6 +22,7 @@ import { CourseComponent } from './Course/Course.component';
                     { path: 'users', component: UsersComponent, data: { permission: 'Pages.Users' }, canActivate: [AppRouteGuard] },
                     { path: 'roles', component: RolesComponent, data: { permission: 'Pages.Roles' }, canActivate: [AppRouteGuard] },
                     { path: 'course', component: CourseComponent, canActivate: [AppRouteGuard] },
+                    { path: 'Student', component: StudentComponent, canActivate: [AppRouteGuard] },
                     { path: 'tenants', component: TenantsComponent, data: { permission: 'Pages.Tenants' }, canActivate: [AppRouteGuard] },
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] }
