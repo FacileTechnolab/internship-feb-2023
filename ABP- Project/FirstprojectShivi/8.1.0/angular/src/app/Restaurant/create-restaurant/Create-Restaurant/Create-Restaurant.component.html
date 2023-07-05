@@ -1,0 +1,181 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createRestaurantModal="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'CreateNewUser' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <tabset>
+      <tab [heading]="'UserDetails' | localize" class="pt-3 px-2">
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="RestaurantName">
+            {{ "Name" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              required
+              maxlength="32"
+              [(ngModel)]="restaurant.name"
+              #nameModel="ngModel"
+              #nameEl
+            />
+            <abp-validation-summary
+              [control]="nameModel"
+              [controlEl]="nameEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="location">
+            {{ "Location" | localize }}
+          </label>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col">
+                <div ngbDropdown class="d-inline-block">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    id="dropdownBasic1"
+                    ngbDropdownToggle
+                  >
+                    Location
+                  </button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem>Ahmedabad</button>
+                    <button ngbDropdownItem>Surat</button>
+                    <button ngbDropdownItem>Surendranagar</button>
+                    <button ngbDropdownItem>Nikol</button>
+                    <button ngbDropdownItem>Bodakdev</button>
+                    <button ngbDropdownItem>Viratnagar</button>
+                    <button ngbDropdownItem>Bapunagar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="OpeningDate">
+              {{ "OpeningDate" | localize }}
+            </label>
+            <div class="col-md-9">
+              <ngb-datepicker
+                #dp
+                [(ngModel)]="model"
+                (navigate)="date = $event.next"
+              ></ngb-datepicker>
+
+              <hr />
+
+              <button
+                class="btn btn-sm btn-outline-primary me-2"
+                (click)="selectToday()"
+              >
+                Select Today
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary me-2"
+                (click)="dp.navigateTo()"
+              >
+                To current month
+              </button>
+            </div>
+          </div>
+          <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="CloseingDate">
+              {{ "CloseingDate" | localize }}
+            </label>
+            <div class="col-md-9">
+              <ngb-datepicker
+                #dp
+                [(ngModel)]="model"
+                (navigate)="date = $event.next"
+              ></ngb-datepicker>
+
+              <hr />
+
+              <button
+                class="btn btn-sm btn-outline-primary me-2"
+                (click)="selectToday()"
+              >
+                Select Today
+              </button>
+              <button
+                class="btn btn-sm btn-outline-primary me-2"
+                (click)="dp.navigateTo()"
+              >
+                To current month
+              </button>
+            </div>
+          </div>
+          <div class="form-group row required">
+            <label class="col-md-3 col-form-label" for="Capacity">
+              {{ "Capacity" | localize }}
+            </label>
+            <div class="col-md-9">
+              <input
+                type="text"
+                class="form-control"
+                name="Capacity"
+                id="Capacity"
+                required
+                ngModel
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row mb-0">
+          <label class="col-md-3 col-form-label">
+            {{ "IsActive" | localize }}
+          </label>
+          <div class="col-md-9">
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                name="isActive"
+                id="isActive"
+              />
+              <!-- [(ngModel)]="restaurant.isActive" -->
+              <label class="custom-control-label mt-2" for="isActive"></label>
+            </div>
+          </div>
+        </div>
+      </tab>
+      <tab [heading]="'UserRoles' | localize" class="pt-3 px-2">
+        <div class="form-group row mb-0">
+          <ng-container *ngFor="let role of roles; let i = index">
+            <div class="col-md-6">
+              <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  [id]="'role_' + i"
+                  [checked]="isRoleChecked(role.normalizedName)"
+                  (change)="onRoleChange(role, $event)"
+                />
+                <label class="custom-control-label" [for]="'role_' + i">
+                  {{ role.name }}
+                </label>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </tab>
+    </tabset>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!createRestaurantModal.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>
