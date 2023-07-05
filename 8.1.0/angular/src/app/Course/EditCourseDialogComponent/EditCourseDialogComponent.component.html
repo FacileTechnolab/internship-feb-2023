@@ -1,3 +1,108 @@
-<p>
-  EditCourseDialogComponent works!
-</p>
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #editcourseForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'EditCourse' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Name" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Name"
+          id="Name"
+          minlength="2"
+          maxlength="64"
+          required
+          [(ngModel)]="cour.name"
+          #NameModel="ngModel"
+          #NameEl
+        />
+        <abp-validation-summary
+          [control]="NameModel"
+          [controlEl]="NameModel"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Semester" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="semester"
+          id="semester"
+          required
+          [(ngModel)]="cour.sem"
+          #semesterModel="ngModel"
+          #semEl
+        />
+        <abp-validation-summary
+          [control]="semesterModel"
+          [controlEl]="semEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Description">
+        {{ "Description" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="description"
+          id="description"
+          minlength="2"
+          maxlength="64"
+          required
+          [(ngModel)]="cour.description"
+          #descriptionModel="ngModel"
+          #descEl
+        />
+        <abp-validation-summary
+          [control]="descriptionModel"
+          [controlEl]="descEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Professor">
+        {{ "Professor" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="professor"
+          id="professor"
+          minlength="2"
+          maxlength="64"
+          required
+          [(ngModel)]="cour.professor"
+          #professorModel="ngModel"
+          #proEl
+        />
+        <abp-validation-summary
+          [control]="professorModel"
+          [controlEl]="proEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!editcourseForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

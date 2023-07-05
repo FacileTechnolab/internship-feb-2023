@@ -1,0 +1,34 @@
+<form class="form-horizontal" autocomplete="off" #editcourseForm="ngForm">
+  <abp-modal-header
+    [title]="'ViewCourse' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Name" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ cour.name }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Semester" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ cour.sem }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Description" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ cour.description }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Professor" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ cour.professor }}</p>
+      </div>
+    </div>
+  </div>
+</form>

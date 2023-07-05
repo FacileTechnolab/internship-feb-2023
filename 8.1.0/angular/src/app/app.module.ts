@@ -39,13 +39,14 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
-
+import { ViewCourseComponent } from './Course/ViewCourse/ViewCourse.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CourseComponent } from './Course/Course.component';
 import { CreateCourseDialogComponentComponent } from './Course/CreateCourseDialogComponent/CreateCourseDialogComponent.component';
 import { EditCourseDialogComponentComponent } from './Course/EditCourseDialogComponent/EditCourseDialogComponent.component';
+import { StudentComponent } from './Student/Student.component';
 @NgModule({
-    declarations: [
+    declarations: [	
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -76,11 +77,10 @@ import { EditCourseDialogComponentComponent } from './Course/EditCourseDialogCom
         //Course
         CourseComponent,
         CreateCourseDialogComponentComponent,
-        EditCourseDialogComponentComponent
-
-
-
-    ],
+        EditCourseDialogComponentComponent,
+        ViewCourseComponent,
+      StudentComponent
+   ],
     imports: [
         CommonModule,
         FormsModule,

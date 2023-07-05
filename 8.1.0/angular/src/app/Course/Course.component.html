@@ -6,8 +6,7 @@
           <h1>{{ "Course" | localize }}</h1>
         </div>
         <div class="col-6 text-right">
-          <a href="javascript:;" class="btn bg-blue">
-            <!-- (click)="createRole()" -->
+          <a href="javascript:;" class="btn bg-blue" (click)="createCourse()">
             <i class="fa fa-plus-square"></i>
             {{ "Create" | localize }}
           </a>
@@ -86,6 +85,14 @@
                     >
                       <i class="fas fa-pencil-alt"></i>
                       {{ "Edit" | localize }}
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success mx-2"
+                      (click)="viewRole(role)"
+                    >
+                      <i class="fas fa-eye"></i>
+                      {{ "view" | localize }}
                     </button>
                     <button
                       type="button"
