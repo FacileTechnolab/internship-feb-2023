@@ -1,0 +1,47 @@
+<p>ViewStudent works!</p>
+<form class="form-horizontal" autocomplete="off" #editStudentForm="">
+  <abp-modal-header
+    [title]="'ViewCourse' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "CourseName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.courseId }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "EnrollementNo" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.enrollmentNo }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "FirstName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.firstName }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "LastName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.lastName }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "DateOfBirth" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.dateOfBirth }}</p>
+      </div>
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "Age" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ stud.age }}</p>
+      </div>
+    </div>
+  </div>
+</form>

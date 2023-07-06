@@ -104,21 +104,7 @@ export class CourseComponent extends PagedListingComponentBase<GetCourseOutput> 
       }
     );
   }
-  // viewRole(role: UpdateCourseInput): void {
 
-  //  let createOrEditCourseDialog = this._modalService.show(
-  //   ViewCourseComponent,
-  //     {
-  //       class: 'modal-lg',
-  //       initialState: {
-  //         id: role.id,
-
-  //       },
-  //     }
-  //   );
-
-
-  // }
   showCreateOrEditCourseDialog(id?: number): void {
     let createOrEditCourseDialog: BsModalRef;
     if (!id) {
@@ -141,18 +127,6 @@ export class CourseComponent extends PagedListingComponentBase<GetCourseOutput> 
         }
       );
     }
-
-    // createOrEditCourseDialog = this._modalService.show(
-    //   ViewCourseComponent, {
-    //   class: 'modal-lg',
-    //   initialState: {
-    //     id: id,
-
-    //   },
-    // }
-
-
-
     createOrEditCourseDialog.content.onSave.subscribe(() => {
       this.refresh();
     });

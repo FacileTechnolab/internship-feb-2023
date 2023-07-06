@@ -7,8 +7,6 @@ namespace Jahanvi.Project.Authorization.Users
 {
     public class Student : Entity<int>
     {
-
-        public int Id { get; set; }
         [ForeignKey("CourseId")]
         public int CourseId { get; set; }
         public Course Course { get; set; }

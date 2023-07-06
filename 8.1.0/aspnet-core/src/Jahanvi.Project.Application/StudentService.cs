@@ -1,7 +1,13 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Application.Services.Dto;
+using Abp.Collections.Extensions;
+using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
 using AutoMapper;
 using Jahanvi.Project.Student.DTO;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Jahanvi.Project
@@ -27,9 +33,9 @@ namespace Jahanvi.Project
             await _studentRepository.DeleteAsync(input.Id);
         }
 
-        public async Task<GetStudentOutput> GetStudentById(GetStudentInput input)
+        public async Task<GetStudentOutput> GetStudentById(int id)
         {
-            var getCourse = await _studentRepository.GetAsync(input.Id);
+            var getCourse = await _studentRepository.GetAsync(id);
             GetStudentOutput outputs = _mapper.Map<Authorization.Users.Student, GetStudentOutput>(getCourse);
             return outputs;
         }
@@ -55,7 +61,23 @@ namespace Jahanvi.Project
                 await _studentRepository.UpdateAsync(student);
             }
         }
+        public async Task<PagedResultDto<GetStudentOutput>> GetStudents(GetStudentInput input)
+        {
+            var query = _studentRepository.GetAll().Include(x => x.Course).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter)).AsQueryable();
+            var data = _studentRepository.GetAll().ToList();
+            var studentcount = query.Count();
+            var student = query.PageBy(input).ToList();
+            return new PagedResultDto<GetStudentOutput>(
+            studentcount,
+                ObjectMapper.Map<List<GetStudentOutput>>(student)
+                );
+        }
 
     }
 }
 
+public class GetStudentInput : PagedResultRequestDto
+{
+    public string Filter { get; set; }
+    public int Id { get; set; }
+}

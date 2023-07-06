@@ -51,14 +51,14 @@
             >
               <thead class="bg-light">
                 <tr>
-                  <th>{{ "CourseId" | localize }}</th>
-                  <th>{{ "Course" | localize }}</th>
+                  <th>{{ "CourseName" | localize }}</th>
+
                   <th>{{ "EnrollmentNo" | localize }}</th>
                   <th>{{ "FirstName" | localize }}</th>
                   <th>{{ "LastName" | localize }}</th>
                   <th>{{ "DateOfBirth" | localize }}</th>
                   <th>{{ "Age" | localize }}</th>
-                  <th style="width: 200px">{{ "Actions" | localize }}</th>
+                  <th>{{ "Actions" | localize }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -75,11 +75,12 @@
                           }
                   "
                 >
-                  <td>{{ role.courseId }}</td>
+                  <td>{{ role.courseName }}</td>
+
                   <td>{{ role.enrollmentNo }}</td>
                   <td>{{ role.firstName }}</td>
                   <td>{{ role.lastName }}</td>
-                  <td>{{ role.dateOfBirth }}</td>
+                  <td>{{ role.dateOfBirth | date : "dd-MM-yyyy" }}</td>
                   <td>{{ role.age }}</td>
 
                   <td>

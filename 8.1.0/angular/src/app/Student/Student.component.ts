@@ -1,12 +1,16 @@
+import { ViewStudentComponent } from './ViewStudent/ViewStudent.component';
 import { Component, Injector, OnInit } from '@angular/core';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
 import { PagedListingComponentBase, PagedRequestDto } from '@shared/paged-listing-component-base';
-import { CourseServiceServiceProxy, GetCourseOutput, GetStudentOutput, StudentServiceServiceProxy, UpdateStudentInput } from '@shared/service-proxies/service-proxies';
+import { GetStudentOutput, GetStudentOutputPagedResultDto, StudentServiceServiceProxy, UpdateStudentInput } from '@shared/service-proxies/service-proxies';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+
 import { CreateStudentComponent } from './CreateStudent/CreateStudent.component';
 import { EditStudentComponent } from './EditStudent/EditStudent.component';
+import { finalize } from 'rxjs/operators';
 class PagedRolesRequestDto extends PagedRequestDto {
   keyword: string;
+
 }
 
 @Component({
@@ -16,13 +20,9 @@ class PagedRolesRequestDto extends PagedRequestDto {
   animations: [appModuleAnimation()]
 })
 export class StudentComponent extends PagedListingComponentBase<GetStudentOutput> {
-  protected list(request: PagedRequestDto, pageNumber: number, finishedCallback: Function): void {
-    throw new Error('Method not implemented.');
-  }
-  protected delete(entity: GetStudentOutput): void {
-    throw new Error('Method not implemented.');
-  }
 
+  keyword = '';
+  student: GetStudentOutput[] = [];
   constructor(
     injector: Injector,
     private _modalService: BsModalService,
@@ -30,12 +30,28 @@ export class StudentComponent extends PagedListingComponentBase<GetStudentOutput
   ) {
     super(injector);
   }
+  protected list(request: PagedRolesRequestDto, pageNumber: number, finishedCallback: Function): void {
+    request.keyword = this.keyword;
+    this._studentService.getStudents(request.keyword, request.skipCount, 0, request.maxResultCount)
+      .pipe(
+        finalize(() => {
+          finishedCallback();
+        })
+      )
+      .subscribe((result: GetStudentOutputPagedResultDto) => {
+        console.warn("STUDENT", result);
+        debugger
+        this.student = result.items;
 
-  student: GetStudentOutput[] = [];
-  keyword = '';
+        this.showPaging(result, pageNumber);
+      });
 
-  ngOnInit() {
   }
+  protected delete(entity: GetStudentOutput): void {
+    throw new Error('Method not implemented.');
+  }
+
+
 
   createStudent(): void {
     this.showCreateOrEditStudentDialog();
@@ -44,7 +60,20 @@ export class StudentComponent extends PagedListingComponentBase<GetStudentOutput
     this.showCreateOrEditStudentDialog(role.id);
   }
   viewStudent(role: UpdateStudentInput): void {
-    this.showCreateOrEditStudentDialog(role.id);
+    this.showViewStudentDialog(role.id);
+  }
+  showViewStudentDialog(id?: number): void {
+    let viewDialog: BsModalRef;
+    viewDialog = this._modalService.show(
+      ViewStudentComponent,
+      {
+        class: 'modal-lg',
+        initialState: {
+          id: id,
+
+        },
+      }
+    );
   }
   showCreateOrEditStudentDialog(id?: number): void {
     let createOrEditstudentDialog: BsModalRef;
@@ -68,5 +97,11 @@ export class StudentComponent extends PagedListingComponentBase<GetStudentOutput
         }
       );
     }
+    createOrEditstudentDialog.content.onSave.subscribe(() => {
+      this.refresh();
+    });
   }
+
+
+
 }

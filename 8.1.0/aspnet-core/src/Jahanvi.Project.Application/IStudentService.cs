@@ -12,7 +12,7 @@ namespace Jahanvi.Project
         Task Create(CreateStudentInput input);
         Task Update(UpdateStudentInput input);
         Task Delete(DeleteStudentInput input);
-        Task<GetStudentOutput> GetStudentById(GetStudentInput input);
+        Task<GetStudentOutput> GetStudentById(int id);
         //Task<IEnumerable<Student.DTO.GetStudentOutput>> ListAll();
     }
 }

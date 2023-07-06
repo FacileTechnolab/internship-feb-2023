@@ -1,3 +1,156 @@
-<p>
-  CreateStudent works!
-</p>
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createUserModal="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'CreateNewStudent' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="CourseName">
+        {{ "CourseName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name="CourseName"
+              [(ngModel)]="stud.courseId"
+            >
+              Enter the Course
+              <option selected value="selected">Enter the Course</option>
+              <option *ngFor="let item of cource" [value]="item.id">
+                {{ item.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <abp-validation-summary
+        [control]="enrollModel"
+        [controlEl]="enEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="enrollmentNo">
+      {{ "EnrollmentNo" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="enrollmentNo"
+        id="enrollmentNo"
+        required
+        [(ngModel)]="stud.enrollmentNo"
+        #enrollModel="ngModel"
+        #enEl
+      />
+      <abp-validation-summary
+        [control]="enrollModel"
+        [controlEl]="enEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="FirstName">
+      {{ "FirstName" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="fname"
+        id="fname"
+        required
+        minlength="5"
+        maxlength="32"
+        [(ngModel)]="stud.firstName"
+        #firstnameModel="ngModel"
+        #fnameEl
+      />
+      <abp-validation-summary
+        [control]="firstnameModel"
+        [controlEl]="fnameEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="LastName">
+      {{ "LastName" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="lname"
+        id="lname"
+        required
+        minlength="5"
+        maxlength="32"
+        [(ngModel)]="stud.lastName"
+        #lastModel="ngModel"
+        #lnameEl
+      />
+      <abp-validation-summary
+        [control]="lastModel"
+        [controlEl]="lnameEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="DateOfBirth">
+      {{ "DateOfBirth" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="date"
+        class="form-control"
+        name="dob"
+        id="dob"
+        required
+        [(ngModel)]="stud.dateOfBirth"
+        #dateofbirthModel="ngModel"
+        #dobEl
+      />
+      <abp-validation-summary
+        [control]="dateofbirthModel"
+        [controlEl]="dobEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="age">
+      {{ "Age" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="age"
+        id="age"
+        required
+        [(ngModel)]="stud.age"
+        #ageModel="ngModel"
+        #aEl
+      />
+      <abp-validation-summary
+        [control]="ageModel"
+        [controlEl]="aEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!createUserModal.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

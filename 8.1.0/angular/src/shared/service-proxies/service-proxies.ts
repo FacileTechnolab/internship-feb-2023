@@ -1201,7 +1201,7 @@ export class StudentServiceServiceProxy {
         if (id === null)
             throw new Error("The parameter 'id' cannot be null.");
         else if (id !== undefined)
-            url_ += "Id=" + encodeURIComponent("" + id) + "&";
+            url_ += "id=" + encodeURIComponent("" + id) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -1349,6 +1349,77 @@ export class StudentServiceServiceProxy {
         if (status === 200) {
             return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
             return _observableOf(null as any);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
+
+    /**
+     * @param filter (optional) 
+     * @param id (optional) 
+     * @param skipCount (optional) 
+     * @param maxResultCount (optional) 
+     * @return Success
+     */
+    getStudents(filter: string | undefined, id: number | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetStudentOutputPagedResultDto> {
+        let url_ = this.baseUrl + "/api/services/app/StudentService/GetStudents?";
+        if (filter === null)
+            throw new Error("The parameter 'filter' cannot be null.");
+        else if (filter !== undefined)
+            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
+        if (id === null)
+            throw new Error("The parameter 'id' cannot be null.");
+        else if (id !== undefined)
+            url_ += "Id=" + encodeURIComponent("" + id) + "&";
+        if (skipCount === null)
+            throw new Error("The parameter 'skipCount' cannot be null.");
+        else if (skipCount !== undefined)
+            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
+        if (maxResultCount === null)
+            throw new Error("The parameter 'maxResultCount' cannot be null.");
+        else if (maxResultCount !== undefined)
+            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("get", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetStudents(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetStudents(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GetStudentOutputPagedResultDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GetStudentOutputPagedResultDto>;
+        }));
+    }
+
+    protected processGetStudents(response: HttpResponseBase): Observable<GetStudentOutputPagedResultDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GetStudentOutputPagedResultDto.fromJS(resultData200);
+            return _observableOf(result200);
             }));
         } else if (status !== 200 && status !== 204) {
             return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
@@ -3526,12 +3597,14 @@ export interface IGetRoleForEditOutput {
 }
 
 export class GetStudentOutput implements IGetStudentOutput {
+    id: number;
     courseId: number;
     enrollmentNo: number;
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
     age: number;
+    courseName: string | undefined;
 
     constructor(data?: IGetStudentOutput) {
         if (data) {
@@ -3544,12 +3617,14 @@ export class GetStudentOutput implements IGetStudentOutput {
 
     init(_data?: any) {
         if (_data) {
+            this.id = _data["id"];
             this.courseId = _data["courseId"];
             this.enrollmentNo = _data["enrollmentNo"];
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.dateOfBirth = _data["dateOfBirth"] ? moment(_data["dateOfBirth"].toString()) : <any>undefined;
             this.age = _data["age"];
+            this.courseName = _data["courseName"];
         }
     }
 
@@ -3562,12 +3637,14 @@ export class GetStudentOutput implements IGetStudentOutput {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
         data["courseId"] = this.courseId;
         data["enrollmentNo"] = this.enrollmentNo;
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["dateOfBirth"] = this.dateOfBirth ? this.dateOfBirth.toISOString() : <any>undefined;
         data["age"] = this.age;
+        data["courseName"] = this.courseName;
         return data;
     }
 
@@ -3580,12 +3657,69 @@ export class GetStudentOutput implements IGetStudentOutput {
 }
 
 export interface IGetStudentOutput {
+    id: number;
     courseId: number;
     enrollmentNo: number;
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
     age: number;
+    courseName: string | undefined;
+}
+
+export class GetStudentOutputPagedResultDto implements IGetStudentOutputPagedResultDto {
+    items: GetStudentOutput[] | undefined;
+    totalCount: number;
+
+    constructor(data?: IGetStudentOutputPagedResultDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            if (Array.isArray(_data["items"])) {
+                this.items = [] as any;
+                for (let item of _data["items"])
+                    this.items.push(GetStudentOutput.fromJS(item));
+            }
+            this.totalCount = _data["totalCount"];
+        }
+    }
+
+    static fromJS(data: any): GetStudentOutputPagedResultDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GetStudentOutputPagedResultDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        if (Array.isArray(this.items)) {
+            data["items"] = [];
+            for (let item of this.items)
+                data["items"].push(item.toJSON());
+        }
+        data["totalCount"] = this.totalCount;
+        return data;
+    }
+
+    clone(): GetStudentOutputPagedResultDto {
+        const json = this.toJSON();
+        let result = new GetStudentOutputPagedResultDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IGetStudentOutputPagedResultDto {
+    items: GetStudentOutput[] | undefined;
+    totalCount: number;
 }
 
 export class Int64EntityDto implements IInt64EntityDto {
