@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>FirstCrudPoject.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>FirstCrudPoject.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirstCrudPoject.Core\FirstCrudPoject.Core.csproj" />
+    <ProjectReference Include="..\FirstCrudPoject.EntityFrameworkCore\FirstCrudPoject.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
