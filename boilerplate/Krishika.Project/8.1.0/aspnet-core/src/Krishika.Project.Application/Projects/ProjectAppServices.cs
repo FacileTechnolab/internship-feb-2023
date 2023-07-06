@@ -40,12 +40,13 @@ namespace Krishika.Project.Projects
             _projectsService.Delete(input.Id);
         }
 
-        public async Task<GetProjectsOutput> GetProjectsById(GetProjectsInput input)
+        public async Task<GetProjectsOutput> GetProjectsById(EntityDto input)
         {
             var getProject = await _projectsService.GetAsync(input.Id);
             GetProjectsOutput output = _mapper.Map<Krishika.Project.Modal.Project, GetProjectsOutput>(getProject);
             return output;
         }
+
 
         public async Task<IEnumerable<GetProjectsOutput>> ListAll()
         {
@@ -83,7 +84,7 @@ namespace Krishika.Project.Projects
 public class GetProjectsInput : PagedResultRequestDto
 {
     public string Filter { get; set; }
-    public int Id { get; set; }
+
 }
 
 

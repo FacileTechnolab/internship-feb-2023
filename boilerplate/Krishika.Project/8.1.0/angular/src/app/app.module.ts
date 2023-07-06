@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,8 +30,11 @@ import { ChangePasswordComponent } from './users/change-password/change-password
 import { ResetPasswordDialogComponent } from './users/reset-password/reset-password.component';
 
 // project
-
 import { ProjectComponent } from './Project/Project.component';
+import {CreateProjectComponent } from './Project/Create-project/Create-project.component';
+import { EditProjectComponent} from './Project/Edit-project/Edit-project.component';
+import { ViewProjectComponent} from './Project/view-project/view-project.component'
+
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -77,7 +78,10 @@ import { ProjectAppResourceServiceProxy } from '@shared/service-proxies/service-
         SidebarMenuComponent,
 
         //project
-      ProjectComponent
+        ProjectComponent,
+        CreateProjectComponent,
+        EditProjectComponent,
+        ViewProjectComponent
   
    ],
     imports: [

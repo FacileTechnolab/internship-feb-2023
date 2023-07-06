@@ -603,30 +603,15 @@ export class ProjectAppServicesServiceProxy {
     }
 
     /**
-     * @param filter (optional) 
      * @param id (optional) 
-     * @param skipCount (optional) 
-     * @param maxResultCount (optional) 
      * @return Success
      */
-    getProjectsById(filter: string | undefined, id: number | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetProjectsOutput> {
+    getProjectsById(id: number | undefined): Observable<GetProjectsOutput> {
         let url_ = this.baseUrl + "/api/services/app/ProjectAppServices/GetProjectsById?";
-        if (filter === null)
-            throw new Error("The parameter 'filter' cannot be null.");
-        else if (filter !== undefined)
-            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
         if (id === null)
             throw new Error("The parameter 'id' cannot be null.");
         else if (id !== undefined)
             url_ += "Id=" + encodeURIComponent("" + id) + "&";
-        if (skipCount === null)
-            throw new Error("The parameter 'skipCount' cannot be null.");
-        else if (skipCount !== undefined)
-            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
-        if (maxResultCount === null)
-            throw new Error("The parameter 'maxResultCount' cannot be null.");
-        else if (maxResultCount !== undefined)
-            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -785,21 +770,16 @@ export class ProjectAppServicesServiceProxy {
 
     /**
      * @param filter (optional) 
-     * @param id (optional) 
      * @param skipCount (optional) 
      * @param maxResultCount (optional) 
      * @return Success
      */
-    getProject(filter: string | undefined, id: number | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetProjectsOutputPagedResultDto> {
+    getProject(filter: string | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetProjectsOutputPagedResultDto> {
         let url_ = this.baseUrl + "/api/services/app/ProjectAppServices/GetProject?";
         if (filter === null)
             throw new Error("The parameter 'filter' cannot be null.");
         else if (filter !== undefined)
             url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
-        if (id === null)
-            throw new Error("The parameter 'id' cannot be null.");
-        else if (id !== undefined)
-            url_ += "Id=" + encodeURIComponent("" + id) + "&";
         if (skipCount === null)
             throw new Error("The parameter 'skipCount' cannot be null.");
         else if (skipCount !== undefined)

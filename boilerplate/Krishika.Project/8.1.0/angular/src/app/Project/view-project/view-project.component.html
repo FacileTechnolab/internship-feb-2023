@@ -1,0 +1,54 @@
+<form class="form-horizontal" 
+autocomplete="off"
+#createRoleForm="ngForm" 
+>
+
+    <abp-modal-header [title]="'EditProject' | localize"
+      (onCloseClick)="bsModalRef.hide()">
+    </abp-modal-header>
+    
+  <div class="modal-body">
+    <tabset>
+      <tab [heading]="'Details' | localize" class="pt-3 px-2">
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="name">
+            {{ "Name" | localize }}
+          </label>
+          <div class="col-md-9">
+           <p>{{proj.name}}</p>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="name">
+            {{ "Description" | localize }}
+          </label>
+          <div class="col-md-9">
+           <p>{{proj.description}}</p>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="name">
+            {{ "StartDate" | localize }}
+          </label>
+          <div class="col-md-9">
+           <p>{{proj.startDate}}</p>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="name">
+            {{ "EndDate" | localize }}
+          </label>
+          <div class="col-md-9">
+           <p>{{proj.endDate}}</p>
+          </div>
+        </div>
+    </tab>
+  </tabset>
+  </div>
+
+
+
+</form>
