@@ -1,13 +1,21 @@
-﻿using Abp.Domain.Repositories;
+﻿using Abp.Application.Services.Dto;
+using Abp.Collections.Extensions;
+using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
+using Abp.ObjectMapping;
 using AutoMapper;
+using AutoMapper.Internal.Mappers;
 using FirstprojectShivi.Order.Dto;
+using FirstprojectShivi.Restaurant.Dto;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FirstprojectShivi.Order
 
 {
-	public class OrderAppService : Abp.Application.Services.ApplicationService, IOrderAppService
+	public class OrderAppService : Abp.Application.Services.ApplicationService
 	{
 		private readonly IMapper _mapper;
 		private readonly IRepository<FirstprojectShivi.Models.Order> _orderrepository;
@@ -31,7 +39,7 @@ namespace FirstprojectShivi.Order
 			await _orderrepository.DeleteAsync(input.Id);
 		}
 
-		public async Task<GetOrderOutput> GetOrderById(GetOrderInput input)
+		public async Task<GetOrderOutput> GetOrderById(EntityDto input)
 		{
 			var getOrder = await _orderrepository.GetAsync(input.Id);
 			GetOrderOutput orderoutput = _mapper.Map<Models.Order, GetOrderOutput>(getOrder);
@@ -59,5 +67,21 @@ namespace FirstprojectShivi.Order
 		await _orderrepository.UpdateAsync(orderoutput);
 			}
 		}
+		public async Task<PagedResultDto<GetOrderOutput>> GetOrder(GetOrderInput input)
+		{
+			var query = _orderrepository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)).AsQueryable();
+			var ordercount =  query.Count();
+			var orderoutput = query.PageBy(input).ToList();
+			return new PagedResultDto<GetOrderOutput>(
+			ordercount,
+				ObjectMapper.Map<List<GetOrderOutput>>(orderoutput)
+				);
+		}
 	}
+	
+}
+public class GetOrderInput : PagedResultRequestDto
+{
+	public string Filter { get; set; }
+
 }

@@ -1,0 +1,54 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #ViewRestaurantDetailsForm="ngForm"
+>
+  <abp-modal-header
+    [title]="'ViewRestaurantDetails' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "RestaurantName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ restaurant.name }}</p>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Location">
+        {{ "Location" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ restaurant.location }}</p>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="OpeningDateTime">
+        {{ "OpeningTime" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ restaurant.openingTime }}</p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="ClosedTime">
+        {{ "ClosedTime" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ restaurant.closedTime }}</p>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Capacity">
+        {{ "Capacity" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ restaurant.capacity }}</p>
+      </div>
+    </div>
+  </div>
+</form>

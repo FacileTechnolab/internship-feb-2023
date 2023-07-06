@@ -603,30 +603,15 @@ export class RestaurantServiceProxy {
     }
 
     /**
-     * @param filter (optional) 
      * @param id (optional) 
-     * @param skipCount (optional) 
-     * @param maxResultCount (optional) 
      * @return Success
      */
-    getRestaurantById(filter: string | undefined, id: number | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetRestaurantOutput> {
+    getRestaurantById(id: number | undefined): Observable<GetRestaurantOutput> {
         let url_ = this.baseUrl + "/api/services/app/Restaurant/GetRestaurantById?";
-        if (filter === null)
-            throw new Error("The parameter 'filter' cannot be null.");
-        else if (filter !== undefined)
-            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
         if (id === null)
             throw new Error("The parameter 'id' cannot be null.");
         else if (id !== undefined)
             url_ += "Id=" + encodeURIComponent("" + id) + "&";
-        if (skipCount === null)
-            throw new Error("The parameter 'skipCount' cannot be null.");
-        else if (skipCount !== undefined)
-            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
-        if (maxResultCount === null)
-            throw new Error("The parameter 'maxResultCount' cannot be null.");
-        else if (maxResultCount !== undefined)
-            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -785,21 +770,16 @@ export class RestaurantServiceProxy {
 
     /**
      * @param filter (optional) 
-     * @param id (optional) 
      * @param skipCount (optional) 
      * @param maxResultCount (optional) 
      * @return Success
      */
-    getRestaurants(filter: string | undefined, id: number | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetRestaurantOutputPagedResultDto> {
+    getRestaurants(filter: string | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetRestaurantOutputPagedResultDto> {
         let url_ = this.baseUrl + "/api/services/app/Restaurant/GetRestaurants?";
         if (filter === null)
             throw new Error("The parameter 'filter' cannot be null.");
         else if (filter !== undefined)
             url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
-        if (id === null)
-            throw new Error("The parameter 'id' cannot be null.");
-        else if (id !== undefined)
-            url_ += "Id=" + encodeURIComponent("" + id) + "&";
         if (skipCount === null)
             throw new Error("The parameter 'skipCount' cannot be null.");
         else if (skipCount !== undefined)
@@ -2850,7 +2830,6 @@ export interface ICreateOrderInput {
 }
 
 export class CreateRestaurantInput implements ICreateRestaurantInput {
-    id: number;
     name: string | undefined;
     location: string | undefined;
     openingTime: moment.Moment | undefined;
@@ -2868,7 +2847,6 @@ export class CreateRestaurantInput implements ICreateRestaurantInput {
 
     init(_data?: any) {
         if (_data) {
-            this.id = _data["id"];
             this.name = _data["name"];
             this.location = _data["location"];
             this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
@@ -2886,7 +2864,6 @@ export class CreateRestaurantInput implements ICreateRestaurantInput {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
-        data["id"] = this.id;
         data["name"] = this.name;
         data["location"] = this.location;
         data["openingTime"] = this.openingTime ? this.openingTime.toISOString() : <any>undefined;
@@ -2904,7 +2881,6 @@ export class CreateRestaurantInput implements ICreateRestaurantInput {
 }
 
 export interface ICreateRestaurantInput {
-    id: number;
     name: string | undefined;
     location: string | undefined;
     openingTime: moment.Moment | undefined;
@@ -3435,6 +3411,7 @@ export class GetRestaurantOutput implements IGetRestaurantOutput {
     closedTime: moment.Moment | undefined;
     capacity: number;
 
+    
     constructor(data?: IGetRestaurantOutput) {
         if (data) {
             for (var property in data) {

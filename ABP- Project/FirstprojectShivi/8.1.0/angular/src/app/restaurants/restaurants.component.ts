@@ -2,10 +2,11 @@ import { Component, Injector, OnInit,EventEmitter } from '@angular/core';
 import { CreateRestaurantComponent } from '@app/Restaurant/create-restaurant/Create-Restaurant/Create-Restaurant.component';
 import { EditRestaurantComponent } from '@app/Restaurant/edit-restaurant/Edit-Restaurant/Edit-Restaurant.component';
 import { PagedListingComponentBase, PagedRequestDto } from '@shared/paged-listing-component-base';
-import { GetRestaurantOutput, GetRestaurantOutputPagedResultDto, RestaurantServiceProxy } from '@shared/service-proxies/service-proxies';
+import { GetRestaurantOutput, GetRestaurantOutputPagedResultDto, RestaurantServiceProxy, UpdateRestaurantInput } from '@shared/service-proxies/service-proxies';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { finalize } from 'rxjs/operators';
 import { appModuleAnimation } from '@shared/animations/routerTransition';
+import { ViewRestaurantComponent } from '@app/Restaurant/View-Restaurant/View-Restaurant.component';
 class PagedRolesRequestDto extends PagedRequestDto {
   keyword: string;
 }
@@ -16,9 +17,7 @@ class PagedRolesRequestDto extends PagedRequestDto {
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent extends PagedListingComponentBase<GetRestaurantOutput> {
-  protected delete(entity: GetRestaurantOutput): void {
-    throw new Error('Method not implemented.');
-  }
+
   keyword='';
   restaurant: GetRestaurantOutput[] = [];
   
@@ -31,7 +30,7 @@ export class RestaurantsComponent extends PagedListingComponentBase<GetRestauran
   }
   protected list(request: PagedRolesRequestDto, pageNumber: number, finishedCallback: Function): void {
     request.keyword = this.keyword;
-    this._Service.getRestaurants(request.keyword,0, request.skipCount, request.maxResultCount)
+    this._Service.getRestaurants(request.keyword, request.skipCount, request.maxResultCount)
       .pipe(
         finalize(() => {
           finishedCallback();
@@ -52,14 +51,28 @@ export class RestaurantsComponent extends PagedListingComponentBase<GetRestauran
 createRestaurant(): void {
   this.showCreateOrEditRestaurant();
 }
-ViewRestaurant(): void {
-  this.showCreateOrEditRestaurant();
+ViewRestaurant( restaurant: UpdateRestaurantInput): void {
+  this.showViewRestaurantDialog( restaurant.id);
 }
+showViewRestaurantDialog(id?: number): void {
+  let viewDialog: BsModalRef;
+  viewDialog = this._modalService.show(
+    ViewRestaurantComponent,
+    {
+      class: 'modal-lg',
+      initialState: {
+        id: id,
+
+      },
+    }
+  );
+}
+
 
 editRestaurant(restaurant: GetRestaurantOutput): void {
   this.showCreateOrEditRestaurant(restaurant.id);
 }
-private showCreateOrEditRestaurant(id?: number): void {
+showCreateOrEditRestaurant(id?: number): void {
     let createOrEditRestaurant: BsModalRef;
     if (!id) {
       createOrEditRestaurant = this._modalService.show(
@@ -80,11 +93,31 @@ private showCreateOrEditRestaurant(id?: number): void {
       );
     }
 
-
+ createOrEditRestaurant.content.onSave.subscribe(() => {
+    this.refresh();
+  });
 
 
   }
-  // createOrEditRestaurant.content.onSave.subscribe(() => {
-  //   this.refresh();
-  // });
+
+ delete(  restaurant: GetRestaurantOutput): void {
+    abp.message.confirm(
+      this.l('Are you sure you want to delete Restaurant?',   restaurant.id),
+      undefined,
+      (result: boolean) => {
+        if (result) {
+          this._Service
+            .delete(  restaurant.id)
+            .pipe(
+              finalize(() => {
+                abp.notify.success(this.l('SuccessfullyDeleted'));
+                this.refresh();
+              })
+            )
+            .subscribe(() => {});
+        }
+      }
+    );
+  }
+
 }

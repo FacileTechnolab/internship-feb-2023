@@ -33,6 +33,8 @@ import { ResetPasswordDialogComponent } from './users/reset-password/reset-passw
 import { RestaurantComponent } from './Restaurant/Restaurant.component';
 import { CreateRestaurantComponent } from './Restaurant/create-restaurant/Create-Restaurant/Create-Restaurant.component';
 import { EditRestaurantComponent } from './Restaurant/edit-restaurant/Edit-Restaurant/Edit-Restaurant.component';
+import { ViewRestaurantComponent } from './Restaurant/View-Restaurant/View-Restaurant.component';
+
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -82,7 +84,8 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
         RestaurantComponent ,
         CreateRestaurantComponent ,
         EditRestaurantComponent,
-      RestaurantsComponent
+      RestaurantsComponent,
+      ViewRestaurantComponent
    ],
     imports: [
         CommonModule ,

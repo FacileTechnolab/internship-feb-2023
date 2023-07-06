@@ -48,14 +48,14 @@
                   [(ngModel)]="restaurant.location"
                 >
                   <option selected value="">Enter the Location</option>
-                  <option value="'Ahmedabad'">Ahmedabad</option>
-                  <option value="'Surat'">Surat</option>
-                  <option value="'Surendranagar'">Surendranagar</option>
-                  <option value="'Nikol'">Nikol</option>
-                  <option value="'Bodakdev'">Bodakdev</option>
-                  <option value="'Viratnagar'">Viratnagar</option>
-                  <option value="'Bapunagar'">Bapunagar</option>
-                  <option value="'Vastral'">Vastral</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Surendranagar">Surendranagar</option>
+                  <option value="Nikol">Nikol</option>
+                  <option value="Bodakdev">Bodakdev</option>
+                  <option value="Viratnagar">Viratnagar</option>
+                  <option value="Bapunagar">Bapunagar</option>
+                  <option value="Vastral">Vastral</option>
                 </select>
               </div>
             </div>
@@ -67,7 +67,7 @@
           </label>
           <div class="col-md-9">
             <input
-              type="time"
+              type="datetime-local"
               class="form-control"
               name="OpeningTime"
               id="OpeningTime"
@@ -78,37 +78,36 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-3 col-form-label" for="CloseingTime">
-            {{ "CloseingTime" | localize }}
+          <label class="col-md-3 col-form-label" for="ClosedTime">
+            {{ "ClosedTime" | localize }}
           </label>
           <div class="col-md-9">
             <input
-              type="time"
+              type="datetime-local"
               class="form-control"
-              name="CloseingTime"
-              id="CloseingTime"
+              name="ClosedTime"
+              id="ClosedTime"
               [(ngModel)]="restaurant.closedTime"
-              #CloseingTime="ngModel"
-              #CloseingTimeEl
+              #ClosedTime="ngModel"
+              #ClosedTimeEl
             />
-
-            <div class="col-md-9">
-              <div class="form-group row required">
-                <label class="col-md-3 col-form-label" for="Capacity">
-                  {{ "Capacity" | localize }}
-                </label>
-                <div class="col-md-9">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="Capacity"
-                    id="Capacity"
-                    required
-                    [(ngModel)]="restaurant.capacity"
-                  />
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="Capacity">
+            {{ "Capacity" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="Capacity"
+              id="Capacity"
+              required
+              [(ngModel)]="restaurant.capacity"
+              #Capacity="ngModel"
+              #CapacityEl
+            />
           </div>
         </div>
       </tab>

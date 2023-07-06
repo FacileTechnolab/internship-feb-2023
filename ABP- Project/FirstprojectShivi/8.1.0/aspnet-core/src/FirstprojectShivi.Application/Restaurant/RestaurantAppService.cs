@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace FirstprojectShivi.Restaurant
 {
-	public class RestaurantAppService:ApplicationService, IRestaurantAppService
+	public class RestaurantAppService:ApplicationService
 	{
 		private  readonly IMapper _mapper;
 		private readonly IRepository<FirstprojectShivi.Models.Restaurant> _restaurantrepository;
@@ -36,7 +36,7 @@ namespace FirstprojectShivi.Restaurant
 			 await _restaurantrepository.DeleteAsync(input.Id);
 		}
 
-		public async Task<GetRestaurantOutput> GetRestaurantById(GetRestaurantInput input)
+		public async Task<GetRestaurantOutput> GetRestaurantById(EntityDto input)
 		{
 			var getRestaurant = await _restaurantrepository.GetAsync(input.Id);
 			GetRestaurantOutput output =_mapper.Map<Models.Restaurant, GetRestaurantOutput>(getRestaurant);
@@ -82,5 +82,5 @@ namespace FirstprojectShivi.Restaurant
 public class GetRestaurantInput : PagedResultRequestDto
 {
 	public string Filter { get; set; }
-	public int Id { get; internal set; }
+
 }
