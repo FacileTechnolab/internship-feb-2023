@@ -9,6 +9,7 @@ using AutoMapper.Internal.Mappers;
 using FirstprojectShivi.Order.Dto;
 using FirstprojectShivi.Restaurant.Dto;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -69,13 +70,13 @@ namespace FirstprojectShivi.Order
 		}
 		public async Task<PagedResultDto<GetOrderOutput>> GetOrder(GetOrderInput input)
 		{
-			var query = _orderrepository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)).AsQueryable();
+			var query = _orderrepository.GetAll().Include(x => x.Restaurants).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)).AsQueryable();
 			var ordercount =  query.Count();
 			var orderoutput = query.PageBy(input).ToList();
+			var result = ObjectMapper.Map<List<GetOrderOutput>>(orderoutput);
 			return new PagedResultDto<GetOrderOutput>(
 			ordercount,
-				ObjectMapper.Map<List<GetOrderOutput>>(orderoutput)
-				);
+			result);
 		}
 	}
 	

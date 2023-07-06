@@ -8,7 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { TenantsComponent } from './tenants/tenants.component';
 import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
-import { RestaurantComponent } from './Restaurant/Restaurant.component';
+import { OrderComponent } from './Order/Order.component';
 import { CommonModule } from '@angular/common';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 @NgModule({
@@ -24,8 +24,9 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
                     { path: 'tenants', component: TenantsComponent, data: { permission: 'Pages.Tenants' }, canActivate: [AppRouteGuard] },
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
-                    { path: 'restaurant', component: RestaurantComponent,canActivate: [AppRouteGuard] },
                     { path: 'restaurants', component: RestaurantsComponent,canActivate: [AppRouteGuard] },
+                    { path: 'Order', component: OrderComponent,canActivate: [AppRouteGuard] },
+                
                 ]
             }
         ])

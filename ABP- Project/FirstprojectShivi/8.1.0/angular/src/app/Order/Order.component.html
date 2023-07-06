@@ -3,14 +3,10 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-6">
-          <h1>{{ "Restaurant" | localize }}</h1>
+          <h1>{{ "Order" | localize }}</h1>
         </div>
         <div class="col-6 text-right">
-          <a
-            href="javascript:;"
-            class="btn bg-blue"
-            (click)="createRestaurant()"
-          >
+          <a href="javascript:;" class="btn bg-blue" (click)="CreateOrder()">
             <i class="fa fa-plus-square"></i>
             {{ "Create" | localize }}
           </a>
@@ -56,18 +52,17 @@
               <thead class="bg-light">
                 <tr>
                   <th>{{ "RestaurantName" | localize }}</th>
-                  <th>{{ "Location" | localize }}</th>
-                  <th>{{ "OpeningDateTime" | localize }}</th>
-                  <th>{{ "ClosedDateTime" | localize }}</th>
-                  <th>{{ "Capacity" | localize }}</th>
-
+                  <th>{{ "FoodName" | localize }}</th>
+                  <th>{{ "  Price" | localize }}</th>
+                  <th>{{ "IsDelivery" | localize }}</th>
+                  <th>{{ "RestaurantId" | localize }}</th>
                   <th style="width: 300px">{{ "Actions" | localize }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr
                   *ngFor="
-                    let restro of restaurant
+                    let restro of Order
                       | paginate
                         : {
                             id: 'server',
@@ -77,28 +72,30 @@
                           }
                   "
                 >
-                  <td>{{ restro.name }}</td>
-                  <td>{{ restro.location }}</td>
                   <td>
-                    {{ restro.openingTime | date : " d/M/yy h:mm:ss" }}
+                    {{ restro.restaurantName }}
+                  </td>
+                  <td>{{ restro.foodName }}</td>
+                  <td>{{ restro.price }}</td>
+                  <td>
+                    {{ restro.isDelivery }}
                   </td>
                   <td>
-                    {{ restro.closedTime | date : " d/M/yy h:mm:ss" }}
+                    {{ restro.restaurantId }}
                   </td>
-                  <td>{{ restro.capacity }}</td>
 
                   <td>
                     <button
                       type="button"
-                      class="btn btn-sl bg-secondary"
-                      (click)="editRestaurant(restro)"
+                      class="btn btn-sl bg-secondary gap-5 column-gap-5"
+                      (click)="EditOrder(restro)"
                     >
                       <i class="fas fa-pencil-alt"></i>
                       {{ "Edit" | localize }}
                     </button>
                     <button
                       type="button"
-                      class="btn btn-sl bg-danger mx-2"
+                      class="btn btn-sl bg-danger gap-5 column-gap-5 mx-2"
                       (click)="delete(restro)"
                     >
                       <i class="fas fa-trash"></i>
@@ -106,8 +103,8 @@
                     </button>
                     <button
                       type="button"
-                      class="btn btn-sl bg-secondary"
-                      (click)="ViewRestaurant(restro)"
+                      class="btn btn-sl bg-secondary gap-5 column-gap-5"
+                      (click)="ViewOrder(restro)"
                     >
                       <i class="fa-solid fa-eye"></i>
                       {{ "View" | localize }}

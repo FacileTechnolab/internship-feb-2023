@@ -30,11 +30,10 @@ import { EditUserDialogComponent } from '@app/users/edit-user/edit-user-dialog.c
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { ResetPasswordDialogComponent } from './users/reset-password/reset-password.component';
 //restuarnt
-import { RestaurantComponent } from './Restaurant/Restaurant.component';
 import { CreateRestaurantComponent } from './Restaurant/create-restaurant/Create-Restaurant/Create-Restaurant.component';
 import { EditRestaurantComponent } from './Restaurant/edit-restaurant/Edit-Restaurant/Edit-Restaurant.component';
 import { ViewRestaurantComponent } from './Restaurant/View-Restaurant/View-Restaurant.component';
-
+import{RestaurantsComponent} from './restaurants/restaurants.component'
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -48,10 +47,14 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { NgbDateStruct, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { JsonPipe } from '@angular/common';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
+import{CreateOrderComponent}from './Order/CreateOrder/CreateOrder.component'
+import { OrderComponent } from './Order/Order.component';
+import { DeleteOrderComponent } from './Order/DeleteOrder/DeleteOrder.component';
+import { ViewOrderComponent } from './Order/ViewOrder/ViewOrder.component';
+import { EditOrderComponent } from './Order/EditOrder/EditOrder.component';
 
 @NgModule({
-    declarations: [		
+    declarations: [			
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -69,6 +72,12 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
         EditUserDialogComponent,
         ChangePasswordComponent,
         ResetPasswordDialogComponent,
+        //Order
+        CreateOrderComponent,
+        OrderComponent ,
+        DeleteOrderComponent,
+        ViewOrderComponent,
+        EditOrderComponent ,
         // layout
         HeaderComponent,
         HeaderLeftNavbarComponent,
@@ -81,11 +90,12 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
         SidebarMenuComponent,
 
         //rest
-        RestaurantComponent ,
+        RestaurantsComponent,
         CreateRestaurantComponent ,
         EditRestaurantComponent,
       RestaurantsComponent,
-      ViewRestaurantComponent
+      ViewRestaurantComponent,
+    
    ],
     imports: [
         CommonModule ,

@@ -15,7 +15,8 @@ namespace FirstprojectShivi.Orders
 		{
 			CreateMap<CreateOrderInput, FirstprojectShivi.Models.Order>().ReverseMap();
 
-			CreateMap<FirstprojectShivi.Models.Order, GetOrderOutput>().ReverseMap();
+			CreateMap<FirstprojectShivi.Models.Order, GetOrderOutput>()
+				 .ForMember(x => x.RestaurantName, y => y.MapFrom(z => z.Restaurants.Name)).ReverseMap();
 			CreateMap<GetOrderOutput, FirstprojectShivi.Models.Order>().ReverseMap();
 			CreateMap<UpdateOrderInput, FirstprojectShivi.Models.Order>().ReverseMap();
 		}

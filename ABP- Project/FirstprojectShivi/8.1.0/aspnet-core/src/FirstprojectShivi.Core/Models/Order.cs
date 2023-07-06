@@ -12,9 +12,11 @@ namespace FirstprojectShivi.Models
 {
 	public class Order : Entity<int>
 	{
+	
 		[Required]
 		[MaxLength(100)]
 		public string FoodName { get; set; }
+
 
 		[Required]
 		public int Price { get; set;}

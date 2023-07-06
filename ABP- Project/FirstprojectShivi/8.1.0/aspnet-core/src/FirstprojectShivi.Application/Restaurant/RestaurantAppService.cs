@@ -68,7 +68,7 @@ namespace FirstprojectShivi.Restaurant
 		public async Task<PagedResultDto<GetRestaurantOutput>> GetRestaurants(GetRestaurantInput input)
 		{
 			var query = _restaurantrepository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter)).AsQueryable();
-
+			
 			var restaurantCount = await query.CountAsync();
 			var restaurant = await query.PageBy(input).ToListAsync();
 

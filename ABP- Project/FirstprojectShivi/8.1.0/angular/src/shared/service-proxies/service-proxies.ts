@@ -485,6 +485,72 @@ export class OrderServiceProxy {
         }
         return _observableOf(null as any);
     }
+
+    /**
+     * @param filter (optional) 
+     * @param skipCount (optional) 
+     * @param maxResultCount (optional) 
+     * @return Success
+     */
+    getOrder(filter: string | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetOrderOutputPagedResultDto> {
+        let url_ = this.baseUrl + "/api/services/app/Order/GetOrder?";
+        if (filter === null)
+            throw new Error("The parameter 'filter' cannot be null.");
+        else if (filter !== undefined)
+            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
+        if (skipCount === null)
+            throw new Error("The parameter 'skipCount' cannot be null.");
+        else if (skipCount !== undefined)
+            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
+        if (maxResultCount === null)
+            throw new Error("The parameter 'maxResultCount' cannot be null.");
+        else if (maxResultCount !== undefined)
+            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("get", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetOrder(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetOrder(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GetOrderOutputPagedResultDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GetOrderOutputPagedResultDto>;
+        }));
+    }
+
+    protected processGetOrder(response: HttpResponseBase): Observable<GetOrderOutputPagedResultDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GetOrderOutputPagedResultDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
 }
 
 @Injectable()
@@ -3346,10 +3412,12 @@ export interface IGetCurrentLoginInformationsOutput {
 
 export class GetOrderOutput implements IGetOrderOutput {
     id: number;
+    restaurantName: string | undefined;
     foodName: string | undefined;
     restaurantId: number;
     price: number;
     isDelivery: boolean;
+    restaurants: Restaurant;
 
     constructor(data?: IGetOrderOutput) {
         if (data) {
@@ -3363,10 +3431,12 @@ export class GetOrderOutput implements IGetOrderOutput {
     init(_data?: any) {
         if (_data) {
             this.id = _data["id"];
+            this.restaurantName = _data["restaurantName"];
             this.foodName = _data["foodName"];
             this.restaurantId = _data["restaurantId"];
             this.price = _data["price"];
             this.isDelivery = _data["isDelivery"];
+            this.restaurants = _data["restaurants"] ? Restaurant.fromJS(_data["restaurants"]) : <any>undefined;
         }
     }
 
@@ -3380,10 +3450,12 @@ export class GetOrderOutput implements IGetOrderOutput {
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
         data["id"] = this.id;
+        data["restaurantName"] = this.restaurantName;
         data["foodName"] = this.foodName;
         data["restaurantId"] = this.restaurantId;
         data["price"] = this.price;
         data["isDelivery"] = this.isDelivery;
+        data["restaurants"] = this.restaurants ? this.restaurants.toJSON() : <any>undefined;
         return data;
     }
 
@@ -3397,10 +3469,67 @@ export class GetOrderOutput implements IGetOrderOutput {
 
 export interface IGetOrderOutput {
     id: number;
+    restaurantName: string | undefined;
     foodName: string | undefined;
     restaurantId: number;
     price: number;
     isDelivery: boolean;
+    restaurants: Restaurant;
+}
+
+export class GetOrderOutputPagedResultDto implements IGetOrderOutputPagedResultDto {
+    items: GetOrderOutput[] | undefined;
+    totalCount: number;
+
+    constructor(data?: IGetOrderOutputPagedResultDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            if (Array.isArray(_data["items"])) {
+                this.items = [] as any;
+                for (let item of _data["items"])
+                    this.items.push(GetOrderOutput.fromJS(item));
+            }
+            this.totalCount = _data["totalCount"];
+        }
+    }
+
+    static fromJS(data: any): GetOrderOutputPagedResultDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GetOrderOutputPagedResultDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        if (Array.isArray(this.items)) {
+            data["items"] = [];
+            for (let item of this.items)
+                data["items"].push(item.toJSON());
+        }
+        data["totalCount"] = this.totalCount;
+        return data;
+    }
+
+    clone(): GetOrderOutputPagedResultDto {
+        const json = this.toJSON();
+        let result = new GetOrderOutputPagedResultDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IGetOrderOutputPagedResultDto {
+    items: GetOrderOutput[] | undefined;
+    totalCount: number;
 }
 
 export class GetRestaurantOutput implements IGetRestaurantOutput {
@@ -3411,7 +3540,6 @@ export class GetRestaurantOutput implements IGetRestaurantOutput {
     closedTime: moment.Moment | undefined;
     capacity: number;
 
-    
     constructor(data?: IGetRestaurantOutput) {
         if (data) {
             for (var property in data) {
@@ -3983,6 +4111,69 @@ export interface IResetPasswordDto {
     adminPassword: string;
     userId: number;
     newPassword: string;
+}
+
+export class Restaurant implements IRestaurant {
+    id: number;
+    name: string;
+    location: string;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
+    capacity: number;
+
+    constructor(data?: IRestaurant) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.id = _data["id"];
+            this.name = _data["name"];
+            this.location = _data["location"];
+            this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
+            this.closedTime = _data["closedTime"] ? moment(_data["closedTime"].toString()) : <any>undefined;
+            this.capacity = _data["capacity"];
+        }
+    }
+
+    static fromJS(data: any): Restaurant {
+        data = typeof data === 'object' ? data : {};
+        let result = new Restaurant();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
+        data["name"] = this.name;
+        data["location"] = this.location;
+        data["openingTime"] = this.openingTime ? this.openingTime.toISOString() : <any>undefined;
+        data["closedTime"] = this.closedTime ? this.closedTime.toISOString() : <any>undefined;
+        data["capacity"] = this.capacity;
+        return data;
+    }
+
+    clone(): Restaurant {
+        const json = this.toJSON();
+        let result = new Restaurant();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IRestaurant {
+    id: number;
+    name: string;
+    location: string;
+    openingTime: moment.Moment | undefined;
+    closedTime: moment.Moment | undefined;
+    capacity: number;
 }
 
 export class RoleDto implements IRoleDto {
