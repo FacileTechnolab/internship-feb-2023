@@ -3412,12 +3412,11 @@ export interface IGetCurrentLoginInformationsOutput {
 
 export class GetOrderOutput implements IGetOrderOutput {
     id: number;
-    restaurantName: string | undefined;
     foodName: string | undefined;
     restaurantId: number;
     price: number;
     isDelivery: boolean;
-    restaurants: Restaurant;
+    restaurantName: string | undefined;
 
     constructor(data?: IGetOrderOutput) {
         if (data) {
@@ -3431,12 +3430,11 @@ export class GetOrderOutput implements IGetOrderOutput {
     init(_data?: any) {
         if (_data) {
             this.id = _data["id"];
-            this.restaurantName = _data["restaurantName"];
             this.foodName = _data["foodName"];
             this.restaurantId = _data["restaurantId"];
             this.price = _data["price"];
             this.isDelivery = _data["isDelivery"];
-            this.restaurants = _data["restaurants"] ? Restaurant.fromJS(_data["restaurants"]) : <any>undefined;
+            this.restaurantName = _data["restaurantName"];
         }
     }
 
@@ -3450,12 +3448,11 @@ export class GetOrderOutput implements IGetOrderOutput {
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
         data["id"] = this.id;
-        data["restaurantName"] = this.restaurantName;
         data["foodName"] = this.foodName;
         data["restaurantId"] = this.restaurantId;
         data["price"] = this.price;
         data["isDelivery"] = this.isDelivery;
-        data["restaurants"] = this.restaurants ? this.restaurants.toJSON() : <any>undefined;
+        data["restaurantName"] = this.restaurantName;
         return data;
     }
 
@@ -3469,12 +3466,11 @@ export class GetOrderOutput implements IGetOrderOutput {
 
 export interface IGetOrderOutput {
     id: number;
-    restaurantName: string | undefined;
     foodName: string | undefined;
     restaurantId: number;
     price: number;
     isDelivery: boolean;
-    restaurants: Restaurant;
+    restaurantName: string | undefined;
 }
 
 export class GetOrderOutputPagedResultDto implements IGetOrderOutputPagedResultDto {
@@ -4111,69 +4107,6 @@ export interface IResetPasswordDto {
     adminPassword: string;
     userId: number;
     newPassword: string;
-}
-
-export class Restaurant implements IRestaurant {
-    id: number;
-    name: string;
-    location: string;
-    openingTime: moment.Moment | undefined;
-    closedTime: moment.Moment | undefined;
-    capacity: number;
-
-    constructor(data?: IRestaurant) {
-        if (data) {
-            for (var property in data) {
-                if (data.hasOwnProperty(property))
-                    (<any>this)[property] = (<any>data)[property];
-            }
-        }
-    }
-
-    init(_data?: any) {
-        if (_data) {
-            this.id = _data["id"];
-            this.name = _data["name"];
-            this.location = _data["location"];
-            this.openingTime = _data["openingTime"] ? moment(_data["openingTime"].toString()) : <any>undefined;
-            this.closedTime = _data["closedTime"] ? moment(_data["closedTime"].toString()) : <any>undefined;
-            this.capacity = _data["capacity"];
-        }
-    }
-
-    static fromJS(data: any): Restaurant {
-        data = typeof data === 'object' ? data : {};
-        let result = new Restaurant();
-        result.init(data);
-        return result;
-    }
-
-    toJSON(data?: any) {
-        data = typeof data === 'object' ? data : {};
-        data["id"] = this.id;
-        data["name"] = this.name;
-        data["location"] = this.location;
-        data["openingTime"] = this.openingTime ? this.openingTime.toISOString() : <any>undefined;
-        data["closedTime"] = this.closedTime ? this.closedTime.toISOString() : <any>undefined;
-        data["capacity"] = this.capacity;
-        return data;
-    }
-
-    clone(): Restaurant {
-        const json = this.toJSON();
-        let result = new Restaurant();
-        result.init(json);
-        return result;
-    }
-}
-
-export interface IRestaurant {
-    id: number;
-    name: string;
-    location: string;
-    openingTime: moment.Moment | undefined;
-    closedTime: moment.Moment | undefined;
-    capacity: number;
 }
 
 export class RoleDto implements IRoleDto {

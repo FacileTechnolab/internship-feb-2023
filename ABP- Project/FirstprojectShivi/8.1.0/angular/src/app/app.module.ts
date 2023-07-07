@@ -49,7 +49,7 @@ import { NgbDateStruct, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/n
 import { JsonPipe } from '@angular/common';
 import{CreateOrderComponent}from './Order/CreateOrder/CreateOrder.component'
 import { OrderComponent } from './Order/Order.component';
-import { DeleteOrderComponent } from './Order/DeleteOrder/DeleteOrder.component';
+
 import { ViewOrderComponent } from './Order/ViewOrder/ViewOrder.component';
 import { EditOrderComponent } from './Order/EditOrder/EditOrder.component';
 
@@ -75,7 +75,7 @@ import { EditOrderComponent } from './Order/EditOrder/EditOrder.component';
         //Order
         CreateOrderComponent,
         OrderComponent ,
-        DeleteOrderComponent,
+     
         ViewOrderComponent,
         EditOrderComponent ,
         // layout

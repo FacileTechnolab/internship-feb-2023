@@ -1,3 +1,52 @@
-<p>
-  ViewOrder works!
-</p>
+<form class="form-horizontal" autocomplete="off" #ViewOrderDetailsForm="ngForm">
+  <abp-modal-header
+    [title]="'View Order Details' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="ClosedTime">
+        {{ "RestaurantName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ Order.restaurantId }}</p>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "FoodName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ Order.foodName }}</p>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Location">
+        {{ "Price" | localize }}
+      </label>
+      <div class="col-md-9">
+        <p>{{ Order.price }}</p>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="OpeningDateTime">
+        {{ "IsDelivery" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="custom-control custom-checkbox">
+          <p>
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              disabled
+              [checked]="Order.isDelivery"
+            />
+            <label class="custom-control-label"> </label>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

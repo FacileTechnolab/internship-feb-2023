@@ -1,3 +1,103 @@
-<p>
-  EditOrder works!
-</p>
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #editOrderForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'Edit Your New Order' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="Name">
+        {{ "RestaurantName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name="RestaurantName"
+              [(ngModel)]="Order.restaurantId"
+            >
+              Enter the RestaurantName
+              <option selected value="selected" selected>
+                Enter the RestaurantName
+              </option>
+              <option
+                *ngFor="let restaurants of restaurant"
+                [value]="restaurants.id"
+              >
+                {{ restaurants.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="FoodName">
+        {{ "FoodName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="FoodName"
+          id="FoodName"
+          required
+          minlength="2"
+          maxlength="32"
+          [(ngModel)]="Order.foodName"
+          #FoodNameModel="ngModel"
+          #FoodNameEl
+        />
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Price">
+        {{ "Price" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Price"
+          id="Price"
+          required
+          minlength="2"
+          maxlength="32"
+          [(ngModel)]="Order.price"
+          #PriceModel="ngModel"
+          #PriceEl
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="IsDelivery">
+        {{ "IsDelivery" | localize }}
+      </label>
+
+      <div class="col-md-9">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            name="IsDelivery"
+            id="IsDelivery"
+            [(ngModel)]="Order.isDelivery"
+          />
+          <label class="custom-control-label mt-2" for="IsDelivery"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!editOrderForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

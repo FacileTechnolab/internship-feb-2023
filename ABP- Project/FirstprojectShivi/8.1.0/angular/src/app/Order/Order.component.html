@@ -55,7 +55,7 @@
                   <th>{{ "FoodName" | localize }}</th>
                   <th>{{ "  Price" | localize }}</th>
                   <th>{{ "IsDelivery" | localize }}</th>
-                  <th>{{ "RestaurantId" | localize }}</th>
+                  <!-- <th>{{ "RestaurantId" | localize }}</th> -->
                   <th style="width: 300px">{{ "Actions" | localize }}</th>
                 </tr>
               </thead>
@@ -78,10 +78,16 @@
                   <td>{{ restro.foodName }}</td>
                   <td>{{ restro.price }}</td>
                   <td>
-                    {{ restro.isDelivery }}
-                  </td>
-                  <td>
-                    {{ restro.restaurantId }}
+                    <!-- {{ restro.isDelivery }} -->
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        disabled
+                        [checked]="restro.isDelivery"
+                      />
+                      <label class="custom-control-label"> </label>
+                    </div>
                   </td>
 
                   <td>

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Injector, OnInit, Output } from '@angular/core';
 import { AppComponentBase } from '@shared/app-component-base';
-import { CreateOrderInput, GetOrderOutput, OrderServiceProxy } from '@shared/service-proxies/service-proxies';
+import { CreateOrderInput, GetOrderOutput, GetRestaurantOutput, OrderServiceProxy, RestaurantServiceProxy } from '@shared/service-proxies/service-proxies';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -15,18 +15,22 @@ id:number;
 keyword = '';
 isActive: boolean | null;
 saving = false;
- 
+restaurant: GetRestaurantOutput[] = [];
 
 constructor(
   injector: Injector,
   private _orderService: OrderServiceProxy,
   private _modalService: BsModalService,
   public bsModalRef: BsModalRef,
+  private _Service: RestaurantServiceProxy
 ) {
   super(injector);
 }
   ngOnInit(): void {
-   
+    this. _Service.listAll().subscribe((result: GetRestaurantOutput[]) => {
+      console.warn("STUDENT", result);
+      this.restaurant = result;
+    });
   }
 
 Order = new GetOrderOutput();

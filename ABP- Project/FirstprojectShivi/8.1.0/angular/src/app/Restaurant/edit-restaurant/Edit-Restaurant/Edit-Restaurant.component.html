@@ -9,109 +9,105 @@
     (onCloseClick)="bsModalRef.hide()"
   ></abp-modal-header>
   <div class="modal-body">
-    <tabset>
-      <tab [heading]="'Details' | localize" class="pt-3 px-2">
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="name">
-            {{ "RestaurantName" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="name"
-              id="name"
-              required
-              minlength="2"
-              maxlength="32"
-              [(ngModel)]="restaurant.name"
-              #nameModel="ngModel"
-              #nameEl
-            />
-            <abp-validation-summary
-              [control]="nameModel"
-              [controlEl]="nameEl"
-            ></abp-validation-summary>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "RestaurantName" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="name"
+          required
+          minlength="2"
+          maxlength="32"
+          [(ngModel)]="restaurant.name"
+          #nameModel="ngModel"
+          #nameEl
+        />
+        <abp-validation-summary
+          [control]="nameModel"
+          [controlEl]="nameEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Location">
+        {{ "Location" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name="location"
+              [(ngModel)]="restaurant.location"
+            >
+              <option selected>Enter the Location</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Surat">Surat</option>
+              <option value="Surendranagar">Surendranagar</option>
+              <option value="Nikol">Nikol</option>
+              <option value="Bodakdev">Bodakdev</option>
+              <option value="Viratnagar">Viratnagar</option>
+              <option value="Bapunagar">Bapunagar</option>
+              <option value="Vastral">Vastral</option>
+            </select>
           </div>
         </div>
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Location">
-            {{ "Location" | localize }}
-          </label>
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col">
-                <select
-                  class="form-select"
-                  aria-label="Default select example"
-                  name="location"
-                  [(ngModel)]="restaurant.location"
-                >
-                  <option selected>Enter the Location</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Surat">Surat</option>
-                  <option value="Surendranagar">Surendranagar</option>
-                  <option value="Nikol">Nikol</option>
-                  <option value="Bodakdev">Bodakdev</option>
-                  <option value="Viratnagar">Viratnagar</option>
-                  <option value="Bapunagar">Bapunagar</option>
-                  <option value="Vastral">Vastral</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-md-3 col-form-label" for="OpeningTime">
-            {{ "OpeningTime" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="datetime-local"
-              class="form-control"
-              name="OpeningTime"
-              id="OpeningTime"
-              [(ngModel)]="restaurant.openingTime"
-              #OpeningTime="ngModel"
-              #OpeningTimeEl
-            />
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-md-3 col-form-label" for="ClosedTime">
-            {{ "ClosedTime" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="datetime-local"
-              class="form-control"
-              name="ClosedTime"
-              id="ClosedTime"
-              [(ngModel)]="restaurant.closedTime"
-              #ClosedTime="ngModel"
-              #ClosedTimeEl
-            />
-          </div>
-        </div>
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Capacity">
-            {{ "Capacity" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="Capacity"
-              id="Capacity"
-              required
-              [(ngModel)]="restaurant.capacity"
-              #Capacity="ngModel"
-              #CapacityEl
-            />
-          </div>
-        </div>
-      </tab>
-    </tabset>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="OpeningTime">
+        {{ "OpeningTime" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="OpeningTime"
+          id="OpeningTime"
+          [(ngModel)]="restaurant.openingTime"
+          #OpeningTime="ngModel"
+          #OpeningTimeEl
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-3 col-form-label" for="ClosedTime">
+        {{ "ClosedTime" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="ClosedTime"
+          id="ClosedTime"
+          [(ngModel)]="restaurant.closedTime"
+          #ClosedTime="ngModel"
+          #ClosedTimeEl
+        />
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Capacity">
+        {{ "Capacity" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Capacity"
+          id="Capacity"
+          required
+          [(ngModel)]="restaurant.capacity"
+          #Capacity="ngModel"
+          #CapacityEl
+        />
+      </div>
+    </div>
   </div>
   <abp-modal-footer
     [cancelDisabled]="saving"

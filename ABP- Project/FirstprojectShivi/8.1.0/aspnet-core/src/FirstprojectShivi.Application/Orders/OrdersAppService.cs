@@ -42,7 +42,7 @@ namespace FirstprojectShivi.Order
 
 		public async Task<GetOrderOutput> GetOrderById(EntityDto input)
 		{
-			var getOrder = await _orderrepository.GetAsync(input.Id);
+			var getOrder = _orderrepository.GetAllIncluding(x => x.Restaurants).FirstOrDefault(x => x.Id == input.Id);
 			GetOrderOutput orderoutput = _mapper.Map<Models.Order, GetOrderOutput>(getOrder);
 			return orderoutput;
 		}
@@ -59,27 +59,32 @@ namespace FirstprojectShivi.Order
 			var orderoutput = await _orderrepository.GetAsync(input.Id);
 			if (orderoutput != null)
 			{
+				orderoutput.RestaurantId = input.RestaurantId;
 				orderoutput.FoodName = input.FoodName;
 				orderoutput.Price = input.Price;
 				orderoutput.IsDelivery = input.IsDelivery;
-				
 
 
-		await _orderrepository.UpdateAsync(orderoutput);
+
+				await _orderrepository.UpdateAsync(orderoutput);
 			}
 		}
 		public async Task<PagedResultDto<GetOrderOutput>> GetOrder(GetOrderInput input)
 		{
-			var query = _orderrepository.GetAll().Include(x => x.Restaurants).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)).AsQueryable();
-			var ordercount =  query.Count();
-			var orderoutput = query.PageBy(input).ToList();
-			var result = ObjectMapper.Map<List<GetOrderOutput>>(orderoutput);
+			var query = _orderrepository.GetAllIncluding(x => x.Restaurants).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)|| x.Price.ToString()==input.Filter||x.IsDelivery.ToString() == input.Filter|| x.RestaurantName.ToString() == input.Filter).ToList();
+
+			var newQuery = query.AsQueryable();
+			
+			var ordercount = newQuery.Count();
+
+			var order = newQuery.PageBy(input).ToList();
+			var result = ObjectMapper.Map<List<GetOrderOutput>>(order);
 			return new PagedResultDto<GetOrderOutput>(
 			ordercount,
 			result);
 		}
 	}
-	
+
 }
 public class GetOrderInput : PagedResultRequestDto
 {

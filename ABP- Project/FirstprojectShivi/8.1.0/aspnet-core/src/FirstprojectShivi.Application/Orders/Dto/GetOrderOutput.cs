@@ -9,7 +9,7 @@ namespace FirstprojectShivi.Order.Dto
 	public class GetOrderOutput
 	{
 		public int Id { get; set; }
-		public string RestaurantName { get; set; }
+		
 		public string FoodName { get; set; }
 
 
@@ -19,8 +19,9 @@ namespace FirstprojectShivi.Order.Dto
 
 		public bool IsDelivery { get; set; }
 
+		public string RestaurantName { get; set; }
 
-
-		public FirstprojectShivi.Models.Restaurant? Restaurants { get; set; }
+	
 	}
 }
+

@@ -1,6 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { PagedListingComponentBase, PagedRequestDto } from '@shared/paged-listing-component-base';
-import { GetOrderOutput, OrderServiceProxy, UpdateOrderInput } from '@shared/service-proxies/service-proxies';
+import { GetOrderOutput, OrderServiceProxy, RestaurantServiceProxy, UpdateOrderInput } from '@shared/service-proxies/service-proxies';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { finalize } from 'rxjs/operators';
 import { ViewOrderComponent } from './ViewOrder/ViewOrder.component';
@@ -26,7 +26,8 @@ export class OrderComponent extends PagedListingComponentBase<GetOrderOutput> {
   constructor(
     injector: Injector,
     private _orderService: OrderServiceProxy,
-    private _modalService: BsModalService
+    private _modalService: BsModalService,
+  
   ) {
     super(injector);
   }
