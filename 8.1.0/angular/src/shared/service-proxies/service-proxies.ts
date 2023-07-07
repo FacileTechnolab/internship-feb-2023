@@ -2969,7 +2969,6 @@ export class CreateStudentInput implements ICreateStudentInput {
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
-    age: number;
 
     constructor(data?: ICreateStudentInput) {
         if (data) {
@@ -2987,7 +2986,6 @@ export class CreateStudentInput implements ICreateStudentInput {
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.dateOfBirth = _data["dateOfBirth"] ? moment(_data["dateOfBirth"].toString()) : <any>undefined;
-            this.age = _data["age"];
         }
     }
 
@@ -3005,7 +3003,6 @@ export class CreateStudentInput implements ICreateStudentInput {
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["dateOfBirth"] = this.dateOfBirth ? this.dateOfBirth.toISOString() : <any>undefined;
-        data["age"] = this.age;
         return data;
     }
 
@@ -3023,7 +3020,6 @@ export interface ICreateStudentInput {
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
-    age: number;
 }
 
 export class CreateTenantDto implements ICreateTenantDto {
@@ -4695,13 +4691,13 @@ export interface IUpdateCourseInput {
 }
 
 export class UpdateStudentInput implements IUpdateStudentInput {
+    id: number;
     courseId: number;
     enrollmentNo: number;
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
     age: number;
-    readonly id: number;
 
     constructor(data?: IUpdateStudentInput) {
         if (data) {
@@ -4714,13 +4710,13 @@ export class UpdateStudentInput implements IUpdateStudentInput {
 
     init(_data?: any) {
         if (_data) {
+            this.id = _data["id"];
             this.courseId = _data["courseId"];
             this.enrollmentNo = _data["enrollmentNo"];
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.dateOfBirth = _data["dateOfBirth"] ? moment(_data["dateOfBirth"].toString()) : <any>undefined;
             this.age = _data["age"];
-            (<any>this).id = _data["id"];
         }
     }
 
@@ -4733,13 +4729,13 @@ export class UpdateStudentInput implements IUpdateStudentInput {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
         data["courseId"] = this.courseId;
         data["enrollmentNo"] = this.enrollmentNo;
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["dateOfBirth"] = this.dateOfBirth ? this.dateOfBirth.toISOString() : <any>undefined;
         data["age"] = this.age;
-        data["id"] = this.id;
         return data;
     }
 
@@ -4752,13 +4748,13 @@ export class UpdateStudentInput implements IUpdateStudentInput {
 }
 
 export interface IUpdateStudentInput {
+    id: number;
     courseId: number;
     enrollmentNo: number;
     firstName: string | undefined;
     lastName: string | undefined;
     dateOfBirth: moment.Moment;
     age: number;
-    id: number;
 }
 
 export class UserDto implements IUserDto {

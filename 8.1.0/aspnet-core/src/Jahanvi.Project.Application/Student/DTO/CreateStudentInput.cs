@@ -14,7 +14,7 @@ namespace Jahanvi.Project.Student.DTO
 
         public DateTime DateOfBirth { get; set; }
 
-        public int Age { get; set; }
+
 
     }
 }

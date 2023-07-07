@@ -64,7 +64,7 @@ namespace Jahanvi.Project
         }
         public async Task<PagedResultDto<GetCourseOutput>> GetCourses(GetCoursesInput input)
         {
-            var query = _cource1Repository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter)).AsQueryable();
+            var query = _cource1Repository.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter) || x.Description.Contains(input.Filter)).AsQueryable();
 
             var courseCount = await query.CountAsync();
             var courses = await query.PageBy(input).ToListAsync();

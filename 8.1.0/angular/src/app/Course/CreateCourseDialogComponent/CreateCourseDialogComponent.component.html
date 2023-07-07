@@ -9,100 +9,96 @@
     (onCloseClick)="bsModalRef.hide()"
   ></abp-modal-header>
   <div class="modal-body">
-    <tabset>
-      <tab [heading]="'CourseDetails' | localize" class="pt-3 px-2">
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Name">
-            {{ "Name" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="name"
-              id="name"
-              required
-              maxlength="32"
-              [(ngModel)]="cour.name"
-              #nameModel="ngModel"
-              #nameEl
-            />
-            <abp-validation-summary
-              [control]="nameModel"
-              [controlEl]="nameEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Semester">
-            {{ "Semester" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="Semester"
-              id="Semester"
-              required
-              maxlength="32"
-              [(ngModel)]="cour.sem"
-              #semesterModel="ngModel"
-              #semeEl
-            />
-            <abp-validation-summary
-              [control]="semesterModel"
-              [controlEl]="semeEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Description">
-            {{ "Description" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="Description"
-              id="Description"
-              required
-              minlength="2"
-              maxlength="32"
-              [(ngModel)]="cour.description"
-              #descriptionModel="ngModel"
-              #descEl
-            />
-            <abp-validation-summary
-              [control]="descriptionModel"
-              [controlEl]="descEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Professor">
-            {{ "Professor" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="Professor"
-              id="Professor"
-              required
-              minlength="2"
-              maxlength="32"
-              [(ngModel)]="cour.professor"
-              #professorModel="ngModel"
-              #profEl
-            />
-            <abp-validation-summary
-              [control]="professorModel"
-              [controlEl]="profEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
-      </tab>
-    </tabset>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Name">
+        {{ "Name" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="name"
+          required
+          maxlength="32"
+          [(ngModel)]="cour.name"
+          #nameModel="ngModel"
+          #nameEl
+        />
+        <abp-validation-summary
+          [control]="nameModel"
+          [controlEl]="nameEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Semester">
+        {{ "Semester" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Semester"
+          id="Semester"
+          required
+          maxlength="32"
+          [(ngModel)]="cour.sem"
+          #semesterModel="ngModel"
+          #semeEl
+        />
+        <abp-validation-summary
+          [control]="semesterModel"
+          [controlEl]="semeEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Description">
+        {{ "Description" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Description"
+          id="Description"
+          required
+          minlength="2"
+          maxlength="32"
+          [(ngModel)]="cour.description"
+          #descriptionModel="ngModel"
+          #descEl
+        />
+        <abp-validation-summary
+          [control]="descriptionModel"
+          [controlEl]="descEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="Professor">
+        {{ "Professor" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="Professor"
+          id="Professor"
+          required
+          minlength="2"
+          maxlength="32"
+          [(ngModel)]="cour.professor"
+          #professorModel="ngModel"
+          #profEl
+        />
+        <abp-validation-summary
+          [control]="professorModel"
+          [controlEl]="profEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
   </div>
   <abp-modal-footer
     [cancelDisabled]="saving"

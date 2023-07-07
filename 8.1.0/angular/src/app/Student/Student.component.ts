@@ -40,16 +40,37 @@ export class StudentComponent extends PagedListingComponentBase<GetStudentOutput
       )
       .subscribe((result: GetStudentOutputPagedResultDto) => {
         console.warn("STUDENT", result);
-        debugger
+
         this.student = result.items;
 
         this.showPaging(result, pageNumber);
       });
 
   }
-  protected delete(entity: GetStudentOutput): void {
-    throw new Error('Method not implemented.');
+  // protected delete(entity: GetStudentOutput): void {
+  //   throw new Error('Method not implemented.');
+  // }
+  protected delete(role: GetStudentOutput): void {
+    abp.message.confirm(
+      this.l('RoleDeleteWarningMessage', role.courseName),
+      undefined,
+      (result: boolean) => {
+        if (result) {
+          this._studentService
+            .delete(role.id)
+            .pipe(
+              finalize(() => {
+                abp.notify.success(this.l('SuccessfullyDeleted'));
+                this.refresh();
+              })
+            )
+            .subscribe(() => { });
+        }
+      }
+    );
   }
+
+
 
 
 

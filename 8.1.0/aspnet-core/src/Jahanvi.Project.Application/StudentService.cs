@@ -6,6 +6,7 @@ using Abp.Linq.Extensions;
 using AutoMapper;
 using Jahanvi.Project.Student.DTO;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace Jahanvi.Project
         public async Task Create(CreateStudentInput input)
         {
             Authorization.Users.Student student = _mapper.Map<CreateStudentInput, Authorization.Users.Student>(input);
+            student.Age = (int)((DateTime.Now - input.DateOfBirth).TotalDays / 365.242199);
             await _studentRepository.InsertAsync(student);
         }
 
@@ -49,22 +51,25 @@ namespace Jahanvi.Project
 
         public async Task Update(UpdateStudentInput input)
         {
+
             var student = await _studentRepository.GetAsync(input.Id);
             if (student != null)
             {
 
+                int age =
+                student.CourseId = input.CourseId;
                 student.FirstName = input.FirstName;
                 student.LastName = input.LastName;
                 student.DateOfBirth = input.DateOfBirth;
 
-                student.Age = input.Age;
+                student.Age = (int)((DateTime.Now - input.DateOfBirth).TotalDays / 365.242199);
                 await _studentRepository.UpdateAsync(student);
             }
         }
         public async Task<PagedResultDto<GetStudentOutput>> GetStudents(GetStudentInput input)
         {
-            var query = _studentRepository.GetAll().Include(x => x.Course).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter)).AsQueryable();
-            var data = _studentRepository.GetAll().ToList();
+            var query = _studentRepository.GetAll().Include(x => x.Course).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter) || x.LastName.ToString() == (input.Filter)).AsQueryable();
+
             var studentcount = query.Count();
             var student = query.PageBy(input).ToList();
             return new PagedResultDto<GetStudentOutput>(
