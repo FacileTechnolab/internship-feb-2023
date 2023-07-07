@@ -4,15 +4,11 @@
   #createRoleForm="ngForm"
 
 >
-<!-- (ngSubmit)="save()" -->
-
 <abp-modal-header
 [title]="'CreateNewEvent' | localize"
 (onCloseClick)="bsModalRef.hide()"
 ></abp-modal-header>
 <div class="modal-body">
-  <tabset>
-    <tab [heading]="'Details' | localize" class="pt-3 px-2">
       <div class="form-group row required">
         <label class="col-md-3 col-form-label" for="name">
           {{ "Name" | localize }}
@@ -21,75 +17,30 @@
           <p>{{events.name}}</p>
         </div>
       </div>
-      <!-- <div class="form-group row required">
+      <div class="form-group row required">
         <label class="col-md-3 col-form-label" for="description">
           {{ "Description" | localize }}
         </label>
         <div class="col-md-9">
-          <textarea
-            type="text"
-            class="form-control"
-            name="description"
-            id="description"
-            [(ngModel)]="events.description"
-            #nameModel="ngModel"
-            #nameEl
-          >
-          </textarea>
-          <abp-validation-summary
-          [control]="nameModel"
-          [controlEl]="nameEl"
-        ></abp-validation-summary>
+          <p>{{events.description}}</p>
         </div>
-      </div> -->
-      <!-- <div class="form-group row required">
+      </div>
+      <div class="form-group row required">
         <label class="col-md-3 col-form-label" for="eventDate">
           {{ "EventDate" | localize }}
         </label>
         <div class="col-md-9">
-          <input
-            type="date"
-            class="form-control"
-            name="eventDate"
-            id="eventDate"
-            required
-            [(ngModel)]="events.eventDate"
-            #nameModel="ngModel"
-            #nameEl
-          />
-          <abp-validation-summary
-            [control]="nameModel"
-            [controlEl]="nameEl"
-          ></abp-validation-summary>
+          <p>{{events.eventDate}}</p>
         </div>
-      </div> -->
-      <!-- <div class="form-group row required">
+      </div>
+      <div class="form-group row required">
         <label class="col-md-3 col-form-label" for="entryFees">
           {{ "EntryFees" | localize }}
         </label>
         <div class="col-md-9">
-          <input
-            type="text"
-            class="form-control"
-            name="entryFees"
-            id="entryFees"
-            required
-            [(ngModel)]="events.entryFees"
-            #nameModel="ngModel"
-            #nameEl
-          />
-          <abp-validation-summary
-            [control]="nameModel"
-            [controlEl]="nameEl"
-          ></abp-validation-summary>
+          <p>{{events.entryFees}}</p>
         </div>
-      </div> -->
-    </tab>
-  </tabset>
+      </div>
 </div>
-<!-- <abp-modal-footer
-[cancelDisabled]="saving"
-[saveDisabled]="!createRoleForm.form.valid || saving"
-(onCancelClick)="bsModalRef.hide()"
-></abp-modal-footer> -->
+
 </form>

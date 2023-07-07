@@ -1,0 +1,42 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createRoleForm="ngForm"
+  (ngSubmit)="save()"
+>
+<!-- (ngSubmit)="save()" -->
+<abp-modal-header
+[title]="'CreateNewTicket' | localize"
+(onCloseClick)="bsModalRef.hide()"
+></abp-modal-header>
+<div class="modal-body">
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="name">
+      {{ "TicketHolderName" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        id="name"
+        required
+        minlength="2"
+        maxlength="32"
+        [(ngModel)]="tickets.ticketHolderName"
+        #nameModel="ngModel"
+        #nameEl
+      />
+      <abp-validation-summary
+        [control]="nameModel"
+        [controlEl]="nameEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+</div>
+<abp-modal-footer
+[cancelDisabled]="saving"
+[saveDisabled]="!createRoleForm.form.valid || saving"
+(onCancelClick)="bsModalRef.hide()"
+></abp-modal-footer>
+</form>

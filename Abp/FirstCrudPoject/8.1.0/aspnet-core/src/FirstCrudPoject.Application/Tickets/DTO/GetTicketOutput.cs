@@ -1,4 +1,6 @@
-﻿namespace FirstCrudPoject.Tickets.DTO
+﻿using FirstCrudPoject.Models;
+
+namespace FirstCrudPoject.Tickets.DTO
 {
     public class GetTicketOutput
     {
@@ -6,5 +8,6 @@
         public string TicketHolderName { get; set; }
         public int Discount { get; set; }
         public int EventId { get; set; }
+        public Event? Events { get; set; }
     }
 }

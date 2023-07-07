@@ -14,7 +14,7 @@ namespace FirstCrudPoject.Models
 
         [ForeignKey("EventId")]
         public int EventId { get; set; }
-
         public Event Events { get; set; }
+
     }
 }

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using FirstCrudPoject.Models;
 using FirstCrudPoject.Tickets.DTO;
 
 namespace FirstCrudPoject.Ticket
@@ -9,7 +8,9 @@ namespace FirstCrudPoject.Ticket
         public TicketMapPrpfile()
         {
             CreateMap<CreateTicketInput, FirstCrudPoject.Models.Ticket>().ReverseMap();
-            CreateMap<Event, GetTicketOutput>().ReverseMap();
+            CreateMap<FirstCrudPoject.Models.Ticket, GetTicketOutput>()
+                .ForMember(x => x.Events, y => y.MapFrom(z => z.Events))
+                .ReverseMap();
             CreateMap<GetTicketOutput, FirstCrudPoject.Models.Ticket>().ReverseMap();
             CreateMap<UpdateTicketInput, FirstCrudPoject.Models.Ticket>().ReverseMap();
         }

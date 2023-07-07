@@ -1,12 +1,19 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
+using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
 using AutoMapper;
 using FirstCrudPoject.Tickets.DTO;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace FirstCrudPoject.Tickets
 {
+
     public class TicketAppServices : ApplicationService
     {
         private readonly IRepository<FirstCrudPoject.Models.Ticket> _ticketServices;
@@ -28,7 +35,7 @@ namespace FirstCrudPoject.Tickets
             _ticketServices.Delete(inputticket.Id);
         }
 
-        public async Task<GetTicketOutput> GetTicketById(GetTicketInput inputticket)
+        public async Task<GetTicketOutput> GetTicketById(EntityDto inputticket)
         {
             var getTicket = await _ticketServices.GetAsync(inputticket.Id);
             GetTicketOutput outticket = _mapperticket.Map<FirstCrudPoject.Models.Ticket, GetTicketOutput>(getTicket);
@@ -56,5 +63,21 @@ namespace FirstCrudPoject.Tickets
             }
 
         }
+
+        public async Task<PagedResultDto<GetTicketOutput>> GetTicket(GetTicketInput inputticket)
+        {
+            var query = _ticketServices.GetAll().Include(x => x.Events).WhereIf(!inputticket.Filter.IsNullOrWhiteSpace(), x => x.TicketHolderName.Contains(inputticket.Filter)).AsQueryable();
+            var ticketcount = query.Count();
+            var tickets = query.PageBy(inputticket).ToList();
+            var result = ObjectMapper.Map<List<GetTicketOutput>>(tickets);
+            return new PagedResultDto<GetTicketOutput>(
+            ticketcount, result);
+        }
+
+
     }
+}
+public class GetTicketInput : PagedResultRequestDto
+{
+    public string Filter { get; set; }
 }

@@ -1,4 +1,5 @@
 
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -42,14 +43,20 @@ import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
 
 
-//event
+//events
 import { EventsComponent } from './events/events.component';
 import {CreateeventComponent} from './events/createevent/createevent.component';
 import { EditeventComponent } from './events/editevent/editevent.component';
 import { VieweventComponent } from './events/viewevent/viewevent.component';
 
+
+//tickets
+import { TicketsComponent } from './tickets/tickets.component';
+import { CreateticketsComponent } from './tickets/createtickets/createtickets.component';
+import { EditticketsComponent } from './tickets/edittickets/edittickets.component';
+
 @NgModule({
-    declarations: [				
+    declarations: [					
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -81,8 +88,13 @@ import { VieweventComponent } from './events/viewevent/viewevent.component';
         EventsComponent,
         CreateeventComponent,
         EditeventComponent,
-        VieweventComponent
-     
+        VieweventComponent,
+
+        //tickets
+        TicketsComponent,
+        CreateticketsComponent,
+        EditticketsComponent
+      
    ],
     imports: [
         CommonModule,

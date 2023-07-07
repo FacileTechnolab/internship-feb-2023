@@ -10,6 +10,7 @@ import { RolesComponent } from 'app/roles/roles.component';
 
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { EventsComponent } from './events/events.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { EventsComponent } from './events/events.component';
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
                     
-                    { path: 'events', component: EventsComponent, canActivate: [AppRouteGuard] }
+                    { path: 'events', component: EventsComponent, canActivate: [AppRouteGuard] },
+                    { path: 'tickets', component: TicketsComponent, canActivate: [AppRouteGuard] }
                 ]
             }
         ])

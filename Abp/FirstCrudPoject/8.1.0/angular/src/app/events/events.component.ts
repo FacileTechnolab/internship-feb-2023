@@ -6,13 +6,15 @@ import { finalize } from 'rxjs/operators';
 import { CreateeventComponent } from './createevent/createevent.component';
 import { EditeventComponent } from './editevent/editevent.component';
 import { VieweventComponent } from './viewevent/viewevent.component';
+import { appModuleAnimation } from '@shared/animations/routerTransition';
 class PagedResultRequestDto extends PagedRequestDto {
   keyword: string;
 }
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.css']
+  styleUrls: ['./events.component.css'],
+  animations: [appModuleAnimation()]
 })
 export class EventsComponent extends PagedListingComponentBase<GetEventOutput> {
   
@@ -121,3 +123,5 @@ export class EventsComponent extends PagedListingComponentBase<GetEventOutput> {
  
 
 }
+
+

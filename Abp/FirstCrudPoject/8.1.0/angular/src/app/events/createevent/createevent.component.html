@@ -10,8 +10,6 @@
 (onCloseClick)="bsModalRef.hide()"
 ></abp-modal-header>
 <div class="modal-body">
-  <tabset>
-    <tab [heading]="'Details' | localize" class="pt-3 px-2">
       <div class="form-group row required">
         <label class="col-md-3 col-form-label" for="name">
           {{ "Name" | localize }}
@@ -98,8 +96,6 @@
           ></abp-validation-summary>
         </div>
       </div>
-    </tab>
-  </tabset>
 </div>
 <abp-modal-footer
 [cancelDisabled]="saving"

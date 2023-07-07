@@ -70,6 +70,12 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
                 'fas fa-sharp fa-light fa-calendar-days',
                 'Pages.Users'
             ),
+            new MenuItem(
+                this.l('Tickets'),
+                '/app/tickets',
+                'fas fa-sharp fa-solid fa-ticket',
+                'Pages.Users'
+            ),
         
            
             new MenuItem(this.l('MultiLevelMenu'), '', 'fas fa-circle', '', [
