@@ -1,4 +1,4 @@
-<form class="form-horizontal" 
+<!-- <form class="form-horizontal" 
 autocomplete="off"
 #createRoleForm="ngForm" 
 (ngSubmit)="save()">
@@ -89,41 +89,12 @@ autocomplete="off"
           </div>
         </div>
 
-        <!-- <div class="form-group row mb-0">
-          <label class="col-md-3 col-form-label" for="description">
-            {{ "Description" | localize }}
-          </label>
-          <div class="col-md-9">
-            <textarea type="text" class="form-control" name="description" id="description"
-              [(ngModel)]="proj.description">
-            </textarea>
-          </div>
-        </div> -->
-   
+      
 
 
 
 
-      <!-- <tab [heading]="'Permissions' | localize" class="pt-3 px-2">
-        <div class="form-group row mb-0">
-          <ng-container *ngFor="let permission of permissions; let i = index">
-            <div class="col-md-6">
-              <div class="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  [id]="'permission_' + i"
-                  [checked]="isPermissionChecked(permission.name)"
-                  (change)="onPermissionChange(permission, $event)"
-                />
-                <label class="custom-control-label" [for]="'permission_' + i">
-                  {{ permission.displayName }}
-                </label>
-              </div>
-            </div>
-          </ng-container>
-        </div>
-      </tab>-->
+      
 
    
   </div>
@@ -132,4 +103,4 @@ autocomplete="off"
   <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!createRoleForm.form.valid || saving"
     (onCancelClick)="bsModalRef.hide()"></abp-modal-footer>
 
-</form>
+</form> -->

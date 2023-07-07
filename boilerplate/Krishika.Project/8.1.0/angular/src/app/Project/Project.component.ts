@@ -23,15 +23,12 @@ class PagedResultRequestDto extends PagedRequestDto {
   animations: [appModuleAnimation()]
 })
 export class ProjectComponent extends PagedListingComponentBase<GetProjectsOutput> {
- 
-  
- 
   proj:  GetProjectsOutput[] =[] ;
   advancedFiltersVisible = false;
   keyword = '';
   isActive: boolean | null; 
-  maxResultCount: number;
-  skipCount: number;
+  // maxResultCount: number;
+  // skipCount: number;
 
   constructor(
         injector: Injector,

@@ -69,6 +69,12 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
                 'fas fa-project-diagram',
                 'Pages.Roles'
             ),
+            new MenuItem(
+                this.l('ProjectResource'),
+                '/app/ProjectResource',
+                "fa-solid fa-list-check",
+                'Pages.Roles'
+            ),
 
             new MenuItem(this.l('MultiLevelMenu'), '', 'fas fa-circle', '', [
                 new MenuItem('ASP.NET Boilerplate', '', 'fas fa-dot-circle', '', [

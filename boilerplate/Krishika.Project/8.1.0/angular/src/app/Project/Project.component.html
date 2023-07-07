@@ -25,8 +25,8 @@
                         <div class="col-md-6">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <button type="button" class="btn bg-blue">
-                                        <!-- (click)="getDataPage(1)" -->
+                                    <button type="button" class="btn bg-blue" (click)="getDataPage(1)" >
+                                         
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -77,8 +77,8 @@
 
                         <td>{{ project.name }}</td>
                         <td>{{ project.description }}</td>
-                        <td>{{ project.startDate }}</td>
-                        <td>{{ project.endDate }}</td>
+                        <td>{{ project.startDate |  date:'dd-MM-yyyy' }}</td>
+                        <td>{{ project.endDate | date:'dd-MM-yyyy' }}</td>
                         <!-- <td>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" disabled

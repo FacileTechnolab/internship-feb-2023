@@ -485,6 +485,72 @@ export class ProjectAppResourceServiceProxy {
         }
         return _observableOf(null as any);
     }
+
+    /**
+     * @param filter (optional) 
+     * @param skipCount (optional) 
+     * @param maxResultCount (optional) 
+     * @return Success
+     */
+    getProjectResource(filter: string | undefined, skipCount: number | undefined, maxResultCount: number | undefined): Observable<GetProjectResourceOutputPagedResultDto> {
+        let url_ = this.baseUrl + "/api/services/app/ProjectAppResource/GetProjectResource?";
+        if (filter === null)
+            throw new Error("The parameter 'filter' cannot be null.");
+        else if (filter !== undefined)
+            url_ += "Filter=" + encodeURIComponent("" + filter) + "&";
+        if (skipCount === null)
+            throw new Error("The parameter 'skipCount' cannot be null.");
+        else if (skipCount !== undefined)
+            url_ += "SkipCount=" + encodeURIComponent("" + skipCount) + "&";
+        if (maxResultCount === null)
+            throw new Error("The parameter 'maxResultCount' cannot be null.");
+        else if (maxResultCount !== undefined)
+            url_ += "MaxResultCount=" + encodeURIComponent("" + maxResultCount) + "&";
+        url_ = url_.replace(/[?&]$/, "");
+
+        let options_ : any = {
+            observe: "response",
+            responseType: "blob",
+            headers: new HttpHeaders({
+                "Accept": "text/plain"
+            })
+        };
+
+        return this.http.request("get", url_, options_).pipe(_observableMergeMap((response_ : any) => {
+            return this.processGetProjectResource(response_);
+        })).pipe(_observableCatch((response_: any) => {
+            if (response_ instanceof HttpResponseBase) {
+                try {
+                    return this.processGetProjectResource(response_ as any);
+                } catch (e) {
+                    return _observableThrow(e) as any as Observable<GetProjectResourceOutputPagedResultDto>;
+                }
+            } else
+                return _observableThrow(response_) as any as Observable<GetProjectResourceOutputPagedResultDto>;
+        }));
+    }
+
+    protected processGetProjectResource(response: HttpResponseBase): Observable<GetProjectResourceOutputPagedResultDto> {
+        const status = response.status;
+        const responseBlob =
+            response instanceof HttpResponse ? response.body :
+            (response as any).error instanceof Blob ? (response as any).error : undefined;
+
+        let _headers: any = {}; if (response.headers) { for (let key of response.headers.keys()) { _headers[key] = response.headers.get(key); }}
+        if (status === 200) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            let result200: any = null;
+            let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
+            result200 = GetProjectResourceOutputPagedResultDto.fromJS(resultData200);
+            return _observableOf(result200);
+            }));
+        } else if (status !== 200 && status !== 204) {
+            return blobToText(responseBlob).pipe(_observableMergeMap((_responseText: string) => {
+            return throwException("An unexpected server error occurred.", status, _responseText, _headers);
+            }));
+        }
+        return _observableOf(null as any);
+    }
 }
 
 @Injectable()
@@ -3333,6 +3399,7 @@ export interface IGetCurrentLoginInformationsOutput {
 }
 
 export class GetProjectResourceOutput implements IGetProjectResourceOutput {
+    projectName: string | undefined;
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
@@ -3349,6 +3416,7 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
 
     init(_data?: any) {
         if (_data) {
+            this.projectName = _data["projectName"];
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.projectId = _data["projectId"];
@@ -3365,6 +3433,7 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
+        data["projectName"] = this.projectName;
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["projectId"] = this.projectId;
@@ -3381,10 +3450,66 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
 }
 
 export interface IGetProjectResourceOutput {
+    projectName: string | undefined;
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
     projects: Project;
+}
+
+export class GetProjectResourceOutputPagedResultDto implements IGetProjectResourceOutputPagedResultDto {
+    items: GetProjectResourceOutput[] | undefined;
+    totalCount: number;
+
+    constructor(data?: IGetProjectResourceOutputPagedResultDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            if (Array.isArray(_data["items"])) {
+                this.items = [] as any;
+                for (let item of _data["items"])
+                    this.items.push(GetProjectResourceOutput.fromJS(item));
+            }
+            this.totalCount = _data["totalCount"];
+        }
+    }
+
+    static fromJS(data: any): GetProjectResourceOutputPagedResultDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new GetProjectResourceOutputPagedResultDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        if (Array.isArray(this.items)) {
+            data["items"] = [];
+            for (let item of this.items)
+                data["items"].push(item.toJSON());
+        }
+        data["totalCount"] = this.totalCount;
+        return data;
+    }
+
+    clone(): GetProjectResourceOutputPagedResultDto {
+        const json = this.toJSON();
+        let result = new GetProjectResourceOutputPagedResultDto();
+        result.init(json);
+        return result;
+    }
+}
+
+export interface IGetProjectResourceOutputPagedResultDto {
+    items: GetProjectResourceOutput[] | undefined;
+    totalCount: number;
 }
 
 export class GetProjectsOutput implements IGetProjectsOutput {

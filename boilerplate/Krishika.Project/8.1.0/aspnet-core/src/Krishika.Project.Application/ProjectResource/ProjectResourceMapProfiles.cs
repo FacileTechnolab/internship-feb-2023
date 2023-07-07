@@ -11,6 +11,10 @@ namespace Krishika.Project.ProjectResource
 
             CreateMap<Modal.ProjectResource, GetProjectResourceOutput>().ReverseMap();
 
+            CreateMap<Modal.ProjectResource, GetProjectResourceOutput>()
+               .ForMember(x => x.ProjectName, y => y.MapFrom(z => z.Project.Name))
+               .ReverseMap();
+
             CreateMap<GetProjectResourceOutput, Modal.ProjectResource>().ReverseMap();
 
             CreateMap<UpdateProjectResourceInput, Modal.ProjectResource>().ReverseMap();

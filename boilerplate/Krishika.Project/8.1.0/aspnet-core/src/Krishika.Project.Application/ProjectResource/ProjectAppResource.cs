@@ -1,14 +1,19 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
+using Abp.Collections.Extensions;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
+using Abp.Linq.Extensions;
 using AutoMapper;
 using Krishika.Project.ProjectResource.DTO;
-//using Krishika.Project.Projects.DTO;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Krishika.Project.ProjectResource
 {
-    public class ProjectAppResource : IApplicationService
+    public class ProjectAppResource : ApplicationService
     {
         private readonly IRepository<Modal.ProjectResource> _projectResource;
         private readonly IMapper _mapper;
@@ -31,7 +36,7 @@ namespace Krishika.Project.ProjectResource
             _projectResource.Delete(input.Id);
         }
 
-        public async Task<GetProjectResourceOutput> GetProjectResourceById(GetProjectResourceInput input)
+        public async Task<GetProjectResourceOutput> GetProjectResourceById(EntityDto input)
         {
             var getProjectAppResource = await _projectResource.GetAsync(input.Id);
             GetProjectResourceOutput output = _mapper.Map<Modal.ProjectResource, GetProjectResourceOutput>(getProjectAppResource);
@@ -56,6 +61,24 @@ namespace Krishika.Project.ProjectResource
                 await _projectResource.UpdateAsync(output);
             }
         }
+
+        public async Task<PagedResultDto<GetProjectResourceOutput>> GetProjectResource(GetProjectResourceInput input)
+        {
+            var query = _projectResource.GetAll().Include(x => x.Project).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter)).AsQueryable();
+            var projectresourcecount = await query.CountAsync();
+            var projectAppResource = await query.PageBy(input).ToListAsync();
+            var result = ObjectMapper.Map<List<GetProjectResourceOutput>>(projectAppResource);
+            return new PagedResultDto<GetProjectResourceOutput>(
+            projectresourcecount, result);
+
+
+        }
+
     }
 }
+public class GetProjectResourceInput : PagedResultRequestDto
+{
+    public string Filter { get; set; }
 
+
+}

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -33,8 +34,12 @@ import { ResetPasswordDialogComponent } from './users/reset-password/reset-passw
 import { ProjectComponent } from './Project/Project.component';
 import {CreateProjectComponent } from './Project/Create-project/Create-project.component';
 import { EditProjectComponent} from './Project/Edit-project/Edit-project.component';
-import { ViewProjectComponent} from './Project/view-project/view-project.component'
+import { ViewProjectComponent} from './Project/view-project/view-project.component';
 
+// projectResource
+import { ProjectResourceComponent } from './Project-Resource/Project-Resource.component';
+import { CreateResourceComponent } from './Project-Resource/Create-Resource/Create-Resource.component';
+import { EditResourceComponent } from './Project-Resource/edit-Resource/edit-Resource.component';
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -45,10 +50,9 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
-import { ProjectAppResourceServiceProxy } from '@shared/service-proxies/service-proxies';
 
 @NgModule({
-    declarations: [	
+    declarations: [		
         AppComponent,
         HomeComponent,
         AboutComponent,
@@ -81,8 +85,13 @@ import { ProjectAppResourceServiceProxy } from '@shared/service-proxies/service-
         ProjectComponent,
         CreateProjectComponent,
         EditProjectComponent,
-        ViewProjectComponent
-  
+        ViewProjectComponent,
+        
+      //ProjectResource
+      ProjectResourceComponent,
+      CreateResourceComponent,
+      EditResourceComponent,
+
    ],
     imports: [
         CommonModule,

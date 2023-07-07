@@ -1,6 +1,5 @@
 import { ProjectComponent } from './Project/Project.component';
-import { Project } from './../shared/service-proxies/service-proxies';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRouteGuard } from '@shared/auth/auth-route-guard';
@@ -10,6 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { TenantsComponent } from './tenants/tenants.component';
 import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
+import { ProjectResourceComponent } from './Project-Resource/Project-Resource.component';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { ChangePasswordComponent } from './users/change-password/change-password
                     { path: 'tenants', component: TenantsComponent, data: { permission: 'Pages.Tenants' }, canActivate: [AppRouteGuard] },
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
-                    { path: 'Project', component: ProjectComponent, data: { Permissions: 'Pages.Project' }, canActivate:[AppRouteGuard] }
+                    { path: 'Project', component: ProjectComponent, data: { Permissions: 'Pages.Project' }, canActivate:[AppRouteGuard] },
+                    { path: 'ProjectResource', component: ProjectResourceComponent, data:{ Persmission:'Pages.PeojectResource'}, canActivate:[AppRouteGuard] }
                 ]
             }
         ])
