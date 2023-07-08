@@ -3403,7 +3403,7 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
-    projects: Project;
+    id: number;
 
     constructor(data?: IGetProjectResourceOutput) {
         if (data) {
@@ -3420,7 +3420,7 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.projectId = _data["projectId"];
-            this.projects = _data["projects"] ? Project.fromJS(_data["projects"]) : <any>undefined;
+            this.id = _data["id"];
         }
     }
 
@@ -3437,7 +3437,7 @@ export class GetProjectResourceOutput implements IGetProjectResourceOutput {
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["projectId"] = this.projectId;
-        data["projects"] = this.projects ? this.projects.toJSON() : <any>undefined;
+        data["id"] = this.id;
         return data;
     }
 
@@ -3454,7 +3454,7 @@ export interface IGetProjectResourceOutput {
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
-    projects: Project;
+    id: number;
 }
 
 export class GetProjectResourceOutputPagedResultDto implements IGetProjectResourceOutputPagedResultDto {
@@ -3930,65 +3930,6 @@ export class PermissionDtoListResultDto implements IPermissionDtoListResultDto {
 
 export interface IPermissionDtoListResultDto {
     items: PermissionDto[] | undefined;
-}
-
-export class Project implements IProject {
-    id: number;
-    name: string;
-    description: string;
-    startDate: moment.Moment;
-    endDate: moment.Moment | undefined;
-
-    constructor(data?: IProject) {
-        if (data) {
-            for (var property in data) {
-                if (data.hasOwnProperty(property))
-                    (<any>this)[property] = (<any>data)[property];
-            }
-        }
-    }
-
-    init(_data?: any) {
-        if (_data) {
-            this.id = _data["id"];
-            this.name = _data["name"];
-            this.description = _data["description"];
-            this.startDate = _data["startDate"] ? moment(_data["startDate"].toString()) : <any>undefined;
-            this.endDate = _data["endDate"] ? moment(_data["endDate"].toString()) : <any>undefined;
-        }
-    }
-
-    static fromJS(data: any): Project {
-        data = typeof data === 'object' ? data : {};
-        let result = new Project();
-        result.init(data);
-        return result;
-    }
-
-    toJSON(data?: any) {
-        data = typeof data === 'object' ? data : {};
-        data["id"] = this.id;
-        data["name"] = this.name;
-        data["description"] = this.description;
-        data["startDate"] = this.startDate ? this.startDate.toISOString() : <any>undefined;
-        data["endDate"] = this.endDate ? this.endDate.toISOString() : <any>undefined;
-        return data;
-    }
-
-    clone(): Project {
-        const json = this.toJSON();
-        let result = new Project();
-        result.init(json);
-        return result;
-    }
-}
-
-export interface IProject {
-    id: number;
-    name: string;
-    description: string;
-    startDate: moment.Moment;
-    endDate: moment.Moment | undefined;
 }
 
 export class RegisterInput implements IRegisterInput {
@@ -4669,6 +4610,7 @@ export class UpdateProjectResourceInput implements IUpdateProjectResourceInput {
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
+    id: number;
 
     constructor(data?: IUpdateProjectResourceInput) {
         if (data) {
@@ -4684,6 +4626,7 @@ export class UpdateProjectResourceInput implements IUpdateProjectResourceInput {
             this.firstName = _data["firstName"];
             this.lastName = _data["lastName"];
             this.projectId = _data["projectId"];
+            this.id = _data["id"];
         }
     }
 
@@ -4699,6 +4642,7 @@ export class UpdateProjectResourceInput implements IUpdateProjectResourceInput {
         data["firstName"] = this.firstName;
         data["lastName"] = this.lastName;
         data["projectId"] = this.projectId;
+        data["id"] = this.id;
         return data;
     }
 
@@ -4714,6 +4658,7 @@ export interface IUpdateProjectResourceInput {
     firstName: string | undefined;
     lastName: string | undefined;
     projectId: number;
+    id: number;
 }
 
 export class UpdateProjectsInput implements IUpdateProjectsInput {

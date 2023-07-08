@@ -112,19 +112,17 @@ showViewProjectDialog(id? :number):void{
   }
 );
 }
-
-
 showCreateOrEditProjectDialog(id?: number): void {
-  let createOrEditProjectDialog: BsModalRef;
+  let CreateOrEditProjectDialog: BsModalRef;
   if (!id) {
-    createOrEditProjectDialog = this._modalService.show(
+    CreateOrEditProjectDialog = this._modalService.show(
       CreateProjectComponent,
       {
         class: 'modal-lg',
       }
     );
   } else {
-    createOrEditProjectDialog = this._modalService.show(
+    CreateOrEditProjectDialog = this._modalService.show(
       EditProjectComponent,
       {
         class: 'modal-lg',
@@ -136,11 +134,16 @@ showCreateOrEditProjectDialog(id?: number): void {
   }
 
 
-  createOrEditProjectDialog.content.onSave.subscribe(() => {
+
+
+
+  CreateOrEditProjectDialog.content.onSave.subscribe(() => {
     this.refresh();
   });
 }
 }
+
+
 
  
 

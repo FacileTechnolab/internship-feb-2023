@@ -53,18 +53,19 @@ namespace Krishika.Project.ProjectResource
 
         public async Task Update(UpdateProjectResourceInput input)
         {
-            var output = await _projectResource.GetAsync(input.ProjectId);
+            var output = await _projectResource.GetAsync(input.Id);
             if (output != null)
             {
                 output.FirstName = input.FirstName;
                 output.LastName = input.LastName;
+                output.ProjectId = input.ProjectId;
                 await _projectResource.UpdateAsync(output);
             }
         }
 
         public async Task<PagedResultDto<GetProjectResourceOutput>> GetProjectResource(GetProjectResourceInput input)
         {
-            var query = _projectResource.GetAll().Include(x => x.Project).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter)).AsQueryable();
+            var query = _projectResource.GetAll().Include(x => x.Project).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FirstName.Contains(input.Filter) || x.LastName == input.Filter || x.Project.Name.Contains(input.Filter)).AsQueryable();
             var projectresourcecount = await query.CountAsync();
             var projectAppResource = await query.PageBy(input).ToListAsync();
             var result = ObjectMapper.Map<List<GetProjectResourceOutput>>(projectAppResource);

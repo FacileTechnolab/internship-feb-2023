@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Injector, OnInit, Output } from '@angular/core';
 import { AppComponentBase } from '@shared/app-component-base';
-import { CreateProjectsInput, GetProjectsOutput, Project, ProjectAppServicesServiceProxy } from '@shared/service-proxies/service-proxies';
+import { CreateProjectsInput, GetProjectsOutput,  ProjectAppServicesServiceProxy } from '@shared/service-proxies/service-proxies';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({

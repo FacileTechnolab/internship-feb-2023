@@ -60,8 +60,7 @@
             <thead class="bg-light">
                 <tr>
                     <th>{{ "ProjectsName" | localize }}</th>
-                    <th>{{ "ProjectID" | localize }}</th>
-                    <th>{{ "Firstname" | localize }}</th>
+                     <th>{{ "Firstname" | localize }}</th>
                     <th>{{ "Lastname" | localize }}</th>
                    
                     <th style="width: 310px;">{{ "Actions" | localize }}</th>
@@ -76,20 +75,19 @@
       totalItems: totalItems }
 ">
                     <td>{{ projectres.projectName }}</td>
-                    <td>{{ projectres.projectId }}</td>
+                    
                     <td>{{ projectres.firstName }}</td>
                     <td>{{ projectres.lastName }}</td>
                     <td>
                         <button type="button" 
                         class="btn btn-sm bg-secondary"
-                             >
-                             <!-- (click)="edit(projectres)" -->
-                            <i class="fas fa-pencil-alt"></i>
-                            {{ "Edit" | localize }}
+                        (click)="edit(projectres)" >
+                        <i class="fas fa-pencil-alt"></i>
+                        {{ "Edit" | localize }}
                         </button>
                         <button type="button" 
-                        class="btn btn-sm bg-success mx-2">
-                            <!-- (click)="view(projectres)" -->
+                        class="btn btn-sm bg-success mx-2"
+                            (click)="view(projectres)" >
                             <i class="fa-solid fa-eye"></i>
                             {{ "View" | localize }}
                         </button>

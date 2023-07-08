@@ -1,4 +1,4 @@
-<!-- <form class="form-horizontal" 
+<form class="form-horizontal" 
 autocomplete="off"
 #createRoleForm="ngForm" 
 (ngSubmit)="save()">
@@ -10,84 +10,69 @@ autocomplete="off"
   <div class="modal-body">
     
     
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="name">
-            {{ "Name" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input type="text" class="form-control" name="name" id="name" required minlength="2" maxlength="32"
-              [(ngModel)]="proj.name" #nameModel="ngModel" #nameEl />
-            <abp-validation-summary [control]="nameModel" [controlEl]="nameEl"></abp-validation-summary>
-          </div>
-        </div>
+    <!-- <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "Projectname" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input type="text" 
+        class="form-control" 
+        name="Projectname" id="Projectname" 
+        required minlength="2" 
+        maxlength="32"
+          [(ngModel)]="projres.projectName" 
+          #nameModel="ngModel" #nameEl />
+        <abp-validation-summary [control]="nameModel" 
+        [controlEl]="nameEl"></abp-validation-summary>
+      </div>
+    </div> -->
 
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Discription">
-            {{ "Discription" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="text"
-              class="form-control"
-              name="Discription"
-              id="Discription"
-              required
-              minlength="2"
-              maxlength="32"
-              [(ngModel)]="proj.description"
-              #discriptionModel="ngModel"
-              #discriptionNameEl
-            />
-            <abp-validation-summary
-               [control]="discriptionModel"
-              [controlEl]="discriptionNameEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "ProjectName" | localize }}
+      </label>
 
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Discription">
-            {{ "StartDate" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="date"
-              class="form-control"
-              name="StartDate"
-              id="StartDate"
-              required
-               [(ngModel)]="proj.startDate"
-              #StartDateModel="ngModel"
-              #StartDateNameEl
-            />
-            <abp-validation-summary
-               [control]="StartDateModel"
-              [controlEl]="StartDateNameEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
+      <select [(ngModel)]="Project.id" name="ProjectId" class="selectopt">
+        <option [ngValue]="null" selected>Select Project Name</option>
+        <option *ngFor="let project of proj " [ngValue]="project.id">{{project.name}}</option>
+      </select>
+     
+    </div>
 
-        <div class="form-group row required">
-          <label class="col-md-3 col-form-label" for="Discription">
-            {{ "EndDate" | localize }}
-          </label>
-          <div class="col-md-9">
-            <input
-              type="date"
-              class="form-control"
-              name="EndDate"
-              id="EndDate"
-              required
-               [(ngModel)]="proj.endDate"
-              #EndDateModel="ngModel"
-              #EndDateNameEl
-            />
-            <abp-validation-summary
-               [control]="EndDateModel"
-              [controlEl]="EndDateNameEl"
-            ></abp-validation-summary>
-          </div>
-        </div>
+     
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "Firstname" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input type="text" 
+        class="form-control" 
+        name="Firstname" id="Firstname" 
+        required minlength="2" 
+        maxlength="32"
+          [(ngModel)]="projres.firstName" 
+          #nameModel="ngModel" #nameEl />
+        <abp-validation-summary [control]="nameModel" 
+        [controlEl]="nameEl"></abp-validation-summary>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="name">
+        {{ "Lastname" | localize }}
+      </label>
+      <div class="col-md-9">
+        <input type="text" 
+        class="form-control" 
+        name="Lastname" id="Lastname" 
+        required minlength="2" 
+        maxlength="32"
+          [(ngModel)]="projres.lastName" 
+          #nameModel="ngModel" #nameEl />
+        <abp-validation-summary [control]="nameModel" 
+        [controlEl]="nameEl"></abp-validation-summary>
+      </div>
+    </div>
 
       
 
@@ -103,4 +88,4 @@ autocomplete="off"
   <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!createRoleForm.form.valid || saving"
     (onCancelClick)="bsModalRef.hide()"></abp-modal-footer>
 
-</form> -->
+</form>

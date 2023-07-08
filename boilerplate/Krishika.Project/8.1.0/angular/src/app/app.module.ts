@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -40,6 +39,8 @@ import { ViewProjectComponent} from './Project/view-project/view-project.compone
 import { ProjectResourceComponent } from './Project-Resource/Project-Resource.component';
 import { CreateResourceComponent } from './Project-Resource/Create-Resource/Create-Resource.component';
 import { EditResourceComponent } from './Project-Resource/edit-Resource/edit-Resource.component';
+import { ViewResourceComponent} from './Project-Resource/View-Resource/View-Resource.component';
+
 // layout
 import { HeaderComponent } from './layout/header.component';
 import { HeaderLeftNavbarComponent } from './layout/header-left-navbar.component';
@@ -91,6 +92,7 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
       ProjectResourceComponent,
       CreateResourceComponent,
       EditResourceComponent,
+      ViewResourceComponent,
 
    ],
     imports: [
