@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Injector, OnInit, Output } from '@angular/core';
 import { AppComponentBase } from '@shared/app-component-base';
 import { EventAppServicesServiceProxy, GetEventOutput, UpdateEventInput } from '@shared/service-proxies/service-proxies';
+import result from 'lodash-es/result';
+import * as moment from 'moment';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -13,6 +15,7 @@ implements OnInit{
   id: number;
   saving = false;
   events = new UpdateEventInput();
+  date: string;
   @Output() onSave = new EventEmitter<any>();
   constructor(
     injector: Injector,
@@ -30,9 +33,11 @@ implements OnInit{
       // this.permissions = result.permissions;
       // this.grantedPermissionNames = result.grantedPermissionNames;
       // this.setInitialPermissionsStatus();
+      
     });
-  }
+    // this.date = moment(result.eventDate).format('dd-MM-yyyy');
 
+  }
 
   save(): void {
     this.saving = true;
@@ -40,7 +45,7 @@ implements OnInit{
     const events = new GetEventOutput();
     events.init(this.events);
     // events.grantedPermissions = this.getCheckedPermissions();
-
+    // this.events.eventDate = moment(this.eventDate, 'dd-MM-yyyy')
     this._eventsService
       .update(events)
       .subscribe(

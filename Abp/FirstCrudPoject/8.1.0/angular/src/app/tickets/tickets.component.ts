@@ -6,6 +6,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { finalize } from 'rxjs/operators';
 import { CreateticketsComponent } from './createtickets/createtickets.component';
 import { EditticketsComponent } from './edittickets/edittickets.component';
+import { ViewticketsComponent } from './viewtickets/viewtickets.component';
 class PagedResultRequestDto extends PagedRequestDto {
   keyword: string;
 }
@@ -44,18 +45,58 @@ export class TicketsComponent extends PagedListingComponentBase<GetTicketOutput>
       this.showPaging(result,pageNumber);
       });
   }
-  protected delete(entity: GetTicketOutput): void {
-    throw new Error('Method not implemented.');
+  protected delete(ticket: GetTicketOutput): void {
+    abp.message.confirm(
+      this.l('RoleDeleteWarningMessage', ticket.eventId),
+      undefined,
+      (result: boolean) => {
+        if (result) {
+          this._ticketsService
+            .delete(ticket.id)
+            .pipe(
+              finalize(() => {
+                abp.notify.success(this.l('SuccessfullyDeleted'));
+                this.refresh();
+              })
+            )
+            .subscribe(() => {});
+        }
+      }
+    );
   }
 
   createTicket(): void {
     this.showCreateOrEditTicketDialog();
   }
 
+  editEvent(tickets: GetTicketOutput): void {
+    debugger
+    this.showCreateOrEditTicketDialog(tickets.id);
+  }
+  viewTicket(tickets: GetTicketOutput): void {
+    debugger
+    this.showViewDialog(tickets.id);
+  }
+
+  showViewDialog(id?: number) : void{
+    let viewTicketDialog : BsModalRef;
+    viewTicketDialog = this._modalService.show(
+      ViewticketsComponent,
+      {
+        class: 'modal-lg',
+        initialState:{
+          id: id,
+        }
+      }
+    );
+  }
+
+
+
   showCreateOrEditTicketDialog(id?: number): void {
-    let createOrEditRoleDialog: BsModalRef;
+    let createOrEditTicketDialog: BsModalRef;
     if (!id) {
-      createOrEditRoleDialog = this._modalService.show(
+      createOrEditTicketDialog = this._modalService.show(
         CreateticketsComponent
         ,
         {
@@ -63,7 +104,7 @@ export class TicketsComponent extends PagedListingComponentBase<GetTicketOutput>
         }
       );
     } else {
-      createOrEditRoleDialog = this._modalService.show(
+      createOrEditTicketDialog = this._modalService.show(
         EditticketsComponent,
         {
           class: 'modal-lg',
@@ -74,7 +115,7 @@ export class TicketsComponent extends PagedListingComponentBase<GetTicketOutput>
       );
     }
 
-    createOrEditRoleDialog.content.onSave.subscribe(() => {
+    createOrEditTicketDialog.content.onSave.subscribe(() => {
       this.refresh();
     });
   }

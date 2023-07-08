@@ -1,3 +1,92 @@
-<p>
-  edittickets works!
-</p>
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createRoleForm="ngForm"
+  (ngSubmit)="save()"
+>
+
+<abp-modal-header
+[title]="'Edit Ticket' | localize"
+(onCloseClick)="bsModalRef.hide()"
+></abp-modal-header>
+<div class="modal-body">
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="name">
+      {{ "EventName" | localize }}
+    </label>
+    <select [(ngModel)]="tickets.eventId" name="EventId" class="setectopt">
+      <option [ngValue]="null" selected>Select Country</option>
+      <option *ngFor="let event of events" [ngValue]="event.id">{{event.name}}</option>
+    </select>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="name">
+      {{ "TicketHolderName" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        id="name"
+        required
+        [(ngModel)]="tickets.ticketHolderName"
+        #nameModel="ngModel"
+        #nameEl
+      />
+      <abp-validation-summary
+        [control]="nameModel"
+        [controlEl]="nameEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="discount">
+      {{ "Discount" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="discount"
+        id="discount"
+        required
+        [(ngModel)]="tickets.discount"
+        #nameModel="ngModel"
+        #nameEl
+      />
+      <abp-validation-summary
+        [control]="nameModel"
+        [controlEl]="nameEl"
+      ></abp-validation-summary>
+    </div>
+  </div>
+  <!-- <div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="eventId">
+      {{ "EventId" | localize }}
+    </label>
+    <div class="col-md-9">
+      <input
+        type="text"
+        class="form-control"
+        name="eventId"
+        id="eventId"
+        required
+        [(ngModel)]="tickets.eventId"
+        #nameModel="ngModel"
+        #nameEl
+      />
+      <abp-validation-summary
+        [control]="nameModel"
+        [controlEl]="nameEl"
+      ></abp-validation-summary>
+    </div>
+  </div> -->
+</div>
+
+<abp-modal-footer
+[cancelDisabled]="saving"
+[saveDisabled]="!createRoleForm.form.valid || saving"
+(onCancelClick)="bsModalRef.hide()"
+></abp-modal-footer>
+</form>

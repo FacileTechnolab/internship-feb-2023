@@ -9,9 +9,8 @@ namespace FirstCrudPoject.Ticket
         {
             CreateMap<CreateTicketInput, FirstCrudPoject.Models.Ticket>().ReverseMap();
             CreateMap<FirstCrudPoject.Models.Ticket, GetTicketOutput>()
-                .ForMember(x => x.Events, y => y.MapFrom(z => z.Events))
+                .ForMember(x => x.EventName, y => y.MapFrom(z => z.Events.Name))
                 .ReverseMap();
-            CreateMap<GetTicketOutput, FirstCrudPoject.Models.Ticket>().ReverseMap();
             CreateMap<UpdateTicketInput, FirstCrudPoject.Models.Ticket>().ReverseMap();
         }
     }

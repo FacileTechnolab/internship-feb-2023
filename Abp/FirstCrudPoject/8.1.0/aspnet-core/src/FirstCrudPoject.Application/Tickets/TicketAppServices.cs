@@ -55,6 +55,7 @@ namespace FirstCrudPoject.Tickets
             var outticket = await _ticketServices.GetAsync(inputticket.Id);
             if (outticket != null)
             {
+
                 outticket.EventId = inputticket.EventId;
                 outticket.TicketHolderName = inputticket.TicketHolderName;
                 outticket.Discount = inputticket.Discount;
@@ -66,7 +67,7 @@ namespace FirstCrudPoject.Tickets
 
         public async Task<PagedResultDto<GetTicketOutput>> GetTicket(GetTicketInput inputticket)
         {
-            var query = _ticketServices.GetAll().Include(x => x.Events).WhereIf(!inputticket.Filter.IsNullOrWhiteSpace(), x => x.TicketHolderName.Contains(inputticket.Filter)).AsQueryable();
+            var query = _ticketServices.GetAll().Include(x => x.Events).WhereIf(!inputticket.Filter.IsNullOrWhiteSpace(), x => x.TicketHolderName.Contains(inputticket.Filter) || x.Discount.ToString() == inputticket.Filter || x.Events.Name.Contains(inputticket.Filter)).AsQueryable();
             var ticketcount = query.Count();
             var tickets = query.PageBy(inputticket).ToList();
             var result = ObjectMapper.Map<List<GetTicketOutput>>(tickets);

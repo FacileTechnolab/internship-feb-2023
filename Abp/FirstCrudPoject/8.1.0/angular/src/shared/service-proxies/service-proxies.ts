@@ -3143,65 +3143,6 @@ export interface ICreateUserDto {
     password: string;
 }
 
-export class Event implements IEvent {
-    id: number;
-    name: string;
-    description: string;
-    eventDate: moment.Moment;
-    entryFees: number;
-
-    constructor(data?: IEvent) {
-        if (data) {
-            for (var property in data) {
-                if (data.hasOwnProperty(property))
-                    (<any>this)[property] = (<any>data)[property];
-            }
-        }
-    }
-
-    init(_data?: any) {
-        if (_data) {
-            this.id = _data["id"];
-            this.name = _data["name"];
-            this.description = _data["description"];
-            this.eventDate = _data["eventDate"] ? moment(_data["eventDate"].toString()) : <any>undefined;
-            this.entryFees = _data["entryFees"];
-        }
-    }
-
-    static fromJS(data: any): Event {
-        data = typeof data === 'object' ? data : {};
-        let result = new Event();
-        result.init(data);
-        return result;
-    }
-
-    toJSON(data?: any) {
-        data = typeof data === 'object' ? data : {};
-        data["id"] = this.id;
-        data["name"] = this.name;
-        data["description"] = this.description;
-        data["eventDate"] = this.eventDate ? this.eventDate.toISOString() : <any>undefined;
-        data["entryFees"] = this.entryFees;
-        return data;
-    }
-
-    clone(): Event {
-        const json = this.toJSON();
-        let result = new Event();
-        result.init(json);
-        return result;
-    }
-}
-
-export interface IEvent {
-    id: number;
-    name: string;
-    description: string;
-    eventDate: moment.Moment;
-    entryFees: number;
-}
-
 export class ExternalAuthenticateModel implements IExternalAuthenticateModel {
     authProvider: string;
     providerKey: string;
@@ -3643,7 +3584,7 @@ export class GetTicketOutput implements IGetTicketOutput {
     ticketHolderName: string | undefined;
     discount: number;
     eventId: number;
-    events: Event;
+    eventName: string | undefined;
 
     constructor(data?: IGetTicketOutput) {
         if (data) {
@@ -3660,7 +3601,7 @@ export class GetTicketOutput implements IGetTicketOutput {
             this.ticketHolderName = _data["ticketHolderName"];
             this.discount = _data["discount"];
             this.eventId = _data["eventId"];
-            this.events = _data["events"] ? Event.fromJS(_data["events"]) : <any>undefined;
+            this.eventName = _data["eventName"];
         }
     }
 
@@ -3677,7 +3618,7 @@ export class GetTicketOutput implements IGetTicketOutput {
         data["ticketHolderName"] = this.ticketHolderName;
         data["discount"] = this.discount;
         data["eventId"] = this.eventId;
-        data["events"] = this.events ? this.events.toJSON() : <any>undefined;
+        data["eventName"] = this.eventName;
         return data;
     }
 
@@ -3694,7 +3635,7 @@ export interface IGetTicketOutput {
     ticketHolderName: string | undefined;
     discount: number;
     eventId: number;
-    events: Event;
+    eventName: string | undefined;
 }
 
 export class GetTicketOutputPagedResultDto implements IGetTicketOutputPagedResultDto {

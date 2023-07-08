@@ -54,6 +54,7 @@ import { VieweventComponent } from './events/viewevent/viewevent.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { CreateticketsComponent } from './tickets/createtickets/createtickets.component';
 import { EditticketsComponent } from './tickets/edittickets/edittickets.component';
+import {  ViewticketsComponent } from './tickets/viewtickets/viewtickets.component';
 
 @NgModule({
     declarations: [					
@@ -89,11 +90,12 @@ import { EditticketsComponent } from './tickets/edittickets/edittickets.componen
         CreateeventComponent,
         EditeventComponent,
         VieweventComponent,
-
+        ViewticketsComponent,
         //tickets
         TicketsComponent,
         CreateticketsComponent,
-        EditticketsComponent
+        EditticketsComponent,
+        
       
    ],
     imports: [
