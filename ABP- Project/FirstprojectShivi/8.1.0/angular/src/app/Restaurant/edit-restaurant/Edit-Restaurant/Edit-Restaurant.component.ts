@@ -15,6 +15,9 @@ id:number;
 saving = false;
 restaurant = new GetRestaurantOutput();
 restaurantDate: string;
+openingTime :string;
+closedTime :string;
+date=new GetRestaurantOutput ;
 
 
  
@@ -36,10 +39,9 @@ ngOnInit(): void {
     .getRestaurantById(this.id)
     .subscribe((result: GetRestaurantOutput) => {
       this.restaurant = result;
-      this.restaurantDate = moment(result.openingTime).format('dd/MM/yyyy HH:mm:ss');
-      // this.permissions = result.permissions;
-      // this.grantedPermissionNames = result.grantedPermissionNames;
-      // this.setInitialPermissionsStatus();
+     // this.restaurantDate = moment(result.openingTime).format('dd/MM/yyyy HH:mm:ss');
+      this.openingTime=result.openingTime.toISOString();
+      this.closedTime=result.closedTime.toISOString();
     });
    
 }
@@ -52,7 +54,10 @@ ngOnInit(): void {
 
 save(): void {
   this.saving = true;
-  this.restaurant.openingTime = moment(this.restaurantDate, 'dd/MM/yyyy HH:mm:ss');
+ // this.restaurant.openingTime = moment(this.restaurantDate, 'dd/MM/yyyy HH:mm:ss');
+  this.date.openingTime = moment(this.openingTime, 'HH:mm:ss')
+  this.date.closedTime = moment(this.closedTime, 'HH:mm:ss')
+
   const restaurant = new GetRestaurantOutput();
   restaurant.init(this.restaurant);
   // role.grantedPermissions = this.getCheckedPermissions();

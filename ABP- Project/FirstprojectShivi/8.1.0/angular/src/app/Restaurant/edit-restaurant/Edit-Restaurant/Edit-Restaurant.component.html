@@ -65,11 +65,12 @@
       </label>
       <div class="col-md-9">
         <input
-          type="datetime-local"
+          type="time"
           class="form-control"
           name="OpeningTime"
           id="OpeningTime"
-          [(ngModel)]="restaurant.openingTime"
+          [(ngModel)]="openingTime"
+          [ngModel]="openingTime | date : 'HH:mm:ss'"
           #OpeningTime="ngModel"
           #OpeningTimeEl
         />
@@ -81,11 +82,12 @@
       </label>
       <div class="col-md-9">
         <input
-          type="datetime-local"
+          type="time"
           class="form-control"
           name="ClosedTime"
           id="ClosedTime"
-          [(ngModel)]="restaurant.closedTime"
+          [(ngModel)]="closedTime"
+          [ngModel]="closedTime | date : 'HH:mm:ss'"
           #ClosedTime="ngModel"
           #ClosedTimeEl
         />

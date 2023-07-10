@@ -71,7 +71,7 @@ namespace FirstprojectShivi.Order
 		}
 		public async Task<PagedResultDto<GetOrderOutput>> GetOrder(GetOrderInput input)
 		{
-			var query = _orderrepository.GetAllIncluding(x => x.Restaurants).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)|| x.Price.ToString()==input.Filter||x.IsDelivery.ToString() == input.Filter|| x.RestaurantName.ToString() == input.Filter).ToList();
+			var query = _orderrepository.GetAllIncluding(x => x.Restaurants).WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.FoodName.Contains(input.Filter)|| x.Price.ToString()==input.Filter||x.IsDelivery.ToString() == input.Filter|| x.Restaurants.Name.Contains(input.Filter)).ToList();
 
 			var newQuery = query.AsQueryable();
 			

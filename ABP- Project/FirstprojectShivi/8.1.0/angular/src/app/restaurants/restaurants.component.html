@@ -57,8 +57,8 @@
                 <tr>
                   <th>{{ "RestaurantName" | localize }}</th>
                   <th>{{ "Location" | localize }}</th>
-                  <th>{{ "OpeningDateTime" | localize }}</th>
-                  <th>{{ "ClosedDateTime" | localize }}</th>
+                  <th>{{ "OpeningTime" | localize }}</th>
+                  <th>{{ "ClosedTime" | localize }}</th>
                   <th>{{ "Capacity" | localize }}</th>
 
                   <th style="width: 300px">{{ "Actions" | localize }}</th>
@@ -80,10 +80,10 @@
                   <td>{{ restro.name }}</td>
                   <td>{{ restro.location }}</td>
                   <td>
-                    {{ restro.openingTime | date : " d/M/yy h:mm:ss" }}
+                    {{ restro.openingTime | date : "  hh:mm:ss" }}
                   </td>
                   <td>
-                    {{ restro.closedTime | date : " d/M/yy h:mm:ss" }}
+                    {{ restro.closedTime | date : " hh:mm:ss" }}
                   </td>
                   <td>{{ restro.capacity }}</td>
 
