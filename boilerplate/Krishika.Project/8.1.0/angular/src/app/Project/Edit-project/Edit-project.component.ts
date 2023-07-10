@@ -14,7 +14,7 @@ import * as moment from 'moment';
 export class EditProjectComponent extends  AppComponentBase implements OnInit {
   saving = false;
   id: number;
-  
+  date = new GetProjectsOutput;
   startDate: string;
   endDate: string;
   proj = new UpdateProjectsInput ();
@@ -35,22 +35,21 @@ export class EditProjectComponent extends  AppComponentBase implements OnInit {
       .getProjectsById(this.id)
       .subscribe((result: GetProjectsOutput) => {
         this.proj = result;
-        debugger
+      
         //this.Date=moment(result.startDate).format('YYYY-DD-MM');
-        this.startDate=moment(result.startDate).format('YYYY-DD-MM');
-        this.endDate=moment(result.endDate).format('YYYY-DD-MM');
-        // this.permissions = result.permissions;
-        // this.grantedPermissionNames = result.grantedPermissionNames;
-        // this.setInitialPermissionsStatus();
-        
+        // this.startDate=moment(result.startDate).format('DD-MM-yyyy');
+        // this.endDate=moment(result.endDate).format('DD-MM-yyyy');
+           this.startDate=result.startDate.toISOString();
+        this.endDate=result.endDate.toISOString();
       });
   }
  
   save(): void {
     this.saving = true;
-   // this.Date = moment(this.startDate, 'YYYY-MM-DD')
+    this.date.startDate = moment(this.startDate, 'MM-dd-yyyy')
+    this.date.endDate = moment(this.endDate, 'MM-dd-yyyy')
     const project = new GetProjectsOutput();
-    project.init(this.proj);
+    project.init(this.date);
    // project.grantedPermissions = this.getCheckedPermissions();
    
 

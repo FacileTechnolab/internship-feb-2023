@@ -68,7 +68,7 @@ namespace Krishika.Project.Projects
         }
         public async Task<PagedResultDto<GetProjectsOutput>> GetProject(GetProjectsInput input)
         {
-            var query = _projectsService.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter)).AsQueryable();
+            var query = _projectsService.GetAll().WhereIf(!input.Filter.IsNullOrWhiteSpace(), x => x.Name.Contains(input.Filter) || x.Description == input.Filter).AsQueryable();
 
             var projectCount = await query.CountAsync();
             var project = await query.PageBy(input).ToListAsync();

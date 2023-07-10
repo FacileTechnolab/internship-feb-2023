@@ -51,16 +51,14 @@ autocomplete="off"
           </label>
           <div class="col-md-9">
             <input
-              type="date" 
+              type="date"
               class="form-control"
-              name="StartDate"
-              id="StartDate"
-              required
-               [(ngModel)]="startDate "
-
+              name="start-date" 
+              [(ngModel)]="startDate"
+              [ngModel]="startDate | date: 'yyyy-MM-dd'"
               #StartDateModel="ngModel"
               #StartDateNameEl
-            />
+            /> 
             <abp-validation-summary
                [control]="StartDateModel"
               [controlEl]="StartDateNameEl"
@@ -80,6 +78,7 @@ autocomplete="off"
               id="EndDate"
               required
                [(ngModel)]="endDate"
+               [ngModel]="endDate | date: 'yyyy-MM-dd'"
               #EndDateModel="ngModel"
               #EndDateNameEl
             />
