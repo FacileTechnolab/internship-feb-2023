@@ -13,9 +13,13 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesDetailsComponent } from './services-details/services-details.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { ServicesBoxComponent } from './services-box/services-box.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+
 
 @NgModule({
-  declarations: [										
+  declarations: [														
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -26,7 +30,10 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
       BlogComponent,
       ContactComponent,
       ServicesDetailsComponent,
-      BlogDetailsComponent
+      BlogDetailsComponent,
+      ServicesBoxComponent,
+      TestimonialsComponent,
+      BreadcrumbsComponent
    ],
   imports: [
     BrowserModule,
