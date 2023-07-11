@@ -9,16 +9,26 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './Services/Services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ElementsComponent } from './elements/elements.component';
+import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
+import { BlogComponent } from './Blog/Blog.component';
+import { BlogdetailsComponent } from './Blogdetails/Blogdetails.component';
+import { ContactComponent } from './Contact/Contact.component';
 
 @NgModule({
-  declarations: [						
+  declarations: [											
     AppComponent,
       HeaderComponent,
       FooterComponent,
       HomeComponent,
       AboutComponent,
       ServicesComponent,
-      PortfolioComponent
+      PortfolioComponent,
+      ElementsComponent,
+      PortfolioDetailsComponent,
+      BlogComponent,
+      BlogdetailsComponent,
+      ContactComponent
    ],
   imports: [
     BrowserModule,

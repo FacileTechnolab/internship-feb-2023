@@ -14,9 +14,11 @@ import { HotelsComponent } from './Hotels/Hotels.component';
 import { GalleryComponent } from './Gallery/Gallery.component';
 import { SponsorsComponent } from './Sponsors/Sponsors.component';
 import { ContactComponent } from './Contact/Contact.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HotelreviewComponent } from './hotelreview/hotelreview.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -28,14 +30,16 @@ import { ContactComponent } from './Contact/Contact.component';
     HotelsComponent,
     GalleryComponent,
     SponsorsComponent,
-    ContactComponent
-  ],
+    ContactComponent,
+      HotelreviewComponent
+   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
 
-    AppRoutingModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

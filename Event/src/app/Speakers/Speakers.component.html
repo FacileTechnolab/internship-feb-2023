@@ -2,31 +2,29 @@
 <section id="speakers">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
-      <h2>Event Speakers</h2>
-      <p>Here are some of our speakers</p>
+      <h2>{{ title }}</h2>
+      <p>{{ desc }}</p>
     </div>
 
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" *ngFor="let data of speakersdetails">
         <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-          <img
-            src="assets/img/speakers/1.jpg"
-            alt="Speaker 1"
-            class="img-fluid"
-          />
+          <img [src]="data.img" alt="Speaker 1" class="img-fluid" />
           <div class="details">
-            <h3><a href="speaker-details.html">Brenden Legros</a></h3>
-            <p>Quas alias incidunt</p>
+            <h3>
+              <a href="speaker-details.html">{{ data.title }}</a>
+            </h3>
+            <p>{{ data.desc }}</p>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i [className]="data.twitter"></i></a>
+              <a href=""><i [className]="data.facebook"></i></a>
+              <a href=""><i [className]="data.insta"></i></a>
+              <a href=""><i [className]="data.link"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <!-- <div class="col-lg-4 col-md-6">
         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
           <img
             src="assets/img/speakers/2.jpg"
@@ -120,7 +118,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </section>
