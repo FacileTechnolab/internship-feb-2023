@@ -17,8 +17,9 @@ import { ContactComponent } from './Contact/Contact.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HotelreviewComponent } from './hotelreview/hotelreview.component';
 
+
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -31,8 +32,8 @@ import { HotelreviewComponent } from './hotelreview/hotelreview.component';
     GalleryComponent,
     SponsorsComponent,
     ContactComponent,
-      HotelreviewComponent
-   ],
+    HotelreviewComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

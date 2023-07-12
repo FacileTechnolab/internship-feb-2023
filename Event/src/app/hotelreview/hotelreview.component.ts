@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NumberSymbol } from '@angular/common';
+import * as data from '../../assets/json/hotelreview.json';
 @Component({
   selector: 'app-hotelreview',
   templateUrl: './hotelreview.component.html',
@@ -11,13 +11,14 @@ export class HotelreviewComponent implements OnInit {
   hotelreview: any;
   url: string = '/assets/json/hotelreview.json';
 
+  @Output() data: EventEmitter<object[]> = new EventEmitter<object[]>();
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    // this.http.get(this.url).subscribe(res => {
-    //   this.hotelreview = res;
-    //   console.log('hotel', this.hotelreview)
-    // });
+    this.http.get(this.url).subscribe(res => {
+      this.data.emit([res]);
+    });
 
   }
 
