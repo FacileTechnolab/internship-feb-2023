@@ -4,7 +4,8 @@
       <h2>Hotels</h2>
       <p>Her are some nearby hotels</p>
     </div>
-    <app-hotelreview></app-hotelreview>
+
+    <app-hotelreview [value]="data | async"></app-hotelreview>
 
     <!-- <div>{{ hotelreview }}</div> -->
     <div class="row" data-aos="fade-up" data-aos-delay="100">

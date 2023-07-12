@@ -11,14 +11,18 @@ export class HotelreviewComponent implements OnInit {
   hotelreview: any;
   url: string = '/assets/json/hotelreview.json';
 
-  @Output() data: EventEmitter<object[]> = new EventEmitter<object[]>();
+  // @Output() data: EventEmitter<object[]> = new EventEmitter<object[]>();
+  @Input() value: any;
+  data: any;
+
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(res => {
-      this.data.emit([res]);
-    });
+    console.log('child', this.data);
+    // this.http.get(this.url).subscribe(res => {
+    //   this.hotelreview([res]);
+    // });
 
   }
 

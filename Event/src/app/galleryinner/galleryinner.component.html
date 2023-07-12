@@ -1,0 +1,5 @@
+<div class="swiper-slide" *ngFor="let data of value">
+  <a {{data.href}} class="gallery-lightbox"
+    ><img [src]="data.src" class="img-fluid" alt=""
+  /></a>
+</div>

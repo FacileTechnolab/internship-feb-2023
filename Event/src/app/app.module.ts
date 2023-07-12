@@ -16,10 +16,12 @@ import { SponsorsComponent } from './Sponsors/Sponsors.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HotelreviewComponent } from './hotelreview/hotelreview.component';
+import { EventtimeComponent } from './Eventtime/Eventtime.component';
+import { GalleryinnerComponent } from './galleryinner/galleryinner.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -32,8 +34,10 @@ import { HotelreviewComponent } from './hotelreview/hotelreview.component';
     GalleryComponent,
     SponsorsComponent,
     ContactComponent,
-    HotelreviewComponent
-  ],
+    HotelreviewComponent,
+      EventtimeComponent,
+      GalleryinnerComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

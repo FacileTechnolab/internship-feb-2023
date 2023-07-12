@@ -1,0 +1,134 @@
+<ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
+  <li class="nav-item" *ngFor="let data of value">
+    <a class="nav-link" href="" role="tab" data-bs-toggle="tab">{{
+      data.Id
+    }}</a>
+
+    <!-- <li class="nav-item">
+    <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Day 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Day 3</a>
+  </li> -->
+  </li>
+</ul>
+
+<h3 class="sub-heading">
+  Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia.
+  Eius necessitatibus voluptatem quis labore perspiciatis quia.
+</h3>
+
+<div
+  class="tab-content row justify-content-center"
+  data-aos="fade-up"
+  data-aos-delay="200"
+  *ngFor="let data of value"
+>
+  <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time1 }}</time>
+      </div>
+      <div class="col-md-10">
+        <h4>{{ data.title }}</h4>
+        <p>{{ data.desc }}</p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time2 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img2" alt="Brenden Legros" />
+        </div>
+        <h4>
+          {{ data.title2 }}<span>{{ data.des2 }}</span>
+        </h4>
+        <p>{{ data.desc2 }}</p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time3 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img3" alt="Hubert Hirthe" />
+        </div>
+        <h4>
+          {{ data.title3 }} <span>{{ data.des3 }}</span>
+        </h4>
+        <p>{{ data.desc3 }}</p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time4 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img4" alt="Cole Emmerich" />
+        </div>
+        <h4>
+          {{ data.title4 }} <span>{{ data.des4 }}</span>
+        </h4>
+        <p>
+          {{ data.desc4 }}
+        </p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time5 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img5" alt="Jack Christiansen" />
+        </div>
+        <h4>
+          {{ data.title5 }} <span>{{ data.des5 }}</span>
+        </h4>
+        <p>{{ data.desc5 }}</p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time6 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img6" alt="Alejandrin Littel" />
+        </div>
+        <h4>
+          {{ data.title6 }}
+          <span>{{ data.des6 }}</span>
+        </h4>
+        <p>{{ data.desc6 }}</p>
+      </div>
+    </div>
+
+    <div class="row schedule-item">
+      <div class="col-md-2">
+        <time>{{ data.time7 }}</time>
+      </div>
+      <div class="col-md-10">
+        <div class="speaker">
+          <img [src]="data.img7" alt="Willow Trantow" />
+        </div>
+        <h4>
+          {{ data.title7 }}<span>{{ data.des7 }}</span>
+        </h4>
+        <p>{{ data.desc7 }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Schdule Day 1 -->
+  <!-- </div> -->
+</div>
