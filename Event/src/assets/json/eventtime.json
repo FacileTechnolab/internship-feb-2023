@@ -1,5 +1,7 @@
-[{
-    "Id":"Day 1",
+[
+    {
+        "isActive": true,
+    "Id":"Day-1",
     "time1":"09.30AM",
     "title":"Registration",
     "desc":"Fugit voluptas iusto maiores temporibus autem numquam magnam.",
@@ -36,7 +38,8 @@
 
 },
 {
-    "Id":"Day 2",
+    "isActive": false,
+    "Id":"Day-2",
     "time2":"10:00 AM",
     "title2":"Libero corrupti explicabo itaque.",
     "des2":"Brenden Legros",
@@ -68,7 +71,8 @@
     "img7":"assets/img/speakers/6.jpg",
     "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis."
 },{
-    "Id":"Day 3",
+    "isActive": false,
+    "Id":"Day-3",
     "time2":"10:00 AM",
     "title2":"Libero corrupti explicabo itaque.",
     "des2":"Brenden Legros",

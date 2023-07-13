@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Sponsors.component.css']
 })
 export class SponsorsComponent implements OnInit {
-
-  constructor() { }
+  title = "Sponsors";
+  icon: any;
+  url: string = '/assets/json/sponsorelogo.json';
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(res => {
+      this.icon = res;
+      console.log('icon', this.icon)
+    });
   }
 
 }

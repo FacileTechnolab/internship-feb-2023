@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  "title1" = "The Annual";
+  "title2" = "Marketing";
+  "title3" = "Conference";
+  "desc" = "10-12 December, Downtown Conference Center, New York";
+  "link" = ""
   constructor() { }
 
   ngOnInit() {

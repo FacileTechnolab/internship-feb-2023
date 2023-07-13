@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/Header.component';
@@ -18,10 +18,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HotelreviewComponent } from './hotelreview/hotelreview.component';
 import { EventtimeComponent } from './Eventtime/Eventtime.component';
 import { GalleryinnerComponent } from './galleryinner/galleryinner.component';
-
+import { TicketComponent } from './About/Ticket/Ticket.component';
+import { FAQComponent } from './FAQ/FAQ.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [	
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -35,14 +36,17 @@ import { GalleryinnerComponent } from './galleryinner/galleryinner.component';
     SponsorsComponent,
     ContactComponent,
     HotelreviewComponent,
-      EventtimeComponent,
-      GalleryinnerComponent
+    EventtimeComponent,
+    GalleryinnerComponent,
+    TicketComponent,
+      FAQComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-
+    HttpClientModule,
+    NgbModule,
+    NgbNavModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

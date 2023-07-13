@@ -1,0 +1,34 @@
+[{
+    "title":" Standard Access",
+    "price":"$150",
+    "t1":"Regular Seating",
+    "t2":"Coffee Break",
+    "t3":"Custom Badge",
+    "t4":"Community Access",
+    "t5":"Workshop  Access",
+    "t6":"After Party",
+    "button":"  Buy Now"
+},
+{
+    "title":"  Pro Access",
+    "price":"$250",
+    "t1":"Regular Seating",
+    "t2":"Coffee Break",
+    "t3":"Custom Badge",
+    "t4":"Community Access",
+    "t5":"Workshop  Access",
+    "t6":"After Party",
+    "button":"  Buy Now"
+},
+{
+    "title":" Premium Access",
+    "price":"$350",
+    "t1":"Regular Seating",
+    "t2":"Coffee Break",
+    "t3":"Custom Badge",
+    "t4":"Community Access",
+    "t5":"Workshop  Access",
+    "t6":"After Party",
+    "button":"Buy Now"
+}
+]

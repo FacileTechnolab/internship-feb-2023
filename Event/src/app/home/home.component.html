@@ -1,9 +1,11 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-    <h1 class="mb-4 pb-0">The Annual<br /><span>Marketing</span> Conference</h1>
+    <h1 class="mb-4 pb-0">
+      {{ title1 }}<br /><span>{{ title2 }}</span> {{ title3 }}
+    </h1>
     <p class="mb-4 pb-0">
-      10-12 December, Downtown Conference Center, New York
+      {{ desc }}
     </p>
     <a
       href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
@@ -15,7 +17,6 @@
 <!-- End Hero Section -->
 
 <main id="main">
-  <app-Gallery></app-Gallery>
   <!-- ======= About Section ======= -->
   <!-- <section id="about">
     <div class="container" data-aos="fade-up">
