@@ -1,0 +1,10 @@
+<div class="gallery-slider swiper">
+  <div class="swiper-wrapper align-items-center" *ngFor="let data of value">
+    <div class="swiper-slide">
+      <a [href]="data.href" class="gallery-lightbox"
+        ><img [src]="data.src" class="img-fluid" alt=""
+      /></a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

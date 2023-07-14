@@ -1,0 +1,171 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <button ngbNavLink>One</button>
+    <ng-template ngbNavContent>
+      <p>
+        Raw denim you probably haven't heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+        butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui
+        irure terry richardson ex squid. Aliquip placeat salvia cillum iphone.
+        Seitan aliquip quis cardigan american apparel, butcher voluptate nisi
+        qui.
+      </p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <button ngbNavLink>Two</button>
+    <ng-template ngbNavContent>
+      <p>
+        Exercitation +1 labore velit, blog sartorial PBR leggings next level wes
+        anderson artisan four loko farm-to-table craft beer twee. Qui photo
+        booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+        ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore
+        aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero
+        magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes
+        anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry
+        richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+        sint qui sapiente accusamus tattooed echo park.
+      </p>
+    </ng-template>
+  </li>
+</ul>
+
+<!-- <div *ngFor="let value of values">
+  <ul
+    class="nav nav-tabs"
+    role="tablist"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    <li class="nav-item" *ngFor="let value of values">
+      <a
+        class="nav-link active"
+        href="#{{ value.Id }}"
+        role="tab"
+        data-bs-toggle="tab"
+        >Day 1</a
+      >
+    </li>
+  </ul>
+
+  <h3 class="sub-heading">
+    Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet
+    officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.
+  </h3>
+
+  <div
+    class="tab-content row justify-content-center aos-init aos-animate"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <div
+      role="tabpanel"
+      class="col-lg-9 tab-pane fade show active"
+      [id]="value.Id"
+    >
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time1 }}</time>
+        </div>
+        <div class="col-md-10">
+          <h4>{{ value.title }}</h4>
+          <p>{{ value.desc }}</p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time2 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img2" alt="Brenden Legros" />
+          </div>
+          <h4>
+            {{ value.title2 }}<span>{{ value.des2 }}</span>
+          </h4>
+          <p>{{ value.desc2 }}</p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time3 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img3" alt="Hubert Hirthe" />
+          </div>
+          <h4>
+            {{ value.title3 }} <span>{{ value.des3 }}</span>
+          </h4>
+          <p>{{ value.desc3 }}</p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time4 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img4" alt="Cole Emmerich" />
+          </div>
+          <h4>
+            {{ value.title4 }} <span>{{ value.des4 }}</span>
+          </h4>
+          <p>
+            {{ value.desc4 }}
+          </p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time5 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img5" alt="Jack Christiansen" />
+          </div>
+          <h4>
+            {{ value.title5 }} <span>{{ value.des5 }}</span>
+          </h4>
+          <p>{{ value.desc5 }}</p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time6 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img6" alt="Alejandrin Littel" />
+          </div>
+          <h4>
+            {{ value.title6 }}
+            <span>{{ value.des6 }}</span>
+          </h4>
+          <p>{{ value.desc6 }}</p>
+        </div>
+      </div>
+
+      <div class="row schedule-item">
+        <div class="col-md-2">
+          <time>{{ value.time7 }}</time>
+        </div>
+        <div class="col-md-10">
+          <div class="speaker">
+            <img [src]="value.img7" alt="Willow Trantow" />
+          </div>
+          <h4>
+            {{ value.title7 }}<span>{{ value.des7 }}</span>
+          </h4>
+          <p>{{ value.desc7 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
