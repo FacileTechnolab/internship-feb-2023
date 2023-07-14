@@ -788,7 +788,7 @@
   # Stats Counter Section
   --------------------------------------------------------------*/
   .stats-counter {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats-bg.jpg") center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/img/stats-bg.jpg") center center;
     background-size: cover;
     padding: 100px 0;
   }
@@ -1103,7 +1103,7 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/team-shape.svg) no-repeat center bottom;
+    background: url(assets/img/team-shape.svg) no-repeat center bottom;
     background-size: contain;
     z-index: 1;
   }
