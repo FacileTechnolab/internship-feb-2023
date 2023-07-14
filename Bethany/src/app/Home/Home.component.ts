@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Home.component.css']
 })
 export class HomeComponent implements OnInit {
+title="Your New Online Presence with Bethany"
+subtitle="We are team of talented designers making websites with Bootstrap"
+btn="Get Started"
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+
+constructor() { }
+
+  ngOnInit() {}
 
 }

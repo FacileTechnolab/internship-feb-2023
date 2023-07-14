@@ -1,0 +1,21 @@
+[{
+    "icon":"bx bxl-dribbble",
+    "name":"Lorem Ipsum",
+    "desc":"Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi"
+},
+{
+    "icon":"bx bx-file",
+    "name":"Sed ut perspiciatis",
+    "desc":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore"
+},
+{
+    "icon":"bx bx-tachometer",
+    "name":"Magni Dolores",
+    "desc":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia"
+},
+{
+    "icon":"bx bx-world",
+    "name":"Nemo Enim",
+    "desc":"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis"
+}
+]

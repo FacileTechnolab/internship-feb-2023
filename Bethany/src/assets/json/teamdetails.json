@@ -1,0 +1,40 @@
+[{
+    "img":"assets/image/team/team-1.jpg",
+    "name":"Walter White",
+    "title":"Chief Executive Officer",
+    "desc":"Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+    "twiter":"ri-twitter-fill",
+    "facebook":"ri-facebook-fill",
+    "insta":"ri-instagram-fill",
+    "linked":" ri-linkedin-box-fill"
+},
+{
+    "img":"assets/image/team/team-2.jpg",
+    "name":"Sarah Jhonson",
+    "title":"Product Manager",
+    "desc":"Aut maiores voluptates amet et quis praesentium qui senda para",
+    "twiter":"ri-twitter-fill",
+    "facebook":"ri-facebook-fill",
+    "insta":"ri-instagram-fill",
+    "linked":" ri-linkedin-box-fill"
+},
+{
+    "img":"assets/image/team/team-3.jpg",
+    "name":"William Anderson",
+    "title":"CTO",
+    "desc":"Quisquam facilis cum velit laborum corrupti fuga rerum quia",
+    "twiter":"ri-twitter-fill",
+    "facebook":"ri-facebook-fill",
+    "insta":"ri-instagram-fill",
+    "linked":" ri-linkedin-box-fill"
+},
+{
+    "img":"assets/image/team/team-4.jpg",
+    "name":"Amanda Jepson",
+    "title":"Accountant",
+    "desc":"Dolorum tempora officiis odit laborum officiis et et accusamus",
+    "twiter":"ri-twitter-fill",
+    "facebook":"ri-facebook-fill",
+    "insta":"ri-instagram-fill",
+    "linked":" ri-linkedin-box-fill"
+}]
