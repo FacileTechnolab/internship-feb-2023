@@ -1,4 +1,4 @@
-<div *ngFor="let eventsbox of value">
+<!-- <div *ngFor="let eventsbox of value">
 <div class="swiper-slide event-item d-flex flex-column justify-content-end" [style.backgroundImage]="'url(' + eventsbox.url + ')'">
   <h3>{{eventsbox.evntstitle}}</h3>
   <div class="price align-self-start">{{eventsbox.evntsprice}}</div>
@@ -6,4 +6,17 @@
     {{eventsbox.eventdesc}}
   </p>
 </div>
-</div>
+</div>  -->
+
+<owl-carousel-o [options]="customOptions" >
+  <ng-template carouselSlide *ngFor="let eventsbox of value">
+    <div class="carousel-Slide event-item d-flex flex-column justify-content-end" [style.backgroundImage]="'url(' + eventsbox.url + ')'">
+    <h3>{{eventsbox.evntstitle}}</h3>
+    <div class="price align-self-start">{{eventsbox.evntsprice}}</div>
+    <p class="description">
+      {{eventsbox.eventdesc}}
+    </p>
+  </div></ng-template>
+
+</owl-carousel-o>
+

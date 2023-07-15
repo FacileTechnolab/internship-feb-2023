@@ -1,0 +1,39 @@
+[
+    {
+        "qouticonleft":"bi bi-quote quote-icon-left",
+        "qouticonright":"bi bi-quote quote-icon-right",
+       "testidesc":"Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+       "testititle": "Saul Goodman",
+       "testisubtitle": "Ceo & Founder",
+       "staricon": "bi bi-star-fill",
+        "testprofileimg":"assets/img/testimonials/testimonials-1.jpg"
+    },
+    {
+        "qouticonleft":"bi bi-quote quote-icon-left",
+        "qouticonright":"bi bi-quote quote-icon-right",
+       "testidesc":"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+       "testititle": "Sara Wilsson",
+       "testisubtitle": "Designer",
+       "staricon": "bi bi-star-fill",
+        "testprofileimg":"assets/img/testimonials/testimonials-2.jpg"
+    },
+    {
+        "qouticonleft":"bi bi-quote quote-icon-left",
+        "qouticonright":"bi bi-quote quote-icon-right",
+       "testidesc":"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+       "testititle": "Jena Karlis",
+       "testisubtitle": "Store Owner",
+       "staricon": "bi bi-star-fill",
+        "testprofileimg":"assets/img/testimonials/testimonials-3.jpg"
+    },
+    {
+        "qouticonleft":"bi bi-quote quote-icon-left",
+        "qouticonright":"bi bi-quote quote-icon-right",
+       "testidesc":" Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+       "testititle": "John Larson",
+       "testisubtitle": "Entrepreneur",
+       "staricon": "bi bi-star-fill",
+        "testprofileimg":"assets/img/testimonials/testimonials-4.jpg"
+    }
+    
+]

@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,8 +22,12 @@ import { HttpClientModule} from '@angular/common/http';
 import { ChefboxComponent } from './chefbox/chefbox.component';
 import { EventsboxComponent } from './eventsbox/eventsbox.component';
 import { CounterpartComponent } from './counterpart/counterpart.component';
+import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { TestimonialsboxComponent } from './testimonialsbox/testimonialsbox.component';
+import { GalleryboxComponent } from './gallerybox/gallerybox.component';
 @NgModule({
-  declarations: [																	
+  declarations: [																			
     AppComponent,
       HeaderComponent,
       HomeComponent,
@@ -40,18 +45,20 @@ import { CounterpartComponent } from './counterpart/counterpart.component';
       BookatableComponent,
       ChefboxComponent,
       EventsboxComponent,
-      CounterpartComponent
+      CounterpartComponent,
+      TestimonialsboxComponent,
+      GalleryboxComponent
    ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
+ 
   
-    
-
-    
-  ],
-  providers: [   HttpClientModule],
+   ],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,5 +16,41 @@
         "evntstitle":"Birthday Parties",
         "evntsprice": "$499",
         "eventdesc": "Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis."
+    },
+    {
+        "url":"assets/img/events-1.jpg",
+        "evntstitle":"Custom Parties",
+        "evntsprice": "$99",
+        "eventdesc": "Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis."
+    },
+    {
+        "url":"assets/img/events-2.jpg",
+        "evntstitle":"Private Parties",
+        "evntsprice": "$289",
+        "eventdesc": "In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur."
+    },
+    {
+        "url":"assets/img/events-3.jpg",
+        "evntstitle":"Birthday Parties",
+        "evntsprice": "$499",
+        "eventdesc": "Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis."
+    },
+    {
+        "url":"assets/img/events-1.jpg",
+        "evntstitle":"Custom Parties",
+        "evntsprice": "$99",
+        "eventdesc": "Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis."
+    },
+    {
+        "url":"assets/img/events-2.jpg",
+        "evntstitle":"Private Parties",
+        "evntsprice": "$289",
+        "eventdesc": "In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur."
+    },
+    {
+        "url":"assets/img/events-3.jpg",
+        "evntstitle":"Birthday Parties",
+        "evntsprice": "$499",
+        "eventdesc": "Laborum aperiam atque omnis minus omnis est qui assumenda quos. Quis id sit quibusdam. Esse quisquam ducimus officia ipsum ut quibusdam maxime. Non enim perspiciatis."
     }
 ]

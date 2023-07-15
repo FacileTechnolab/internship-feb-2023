@@ -1019,6 +1019,11 @@
     padding: 30px;
   }
   
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #ce1212 !important;
+}
+
   @media (max-width: 575px) {
     .events .event-item {
       min-height: 500px;
@@ -1056,8 +1061,8 @@
   }
   
   @media (min-width: 1200px) {
-    .events .swiper-slide-active+.swiper-slide {
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    .events .carousel-Slide-active+.carousel-Slide {
+      border-left: 1px solid rgba(245, 242, 242, 0.5);
       border-right: 1px solid rgba(255, 255, 255, 0.5);
       z-index: 1;
     }

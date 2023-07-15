@@ -1,0 +1,16 @@
+
+<owl-carousel-o [options]="customOptions" >
+  <ng-template carouselSlide *ngFor="let gallbox of value">
+  
+      <div class="gallery-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide">
+            <a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg">
+              <img src={{gallbox.galleryimg}} class="img-fluid" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+  </ng-template>
+
+</owl-carousel-o>

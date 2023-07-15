@@ -2,18 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
-
 @Component({
-  selector: 'app-eventsbox',
-  templateUrl: './eventsbox.component.html',
-  styleUrls: ['./eventsbox.component.css']
+  selector: 'app-gallerybox',
+  templateUrl: './gallerybox.component.html',
+  styleUrls: ['./gallerybox.component.css']
 })
-export class EventsboxComponent implements OnInit {
+export class GalleryboxComponent implements OnInit {
 
-  url: string = "/assets/json/eventsdata.json" ;
+  url: string = "/assets/json/gallerydata.json" ;
   
   @Input() value: any;
-  eventsbox: any;
+  testimonibox: any;
  constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -35,10 +34,11 @@ export class EventsboxComponent implements OnInit {
         items: 2
       },
       740: {
-        items: 3
+        items: 5
       },
      
     },
     nav: false
   }
+
 }

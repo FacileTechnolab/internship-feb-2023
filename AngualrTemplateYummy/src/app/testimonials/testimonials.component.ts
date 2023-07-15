@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-testimonials',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit {
+  url: string = "/assets/json/testimonialsdata.json" ;
+  testimonibox: Observable<any> | undefined;
+  @Input() value: any;
 
-  constructor() { }
+ constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.testimonibox = this.http.get(this.url);
+    console.log(this.testimonibox)
   }
 
 }
