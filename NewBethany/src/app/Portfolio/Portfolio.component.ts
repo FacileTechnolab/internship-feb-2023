@@ -1,8 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
-
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-Portfolio',
@@ -10,15 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./Portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-id:any
-  constructor(private router: Router) { }
+url:string="/assets/json/portfolio.json"
 
-  ngOnInit() { }
-  onclick(id: any) {
-    debugger
-    this.router.navigate(['spekarinfo'], {
-      queryParams: { id: id },
-    });
-  }
+port: Observable<any> | undefined;
+constructor(private http:HttpClient) { }
 
+  ngOnInit() {
+    this.port=this.http.get(this.url)
+    // console.log(this.port)
+   }
+  
 }
+// onclick(id: any) {
+  //   debugger
+  //   this.router.navigate(['spekarinfo'], {
+  //     queryParams: { id: id },
+  //   });
+  // }

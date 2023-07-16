@@ -1,3 +1,91 @@
 [{
-    
-}]
+    "id":"1",
+    "img":"assets/image/portfolio/portfolio-1.jpg",
+    "head":"App 1",
+    "title":"App",
+    "pic":"assets/image/portfolio/portfolio-1.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{
+    "id":"2",
+    "img":"assets/image/portfolio/portfolio-2.jpg",
+    "head":"Web 3",
+    "title":"Web",
+    "pic":"assets/image/portfolio/portfolio-2.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{
+    "id":"3",
+    "img":"assets/image/portfolio/portfolio-3.jpg",
+    "head":"App 2",
+    "title":"App",
+    "pic":"assets/image/portfolio/portfolio-3.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{
+    "id":"4",
+    "img":"assets/image/portfolio/portfolio-4.jpg",
+    "head":"Card 2",
+    "title":"Card",
+    "pic":"assets/image/portfolio/portfolio-4.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{
+    "id":"5",
+    "img":"assets/image/portfolio/portfolio-5.jpg",
+    "head":"Web 2",
+    "title":"Web",
+    "pic":"assets/image/portfolio/portfolio-5.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{ 
+    "id":"6",
+    "img":"assets/image/portfolio/portfolio-6.jpg",
+    "head":"App 3",
+    "title":"App",
+    "pic":"assets/image/portfolio/portfolio-6.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{ 
+    "id":"7",
+    "img":"assets/image/portfolio/portfolio-7.jpg",
+    "head":"Card 1",
+    "title":"Card",
+    "pic":"assets/image/portfolio/portfolio-7.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{ 
+    "id":"8",
+    "img":"assets/image/portfolio/portfolio-8.jpg",
+    "head":"Card 3",
+    "title":"Card",
+    "pic":"assets/image/portfolio/portfolio-8.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+},
+{ 
+    "id":"9",
+    "img":"assets/image/portfolio/portfolio-9.jpg",
+    "head":"Web 3",
+    "title":"Web",
+    "pic":"assets/image/portfolio/portfolio-9.jpg",
+    "picicon":"bx bx-plus",
+    "link":"portfolioinner.component.html",
+    "class":"bx bx-link"
+}
+]
