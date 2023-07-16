@@ -12,19 +12,19 @@
         <!-- <li><a href="#hero">Home</a></li> -->
         <li><a routerLink="/home">Home</a></li>
 
-        <li><a href="#about">About</a></li>
+        <li><a (click)="toAbout()" routerLinkActive="active">About</a></li>
         <!-- <li><a (click)="toAbout()" routerLinkActive="active">About</a></li> -->
       
-        <li><a href="#menu">Menu</a></li> 
+        <li><a (click)="toMenu()" routerLinkActive="active">Menu</a></li> 
         <!-- <li><a (click)="toMenu()" routerLinkActive="active">Menu</a></li> -->
 
         <!-- <li><a href="#events">Events</a></li> -->
         <li><a (click)="toEvents()" routerLinkActive="active">Events</a></li>
 
-         <li><a href="#chefs">Chefs</a></li>
+         <li><a (click)="toChefs()" routerLinkActive="active">Chefs</a></li>
         <!-- <li><a (click)="toChefs()" routerLinkActive="active">Chefs</a></li> -->
 
-        <li><a href="#gallery">Gallery</a></li> 
+        <li><a (click)="toGallery()" routerLinkActive="active">Gallery</a></li> 
         <!-- <li><a (click)="toGallery()" routerLinkActive="active">Gallery</a></li> -->
 
         <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -44,7 +44,7 @@
             <li><a href="#">Drop Down 4</a></li>
           </ul>
         </li>
-        <li><a href="#contact">Contact</a></li> 
+        <li><a (click)="toContact()" routerLinkActive="active">Contact</a></li> 
         <!-- <li><a (click)="toContact()"  routerLinkActive="active">Contact</a></li> -->
       </ul>
     </nav><!-- .navbar -->

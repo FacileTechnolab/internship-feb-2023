@@ -26,8 +26,12 @@ import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TestimonialsboxComponent } from './testimonialsbox/testimonialsbox.component';
 import { GalleryboxComponent } from './gallerybox/gallerybox.component';
+import { MenutabsComponent } from './menutabs/menutabs.component';
+import { MenutabscontentComponent } from './menutabscontent/menutabscontent.component';
+import { ContactinfoComponent } from './contactinfo/contactinfo.component';
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 @NgModule({
-  declarations: [																			
+  declarations: [																						
     AppComponent,
       HeaderComponent,
       HomeComponent,
@@ -47,14 +51,19 @@ import { GalleryboxComponent } from './gallerybox/gallerybox.component';
       EventsboxComponent,
       CounterpartComponent,
       TestimonialsboxComponent,
-      GalleryboxComponent
+      GalleryboxComponent,
+      MenutabsComponent,
+      MenutabscontentComponent,
+      ContactinfoComponent
    ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    ReactiveFormsModule
  
   
    ],

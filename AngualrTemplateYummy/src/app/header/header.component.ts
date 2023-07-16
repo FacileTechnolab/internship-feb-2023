@@ -11,31 +11,31 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  toHome(){
+    toHome(){
     document.getElementById("home")?.scrollIntoView({behavior: "smooth"});
      }
      toAbout(){
-      document.getElementById("about")?.scrollIntoView({});
+      document.getElementById("about")?.scrollIntoView({behavior: "smooth"});
     
      }
      toMenu(){
-      document.getElementById("menu")?.scrollIntoView({});
+      document.getElementById("menu")?.scrollIntoView({behavior: "smooth"});
     
      }
      toEvents(){
-      document.getElementById("events")?.scrollIntoView({});
+      document.getElementById("events")?.scrollIntoView({behavior: "smooth"});
     
      }
      toChefs(){
-      document.getElementById("chefs")?.scrollIntoView({});
+      document.getElementById("chefs")?.scrollIntoView({behavior: "smooth"});
     
      }
      toGallery(){
-      document.getElementById("events")?.scrollIntoView({});
+      document.getElementById("events")?.scrollIntoView({behavior: "smooth"});
     
      }
      toContact(){
-      document.getElementById("contact")?.scrollIntoView({});
+      document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});
     
      }
 }

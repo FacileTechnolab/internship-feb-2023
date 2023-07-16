@@ -1,0 +1,33 @@
+
+<ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+  <li class="nav-item" *ngFor="let tab of tabsArray; let sr = index" (click)="setTab(sr)">
+    <a class="nav-link" [ngClass]="activatedTab == sr ? 'active' : ''" >
+      <h4>{{tab}}</h4>
+    </a>
+  </li>
+  <!-- End tab nav item -->
+
+  <!-- <li class="nav-item">
+    <a class="nav-link" >
+      <h4>Breakfast</h4>
+    </a>
+  </li> -->
+    <!-- End tab nav item -->
+
+  <!-- <li class="nav-item">
+    <a class="nav-link" >
+      <h4>Lunch</h4>
+    </a>
+  </li> -->
+  <!-- End tab nav item -->
+<!-- 
+  <li class="nav-item">
+    <a class="nav-link" >
+      <h4>Dinner</h4>
+    </a>
+  </li> -->
+  <!-- End tab nav item -->
+
+</ul>
+
