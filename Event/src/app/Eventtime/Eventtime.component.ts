@@ -1,38 +1,45 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+// import * as AOS from 'aos';
 
 @Component({
   selector: 'app-Eventtime',
   templateUrl: './Eventtime.component.html',
   styleUrls: ['./Eventtime.component.css'],
+
+
 })
 export class EventtimeComponent implements OnInit {
-  eventtime: any;
+  // eventtime: any;
   url: string = '/assets/json/eventtime.json';
-  @Input() values: any;
-  data: any[] = [];
+  @Input() tabarray: string[] = [];
+  @Output() onTabChange = new EventEmitter<number>();
 
-  active = 1;
+  activitedtab: number = 0;
+  activatedTabIndex: number = 0;
+  @Input() value: any;
+  constructor(private http: HttpClient) {
 
-  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-    AOS.init();
-    console.log('child', this.data);
+
   }
+  setTab(index: number) {
+    this.activitedtab = index;
+    this.onTabChange.emit(this.activitedtab);
+  }
+  data: any;
+  table: any;
+  ngOnInit() {
 
-  // onNavClick(value: any) {
 
-  //   var i, n = this.data.length;
-  //   for (i = 0; i < n; ++i) {
-  //     this.data[i].isActive = false;
-  //   }
+    this.http.get(this.url).subscribe(res => {
+      this.table = res;
+
+      console.log('child', this.data);
+
+    });
 
 
-  // value.isActive = !value.isActive;
-  // console.log('child', this.data);
-
+  }
 }
-
 

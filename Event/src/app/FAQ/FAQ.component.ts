@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class FAQComponent implements OnInit {
   "title" = "F.A.Q";
   faqdetails: any;
-
+  isDisplay: boolean = false;
   constructor(private http: HttpClient) { }
   "url": string = "/assets/json/faqdetails.json"
 
@@ -18,4 +18,10 @@ export class FAQComponent implements OnInit {
       console.log('faqdetails', this.faqdetails)
     });
   }
+
+  // OnEvent(id: number) {
+
+  //   this.isDisplay = !this.isDisplay;
+
+  // }
 }

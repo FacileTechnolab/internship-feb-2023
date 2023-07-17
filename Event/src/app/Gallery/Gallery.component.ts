@@ -9,13 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class GalleryComponent implements OnInit {
   title = "Gallery";
-  galleryimage: any;
   desc = "Check our gallery from the recent events";
   constructor(private http: HttpClient) { }
 
   data: Observable<any> | undefined;
   url: string = "/assets/json/galleryimg.json"
-
+  @Input() value: any;
   ngOnInit() {
     this.data = this.http.get(this.url);
 

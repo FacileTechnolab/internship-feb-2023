@@ -7,7 +7,7 @@
 
     <div class="row contact-info">
       <div class="col-md-4" *ngFor="let data of contactdetails">
-        <div class="contact-address">
+        <div [className]="data.c1">
           <i [className]="data.class"></i>
           <h3>{{ data.title }}</h3>
           <address>{{ data.desc }}</address>
@@ -32,12 +32,7 @@
     </div>
 
     <div class="form">
-      <form
-        action="forms/contact.php"
-        method="post"
-        role="form"
-        class="php-email-form"
-      >
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
         <div class="row">
           <div class="form-group col-md-6">
             <input
@@ -45,6 +40,7 @@
               name="name"
               class="form-control"
               id="name"
+              ngModel
               placeholder="Your Name"
               required
             />
@@ -55,6 +51,7 @@
               class="form-control"
               name="email"
               id="email"
+              ngModel
               placeholder="Your Email"
               required
             />
@@ -63,6 +60,7 @@
         <div class="form-group mt-3">
           <input
             type="text"
+            ngModel
             class="form-control"
             name="subject"
             id="subject"
@@ -75,17 +73,24 @@
             class="form-control"
             name="message"
             rows="5"
+            ngModel
             placeholder="Message"
             required
           ></textarea>
         </div>
-        <div class="my-3">
+        <!-- <div class="my-3">
           <div class="loading">Loading</div>
           <div class="error-message"></div>
           <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
+        </div> -->
         <div class="text-center">
-          <button type="submit">Send Message</button>
+          <button
+            class="btn btn-success"
+            style="padding: 10px; margin: 10px"
+            type="submit"
+          >
+            Send Message
+          </button>
         </div>
       </form>
     </div>

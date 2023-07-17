@@ -12,7 +12,7 @@
           <img [src]="data.img" alt="Speaker 1" class="img-fluid" />
           <div class="details">
             <h3>
-              <a href="speaker-details.html">{{ data.title }}</a>
+              <a (click)="onclick(data.id)">{{ data.title }}</a>
             </h3>
             <p>{{ data.desc }}</p>
             <div class="social">

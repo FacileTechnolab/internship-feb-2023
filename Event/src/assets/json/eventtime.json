@@ -1,6 +1,6 @@
 [
     {
-        "isActive": true,
+     "isActive": true,
     "Id":"Day-1",
     "time1":"09.30AM",
     "title":"Registration",
@@ -34,7 +34,9 @@
     "title7":"Quo qui praesentium nesciunt",
     "des7":"Willow Trantow",
     "img7":"assets/img/speakers/6.jpg",
-    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis."
+    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis.",
+    "index": 0
+ 
 
 },
 {
@@ -69,24 +71,25 @@
     "title7":"Quo qui praesentium nesciunt",
     "des7":"Willow Trantow",
     "img7":"assets/img/speakers/6.jpg",
-    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis."
+    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis.",
+    "index": 1
 },{
     "isActive": false,
     "Id":"Day-3",
     "time2":"10:00 AM",
     "title2":"Libero corrupti explicabo itaque.",
     "des2":"Brenden Legros",
-    "img2":"assets/img/speakers/1.jpg",
+    "img2":"assets/img/speakers/2.jpg",
     "desc2":"Facere provident incidunt quos voluptas.",
     "time3":"11:00 AM",
     "title3":"Et voluptatem iusto dicta nobis.",
     "des3":"Hubert Hirthe",
-    "img3":"assets/img/speakers/2.jpg",
+    "img3":"assets/img/speakers/3.jpg",
     "desc3":"Maiores dignissimos neque qui cum accusantium ut sit sint inventore",
     "time4":"12:00 AM",
     "title4":" Explicabo et rerum quis et ut ea.",
     "des4":"Cole Emmerich",
-    "img4":"assets/img/speakers/3.jpg",
+    "img4":"assets/img/speakers/1.jpg",
     "desc4":"Veniam accusantium laborum nihil eos eaque accusantium aspernatur.",
     "time5":"02:00 PM",
     "title5":"Qui non qui vel amet culpa sequi.",
@@ -102,7 +105,8 @@
     "title7":"Quo qui praesentium nesciunt",
     "des7":"Willow Trantow",
     "img7":"assets/img/speakers/6.jpg",
-    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis."
+    "desc7":"Voluptatem et alias dolorum est aut sit enim neque veritatis.",
+    "index": 2
 }
 
 

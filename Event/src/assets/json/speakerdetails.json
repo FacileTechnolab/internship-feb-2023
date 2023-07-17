@@ -1,4 +1,5 @@
 [{
+    "id":"1",
     "img":"assets/img/speakers/1.jpg",
     "title":"Brenden Legros",
     "desc":"Quas alias incidunt",
@@ -7,6 +8,7 @@
     "insta":"bi bi-instagram",
     "link":"bi bi-linkedin"
 },{
+    "id":"2",
     "img":"assets/img/speakers/2.jpg",
     "title":"Hubert Hirthe",
     "desc":"Consequuntur odio aut",
@@ -16,6 +18,7 @@
     "link":"bi bi-linkedin"
 },
 {
+    "id":"3",
     "img":"assets/img/speakers/3.jpg",
     "title":"Cole Emmerich",
     "desc":"Consequuntur odio aut",
@@ -25,6 +28,7 @@
     "link":"bi bi-linkedin"
 },
 {
+    "id":"4",
     "img":"assets/img/speakers/4.jpg",
     "title":"Jack Christiansen",
     "desc":"Debitis iure vero",
@@ -34,6 +38,7 @@
     "link":"bi bi-linkedin"
 },
 {
+    "id":"5",
     "img":"assets/img/speakers/5.jpg",
     "title":"Alejandrin Littel",
     "desc":"Qui molestiae natus",
@@ -43,6 +48,7 @@
     "link":"bi bi-linkedin"
 },
 {
+    "id":"6",
     "img":"assets/img/speakers/6.jpg",
     "title":"Willow Trantow",
     "desc":"Non autem dicta",
@@ -50,4 +56,5 @@
     "facebook":"bi bi-facebook",
     "insta":"bi bi-instagram",
     "link":"bi bi-linkedin"
-}]
+}
+]

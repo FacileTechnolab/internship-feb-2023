@@ -1,4 +1,5 @@
 <!-- ======= Hero Section ======= -->
+
 <section id="hero">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
     <h1 class="mb-4 pb-0">
@@ -7,10 +8,7 @@
     <p class="mb-4 pb-0">
       {{ desc }}
     </p>
-    <a
-      href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
-      class="glightbox play-btn mb-4"
-    ></a>
+    <a [attr.href]="link" class="glightbox play-btn mb-4"></a>
     <a href="#about" class="about-btn scrollto">About The Event</a>
   </div>
 </section>
@@ -1351,3 +1349,16 @@
   <!-- End Contact Section -->
 </main>
 <!-- End #main -->
+
+<app-About></app-About>
+
+<app-Speakers></app-Speakers>
+<app-Schedule></app-Schedule>
+<app-Venue></app-Venue>
+<app-Hotels></app-Hotels>
+<app-Gallery></app-Gallery>
+<app-Sponsors></app-Sponsors>
+<app-FAQ></app-FAQ>
+<app-newslatter></app-newslatter>
+<app-Contact> </app-Contact>
+<app-Ticket></app-Ticket>

@@ -20,9 +20,14 @@ import { EventtimeComponent } from './Eventtime/Eventtime.component';
 import { GalleryinnerComponent } from './galleryinner/galleryinner.component';
 import { TicketComponent } from './About/Ticket/Ticket.component';
 import { FAQComponent } from './FAQ/FAQ.component';
-
+import { NewslatterComponent } from './newslatter/newslatter.component';
+// import { ReactiveFormsModule } from '@angular/forms';
+import { SpeakerinfoComponent } from './speakerinfo/speakerinfo.component';
+import { FormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -39,16 +44,26 @@ import { FAQComponent } from './FAQ/FAQ.component';
     EventtimeComponent,
     GalleryinnerComponent,
     TicketComponent,
-      FAQComponent
-   ],
+    FAQComponent,
+    NewslatterComponent,
+    SpeakerinfoComponent,
+
+  ],
   imports: [
     BrowserModule,
+    FormsModule,
+
     AppRoutingModule,
     HttpClientModule,
+
     NgbModule,
-    NgbNavModule
+    NgbNavModule,
+    CarouselModule,
+
+    BrowserAnimationsModule
+
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

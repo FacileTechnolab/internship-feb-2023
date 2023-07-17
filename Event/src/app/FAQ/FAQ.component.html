@@ -9,22 +9,27 @@
       class="row justify-content-center"
       data-aos="fade-up"
       data-aos-delay="100"
-      *ngFor="let data of faqdetails"
     >
       <div class="col-lg-9">
         <ul class="faq-list">
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#">
-              {{ data.qus }} <i class="bi bi-chevron-down icon-show"></i
+          <li *ngFor="let data of faqdetails">
+            <div
+              data-bs-toggle="collapse"
+              class="collapsed question"
+              [attr.href]="'#' + data.id"
+              aria-expanded="false"
+            >
+              {{ data.qus }}
+              <i class="bi bi-chevron-down icon-show"></i
               ><i class="bi bi-chevron-up icon-close"></i>
             </div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+            <div [id]="data.id" class="collapse" data-bs-parent=".faq-list">
               <p>
                 {{ data.ans }}
               </p>
             </div>
           </li>
-          <!-- 
+          <!--
           <li>
             <div
               data-bs-toggle="collapse"
@@ -140,25 +145,5 @@
 <!-- End  F.A.Q Section -->
 
 <!-- ======= Subscribe Section ======= -->
-<section id="subscribe">
-  <div class="container" data-aos="zoom-in">
-    <div class="section-header">
-      <h2>Newsletter</h2>
-      <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-    </div>
 
-    <form method="POST" action="#">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-10 d-flex">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter your Email"
-          />
-          <button type="submit" class="ms-2">Subscribe</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
 <!-- End Subscribe Section -->

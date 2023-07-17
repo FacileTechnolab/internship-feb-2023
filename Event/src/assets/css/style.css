@@ -257,6 +257,7 @@ h6 {
   transition: 0.3s;
   position: relative;
   padding: 6px 4px;
+  cursor: pointer;
 }
 
 .navbar a i,
@@ -1637,4 +1638,7 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #f82249 !important;
 }

@@ -1,14 +1,17 @@
 [{
+    "c1":"contact-address",
     "class":"bi bi-geo-alt",
     "title":"Address",
     "desc":"A108 Adam Street, NY 535022, USA"
 },{
+    "c2":"contact-phone",
     "class":"bi bi-phone",
     "title":"Phone Number",
     "desc":"+1 5589 55488 55"
 },
 
     {
+        "c3":"contact-email",
         "class":"bi bi-envelope",
         "title":"Email",
         "desc":"info@example.com"

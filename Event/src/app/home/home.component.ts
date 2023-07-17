@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   "title2" = "Marketing";
   "title3" = "Conference";
   "desc" = "10-12 December, Downtown Conference Center, New York";
-  "link" = ""
+  "link" = "https://www.youtube.com/watch?v=jDDaplaOz7Q";
   constructor() { }
 
   ngOnInit() {
