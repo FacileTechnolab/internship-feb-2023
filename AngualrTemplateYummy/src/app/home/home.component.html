@@ -6,7 +6,7 @@
         <h2 data-aos="fade-up">{{hometitle}} <br> {{homesectitle}}</h2>
         <p data-aos="fade-up" data-aos-delay="100">{{homedesc}}</p>
         <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-          <a href="#book-a-table" class="btn-book-a-table">{{homebuttontext}}</a>
+          <a (click)="tobooktable()" routerLinkActive="active" class="btn-book-a-table">{{homebuttontext}}</a>
           <a [attr.href]="youlink" class="glightbox btn-watch-video d-flex align-items-center"><i [className]="homeicon"></i><span>Watch Video</span></a>
         </div>
       </div>

@@ -8,10 +8,16 @@
     </div>
 
  
-   
+    <owl-carousel-o [options]="customOptions" >
+      <ng-template carouselSlide *ngFor="let eventsbox of eventsboxs">
+        <app-eventsbox [eventsbox]="eventsbox"></app-eventsbox>
+       </ng-template>
+    
+    </owl-carousel-o>
+    
 
     
-       <app-eventsbox [value]="eventsbox | async"></app-eventsbox>
+      
         <!-- End Event item -->
 <!-- 
         <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">

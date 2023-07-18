@@ -42,8 +42,8 @@
       <div *ngFor="let menutabcont of menutabarry">
       <div *ngIf="activatedTabIndex == menutabcont.index">
         <div class="tab-header text-center">
-          <p>Menu</p>
-          <h3>Starters</h3>
+          <p>{{menutabcont.menutabtitle}}</p>
+          <h3>{{menutabcont.menusubtitle}}</h3>
         </div>
         <div class="row gy-5" >
     

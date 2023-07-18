@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
     toHome(){
-    document.getElementById("home")?.scrollIntoView({behavior: "smooth"});
+    document.getElementById("hero")?.scrollIntoView({behavior: "smooth"});
      }
      toAbout(){
       document.getElementById("about")?.scrollIntoView({behavior: "smooth"});
@@ -37,5 +37,9 @@ export class HeaderComponent implements OnInit {
      toContact(){
       document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});
     
+     }
+     tobooktable()
+     {
+      document.getElementById("book-a-table")?.scrollIntoView({behavior: "smooth"});
      }
 }

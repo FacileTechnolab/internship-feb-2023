@@ -13,20 +13,21 @@ export class MenuComponent implements OnInit {
 
   constructor() { 
     this.menutabarry = [
-      
         
           {
+               menutabtitle: 'Menu',
+               menusubtitle: 'Starters',
                menuconthraf : 'assets/img/menu/menu-item-1.png',
                menucontimg: 'assets/img/menu/menu-item-1.png',
                menuconttitle: 'Magnam Tiste',
                menuconttitingr: 'Lorem, deren, trataro, filede, nerada',
                menucontprice: '$5.95',
                index: 0
-             
-
           },
           
           {
+            menutabtitle: 'Menu',
+            menusubtitle: 'Breakfast',
             menuconthraf : 'assets/img/menu/menu-item-2.png',
             menucontimg: 'assets/img/menu/menu-item-2.png',
             menuconttitle: 'Magnam Tiste',
@@ -36,6 +37,8 @@ export class MenuComponent implements OnInit {
 
          },
          {
+          menutabtitle: 'Menu',
+          menusubtitle: 'Lunch',
           menuconthraf : 'assets/img/menu/menu-item-3.png',
           menucontimg: 'assets/img/menu/menu-item-3.png',
           menuconttitle: 'Magnam Tiste',
@@ -45,13 +48,15 @@ export class MenuComponent implements OnInit {
 
        },
        {
+        menutabtitle: 'Menu',
+        menusubtitle: 'Dinner',
         menuconthraf : 'assets/img/menu/menu-item-4.png',
         menucontimg: 'assets/img/menu/menu-item-4.png',
         menuconttitle: 'Magnam Tiste',
         menuconttitingr: 'Lorem, deren, trataro, filede, nerada',
         menucontprice: '$5.95',
         index: 3
-     }
+       }
    
         
          

@@ -19,5 +19,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
+  tobooktable()
+  {
+   document.getElementById("book-a-table")?.scrollIntoView({behavior: "smooth"});
+  }
 
 }

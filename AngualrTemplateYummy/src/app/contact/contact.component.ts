@@ -24,7 +24,6 @@ export class ContactComponent implements OnInit {
   }
   onSubmit(data:NgForm) {
     console.warn(data);
-    data.reset();
     alert("success");
     
     }

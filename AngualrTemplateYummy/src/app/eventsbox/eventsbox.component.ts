@@ -12,11 +12,12 @@ export class EventsboxComponent implements OnInit {
 
   url: string = "/assets/json/eventsdata.json" ;
   
-  @Input() value: any;
-  eventsbox: any;
+  @Input() eventsbox: any;
  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    debugger;
+    console.log(this.eventsbox)
   }
   customOptions: OwlOptions = {
     loop: true,
