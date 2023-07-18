@@ -1,3 +1,23 @@
-<p>
-  contactinfo works!
-</p>
+<div *ngFor="let contactvalue of contactdata" >
+<div class="col-md-6" >
+  <div class="info-item  d-flex align-items-center">
+    <i [className]="contactvalue.contacticon"></i>
+    <div>
+      <h3>{{contactvalue.contaboxtitle}}</h3>
+      <p>{{contactvalue.contaboxdesc}}</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="col-md-6" >
+  <div class="info-item  d-flex align-items-center">
+    <i [className]="contacticon"></i>
+    <div>
+      <h3>{{contaboxtitle}}</h3>
+      <div><strong>{{contaboxstrong1}}</strong> {{contaboxdesc1}}
+        <strong>{{contaboxstrong2}}</strong>{{contaboxdesc2}}
+      </div>
+    </div>
+  </div>
+</div>

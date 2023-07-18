@@ -12,16 +12,20 @@ export class CounterComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.countervalue = [
       {
-        countertitle: 'Clients'
+        countertitle: 'Clients',
+        counterend: '234'
       },
       {
-        countertitle: 'Projects'
+        countertitle: 'Projects',
+        counterend: '500'
       },
       {
-        countertitle: 'Hours Of Support'
+        countertitle: 'Hours Of Support',
+        counterend: '670'
       },
       {
-        countertitle: 'Workers'
+        countertitle: 'Workers',
+        counterend: '670'
       },
     ]
    }

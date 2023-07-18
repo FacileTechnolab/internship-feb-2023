@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menutabscontent.component.css']
 })
 export class MenutabscontentComponent implements OnInit {
-
-  constructor() { }
-
+  activatedTabIndex: number = 0;
+  // menutabarry : Array<any>;
+  constructor() {
+   
+  }
   ngOnInit() {
   }
- 
+  // tabChange(tabIndex: number){
+  //   debugger;
+  //   this.activatedTabIndex = tabIndex;
+  // }
 }

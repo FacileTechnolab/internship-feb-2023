@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   homeimg = 'assets/img/hero-img.png'
   homebuttontext = 'Book a Table'
   homeicon = 'bi bi-play-circle'
+  youlink = 'https://www.youtube.com/watch?v=LXb3EKWsInQ'
 
 
   constructor() { }

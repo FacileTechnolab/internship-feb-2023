@@ -8,11 +8,26 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CounterpartComponent implements OnInit {
 
-
+  counterarray: Array<any>;
   
   @Input() value: any;
   countervalue: any;
- constructor(private http: HttpClient) { }
+ constructor(private http: HttpClient) {
+  this.counterarray = [
+    {
+        counterend: 234
+    },
+    {
+      counterend: 500
+    },
+    {
+      counterend: 570
+    },
+    {
+      counterend: 600
+    }
+  ]
+  }
 
  ngOnInit() {
 
