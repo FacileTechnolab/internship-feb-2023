@@ -11,5 +11,10 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
   }
+  onSubmit(data:any) {
+    console.warn(data);
+    alert("success");
+    
+    }
 
 }

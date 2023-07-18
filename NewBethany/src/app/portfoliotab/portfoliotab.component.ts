@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-portfoliotab',
@@ -6,14 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfoliotab.component.css']
 })
 export class PortfoliotabComponent implements OnInit {
-A="All"  
-B="App"
-C="Card"
-D="Web"
+
+  
+  @Input () tabArray: string [] =[];
+  @Output() onTabChange = new EventEmitter<number>();
+  activatedTab: number =0;
 
   constructor() { }
 
   ngOnInit() {
+  }
+  setTab(index:number){
+    this.activatedTab = index;
+    this.onTabChange.emit(this.activatedTab);
   }
 
 }

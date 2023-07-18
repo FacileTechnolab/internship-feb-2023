@@ -1,15 +1,21 @@
+<!-- <owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide *ngFor="let data of value"> -->
 <div class="swiper-slide" *ngFor="let data of value">
   <div class="testimonial-item">
     <p>
-      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+      <i [className]="data.left"></i>
       {{data.desc}}      
-      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+      <i [className]="data.right"></i>
     </p>
     <img [src]="data.img" class="testimonial-img" alt="">
     <h3>{{data.name}}</h3>
     <h4>{{data.subtitle}}</h4>
+
   </div>
 </div>
+  <!-- </ng-template>
+</owl-carousel-o> -->
+
   <!-- End testimonial item -->
 <!-- 
 <div class="swiper-slide">

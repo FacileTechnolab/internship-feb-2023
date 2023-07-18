@@ -22,10 +22,12 @@ import { PortfolioComponent } from './Portfolio/Portfolio.component';
 import { PortfolioboxComponent } from './portfoliobox/portfoliobox.component';
 import { TeamComponent } from './Team/Team.component';
 import { TeamboxComponent } from './teambox/teambox.component';
+import { FormsModule } from '@angular/forms';
 import { TestingComponent } from './Testing/Testing.component';
 import { TestingboxComponent } from './testingbox/testingbox.component';
 import { PortfolioinnerComponent } from './portfolioinner/portfolioinner.component';
 import { PortfoliotabComponent } from './portfoliotab/portfoliotab.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [																			
@@ -50,12 +52,15 @@ import { PortfoliotabComponent } from './portfoliotab/portfoliotab.component';
       TestingComponent,
       TestingboxComponent,
       PortfolioinnerComponent,
-      PortfoliotabComponent
+      PortfoliotabComponent,
+     
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CarouselModule 
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

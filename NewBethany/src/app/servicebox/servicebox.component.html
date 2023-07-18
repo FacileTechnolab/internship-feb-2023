@@ -1,11 +1,14 @@
-
-<div class="col-md-6 d-flex align-items-stretch" *ngFor="let ser of value">
-  <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-    <div class="icon"><i [className]="ser.icon"></i></div>
-    <h4><a href="">{{ser.name}}</a></h4>
-    <p>{{ser.desc}}</p>
+<div class="row" >
+  <div class="col-md-6 d-flex align-items-stretch mt-4"  *ngFor="let ser of value" id="box">
+    <div class="icon-box aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon"><i [className]="ser.icon"></i></div>
+        <h4><a href="">{{ser.name}}</a></h4>
+        <p>{{ser.desc}}</p>
+    </div>
   </div>
 </div>
+
+
 
 <!-- <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
   <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">

@@ -166,6 +166,7 @@ body {
     font-family: "Poppins", sans-serif;
     white-space: nowrap;
     transition: 0.3s;
+    cursor: pointer;
   }
 
   .navbar a i,
