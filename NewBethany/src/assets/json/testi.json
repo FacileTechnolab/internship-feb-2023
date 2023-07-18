@@ -7,26 +7,33 @@
     "subtitle":"Ceo Founder"
 
 },
-{
+{   "left":"bx bxs-quote-alt-left quote-icon-left",
     "desc":"Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    "right":"bx bxs-quote-alt-right quote-icon-right",
     "img":"assets/image/testimonials/testimonials-2.jpg",
     "name":"Sara Wilsson",
     "subtitle":"Designer"
 },
 {
+    "left":"bx bxs-quote-alt-left quote-icon-left",
     "desc":"Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+    "right":"bx bxs-quote-alt-right quote-icon-right",
     "img":"assets/image/testimonials/testimonials-3.jpg",
     "name":"Jena Karlis",
     "subtitle":"Store Owner"
 },
 {
+    "left":"bx bxs-quote-alt-left quote-icon-left",
     "desc":"Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+    "right":"bx bxs-quote-alt-right quote-icon-right",
     "img":"assets/image/testimonials/testimonials-4.jpg",
     "name":"Matt Brandon",
     "subtitle":"Freelancer"
 },
 {
+    "left":"bx bxs-quote-alt-left quote-icon-left",
     "desc":" Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+    "right":"bx bxs-quote-alt-right quote-icon-right",
     "img":"assets/image/testimonials/testimonials-5.jpg",
     "name":"John Larson",
     "subtitle":"Entrepreneur"

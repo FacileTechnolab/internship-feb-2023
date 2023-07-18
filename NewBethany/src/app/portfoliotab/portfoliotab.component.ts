@@ -11,7 +11,10 @@ export class PortfoliotabComponent implements OnInit {
   @Input () tabArray: string [] =[];
   @Output() onTabChange = new EventEmitter<number>();
   activatedTab: number =0;
-
+  A='ALL'
+  B='APP'
+  C='CARD'
+  D='WEB'
   constructor() { }
 
   ngOnInit() {

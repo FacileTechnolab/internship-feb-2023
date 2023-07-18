@@ -8,15 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WhyboxComponent implements OnInit {
 
-url: string= "/assets/json/Why.json"
-why:any
+
+
 @Input () value:any
   constructor(
     private http:HttpClient
   ) { }
 
   ngOnInit( ) {
-    console.log("child", this.why);
+    
   }
 
 }
