@@ -9,9 +9,13 @@ export class NewslatterComponent {
   "title" = "Newsletter";
   "desc" = "Rerum numquam illum recusandae quia mollitia consequatur.";
   "des" = "Subscribe";
+  "news": any;
   onSubmit(data: any) {
+
     console.warn(data);
     alert("success");
 
   }
+
+
 }

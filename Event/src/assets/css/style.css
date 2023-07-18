@@ -62,6 +62,9 @@ h6 {
   overflow: visible;
   background: #fff url("../img/preloader.svg") no-repeat center center;
 }
+.buy-tickets{
+  cursor: pointer;
+}
 
 /*--------------------------------------------------------------
 # Back to top button

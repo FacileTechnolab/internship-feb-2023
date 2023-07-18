@@ -19,9 +19,5 @@ export class FAQComponent implements OnInit {
     });
   }
 
-  // OnEvent(id: number) {
 
-  //   this.isDisplay = !this.isDisplay;
-
-  // }
 }

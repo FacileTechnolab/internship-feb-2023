@@ -4,18 +4,20 @@
       <h2>{{ title }}</h2>
       <p>{{ desc }}</p>
     </div>
-
-    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-10 d-flex">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter your Email"
-          />
-          <button type="submit" class="ms-2">{{ des }}</button>
+    <div class="form">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-10 d-flex">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your Email"
+              required
+            />
+            <button type="submit" class="ms-2">{{ des }}</button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </section>
