@@ -11,7 +11,7 @@ export class IconeComponent implements OnInit {
 
   @Input() iconic: any;
   ngOnInit() {
-    debugger
+
 
     console.log(this.iconic)
 

@@ -1,3 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -18,9 +20,16 @@ import { IntroductionComponent } from './Introduction/Introduction.component';
 import { IconeComponent } from './Icone/Icone.component';
 import { IconMainComponent } from './Icon-main/Icon-main.component';
 import { BannerComponent } from './Banner/Banner.component';
+import { ServiceofferComponent } from './Serviceoffer/Serviceoffer.component';
+import { ServicechildComponent } from './servicechild/servicechild.component';
+import { SlidermainComponent } from './Slidermain/Slidermain.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SliderchildComponent } from './Slidermain/sliderchild/sliderchild.component';
+import { UpdateComponent } from './Update/Update.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -33,15 +42,26 @@ import { BannerComponent } from './Banner/Banner.component';
     BlogComponent,
     BlogdetailsComponent,
     ContactComponent,
-      IntroductionComponent,
-      IconeComponent,
-      IconMainComponent,
-      BannerComponent
-   ],
+    IntroductionComponent,
+    IconeComponent,
+    IconMainComponent,
+    BannerComponent,
+    ServiceofferComponent,
+    ServicechildComponent,
+    SlidermainComponent,
+    SliderchildComponent,
+    UpdateComponent,
+    TabsComponent,
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

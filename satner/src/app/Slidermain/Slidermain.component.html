@@ -1,0 +1,21 @@
+<div class="testimonial_area section_gap_bottom">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <div class="main_title" *ngFor="let data of home">
+          <h2>{{ data.label }}</h2>
+          <p>
+            {{ data.label2 }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="testi_slider owl-carousel owl-loaded owl-drag">
+        <div class="owl-stage-outer" *ngFor="let slider of sliders">
+          <app-sliderchild [slider]="slider"></app-sliderchild>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
