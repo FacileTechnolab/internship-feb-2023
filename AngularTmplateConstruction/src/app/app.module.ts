@@ -16,10 +16,14 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { ServicesBoxComponent } from './services-box/services-box.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { BannersliderComponent } from './bannerslider/bannerslider.component';
+import { BannerimgComponent } from './bannerimg/bannerimg.component';
+import { HttpClientModule} from '@angular/common/http';  
+import { ConstructionsComponent } from './constructions/constructions.component';
 
 
 @NgModule({
-  declarations: [														
+  declarations: [																	
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -33,11 +37,15 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
       BlogDetailsComponent,
       ServicesBoxComponent,
       TestimonialsComponent,
-      BreadcrumbsComponent
+      BreadcrumbsComponent,
+      BannersliderComponent,
+      BannerimgComponent,
+      ConstructionsComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

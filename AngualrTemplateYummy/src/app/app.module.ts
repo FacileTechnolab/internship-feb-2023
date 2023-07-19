@@ -31,7 +31,7 @@ import { MenutabscontentComponent } from './menutabscontent/menutabscontent.comp
 import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 @NgModule({
-  declarations: [																						
+  declarations: [																							
     AppComponent,
       HeaderComponent,
       HomeComponent,
@@ -54,7 +54,7 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       GalleryboxComponent,
       MenutabsComponent,
       MenutabscontentComponent,
-      ContactinfoComponent
+      ContactinfoComponent,
    ],
   imports: [
     BrowserModule,
