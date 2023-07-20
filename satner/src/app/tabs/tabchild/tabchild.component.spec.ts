@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SliderchildComponent } from './sliderchild.component';
+import { TabchildComponent } from './tabchild.component';
 
-describe('SliderchildComponent', () => {
-  let component: SliderchildComponent;
-  let fixture: ComponentFixture<SliderchildComponent>;
+describe('TabchildComponent', () => {
+  let component: TabchildComponent;
+  let fixture: ComponentFixture<TabchildComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SliderchildComponent ]
+      declarations: [ TabchildComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SliderchildComponent);
+    fixture = TestBed.createComponent(TabchildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

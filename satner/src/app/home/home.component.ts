@@ -10,10 +10,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
   home: any;
   ngOnInit() {
-    this.http.get(this.url).subscribe(res => {
-      this.home = res;
-      console.log('icon', this.home)
-    });
+
   }
 
 }

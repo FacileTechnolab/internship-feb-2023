@@ -1,0 +1,73 @@
+[{
+    "index":"01",
+    "country":"Canada",
+    "src":"assets/img/elements/f1.jpg",
+    "visit":"645032",
+    "per":"80"
+},{
+    
+        "index":"02",
+        "country":"Canada",
+        "src":"assets/img/elements/f2.jpg",
+        "visit":"645032",
+        "per":"30"
+    
+},
+{
+    
+    "index":"03",
+    "country":"Canada",
+    "src":"assets/img/elements/f3.jpg",
+    "visit":"645032",
+    "per":"55"
+
+},
+{
+    
+    "index":"04",
+    "country":"Canada",
+    "src":"assets/img/elements/f4.jpg",
+    "visit":"645032",
+    "per":"60"
+
+},
+{
+    
+    "index":"05",
+    "country":"Canada",
+    "src":"assets/img/elements/f5.jpg",
+    "visit":"645032",
+    "per":"40"
+
+},
+
+{
+    
+    "index":"06",
+    "country":"Canada",
+    "src":"assets/img/elements/f6.jpg",
+    "visit":"645032",
+    "per":"70"
+
+},
+
+{
+    
+    "index":"07",
+    "country":"Canada",
+    "src":"assets/img/elements/f7.jpg",
+    "visit":"645032",
+    "per":"30"
+
+},
+
+{
+    
+    "index":"08",
+    "country":"Canada",
+    "src":"assets/img/elements/f8.jpg",
+    "visit":"645032",
+    "per":"60"
+
+}
+]

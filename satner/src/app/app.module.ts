@@ -22,14 +22,20 @@ import { IconMainComponent } from './Icon-main/Icon-main.component';
 import { BannerComponent } from './Banner/Banner.component';
 import { ServiceofferComponent } from './Serviceoffer/Serviceoffer.component';
 import { ServicechildComponent } from './servicechild/servicechild.component';
-import { SlidermainComponent } from './Slidermain/Slidermain.component';
+import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { SliderchildComponent } from './Slidermain/sliderchild/sliderchild.component';
-import { UpdateComponent } from './Update/Update.component';
-import { TabsComponent } from './tabs/tabs.component';
+import { TabchildComponent } from './tabs/tabchild/tabchild.component';
 
+import { TabsComponent } from './tabs/tabs.component';
+import { SliderComponent } from './Slider/Slider.component';
+import { SliderChildComponent } from './Slider/slider-child/slider-child.component';
+import { UpdateComponent } from './Update/Update.component';
+import { CountryComponent } from './elements/country/country.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GallerychildComponent } from './gallerychild/gallerychild.component';
+import { PortfoliochildComponent } from './portfoliochild/portfoliochild.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -48,18 +54,23 @@ import { TabsComponent } from './tabs/tabs.component';
     BannerComponent,
     ServiceofferComponent,
     ServicechildComponent,
-    SlidermainComponent,
-    SliderchildComponent,
-    UpdateComponent,
+    TabchildComponent,
+    SliderChildComponent,
     TabsComponent,
-
-  ],
+    SliderComponent,
+    UpdateComponent,
+    CountryComponent,
+    GalleryComponent,
+    GallerychildComponent,
+      PortfoliochildComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
 
   ],

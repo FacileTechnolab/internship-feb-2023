@@ -1,13 +1,12 @@
-<!-- <section class="newsletter_area">
+<section class="newsletter_area">
   <div class="container">
-    <div
-      class="row justify-content-center align-items-center"
-      *ngFor="let d of data"
-    >
+    <div class="row justify-content-center align-items-center">
       <div class="col-lg-12">
-        <div class="subscription_box text-center">
-          <h2 class="text-uppercase text-white">{{ d.desc }}</h2>
-          <p class="text-white">{{ d.desc2 }}.</p>
+        <div class="subscription_box text-center" *ngFor="let data of from">
+          <h2 class="text-uppercase text-white">{{ data.desc }}</h2>
+          <p class="text-white">
+            {{ data.desc2 }}
+          </p>
           <div class="subcribe-form" id="mc_embed_signup">
             <form
               target="_blank"
@@ -33,7 +32,7 @@
                 />
               </div>
               <button class="primary-btn hover d-inline">
-                {{ d.title }}
+                {{ data.title }}
               </button>
               <div class="info"></div>
             </form>
@@ -42,4 +41,4 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>

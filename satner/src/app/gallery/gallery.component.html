@@ -1,0 +1,8 @@
+<div class="section-top-border">
+  <h3 class="title_color">Image Gallery</h3>
+  <div class="row gallery-item">
+    <div class="col-md-4" *ngFor="let gallerydata of gallery">
+      <app-gallerychild [gallerydata]="gallerydata"></app-gallerychild>
+    </div>
+  </div>
+</div>
