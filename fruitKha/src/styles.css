@@ -1460,11 +1460,11 @@ html {
   }
   
   .homepage-bg-2 {
-    background-image: url(../img/hero-bg-2.jpg);
+    background-image: url(assets/img/latest-news/news-bg-3.jpg);
   }
   
   .homepage-bg-3 {
-    background-image: url(../img/hero-bg-3.jpg);
+    background-image: url(assets/img/hero-bg-3.jpg);
   }
   
   .homepage-slider {
@@ -1578,27 +1578,27 @@ html {
   
   ----------------------------------------------------------------------------- */
   .news-bg-1 {
-    background-image: url(../img/latest-news/news-bg-1.jpg);
+    background-image: url(assets/img/latest-news/news-bg-1.jpg);
   }
   
   .news-bg-2 {
-    background-image: url(../img/latest-news/news-bg-2.jpg);
+    background-image: url(assets/img/latest-news/news-bg-2.jpg);
   }
   
   .news-bg-3 {
-    background-image: url(../img/latest-news/news-bg-3.jpg);
+    background-image: url(assets/img/latest-news/news-bg-3.jpg);
   }
   
   .news-bg-4 {
-    background-image: url(../img/latest-news/news-bg-4.jpg);
+    background-image: url(assets/img/latest-news/news-bg-4.jpg);
   }
   
   .news-bg-5 {
-    background-image: url(../img/latest-news/news-bg-5.jpg);
+    background-image: url(assets/img/latest-news/news-bg-5.jpg);
   }
   
   .news-bg-6 {
-    background-image: url(../img/latest-news/news-bg-6.jpg);
+    background-image: url(assets/img/latest-news/news-bg-6.jpg);
   }
   
   .latest-news-bg {
@@ -1656,7 +1656,7 @@ html {
   }
   
   .single-artcile-bg {
-    background-image: url(../img/latest-news/news-bg-3.jpg);
+    background-image: url(assets/img/latest-news/news-bg-3.jpg);
     height: 450px;
   }
   
@@ -2054,7 +2054,7 @@ html {
   }
   
   .abt-bg {
-    background-image: url(../img/abt.jpg);
+    background-image: url(assets/img/abt.jpg);
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -2105,7 +2105,7 @@ html {
   .shop-banner {
     position: relative;
     background-color: #f5f5f5;
-    background-image: url(../img/1.jpg);
+    background-image: url(assets/img/1.jpg);
     background-size: cover;
     padding: 110px 0px 115px;
   }
@@ -2146,7 +2146,7 @@ html {
   }
   
   .feature-bg:after {
-    background-image: url(../img/feature-bg.jpg);
+    background-image: url(assets/img/feature-bg.jpg);
     position: absolute;
     right: 0;
     top: 0;
@@ -2162,20 +2162,20 @@ html {
   }
   
   .team-bg-1 {
-    background-image: url(../img/team/team-1.jpg);
+    background-image: url(assets/img/team/team-1.jpg);
   }
   
   .team-bg-2 {
-    background-image: url(../img/team/team-2.jpg);
+    background-image: url(assets/img/team/team-2.jpg);
   }
   
   .team-bg-3 {
-    background-image: url(../img/team/team-3.jpg);
+    background-image: url(assets/img/team/team-3.jpg);
   }
   
-  .team-bg-4 {
+  /* .team-bg-4 {
     background-image: url(../img/team/team-4.jpg);
-  }
+  } */
   
   .team-bg {
     height: 400px;

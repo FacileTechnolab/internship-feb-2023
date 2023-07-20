@@ -8,24 +8,37 @@ import { HeaderComponent } from './Layout/Header/Header.component';
 import { FooterComponent } from './Layout/Footer/Footer.component';
 import { StaticHomeComponent } from './Static-home/Static-home.component';
 import { HelpComponent } from './Help/Help.component';
-import { OurproductsComponent } from './Ourproducts/Ourproducts.component';
-import { OurproductBoxComponent } from './OurproductBox/OurproductBox.component';
 import { HttpClientModule} from '@angular/common/http'; 
+import { ProductComponent } from './product/product.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { TestimonailComponent } from './testimonail/testimonail.component';
+import { AdvertisementComponent } from './advertisement/advertisement.component';
+import { ShopbannerComponent } from './Shopbanner/Shopbanner.component';
+import { OurNewsComponent } from './OurNews/OurNews.component';
+import { LogocarsoulComponent } from './logocarsoul/logocarsoul.component';
+import { OurProductComponent } from './OurProduct/OurProduct.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [															
     AppComponent,
     HeaderComponent,
     FooterComponent,
       StaticHomeComponent,
       HelpComponent,
-      OurproductsComponent,
-      OurproductBoxComponent
+    
+      ProductComponent,
+      TestimonailComponent,
+      AdvertisementComponent,      
+      ShopbannerComponent,
+      OurNewsComponent,
+      LogocarsoulComponent,
+      OurProductComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
