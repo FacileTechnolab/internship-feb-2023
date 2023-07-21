@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SliderChildComponent } from './slider-child.component';
+import { SlidermainComponent } from './Slidermain.component';
 
-describe('SliderChildComponent', () => {
-  let component: SliderChildComponent;
-  let fixture: ComponentFixture<SliderChildComponent>;
+describe('SlidermainComponent', () => {
+  let component: SlidermainComponent;
+  let fixture: ComponentFixture<SlidermainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SliderChildComponent ]
+      declarations: [ SlidermainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SliderChildComponent);
+    fixture = TestBed.createComponent(SlidermainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

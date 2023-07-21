@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tabs',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
   home: any;
+  list: any;
   //tabs: string[] = ['ALL', 'POPULAR', 'LATEST', 'FOLLOWING', 'UPCOMMING'];
   constructor(private http: HttpClient) { }
   url: string = "/assets/json/filter.json";
@@ -19,10 +20,28 @@ export class TabsComponent implements OnInit {
   tab5 = "upcoming";
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
+      debugger
       this.home = res;
+      this.list = this.home;
 
       console.log('icon', this.home)
     });
   }
-
+  onevent() {
+    debugger
+    this.list = this.home.filter((x: any) => x.type == "popular")
+  }
+  onlatest() {
+    this.list = this.home.filter((b: any) => b.type == "latest")
+  }
+  alllist() {
+    this
+      .list = this.home
+  }
+  onfollow() {
+    this.list = this.home.filter((y: any) => y.type == "following")
+  }
+  onup() {
+    this.list = this.home.filter((a: any) => a.type == "upcoming")
+  }
 }

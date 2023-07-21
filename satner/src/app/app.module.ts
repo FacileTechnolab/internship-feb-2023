@@ -27,15 +27,19 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TabchildComponent } from './tabs/tabchild/tabchild.component';
 
 import { TabsComponent } from './tabs/tabs.component';
-import { SliderComponent } from './Slider/Slider.component';
-import { SliderChildComponent } from './Slider/slider-child/slider-child.component';
+
 import { UpdateComponent } from './Update/Update.component';
 import { CountryComponent } from './elements/country/country.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GallerychildComponent } from './gallerychild/gallerychild.component';
 import { PortfoliochildComponent } from './portfoliochild/portfoliochild.component';
+import { BlogcategoryComponent } from './blogcategory/blogcategory.component';
+import { SlidermainComponent } from './Slidermain/Slidermain.component';
+import { BlogareaComponent } from './Blogarea/Blogarea.component';
+import { BlogmainComponent } from './blogmain/blogmain.component';
+
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -44,6 +48,7 @@ import { PortfoliochildComponent } from './portfoliochild/portfoliochild.compone
     ServicesComponent,
     PortfolioComponent,
     ElementsComponent,
+    BlogcategoryComponent,
     PortfolioDetailsComponent,
     BlogComponent,
     BlogdetailsComponent,
@@ -55,15 +60,19 @@ import { PortfoliochildComponent } from './portfoliochild/portfoliochild.compone
     ServiceofferComponent,
     ServicechildComponent,
     TabchildComponent,
-    SliderChildComponent,
+
     TabsComponent,
-    SliderComponent,
+
     UpdateComponent,
     CountryComponent,
     GalleryComponent,
     GallerychildComponent,
-      PortfoliochildComponent
-   ],
+    PortfoliochildComponent,
+    SlidermainComponent,
+    BlogareaComponent,
+    BlogmainComponent,
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

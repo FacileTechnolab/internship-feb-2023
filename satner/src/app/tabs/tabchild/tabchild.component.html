@@ -8,9 +8,9 @@
       </div>
     </a>
   </div>
-  <div class="short_info">
+  <div class="short_info" *ngIf="tab">
     <h4>
-      <a href="portfolio-details.html">{{ tab.name1 }}</a>
+      <a routerLink="/Blogdetails">{{ tab.name1 }}</a>
     </h4>
     <p>{{ tab.desc1 }}</p>
   </div>

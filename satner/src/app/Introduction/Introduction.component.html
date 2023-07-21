@@ -1,24 +1,24 @@
 <section class="about_area section_gap">
-  <div class="container" *ngFor="let introduce of intro">
-    <div class="row justify-content-start align-items-center">
+  <div class="container">
+    <div class="row justify-content-start align-items-center" *ngIf="intro">
       <div class="col-lg-5">
         <div class="about_img">
-          <img class="" [src]="introduce.src" alt="" />
+          <img class="" [src]="intro.src" alt="" />
         </div>
       </div>
 
       <div class="offset-lg-1 col-lg-5">
         <div class="main_title text-left">
           <h2>
-            {{ introduce.desc1 }} <br />
-            {{ introduce.desc2 }}<br />
-            {{ introduce.desc3 }}
+            {{ intro.desc1 }} <br />
+            {{ intro.desc2 }}<br />
+            {{ intro.desc3 }}
           </h2>
           <p>
-            {{ introduce.desc }}
+            {{ intro.desc }}
           </p>
           <p>
-            {{ introduce.describe }}
+            {{ intro.describe }}
           </p>
           <a class="primary_btn" href="#"><span>Download CV</span></a>
         </div>

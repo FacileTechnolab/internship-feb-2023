@@ -1,11 +1,11 @@
 <section class="newsletter_area">
   <div class="container">
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center" *ngIf="from">
       <div class="col-lg-12">
-        <div class="subscription_box text-center" *ngFor="let data of from">
-          <h2 class="text-uppercase text-white">{{ data.desc }}</h2>
+        <div class="subscription_box text-center">
+          <h2 class="text-uppercase text-white">{{ from.desc }}</h2>
           <p class="text-white">
-            {{ data.desc2 }}
+            {{ from.desc2 }}
           </p>
           <div class="subcribe-form" id="mc_embed_signup">
             <form
@@ -32,7 +32,7 @@
                 />
               </div>
               <button class="primary-btn hover d-inline">
-                {{ data.title }}
+                {{ from.title }}
               </button>
               <div class="info"></div>
             </form>

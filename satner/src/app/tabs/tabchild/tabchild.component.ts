@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./tabchild.component.css']
 })
 export class TabchildComponent implements OnInit {
-  @Input() tab: any; tab2: any;
-
+  @Input() tab: any;
   constructor(private http: HttpClient) { }
   url: string = "/assets/json/filter.json";
 
   ngOnInit() {
+    debugger
     console.log(this.tab);
 
   }
