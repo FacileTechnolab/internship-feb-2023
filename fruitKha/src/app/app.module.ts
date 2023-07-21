@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,33 +5,84 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Layout/Header/Header.component';
 import { FooterComponent } from './Layout/Footer/Footer.component';
-import { StaticHomeComponent } from './Static-home/Static-home.component';
-import { HelpComponent } from './Help/Help.component';
+import { StaticHomeComponent } from './Home/Static-home/Static-home.component';
+import { SliderHomeComponent } from './Home/Slider-home/Slider-home.component';
+import { HelpComponent } from './Home/Help/Help.component';
 import { HttpClientModule} from '@angular/common/http'; 
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './Home/product/product.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { TestimonailComponent } from './testimonail/testimonail.component';
-import { AdvertisementComponent } from './advertisement/advertisement.component';
-import { ShopbannerComponent } from './Shopbanner/Shopbanner.component';
-import { OurNewsComponent } from './OurNews/OurNews.component';
-import { LogocarsoulComponent } from './logocarsoul/logocarsoul.component';
-import { OurProductComponent } from './OurProduct/OurProduct.component';
+import { TestimonailComponent } from './Home/testimonail/testimonail.component';
+import { AdvertisementComponent } from './Home/advertisement/advertisement.component';
+import { ShopbannerComponent } from './Home/Shopbanner/Shopbanner.component';
+import { OurNewsComponent } from './Home/OurNews/OurNews.component';
+import { LogocarsoulComponent } from './Home/logocarsoul/logocarsoul.component';
+import { OurProductComponent } from './Home/OurProduct/OurProduct.component';
+
+import { AboutusComponent } from './About/Aboutus/Aboutus.component';
+import { WhyComponent } from './About/Why/Why.component'; 
+import { OurTeamComponent } from './About/OurTeam/OurTeam.component';
+import { ErrorComponent } from './Page/error/error.component';
+import { NotFoundeComponent } from './Page/NotFounde/NotFounde.component';
+import { CartinComponent } from './Page/cartin/cartin.component';
+import { CartComponent } from './Page/cart/cart.component';
+import { CheckoutComponent } from './Page/checkout/checkout.component';
+import { CheckoutboxComponent } from './Page/checkoutbox/checkoutbox.component';
+import { ContactComponent } from './Contacts/Contact/Contact.component';
+import { ContactcomeComponent } from './Contacts/Contactcome/Contactcome.component';
+import { LocationComponent } from './Contacts/Location/Location.component';
+import { NewComponent } from './News/new/new.component';
+import { NewsboxComponent } from './News/newsbox/newsbox.component';
+import { SinglenewsComponent } from './News/singlenews/singlenews.component';
+import { SingleboxComponent } from './News/singlebox/singlebox.component';
+import { ShopComponent } from './Shop/shop/shop.component';
+import { ShopboxComponent } from './Shop/shopbox/shopbox.component';
+import { SingleproductComponent} from './singleproduct/singleproduct/singleproduct.component';
+import { GreenappleComponent } from './singleproduct/Greenapple/Greenapple.component';
+import { RelatedproductComponent } from './singleproduct/Relatedproduct/Relatedproduct.component';
 
 @NgModule({
-  declarations: [															
+  declarations: [																	
     AppComponent,
     HeaderComponent,
     FooterComponent,
+
       StaticHomeComponent,
-      HelpComponent,
-    
+      SliderHomeComponent,
+      HelpComponent,    
       ProductComponent,
       TestimonailComponent,
       AdvertisementComponent,      
       ShopbannerComponent,
       OurNewsComponent,
       LogocarsoulComponent,
-      OurProductComponent
+      OurProductComponent,
+
+
+      AboutusComponent,
+      WhyComponent,
+      OurTeamComponent,
+
+      ErrorComponent,
+      NotFoundeComponent,
+      CartComponent,
+      CartinComponent,
+      CheckoutComponent,
+      CheckoutboxComponent,
+
+      ContactComponent,
+      ContactcomeComponent,
+      LocationComponent,
+
+      NewComponent,
+      NewsboxComponent,
+      SingleboxComponent,
+      SinglenewsComponent, 
+
+      ShopComponent,
+      ShopboxComponent ,
+      SingleproductComponent,
+      GreenappleComponent,
+      RelatedproductComponent
    ],
   imports: [
     BrowserModule,
