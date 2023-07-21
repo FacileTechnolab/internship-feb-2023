@@ -12,10 +12,11 @@
       <div class="slides-2 swiper">
         <div class="swiper-wrapper">
 
-          <div class="swiper-slide">
+          <div class="swiper-slide" *ngFor="let testibox of testidatabox">
             <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <div class="testimonial-item"  >
+                <app-tesibox [testibox]="testibox"></app-tesibox>
+                <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <div class="stars">
@@ -27,13 +28,13 @@
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
                   Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                   <i class="bi bi-quote quote-icon-right"></i>
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
           <!-- End testimonial item -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -51,9 +52,10 @@
                 </p>
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div> -->
+          <!-- End testimonial item -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -71,9 +73,10 @@
                 </p>
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div> -->
+          <!-- End testimonial item -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -91,9 +94,10 @@
                 </p>
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div> -->
+          <!-- End testimonial item -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="testimonial-wrap">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -112,7 +116,8 @@
                 </p>
               </div>
             </div>
-          </div><!-- End testimonial item -->
+          </div> -->
+          <!-- End testimonial item -->
 
         </div>
         <div class="swiper-pagination"></div>

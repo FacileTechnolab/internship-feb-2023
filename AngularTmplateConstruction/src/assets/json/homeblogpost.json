@@ -1,0 +1,38 @@
+[
+    {
+        "blogimg": "assets/img/blog/blog-1.jpg",
+        "blogimgdate": "December 12",
+        "blogposttitle": "Eum ad dolor et. Autem aut fugiat debitis",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"Julia Parker",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Politics",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
+    },
+    {
+        "blogimg": "assets/img/blog/blog-2.jpg",
+        "blogimgdate": "July 17",
+        "blogposttitle": "Et repellendus molestiae qui est sed omnis",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"Mario Douglas",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Sports",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
+    },
+    {
+        "blogimg": "assets/img/blog/blog-3.jpg",
+        "blogimgdate": "September 05",
+        "blogposttitle": "Quia assumenda est et veritati tirana ploder",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"Lisa Hunter",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Economics",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
+    }
+]

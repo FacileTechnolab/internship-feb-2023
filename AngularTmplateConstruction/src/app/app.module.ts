@@ -26,10 +26,15 @@ import { AltserviceboxComponent } from './altservicebox/altservicebox.component'
 import { HometabComponent } from './hometab/hometab.component';
 import { HomenavtabComponent } from './homenavtab/homenavtab.component';
 import { HometabcontentComponent } from './hometabcontent/hometabcontent.component';
+import { TesiboxComponent } from './tesibox/tesibox.component';
+import { HomeblogpostComponent } from './homeblogpost/homeblogpost.component';
+import { HomeblogboxComponent } from './homeblogbox/homeblogbox.component';
+import { StatscounterComponent } from './statscounter/statscounter.component';
+
 
 
 @NgModule({
-  declarations: [																										
+  declarations: [																														
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -53,7 +58,11 @@ import { HometabcontentComponent } from './hometabcontent/hometabcontent.compone
       AltserviceboxComponent,
       HometabComponent,
       HomenavtabComponent,
-      HometabcontentComponent
+      HometabcontentComponent,
+      TesiboxComponent,
+      HomeblogpostComponent,
+      HomeblogboxComponent,
+      StatscounterComponent
    ],
   imports: [
     BrowserModule,

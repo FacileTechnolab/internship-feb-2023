@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-homenavtab',
@@ -7,11 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HomenavtabComponent implements OnInit {
   url: string = "/assets/json/tab.json" ;
-  @Input() tabtext: any;
+  // @Input() tabtext: any;
+ 
+
+  @Input() tabsArray: string[] = [];
+  @Output() onTabChange = new EventEmitter<number>();
   activatedTab: number = 0;
   constructor() { }
 
   ngOnInit() {
+    
   }
-
+  setTab(index:number)
+  {
+    this.activatedTab = index;
+    debugger;
+    this.onTabChange.emit(this.activatedTab);
+  }
 }
