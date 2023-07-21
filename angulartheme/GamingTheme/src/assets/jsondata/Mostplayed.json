@@ -1,0 +1,44 @@
+[
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-01.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  },
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-02.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  },
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-03.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  },
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-04.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  },
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-05.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  },
+  {
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/top-game-06.jpg",
+    "label": "Adventure",
+    "label1": "Assasin Creed",
+    "label2": "Explore"
+  }
+]

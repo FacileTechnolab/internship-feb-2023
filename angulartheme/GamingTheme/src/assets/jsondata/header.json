@@ -1,0 +1,22 @@
+[
+  {
+    "routerLink": "Home",
+    "label": "Home"
+  },
+  {
+    "routerLink": "Shop",
+    "label": "Our Shop"
+  },
+  {
+    "routerLink": "ProductDetails",
+    "label": "Product Details"
+  },
+  {
+    "routerLink": "ContactUs",
+    "label": "Contact Us"
+  },
+  {
+    "routerLink": "#",
+    "label": "Sign In"
+  }
+]

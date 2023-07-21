@@ -1,0 +1,28 @@
+[
+  {
+    "id": "24",
+    "date": "Feb 2048",
+    "src": "assets/images/professional-golf-player.jpg",
+    "link": "custom-block-icon bi-link",
+    "label": "Private activities",
+    "paragraph": " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "area": "Location:",
+    "NYC": "National Center, NYC",
+    "area2": "Ticket:",
+    "rupees": "$250",
+    "label2": "Buy Ticket"
+  },
+  {
+    "id": "28",
+    "date": "Feb 2048",
+    "src": "assets/images/girl-taking-selfie-with-friends-golf-field.jpg",
+    "link": "custom-block-icon bi-link",
+    "label": "Group tournament activities",
+    "paragraph": " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "area": "Location:",
+    "NYC": "National Center, NYC",
+    "area2": "Ticket:",
+    "rupees": "$350",
+    "label2": "Buy Ticket"
+  }
+]

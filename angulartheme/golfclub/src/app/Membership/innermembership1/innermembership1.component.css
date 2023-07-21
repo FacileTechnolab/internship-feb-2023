@@ -1,0 +1,6 @@
+th.text-start .Mo:nth-child(even) {
+  background-color: #000000;
+}
+.even-row {
+  background-color: var(--section-bg-color);
+}

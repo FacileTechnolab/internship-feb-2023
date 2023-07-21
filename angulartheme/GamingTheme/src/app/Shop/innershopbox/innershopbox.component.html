@@ -1,0 +1,14 @@
+<div class="item">
+  <div class="thumb">
+    <a [attr.href]="value.routerLink"><img [src]="value.src" alt="" /></a>
+    <span class="price"
+      ><em>{{ value.price1 }}</em
+      >{{ value.price2 }}</span
+    >
+  </div>
+  <div class="down-content">
+    <span class="category">{{ value.label }}</span>
+    <h4>{{ value.label2 }}</h4>
+    <a [attr.href]="value.routerLink"><i [class]="value.icon"></i></a>
+  </div>
+</div>

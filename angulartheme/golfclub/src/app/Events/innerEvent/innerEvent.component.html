@@ -1,0 +1,53 @@
+<div class="row custom-block custom-bg" *ngFor="let data of value">
+  <div class="col-lg-2 col-md-4 col-12 order-2 order-md-0 order-lg-0">
+    <div
+      class="custom-block-date-wrap d-flex d-lg-block d-md-block align-items-center mt-3 mt-lg-0 mt-md-0"
+    >
+      <h6 class="custom-block-date mb-lg-1 mb-0 me-3 me-lg-0 me-md-0">
+        {{ data.id }}
+      </h6>
+
+      <strong class="text-white">{{ data.date }}</strong>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-8 col-12 order-1 order-lg-0">
+    <div class="custom-block-image-wrap">
+      <a href="eventdetails">
+        <img [src]="data.src" class="custom-block-image img-fluid" alt="" />
+
+        <i [class]="data.link"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-lg-6 col-12 order-3 order-lg-0">
+    <div class="custom-block-info mt-2 mt-lg-0">
+      <a href="eventdetails" class="events-title mb-3">{{ data.label }}</a>
+
+      <p class="mb-0">
+        {{ data.paragraph }}
+      </p>
+
+      <div class="d-flex flex-wrap border-top mt-4 pt-3">
+        <div class="mb-4 mb-lg-0">
+          <div class="d-flex flex-wrap align-items-center mb-1">
+            <span class="custom-block-span">{{ data.area }}</span>
+
+            <p class="mb-0">{{ data.NYC }}</p>
+          </div>
+
+          <div class="d-flex flex-wrap align-items-center">
+            <span class="custom-block-span">{{ data.area2 }}</span>
+
+            <p class="mb-0">{{ data.rupees }}</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center ms-lg-auto">
+          <a href="eventdetails" class="btn custom-btn">{{ data.label2 }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

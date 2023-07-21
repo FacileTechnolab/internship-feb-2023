@@ -1,0 +1,44 @@
+[
+  {
+    "class": "",
+    "name": "Golf Insurance",
+    "first": "bi-check-circle-fill",
+    "second": "bi-check-circle-fill",
+    "third": "bi-check-circle-fill"
+  },
+  {
+    "class": " even-row",
+    "name": "Club Facilities",
+    "first": "bi-check-circle-fill",
+    "second": "bi-check-circle-fill",
+    "third": "bi-check-circle-fill"
+  },
+  {
+    "class": "",
+    "name": "Country Club",
+    "first": "bi-x-circle-fill",
+    "second": "bi-check-circle-fill",
+    "third": "bi-check-circle-fill"
+  },
+  {
+    "class": " even-row",
+    "name": "Weekend Seasonal",
+    "first": "bi-x-circle-fill",
+    "second": "bi-check-circle-fill",
+    "third": "bi-check-circle-fill"
+  },
+  {
+    "class": "",
+    "name": "Premium Courses",
+    "first": "bi-x-circle-fill",
+    "second": "bi-x-circle-fill",
+    "third": "bi-check-circle-fill"
+  },
+  {
+    "class": " even-row",
+    "name": "Pro's Networking",
+    "first": "bi-x-circle-fill",
+    "second": "bi-x-circle-fill",
+    "third": "bi-check-circle-fill"
+  }
+]

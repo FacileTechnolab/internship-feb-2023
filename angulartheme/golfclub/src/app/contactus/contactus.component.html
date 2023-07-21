@@ -1,0 +1,94 @@
+<section class="contact-section section-padding" id="section_5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-12">
+        <form
+          href="#"
+          #userForm="ngForm"
+          (ngSubmit)="onSubmit(userForm.value)"
+          method="post"
+          class="custom-form contact-form"
+          role="form"
+        >
+          <h2 class="mb-4 pb-2">{{ title }}</h2>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  name="full-name"
+                  ngModel
+                  class="form-control"
+                  placeholder="Full Name"
+                  required=""
+                />
+
+                <label for="floatingInput">Full Name</label>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="form-floating">
+                <input
+                  type="email"
+                  ngModel
+                  name="email"
+                  pattern="[^ @]*@[^ @]*"
+                  class="form-control"
+                  placeholder="Email address"
+                  required=""
+                />
+
+                <label for="floatingInput">Email address</label>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-12">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  ngModel
+                  name="message"
+                  placeholder="Describe message here"
+                ></textarea>
+
+                <label for="floatingTextarea">Message</label>
+              </div>
+
+              <button type="submit" class="form-control">Submit Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-lg-6 col-12">
+        <div class="contact-info mt-5">
+          <div class="contact-info-item">
+            <div class="contact-info-body">
+              <strong>{{ title2 }}</strong>
+
+              <p class="mt-2 mb-1">
+                <a [attr.href]="url" class="contact-link">
+                  {{ data }}
+                </a>
+              </p>
+
+              <p class="mb-0">
+                <a [attr.href]="url2" class="contact-link">
+                  {{ info }}
+                </a>
+              </p>
+            </div>
+
+            <div class="contact-info-footer">
+              <a href="#">{{ label }}</a>
+            </div>
+          </div>
+
+          <img [src]="img" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

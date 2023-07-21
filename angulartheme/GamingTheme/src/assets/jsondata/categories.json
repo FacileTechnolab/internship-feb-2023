@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Action",
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/categories-01.jpg"
+  },
+  {
+    "label": "Action",
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/categories-05.jpg"
+  },
+  {
+    "label": "Action",
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/categories-03.jpg"
+  },
+  {
+    "label": "Action",
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/categories-04.jpg"
+  },
+  {
+    "label": "Action",
+    "routerlink": "ProductDetails",
+    "src": "assets/assets/images/categories-05.jpg"
+  }
+]
