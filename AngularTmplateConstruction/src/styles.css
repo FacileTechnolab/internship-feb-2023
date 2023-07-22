@@ -2690,3 +2690,9 @@
   .footer .footer-legal .credits a {
     color: var(--color-primary);
   }
+
+
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #ffc107 !important;
+  }

@@ -13,11 +13,11 @@ export class TestimonialsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-//     this.http.get(this.url).subscribe(result=>{
-//       debugger
-//       this.testidata =result
-//     });
-//  console.log(this.testidata)
+     this.http.get(this.url).subscribe(result=>{
+       debugger
+       this.testidata =result
+    });
+console.log(this.testidata)
   }
   customOptions: OwlOptions = {
     loop: true,
@@ -40,6 +40,6 @@ export class TestimonialsComponent implements OnInit {
       },
      
     },
-    nav: true
+    nav: false
   }
 }
