@@ -11,7 +11,6 @@ import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { BannersliderComponent } from './bannerslider/bannerslider.component';
 import { BannerimgComponent } from './bannerimg/bannerimg.component';
@@ -26,15 +25,20 @@ import { AltserviceboxComponent } from './altservicebox/altservicebox.component'
 import { HometabComponent } from './hometab/hometab.component';
 import { HomenavtabComponent } from './homenavtab/homenavtab.component';
 import { HometabcontentComponent } from './hometabcontent/hometabcontent.component';
-import { TesiboxComponent } from './tesibox/tesibox.component';
 import { HomeblogpostComponent } from './homeblogpost/homeblogpost.component';
 import { HomeblogboxComponent } from './homeblogbox/homeblogbox.component';
 import { StatscounterComponent } from './statscounter/statscounter.component';
-
+import { OurteamComponent } from './ourteam/ourteam.component';
+import { OurteamboxComponent } from './ourteambox/ourteambox.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { TestimonialsComponent } from './about/testimonials/testimonials.component';
+import { TestiboxComponent } from './testibox/testibox.component';
+import { Altservices2Component } from './altservices2/altservices2.component';
+import { Altserbox2Component } from './altserbox2/altserbox2.component';
 
 
 @NgModule({
-  declarations: [																														
+  declarations: [																																			
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -45,7 +49,6 @@ import { StatscounterComponent } from './statscounter/statscounter.component';
       BlogComponent,
       ContactComponent,
       BlogDetailsComponent,
-      TestimonialsComponent,
       BreadcrumbsComponent,
       BannersliderComponent,
       BannerimgComponent,
@@ -59,15 +62,21 @@ import { StatscounterComponent } from './statscounter/statscounter.component';
       HometabComponent,
       HomenavtabComponent,
       HometabcontentComponent,
-      TesiboxComponent,
       HomeblogpostComponent,
       HomeblogboxComponent,
-      StatscounterComponent
+      StatscounterComponent,
+      OurteamComponent,
+      OurteamboxComponent,
+      TestimonialsComponent,
+      TestiboxComponent,
+      Altservices2Component,
+      Altserbox2Component
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
