@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,34 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Help.component.css']
 })
 export class HelpComponent implements OnInit {
- help:Array<any>;
+url: string="assets/json/help.json"
+ help:any;
 
-  constructor() {
-    this.help =[
-      {
-        icon : 'fas fa-shipping-fast',
-        head: 'Free Shipping',
-        per: 'When order over $75'
-      },
-      {
-        icon : 'fas fa-phone-volume',
-        head: '24/7 Support',
-        per: 'Get support all day'
-      },
-      {
-        icon : 'fas fa-sync',
-        head: 'Refund',
-        per: 'Get refund within 3 days!'
-      },
-
-
-    ]
-
-    
-
-   }
+  constructor(private http : HttpClient  ) {   }
 
   ngOnInit() {
+     this.http.get(this.url). subscribe(res => {this.help = res; console.log(this.help);}) 
+   
   }
 
 }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Static-home.component.css']
 })
 export class StaticHomeComponent implements OnInit {
-  subtitle='Fresh & Organic';
-  title='Delicious Seasonal Fruits';
-  btn1='Fruit Collection';
-  btn2='Contact Us';
+url: string="/assets/json/home.json"
+home:any;
 
-  constructor() { }
+constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(res =>{this.home = res; console.log(this.home);} )
   }
-
 }

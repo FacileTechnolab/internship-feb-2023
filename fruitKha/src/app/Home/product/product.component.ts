@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -7,12 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-url: string="assets/josn/Product.json"
-Deal: any
-@Input () product:any
+url: string="assets/json/Product.json"
+product:any
   constructor(private http: HttpClient) {}
 
-  ngOnInit(){this.http.get(this.url).subscribe(result=>{this.product =result});
-  console.log(this.product)
+  ngOnInit()
+  {this.http.get(this.url).subscribe(result=>{this.product =result});
+  
 }
 }

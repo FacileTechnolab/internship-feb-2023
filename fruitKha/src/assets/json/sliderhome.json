@@ -1,0 +1,25 @@
+[{
+    
+    "img":"assets/img/hero-bg.jpg",
+    "class":"homepage-bg-1",
+    "subtitle":"Fresh & Organic",
+    "title":"Delicious Seasonal Fruits",
+    "btn1":"Fruit Collection",
+    "btn2":"Contact Us"
+},
+{
+    "img":"assets/img/hero-bg-2.jpg",
+    "class":"homepage-bg-2",
+    "subtitle":"Fresh Everyday",
+    "title":"100% Organic Collection",
+    "btn1":"Visit Shop",
+    "btn2":"Contact Us"
+},
+{
+    "img":"assets/img/hero-bg-3.jpg",
+    "class":"homepage-bg-3",
+    "subtitle":"Mega Sale Going On!",
+    "title":"Get December Discount",
+    "btn1":"Visit Shop",
+    "btn2":"Contact Us"
+}]

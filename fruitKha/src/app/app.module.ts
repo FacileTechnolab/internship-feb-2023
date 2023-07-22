@@ -39,9 +39,11 @@ import { ShopboxComponent } from './Shop/shopbox/shopbox.component';
 import { SingleproductComponent} from './singleproduct/singleproduct/singleproduct.component';
 import { GreenappleComponent } from './singleproduct/Greenapple/Greenapple.component';
 import { RelatedproductComponent } from './singleproduct/Relatedproduct/Relatedproduct.component';
+import { HelpboxComponent } from './Home/helpbox/helpbox.component';
+import { OurproductBoxComponent } from './Home/OurproductBox/OurproductBox.component';
 
 @NgModule({
-  declarations: [																	
+  declarations: [																		
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -82,7 +84,9 @@ import { RelatedproductComponent } from './singleproduct/Relatedproduct/Relatedp
       ShopboxComponent ,
       SingleproductComponent,
       GreenappleComponent,
-      RelatedproductComponent
+      RelatedproductComponent,
+      HelpboxComponent,
+      OurproductBoxComponent 
    ],
   imports: [
     BrowserModule,
