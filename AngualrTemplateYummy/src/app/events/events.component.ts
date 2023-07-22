@@ -15,6 +15,7 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
       this.http.get(this.url).subscribe(result=>{
+        
         this.eventsboxs =result
       });
    console.log(this.eventsboxs)
