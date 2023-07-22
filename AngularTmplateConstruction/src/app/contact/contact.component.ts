@@ -11,5 +11,14 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
+  contactData = {
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  };
 
+  onSubmit() {
+    console.log('Contact form data:', this.contactData);
+  }
 }
