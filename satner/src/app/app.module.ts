@@ -37,9 +37,23 @@ import { BlogcategoryComponent } from './blogcategory/blogcategory.component';
 import { SlidermainComponent } from './Slidermain/Slidermain.component';
 import { BlogareaComponent } from './Blogarea/Blogarea.component';
 import { BlogmainComponent } from './blogmain/blogmain.component';
+import { BlogrightchildComponent } from './blogrightchild/blogrightchild.component';
+import { BlogrightmainComponent } from './blogrightmain/blogrightmain.component';
+import { BlogrightcategoryComponent } from './blogrightcategory/blogrightcategory.component';
+import { BlogchildComponent } from './blogchild/blogchild.component';
+import { BlogtechComponent } from './blogtech/blogtech.component';
+import { BlogtechmainComponent } from './blogtechmain/blogtechmain.component';
+import { FoodchildComponent } from './foodchild/foodchild.component';
+import { FoodmainComponent } from './foodmain/foodmain.component';
+import { DatachildComponent } from './datachild/datachild.component';
+import { DatamainComponent } from './datamain/datamain.component';
+import { SymbolchildComponent } from './symbolchild/symbolchild.component';
+import { SymbolmainComponent } from './symbolmain/symbolmain.component';
+import { CommentComponent } from './comment/comment.component';
+import { CommentchildComponent } from './commentchild/commentchild.component';
 
 @NgModule({
-  declarations: [
+  declarations: [					
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -71,8 +85,21 @@ import { BlogmainComponent } from './blogmain/blogmain.component';
     SlidermainComponent,
     BlogareaComponent,
     BlogmainComponent,
-
-  ],
+    BlogrightchildComponent,
+    BlogrightmainComponent,
+    BlogrightcategoryComponent,
+    BlogchildComponent,
+    BlogtechComponent,
+    BlogtechmainComponent,
+    FoodchildComponent,
+    FoodmainComponent,
+    DatachildComponent,
+      DatamainComponent,
+      SymbolchildComponent,
+      SymbolmainComponent,
+      CommentComponent,
+      CommentchildComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

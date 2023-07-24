@@ -1,0 +1,8 @@
+<aside class="single_sidebar_widget popular_post_widget">
+  <h3 class="widget_title">Popular Posts</h3>
+  <div class="media post_item" *ngFor="let post of blogpost">
+    <app-blogrightchild [post]="post"></app-blogrightchild>
+  </div>
+
+  <div class="br"></div>
+</aside>

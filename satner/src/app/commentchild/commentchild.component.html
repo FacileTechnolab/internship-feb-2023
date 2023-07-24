@@ -1,0 +1,21 @@
+<div [className]="comment.class">
+  <div class="single-comment justify-content-between d-flex">
+    <div class="user justify-content-between d-flex">
+      <div class="thumb">
+        <img [src]="comment.img" alt="" />
+      </div>
+      <div class="desc">
+        <h5>
+          <a [attr.href]="comment.link">{{ comment.name }}</a>
+        </h5>
+        <p class="date">{{ comment.title }}</p>
+        <p class="comment">{{ comment.desc }}</p>
+      </div>
+    </div>
+    <div class="reply-btn">
+      <a [attr.href]="comment.link" class="btn-reply text-uppercase">{{
+        comment.btn
+      }}</a>
+    </div>
+  </div>
+</div>

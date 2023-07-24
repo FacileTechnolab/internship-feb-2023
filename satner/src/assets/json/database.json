@@ -1,0 +1,23 @@
+[{
+    "link":"/Blogdetails",
+    "name":"Mark wiens",
+    "class":"lnr lnr-user",
+    "class1":"fa fa-facebook"
+},
+{
+    "link":"/Blogdetails",
+    "name":"12 Dec, 2017",
+    "class":"lnr lnr-calendar-full",
+    "class1":"fa fa-twitter"
+},{
+    "link":"/Blogdetails",
+    "name":"1.2M Views",
+    "class":"lnr lnr-eye",
+    "class1":"fa fa-github"
+},{
+    "link":"/Blogdetails",
+    "name":"06 Comments",
+    "class":"lnr lnr-bubble",
+    "class1":"fa fa-behance"
+
+}]

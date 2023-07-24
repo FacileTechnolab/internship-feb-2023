@@ -1,0 +1,43 @@
+[
+    {
+        "img":"assets/img/blog/c1.jpg",
+        "name":"Emilly Blunt",
+        "title":"December 4, 2017 at 3:12 pm",
+        "desc":"Never say goodbye till the end comes!",
+        "link":"/Blogdetails",
+        "btn":"reply",
+        "class":"comment-list"
+    },
+    {
+        "class":"comment-list left-padding",
+    "img":"assets/img/blog/c2.jpg",
+    "name":"Elsie Cunningham",
+    "title":"December 4, 2017 at 3:12 pm",
+    "desc":"Never say goodbye till the end comes!",
+    "link":"/Blogdetails",
+    "btn":"reply"
+},{
+    "class":"comment-list left-padding",
+    "img":"assets/img/blog/c3.jpg",
+    "name":"Annie Stephens",
+    "title":"December 4, 2017 at 3:12 pm",
+    "desc":"Never say goodbye till the end comes!",
+    "link":"/Blogdetails",
+    "btn":"reply"
+},{
+    "class":"comment-list",
+    "img":"assets/img/blog/c4.jpg",
+    "name":"Maria Luna",
+    "title":"December 4, 2017 at 3:12 pm",
+    "desc":"Never say goodbye till the end comes!",
+    "link":"/Blogdetails",
+    "btn":"reply"
+},{
+    "class":"comment-list",
+    "img":"assets/img/blog/c5.jpg",
+    "name":"Ina Hayes",
+    "title":"December 4, 2017 at 3:12 pm",
+    "desc":"Never say goodbye till the end comes!",
+    "link":"/Blogdetails",
+    "btn":"reply"
+}]

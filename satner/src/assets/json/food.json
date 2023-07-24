@@ -1,0 +1,15 @@
+[{
+    "class":"Food,",
+    "link":"/blogdetails"
+},{
+    "class":"Technology,",
+    "link":"/blogdetails",
+    "class1":"active"
+},
+{
+    "class":"Politics,",
+    "link":"/blogdetails"
+},{
+    "class":"Lifestyle",
+    "link":"/blogdetails"
+}]

@@ -1,40 +1,42 @@
-<div class="col-md-3">
-  <div class="blog_info text-right">
-    <div class="post_tag">
-      <a href="#">{{ area.type1 }}</a>
-      <a class="active" href="#">{{ area.type2 }}</a>
-      <a href="#">{{ area.type3 }}</a>
-      <a href="#">{{ area.type4 }}</a>
-    </div>
-    <ul class="blog_meta list">
-      <li>
-        <a href="#">{{ area.name }}<i class="lnr lnr-user"></i></a>
-      </li>
-      <li>
-        <a href="#">{{ area.date }}<i class="lnr lnr-calendar-full"></i></a>
-      </li>
-      <li>
-        <a href="#">{{ area.view }}<i class="lnr lnr-eye"></i></a>
-      </li>
-      <li>
-        <a href="#">{{ area.comment }}<i class="lnr lnr-bubble"></i></a>
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="col-md-9">
-  <div class="blog_post">
-    <img src="{{ area.img }}" alt="" />
-    <div>
-      <a routerLink="Blogdetails"
-        ><h2>{{ area.title }}</h2></a
-      >
-      <p>
-        {{ area.desc }}
-      </p>
-      <a routerLink="Blogdetails" class="primary_btn"
-        ><span> {{ area.button }}</span></a
-      >
+<article class="row blog_item">
+  <div class="col-md-3">
+    <div class="blog_info text-right">
+      <div class="post_tag">
+        <a href="#">{{ area.type1 }},</a>
+        <a class="active" href="#">{{ area.type2 }}<br /></a>
+        <a href="#">{{ area.type3 }}</a>
+        <a href="#">{{ area.type4 }}</a>
+      </div>
+      <ul class="blog_meta list">
+        <li>
+          <a href="#">{{ area.name }}<i class="lnr lnr-user"></i></a>
+        </li>
+        <li>
+          <a href="#">{{ area.date }}<i class="lnr lnr-calendar-full"></i></a>
+        </li>
+        <li>
+          <a href="#">{{ area.view }}<i class="lnr lnr-eye"></i></a>
+        </li>
+        <li>
+          <a href="#">{{ area.comment }}<i class="lnr lnr-bubble"></i></a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+  <div class="col-md-9">
+    <div class="blog_post">
+      <img src="{{ area.img }}" alt="" />
+      <div>
+        <a routerLink="Blogdetails"
+          ><h2>{{ area.title }}</h2></a
+        >
+        <p>
+          {{ area.desc }}
+        </p>
+        <a routerLink="/Blogdetails" class="primary_btn"
+          ><span> {{ area.button }}</span></a
+        >
+      </div>
+    </div>
+  </div>
+</article>

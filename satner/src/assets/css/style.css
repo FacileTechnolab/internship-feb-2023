@@ -3304,3 +3304,7 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+.post_tag{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
