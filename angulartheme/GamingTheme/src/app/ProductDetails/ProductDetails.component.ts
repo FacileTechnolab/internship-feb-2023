@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ProductDetails',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ProductDetails.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-
-  constructor() { }
-
+details:any;
+categories:any;
+crockery:any;
+ tabs:string[]=[' Description',' Reviews (3)'];
+url2:string="assets/jsondata/categories.json"
+url:string="assets/jsondata/detailspage.json"
+  constructor(private http:HttpClient) { }
+activatedTabIndex:number=0;
   ngOnInit() {
+    this.http.get(this.url).subscribe(result=>{
+      this.details=result;
+    })
+    this.http.get(this.url2).subscribe(result=>{
+      this.crockery=result;
+    })
+  
+  }
+  tabChange(tabIndex:number){
+ this.activatedTabIndex=tabIndex;
   }
 
 }

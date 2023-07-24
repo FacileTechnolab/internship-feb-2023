@@ -747,7 +747,7 @@ Banner Style
   height: 12px;
   content: "";
   left: 125px;
-  bottom: 0;
+  bottom: -14px;
 }
 
 .main-banner .caption p {
@@ -1568,7 +1568,7 @@ Contact PAge Style
 
 .contact-page .left-text ul li span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #4a4a4a;
   margin-bottom: 5px;
@@ -1724,5 +1724,25 @@ body {
 @media (max-width: 1200px) {
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* .tabs-content .nav-tabs .nav-link.active {
+  color: #0071f8;
+} */
+.more-info .nav .nav-link.active {
+  color: #0071f8;
+}
+.mat-h6,
+.mat-typography .mat-h6,
+.mat-typography h6 {
+  font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
+  margin: 0px 2px 37px;
+}

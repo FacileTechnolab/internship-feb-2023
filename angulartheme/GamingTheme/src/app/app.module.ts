@@ -25,6 +25,7 @@ import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.component';
 import { BreadcrumbModule } from 'angular-crumbs';
 import { InnershopboxComponent } from './Shop/innershopbox/innershopbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetailstabComponent } from './ProductDetails/detailstab/detailstab.component';
 
 
 
@@ -50,7 +51,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       ProductDetailsComponent,
       ContactUsComponent,
       BreadcrumbComponent,
-      InnershopboxComponent
+      InnershopboxComponent,
+      DetailstabComponent,
+     
    ],
   imports: [
     BrowserModule,

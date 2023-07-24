@@ -29,10 +29,10 @@
         <a href="#!" data-filter="*">Show All</a>
       </li>
       <li>
-        <a href="#!" data-filter=".adv">Adventure</a>
+        <a data-filter=".adv" (click)="onadv()">Adventure</a>
       </li>
       <li>
-        <a href="#!" data-filter=".str">Strategy</a>
+        <a data-filter=".str" (click)="onstr()">Strategy</a>
       </li>
       <li>
         <a href="#!" data-filter=".rac">Racing</a>
@@ -61,6 +61,7 @@
     </div>
   </div>
 </div>
+
 <!-- <div
         class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv"
       >
