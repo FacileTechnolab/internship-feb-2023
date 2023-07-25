@@ -27,5 +27,11 @@ url:string="assets/jsondata/contact.json"
       this.softwareWorkingVideoLink
     );
   }
+  
+onSubmit(data:any) {
+  console.warn(data.value);
+  alert("success");
+  data.reset();
+  }
 
 }

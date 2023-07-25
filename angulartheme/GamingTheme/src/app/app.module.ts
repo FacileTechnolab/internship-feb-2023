@@ -10,23 +10,23 @@ import { ProductDetailsComponent } from './ProductDetails/ProductDetails.compone
 import { ContactUsComponent } from './ContactUs/ContactUs.component';
 import { HttpClientModule} from '@angular/common/http';  
 
-import { CategoryComponent } from './Home/Category/Category.component';
-import { LastLayoutComponent } from './Home/LastLayout/LastLayout.component';
-import { MostPlayedComponent } from './Home/MostPlayed/MostPlayed.component';
-import { TreadingComponent } from './Home/Treading/Treading.component';
-import { HeaderComponent } from './Layout/Header/Header.component';
-import { FooterComponent } from './Layout/Footer/Footer.component';
-import { InnerhomeComponent } from './Home/innerhome/innerhome.component';
-import { InnerboxComponent } from './Home/innerbox/innerbox.component';
-import { InnertreadingboxComponent } from './Home/Treading/innertreadingbox/innertreadingbox.component';
-import { InnerplayedboxComponent } from './Home/MostPlayed/innerplayedbox/innerplayedbox.component';
-import { InnercategoryboxComponent } from './Home/Category/innercategorybox/innercategorybox.component';
+import { CategoryComponent } from './Category/Category.component';
+import { LastLayoutComponent } from './LastLayout/LastLayout.component';
+import { MostPlayedComponent } from './MostPlayed/MostPlayed.component';
+import { TreadingComponent } from './Treading/Treading.component';
+import { HeaderComponent } from './Header/Header.component';
+import { FooterComponent } from './Footer/Footer.component';
+import { InnerhomeComponent } from './innerhome/innerhome.component';
+import { InnerboxComponent } from './innerbox/innerbox.component';
+import { InnertreadingboxComponent } from './innertreadingbox/innertreadingbox.component';
+import { InnerplayedboxComponent } from './innerplayedbox/innerplayedbox.component';
+import { InnercategoryboxComponent } from './innercategorybox/innercategorybox.component';
 import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.component';
 import { BreadcrumbModule } from 'angular-crumbs';
-import { InnershopboxComponent } from './Shop/innershopbox/innershopbox.component';
+import { InnershopboxComponent } from './innershopbox/innershopbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DetailstabComponent } from './ProductDetails/detailstab/detailstab.component';
-
+import { DetailstabComponent } from './detailstab/detailstab.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -57,7 +57,7 @@ import { DetailstabComponent } from './ProductDetails/detailstab/detailstab.comp
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule, BrowserAnimationsModule
+    AppRoutingModule,HttpClientModule, BrowserAnimationsModule, FormsModule
    
 //  BreadcrumbModule
   

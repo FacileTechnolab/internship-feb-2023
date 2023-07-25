@@ -64,7 +64,12 @@
               </div>
             </div>
             <div class="col-lg-12">
-              <form id="contact-form" action-method="post">
+              <form
+                id="contact-form"
+                action-method="post"
+                #userForm="ngForm"
+                (ngSubmit)="onSubmit(userForm)"
+              >
                 <div class="row">
                   <div class="col-lg-6">
                     <fieldset>
@@ -75,6 +80,7 @@
                         placeholder="Your Name..."
                         autocomplete="on"
                         required
+                        ngModel
                       />
                     </fieldset>
                   </div>
@@ -87,6 +93,7 @@
                         placeholder="Your Surname..."
                         autocomplete="on"
                         required
+                        ngModel
                       />
                     </fieldset>
                   </div>
@@ -99,6 +106,7 @@
                         pattern="[^ @]*@[^ @]*"
                         placeholder="Your E-mail..."
                         required=""
+                        ngModel
                       />
                     </fieldset>
                   </div>
@@ -110,6 +118,8 @@
                         id="subject"
                         placeholder="Subject..."
                         autocomplete="on"
+                        required
+                        ngModel
                       />
                     </fieldset>
                   </div>
@@ -119,6 +129,8 @@
                         name="message"
                         id="message"
                         placeholder="Your Message"
+                        required
+                        ngModel
                       ></textarea>
                     </fieldset>
                   </div>

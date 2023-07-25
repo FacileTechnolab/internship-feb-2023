@@ -410,16 +410,14 @@ Header Style
 }
 
 .header-area .main-nav ul.nav {
-  border-radius: 0px 0px 25px 25px;
-  flex-basis: 100%;
-  margin-top: 10px;
+  border-radius: 0px 0px 25px 30px;
+  flex-basis: 88%;
+  margin-top: 1;
   justify-content: right;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
+  font-family: "Poppins", sans-serif;
 }
 
 .header-area .main-nav .nav li:last-child {
@@ -651,7 +649,11 @@ Header Style
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #ee626b !important;
+
     opacity: 1;
+  }
+  .header-area .main-nav .nav li a:default(home):active {
+    color: #fff;
   }
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
@@ -735,6 +737,7 @@ Banner Style
   font-size: 48px;
   color: #fff;
   margin-top: 20px;
+  font-weight: bold;
   position: relative;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -807,13 +810,13 @@ Banner Style
   position: absolute;
   right: 20px;
   top: 20px;
-  border-radius: 25px;
+  border-radius: 30px;
   background-color: #008af8;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff;
-  padding: 4px 15px;
+  padding: 10px 12px;
 }
 
 .main-banner .right-image span.offer {
@@ -1727,10 +1730,12 @@ body {
 html,
 body {
   height: 100%;
-  font-family: "Poppins", sans-serif;
+
+  font-weight: bold;
 }
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
@@ -1745,4 +1750,76 @@ body {
 .mat-typography h6 {
   font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
   margin: 0px 2px 37px;
+}
+.header-area .main-nav .nav li a:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.features .item h4 {
+  font-size: 17px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.row {
+  font-family: "Poppins", sans-serif;
+}
+.mat-h6,
+.mat-typography .mat-h6,
+.mat-typography h6 {
+  font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
+  margin: 0px 2px 37px;
+  font-size: 15px;
+}
+
+.section-heading h6 {
+  color: #ee626b;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+li.nav-item {
+  border-right: 1px solid #d7d7d7;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+.tabs-content ul.nav-tabs li:last-child {
+  border-right: none;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+ul.nav li:last-child {
+  border-right: none;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.tabs-content .nav-tabs .nav-link.active {
+  color: #0071f8;
+}
+.tabs-content .nav-tabs .nav-link.un {
+  color: #1e1e1e;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent !important;
+  font-size: 20px;
+  font-weight: 800;
+
+  padding: 0px;
+}
+.cta .subscribe form button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ee626b;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0px 25px;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s;
 }

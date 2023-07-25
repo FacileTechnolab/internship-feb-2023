@@ -20,7 +20,7 @@ url:string="assets/jsondata/innershop.json"
     });
   }
   onadv() {
-
+ debugger
     this.list = this.shop.filter((x: any) => x.type == "adv")
     console.log("adv",this.list);
   }
@@ -28,6 +28,15 @@ url:string="assets/jsondata/innershop.json"
 
     this.list = this.shop.filter((x: any) => x.type == "str")
     console.log("str",this.list);
+  }
+  onrac() {
+
+    this.list = this.shop.filter((x: any) => x.type == "rac")
+    console.log("rac",this.list);
+  }
+  listall() {
+
+    this.list = this.shop
   }
   // onevent() {
 

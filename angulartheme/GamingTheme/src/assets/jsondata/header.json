@@ -1,20 +1,16 @@
 [
   {
+    "class": "active",
     "routerLink": "Home",
     "label": "Home"
   },
+  { "class": "", "routerLink": "Shop", "label": "Our Shop" },
   {
-    "routerLink": "Shop",
-    "label": "Our Shop"
-  },
-  {
+    "class": "",
     "routerLink": "ProductDetails",
     "label": "Product Details"
   },
-  {
-    "routerLink": "ContactUs",
-    "label": "Contact Us"
-  },
+  { "class": "", "routerLink": "ContactUs", "label": "Contact Us" },
   {
     "routerLink": "#",
     "label": "Sign In"
