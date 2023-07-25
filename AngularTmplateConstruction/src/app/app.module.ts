@@ -35,10 +35,18 @@ import { TestimonialsComponent } from './about/testimonials/testimonials.compone
 import { TestiboxComponent } from './testibox/testibox.component';
 import { Altservices2Component } from './altservices2/altservices2.component';
 import { Altserbox2Component } from './altserbox2/altserbox2.component';
+import { StatcountboxComponent } from './statcountbox/statcountbox.component';
+import { ServicescardComponent } from './servicescard/servicescard.component';
+import { ServicescardboxComponent } from './servicescardbox/servicescardbox.component';
+import { ServidetasidemenuComponent } from './servidetasidemenu/servidetasidemenu.component';
+import { ServcesdetaillistComponent } from './servcesdetaillist/servcesdetaillist.component';
+import { ServdetaillistlinkComponent } from './servdetaillistlink/servdetaillistlink.component';
+import { ContactinfoComponent } from './contactinfo/contactinfo.component';
+import { ContactinfoboxComponent } from './contactinfobox/contactinfobox.component';
 
 
 @NgModule({
-  declarations: [																																			
+  declarations: [																																												
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -70,7 +78,15 @@ import { Altserbox2Component } from './altserbox2/altserbox2.component';
       TestimonialsComponent,
       TestiboxComponent,
       Altservices2Component,
-      Altserbox2Component
+      Altserbox2Component,
+      StatcountboxComponent,
+      ServicescardComponent,
+      ServicescardboxComponent,
+      ServidetasidemenuComponent,
+      ServcesdetaillistComponent,
+      ServdetaillistlinkComponent,
+      ContactinfoComponent,
+      ContactinfoboxComponent
    ],
   imports: [
     BrowserModule,

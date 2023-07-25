@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servicesdetails.component.css']
 })
 export class ServicesdetailsComponent implements OnInit {
-
-  constructor() { }
+  url: string = "/assets/json/servicesdetails.json"
+  serdetaildata: any;
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(result=>{
+      this.serdetaildata =result
+    });
+ console.log(this.serdetaildata)
   }
+
 
 }

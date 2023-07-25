@@ -34,5 +34,41 @@
         "blogreadlink": "/blog-details",
         "blogreadlinktext": "Read More",
         "blogreadlinkicon": "bi bi-arrow-right"
+    },
+    {
+        "blogimg": "assets/img/blog/blog-4.jpg",
+        "blogimgdate": "August 05",
+        "blogposttitle": "Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"Maria Doe",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Sports",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
+    },
+    {
+        "blogimg": "assets/img/blog/blog-5.jpg",
+        "blogimgdate": "September 17",
+        "blogposttitle": "Accusamus quaerat aliquam qui debitis facilis consequatur",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"John Parker",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Politics",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
+    },
+    {
+        "blogimg": "assets/img/blog/blog-6.jpg",
+        "blogimgdate": "December 07",
+        "blogposttitle": "Distinctio provident quibusdam numquam aperiam aut",
+        "blogpersonicon":"bi bi-person",
+        "blogpersontitle":"Julia White",
+        "blogfoldericon":"bi bi-folder2",
+        "blogfoldertitle":"Economics",
+        "blogreadlink": "/blog-details",
+        "blogreadlinktext": "Read More",
+        "blogreadlinkicon": "bi bi-arrow-right"
     }
 ]
