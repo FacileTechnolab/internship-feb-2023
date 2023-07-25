@@ -7,10 +7,9 @@
   <div class="percentage">
     <div class="progress">
       <div
-        class="progress-bar color-1"
+        [class]="value.class"
         role="progressbar"
-        style="width: 80%"
-        aria-valuenow="80"
+        [ngStyle]="{ 'width.%': value.per }"
         aria-valuemin="0"
         aria-valuemax="100"
       ></div>

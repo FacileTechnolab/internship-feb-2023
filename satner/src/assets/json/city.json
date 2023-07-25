@@ -3,14 +3,17 @@
     "country":"Canada",
     "src":"assets/img/elements/f1.jpg",
     "visit":"645032",
-    "per":"80"
+    "per":"80",
+    "class":"progress-bar color-1"
 },{
     
         "index":"02",
         "country":"Canada",
         "src":"assets/img/elements/f2.jpg",
         "visit":"645032",
-        "per":"30"
+        "per":"30",
+        
+    "class":"progress-bar color-2"
     
 },
 {
@@ -19,7 +22,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f3.jpg",
     "visit":"645032",
-    "per":"55"
+    "per":"55",
+    "class":"progress-bar color-3"
 
 },
 {
@@ -28,7 +32,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f4.jpg",
     "visit":"645032",
-    "per":"60"
+    "per":"60",
+    "class":"progress-bar color-4"
 
 },
 {
@@ -37,7 +42,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f5.jpg",
     "visit":"645032",
-    "per":"40"
+    "per":"40",
+    "class":"progress-bar color-5"
 
 },
 
@@ -47,7 +53,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f6.jpg",
     "visit":"645032",
-    "per":"70"
+    "per":"70",
+    "class":"progress-bar color-6"
 
 },
 
@@ -57,7 +64,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f7.jpg",
     "visit":"645032",
-    "per":"30"
+    "per":"30",
+    "class":"progress-bar color-7"
 
 },
 
@@ -67,7 +75,8 @@
     "country":"Canada",
     "src":"assets/img/elements/f8.jpg",
     "visit":"645032",
-    "per":"60"
+    "per":"60",
+    "class":"progress-bar color-8"
 
 }
 ]

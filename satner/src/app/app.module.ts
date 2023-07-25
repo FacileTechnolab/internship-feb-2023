@@ -51,9 +51,12 @@ import { SymbolchildComponent } from './symbolchild/symbolchild.component';
 import { SymbolmainComponent } from './symbolmain/symbolmain.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentchildComponent } from './commentchild/commentchild.component';
+import { ContactinfoComponent } from './contactinfo/contactinfo.component';
+import { SliderchildComponent } from './sliderchild/sliderchild.component';
+
 
 @NgModule({
-  declarations: [					
+  declarations: [	
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -94,11 +97,13 @@ import { CommentchildComponent } from './commentchild/commentchild.component';
     FoodchildComponent,
     FoodmainComponent,
     DatachildComponent,
-      DatamainComponent,
-      SymbolchildComponent,
-      SymbolmainComponent,
-      CommentComponent,
-      CommentchildComponent
+    DatamainComponent,
+    SymbolchildComponent,
+    SymbolmainComponent,
+    CommentComponent,
+    CommentchildComponent,
+    ContactinfoComponent,
+      SliderchildComponent
    ],
   imports: [
     BrowserModule,

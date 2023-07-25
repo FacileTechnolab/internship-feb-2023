@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -7,12 +8,14 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./Slidermain.component.css']
 })
 export class SlidermainComponent implements OnInit {
+  url: string = "/assets/json/slider.json";
+  main: any;
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
+    mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -26,15 +29,20 @@ export class SlidermainComponent implements OnInit {
         items: 3
       },
       940: {
-        items: 4
+        items: 5
       }
     },
-    nav: true
+    nav: false
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(result => {
+      this.main = result
+      debugger
+      console.log(this.main)
+    });
   }
 
 }

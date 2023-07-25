@@ -17,7 +17,12 @@
 <section class="contact_area section_gap">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="contact_info">
+        <div *ngFor="let contact of cont">
+          <app-contactinfo [contact]="contact"></app-contactinfo>
+        </div>
+      </div>
+      <!-- <div class="col-lg-3">
         <div class="contact_info">
           <div class="info_item">
             <i class="lnr lnr-home"></i>
@@ -35,14 +40,18 @@
             <p>Send us your query anytime!</p>
           </div>
         </div>
-      </div>
+      </div> -->
+
       <div class="col-lg-9">
         <form
+          href="#"
           class="row contact_form"
-          action="contact_process.php"
+          (ngSubmit)="onSubmit(userForm.value)"
           method="post"
           id="contactForm"
-          novalidate="novalidate"
+          action-method="post"
+          #userForm="ngForm"
+          (ngSubmit)="onSubmit(userForm.value)"
         >
           <div class="col-md-6">
             <div class="form-group">
@@ -51,6 +60,7 @@
                 class="form-control"
                 id="name"
                 name="name"
+                ngModel
                 placeholder="Enter your name"
               />
             </div>
@@ -60,6 +70,7 @@
                 class="form-control"
                 id="email"
                 name="email"
+                ngModel
                 placeholder="Enter email address"
               />
             </div>
@@ -69,6 +80,7 @@
                 class="form-control"
                 id="subject"
                 name="subject"
+                ngModel
                 placeholder="Enter Subject"
               />
             </div>
@@ -80,6 +92,7 @@
                 name="message"
                 id="message"
                 rows="1"
+                ngModel
                 placeholder="Enter Message"
               ></textarea>
             </div>
@@ -104,4 +117,5 @@
     ></div>
   </div>
 </section>
+
 <!--================Contact Area =================-->

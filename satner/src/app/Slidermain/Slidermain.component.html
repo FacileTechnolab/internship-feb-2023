@@ -12,105 +12,33 @@
         </div>
       </div>
     </div>
-    <div class="">
-      <div class="testi_slider">
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t1.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Elite Martin</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
+
+    <!-- <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let slider of main">
+        <div class="row">
+          <div class="testi_slider">
+            <div class="testi_item">
+              <app-sliderchild [slider]="slider"></app-sliderchild>
             </div>
           </div>
         </div>
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t2.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Davil Saden</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
-            </div>
+      </ng-template>
+    </owl-carousel-o> -->
+
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let slider of main">
+        <div class="row">
+          <div class="testi_slider">
+            <app-sliderchild [slider]="slider"></app-sliderchild>
           </div>
         </div>
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t1.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Elite Martin</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t2.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Davil Saden</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t1.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Elite Martin</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testi_item">
-          <div class="row">
-            <div class="col-lg-4">
-              <img src="/src/img/testimonials/t2.jpg" alt="" />
-            </div>
-            <div class="col-lg-8">
-              <div class="testi_text">
-                <h4>Davil Saden</h4>
-                <p>
-                  Him, made can't called over won't there on divide there male
-                  fish beast own his day third seed sixth seas unto. Saw from
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
+  <!-- <div class="row">
+      <div class="testi_slider">
+        <div class="testi_item" *ngFor="let slider of main">
+          <app-sliderchild [slider]="slider"></app-sliderchild>
+        </div>
+      </div> -->
 </div>
