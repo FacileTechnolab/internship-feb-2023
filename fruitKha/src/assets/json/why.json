@@ -1,0 +1,20 @@
+[{
+    "icon": "fas fa-shipping-fast",
+    "head":"Home Delivery",
+    "des": "sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+},
+{
+    "icon": "fas fa-money-bill-alt",
+    "head":"Best Price",
+    "des": "sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+},
+{
+    "icon": "fas fa-briefcase",
+    "head":"Custom Box",
+    "des": "sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+},
+{
+    "icon": "fas fa-sync-alt",
+    "head":"Quick Refund",
+    "des": "sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo."
+}]

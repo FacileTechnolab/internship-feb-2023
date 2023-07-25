@@ -1,0 +1,27 @@
+[{
+    "class":"team-bg team-bg-1",
+    "img":"/assets/img/team/team-1.jpg",
+    "head":"Jimmy Doe",
+    "title":"Farmer",
+    "icon1" : "fab fa-facebook-f",
+    "icon2" : "fab fa-twitter",
+    "icon3" :"fab fa-instagram" 
+},
+{
+    "class":"team-bg team-bg-2",
+    "img":"/assets/img/team/team-2.jpg",
+    "head":"Marry Doe",
+    "title":"Farmer",
+    "icon1" : "fab fa-facebook-f",
+    "icon2" : "fab fa-twitter",
+    "icon3" :"fab fa-instagram" 
+},
+{
+    "class":"team-bg team-bg-3",
+    "img":"/assets/img/team/team-3.jpg",
+    "head":"Simon Joe",
+    "title":"Farmer",
+    "icon1" : "fab fa-facebook-f",
+    "icon2" : "fab fa-twitter",
+    "icon3" :"fab fa-instagram" 
+}]

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Layout/Header/Header.component';
@@ -17,7 +16,6 @@ import { ShopbannerComponent } from './Home/Shopbanner/Shopbanner.component';
 import { OurNewsComponent } from './Home/OurNews/OurNews.component';
 import { LogocarsoulComponent } from './Home/logocarsoul/logocarsoul.component';
 import { OurProductComponent } from './Home/OurProduct/OurProduct.component';
-
 import { AboutusComponent } from './About/Aboutus/Aboutus.component';
 import { WhyComponent } from './About/Why/Why.component'; 
 import { OurTeamComponent } from './About/OurTeam/OurTeam.component';
@@ -41,13 +39,16 @@ import { GreenappleComponent } from './singleproduct/Greenapple/Greenapple.compo
 import { RelatedproductComponent } from './singleproduct/Relatedproduct/Relatedproduct.component';
 import { HelpboxComponent } from './Home/helpbox/helpbox.component';
 import { OurproductBoxComponent } from './Home/OurproductBox/OurproductBox.component';
+import { AdsComponent } from './Home/adsbox/ads.component';
+import { OurNewsboxComponent } from './Home/OurNewsbox/OurNewsbox.component';
+import { WhyboxComponent } from './About/Whybox/Whybox.component';
+import { OurteamboxComponent } from './About/ourteambox/ourteambox.component';
 
 @NgModule({
   declarations: [																		
     AppComponent,
     HeaderComponent,
     FooterComponent,
-
       StaticHomeComponent,
       SliderHomeComponent,
       HelpComponent,    
@@ -58,35 +59,35 @@ import { OurproductBoxComponent } from './Home/OurproductBox/OurproductBox.compo
       OurNewsComponent,
       LogocarsoulComponent,
       OurProductComponent,
-
-
       AboutusComponent,
       WhyComponent,
       OurTeamComponent,
-
       ErrorComponent,
       NotFoundeComponent,
       CartComponent,
       CartinComponent,
       CheckoutComponent,
       CheckoutboxComponent,
-
       ContactComponent,
       ContactcomeComponent,
       LocationComponent,
-
       NewComponent,
       NewsboxComponent,
       SingleboxComponent,
       SinglenewsComponent, 
-
       ShopComponent,
       ShopboxComponent ,
       SingleproductComponent,
       GreenappleComponent,
       RelatedproductComponent,
       HelpboxComponent,
-      OurproductBoxComponent 
+      OurproductBoxComponent,
+      AdsComponent,
+      OurNewsboxComponent,
+      WhyboxComponent,
+     OurteamboxComponent 
+
+
    ],
   imports: [
     BrowserModule,
