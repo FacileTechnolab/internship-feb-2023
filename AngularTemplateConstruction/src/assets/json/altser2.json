@@ -1,0 +1,27 @@
+[
+    {
+        "altser2icon": "bi bi-easel flex-shrink-0",
+        "altser2title" : "Lorem Ipsum",
+        "altser2desc" : "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident"
+
+    },
+    {
+        "altser2icon": "bi bi-patch-check flex-shrink-0",
+        "altser2title" : "Nemo Enim",
+        "altser2desc" : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque"
+
+    },
+    {
+        "altser2icon": "bi bi-brightness-high flex-shrink-0",
+        "altser2title" : "Dine Pad",
+        "altser2desc" : "Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis"
+
+    },
+    {
+        "altser2icon": "bi bi-brightness-high flex-shrink-0",
+        "altser2title" : "Tride clov",
+        "altser2desc" : "Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet. Et eligendi"
+
+    }
+
+]

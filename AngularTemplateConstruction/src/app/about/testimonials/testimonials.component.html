@@ -1,0 +1,21 @@
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Testimonials</h2>
+      <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia
+        reprehenderit sunt deleniti</p>
+    </div>
+ 
+    <owl-carousel-o [options]="customOptions" >
+      <ng-template carouselSlide *ngFor="let testibox of testidata"> 
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <app-testibox [testibox]="testibox"></app-testibox>
+            </div>
+          </div>
+      </ng-template> 
+    </owl-carousel-o>
+  </div>
+  
+</section><!-- End Testimonials Section -->

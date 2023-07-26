@@ -1,0 +1,55 @@
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+      <h2>Service Details</h2>
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li>Service Details</li>
+      </ol>
+
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Service Details Section ======= -->
+  <section id="service-details" class="service-details">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4">
+          <app-servcesdetaillist></app-servcesdetaillist>
+
+          <h4>{{serdetaildata.servicdetailsidetitle}}</h4>
+          <p>{{serdetaildata.servicdetailsidedesc}}</p>
+        </div>
+
+        <div class="col-lg-8">
+          <img src={{serdetaildata.servicdetailrightimg}} alt="" class="img-fluid services-img">
+          <h3>{{serdetaildata.servicdetailrighttile}}</h3>
+          <p>
+            {{serdetaildata.servicdetailrightdesc}}
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span>
+            </li>
+            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+          </ul>
+          <p>
+            {{serdetaildata.servicdetailrightdesc1}}
+          </p>
+          <p>
+            {{serdetaildata.servicdetailrightdesc2}}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Service Details Section -->
+
+</main><!-- End #main -->

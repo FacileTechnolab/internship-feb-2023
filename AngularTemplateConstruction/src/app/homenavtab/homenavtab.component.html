@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs row  g-2 d-flex" data-aos="fade-up" data-aos-delay="200">
+
+    <li class="nav-item col-3" *ngFor="let tab of tabsArray; let sr = index" (click)="setTab(sr)">
+      <a class="nav-link" [ngClass]="activatedTab == sr ? 'active' : ''" >
+        <h4>{{tab}}</h4>
+      </a>
+    </li>
+  
+  </ul>
