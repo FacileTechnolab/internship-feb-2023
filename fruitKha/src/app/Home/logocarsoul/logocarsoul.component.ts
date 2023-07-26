@@ -1,3 +1,5 @@
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logocarsoul.component.css']
 })
 export class LogocarsoulComponent implements OnInit {
-
-  constructor() { }
+  url : string="assets/json/logo.json"  
+  logocarsoul : any
+  
+  constructor(private http : HttpClient) { }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(res => {this.logocarsoul = res; console.log(this.logocarsoul); })
   }
+  // customOptions: OwlOptions = {
+  //   loop: true,
+  //   mouseDrag: false,
+  //   touchDrag: false,
+  //   pullDrag: false,
+  //   dots: false,
+  //   navSpeed: 700,
+  //   navText: ['', ''],
+  //   responsive: {
+  //     0: {
+  //       items: 1
+  //     },
+  //     400: {
+  //       items: 2
+  //     },
+  //     740: {
+  //       items: 3
+  //     },
+  //     940: {
+  //       items: 4
+  //     }
+  //   },
+  //   nav: true
+  // }
 
 }

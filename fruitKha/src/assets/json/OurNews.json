@@ -34,4 +34,40 @@
     "dec":"Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.",
     "btn":"read more",
     "icon3":"fas fa-angle-right"
+},
+{
+    "class":"latest-news-bg news-bg-4",
+    "img":"/assets/img/latest-news/news-bg-4.jpg",
+    "head":"Fall in love with the fresh orange",
+    "icon1":"fas fa-user",
+    "icon2":"fas fa-calendar",
+    "s1":"Admin",
+    "s2":"27 December, 2019",
+    "dec":"Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.",
+    "btn":"read more",
+    "icon3":"fas fa-angle-right"
+},
+{
+    "class":"latest-news-bg news-bg-5",
+    "img":"/assets/img/latest-news/news-bg-5.jpg",
+    "head":"Why the berries always look delecious",
+    "icon1":"fas fa-user",
+    "icon2":"fas fa-calendar",
+    "s1":"Admin",
+    "s2":"27 December, 2019",
+    "dec":"Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.",
+    "btn":"read more",
+    "icon3":"fas fa-angle-right"
+},
+{
+    "class":"latest-news-bg news-bg-6",
+    "img":"/assets/img/latest-news/news-bg-6.jpg",
+    "head":"Love for fruits are genuine of John Doe",
+    "icon1":"fas fa-user",
+    "icon2":"fas fa-calendar",
+    "s1":"Admin",
+    "s2":"27 December, 2019",
+    "dec":"Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.",
+    "btn":"read more",
+    "icon3":"fas fa-angle-right"
 }]

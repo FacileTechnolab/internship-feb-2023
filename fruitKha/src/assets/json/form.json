@@ -1,0 +1,21 @@
+{
+    "icon" : "fas fa-map",
+    "head" : "Shop Address",
+    "add1" : "34/8, East Hukupara",
+    "add2" : "Gifirtok, Sadan.",
+    "country" : "Country Name",
+
+
+    "icon1" : "far fa-clock",
+    "head1" : "Shop Hours",
+    "mor" : "MON - FRIDAY: 8 to 9 PM",
+    "eve" : "SAT - SUN: 10 to 8 PM",
+
+    "icon2" : "fas fa-address-book",
+    "head2" : "Contact",
+    "phone" : "Phone: +00 111 222 3333",
+    "email" :" Email: support@fruitkha.com"
+ 
+
+
+}

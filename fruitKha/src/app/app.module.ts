@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +12,6 @@ import { SliderHomeComponent } from './Home/Slider-home/Slider-home.component';
 import { HelpComponent } from './Home/Help/Help.component';
 import { HttpClientModule} from '@angular/common/http'; 
 import { ProductComponent } from './Home/product/product.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TestimonailComponent } from './Home/testimonail/testimonail.component';
 import { AdvertisementComponent } from './Home/advertisement/advertisement.component';
 import { ShopbannerComponent } from './Home/Shopbanner/Shopbanner.component';
@@ -43,9 +45,14 @@ import { AdsComponent } from './Home/adsbox/ads.component';
 import { OurNewsboxComponent } from './Home/OurNewsbox/OurNewsbox.component';
 import { WhyboxComponent } from './About/Whybox/Whybox.component';
 import { OurteamboxComponent } from './About/ourteambox/ourteambox.component';
+import { ContactsboxComponent } from './Contacts/contactsbox/contactsbox.component';
+import { LogoboxComponent } from './Home/logobox/logobox.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
-  declarations: [																		
+  declarations: [						   
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -85,15 +92,19 @@ import { OurteamboxComponent } from './About/ourteambox/ourteambox.component';
       AdsComponent,
       OurNewsboxComponent,
       WhyboxComponent,
-     OurteamboxComponent 
-
-
+     OurteamboxComponent,
+     ContactsboxComponent,
+     LogoboxComponent
+ 
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
