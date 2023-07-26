@@ -129,27 +129,39 @@
         </div>
         <div class="comment-form">
           <h4>Leave a Reply</h4>
-          <form>
+          <form [formGroup]="Leave" #userForm="ngForm" (ngSubmit)="onLeave()">
             <div class="form-group form-inline">
               <div class="form-group col-lg-6 col-md-6 name">
                 <input
                   type="text"
                   class="form-control"
                   id="name"
+                  formControlName="name"
                   placeholder="Enter Name"
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Enter Name'"
                 />
+                <span
+                  style="color: red"
+                  *ngIf="name && name.invalid && name.touched"
+                  >Input field is required</span
+                >
               </div>
               <div class="form-group col-lg-6 col-md-6 email">
                 <input
                   type="email"
                   class="form-control"
                   id="email"
+                  formControlName="email"
                   placeholder="Enter email address"
                   onfocus="this.placeholder = ''"
                   onblur="this.placeholder = 'Enter email address'"
                 />
+                <span
+                  style="color: red"
+                  *ngIf="email && email.invalid && email.touched"
+                  >Input field is required</span
+                >
               </div>
             </div>
             <div class="form-group">
@@ -157,24 +169,28 @@
                 type="text"
                 class="form-control"
                 id="subject"
+                formControlName="sub"
                 placeholder="Subject"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Subject'"
               />
+              <span style="color: red" *ngIf="sub && sub.invalid && sub.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="form-group">
               <textarea
                 class="form-control mb-10"
                 rows="5"
-                name="message"
+                formControlName="message"
                 placeholder="Messege"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Messege'"
                 required=""
               ></textarea>
             </div>
-            <a href="#" class="primary-btn primary_btn"
-              ><span>Post Comment</span></a
+            <a href="#" class="primary-btn primary_btn" type="submit"
+              ><span type="submit">Post Comment</span></a
             >
           </form>
         </div>

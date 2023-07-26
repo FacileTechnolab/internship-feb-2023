@@ -13,7 +13,7 @@ export class SymbolchildComponent implements OnInit {
   @Input() data: any;
   ngOnInit() {
 
-    console.log(this.data);
+
 
   }
 }

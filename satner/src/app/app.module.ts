@@ -1,5 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -53,10 +54,11 @@ import { CommentComponent } from './comment/comment.component';
 import { CommentchildComponent } from './commentchild/commentchild.component';
 import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 import { SliderchildComponent } from './sliderchild/sliderchild.component';
-
-
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -103,15 +105,18 @@ import { SliderchildComponent } from './sliderchild/sliderchild.component';
     CommentComponent,
     CommentchildComponent,
     ContactinfoComponent,
-      SliderchildComponent
-   ],
+    SliderchildComponent,
+    BreadcrumbComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
 
 
   ],

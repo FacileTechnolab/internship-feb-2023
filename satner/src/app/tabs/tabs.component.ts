@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
@@ -18,17 +19,21 @@ export class TabsComponent implements OnInit {
   tab3 = "latest";
   tab4 = "following";
   tab5 = "upcoming";
+
+  theight = "{'height': 2000px}"
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
-      debugger
+
       this.home = res;
       this.list = this.home;
+      //debugger
+      this.theight = this.theight;
 
       console.log('icon', this.home)
     });
   }
   onevent() {
-    debugger
+    // debugger
     this.list = this.home.filter((x: any) => x.type == "popular")
   }
   onlatest() {
@@ -37,6 +42,8 @@ export class TabsComponent implements OnInit {
   alllist() {
     this
       .list = this.home
+    debugger
+    this.list = this.theight
   }
   onfollow() {
     this.list = this.home.filter((y: any) => y.type == "following")

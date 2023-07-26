@@ -15,7 +15,7 @@ export class ServiceofferComponent implements OnInit {
     this.http.get(this.url).subscribe(result => {
       this.service = result
 
-      console.log(this.service)
+      // console.log(this.service)
     });
   }
 

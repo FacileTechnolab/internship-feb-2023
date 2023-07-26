@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-blogmain',
   templateUrl: './blogmain.component.html',
@@ -14,6 +15,9 @@ export class BlogmainComponent implements OnInit {
   blogarea: any;
   blogpost: any;
   news: any;
+  subscribe = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email])
+  })
   ngOnInit() {
 
     this.http.get(this.url1).subscribe(rel => {
@@ -35,6 +39,16 @@ export class BlogmainComponent implements OnInit {
 
     });
 
+
+  }
+  onblog() {
+    document.getElementById("blog")?.scrollIntoView({ behavior: 'smooth' })
+  }
+  onSub() {
+    console.warn(this.subscribe.value);
+  }
+  get email() {
+    return this.subscribe.get('email');
 
   }
 }

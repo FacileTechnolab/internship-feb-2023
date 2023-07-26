@@ -12,6 +12,7 @@ export class SlidermainComponent implements OnInit {
   main: any;
   customOptions: OwlOptions = {
     loop: true,
+    margin: 30,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
@@ -26,10 +27,10 @@ export class SlidermainComponent implements OnInit {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
-        items: 5
+        items: 2
       }
     },
     nav: false
@@ -40,8 +41,8 @@ export class SlidermainComponent implements OnInit {
   ngOnInit() {
     this.http.get(this.url).subscribe(result => {
       this.main = result
-      debugger
-      console.log(this.main)
+
+      //console.log(this.main)
     });
   }
 

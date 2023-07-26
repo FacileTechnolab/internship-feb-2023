@@ -13,7 +13,7 @@ export class IconeComponent implements OnInit {
   ngOnInit() {
 
 
-    console.log(this.iconic)
+
 
   }
 

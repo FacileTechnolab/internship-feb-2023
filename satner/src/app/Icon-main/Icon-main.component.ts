@@ -14,7 +14,7 @@ export class IconMainComponent implements OnInit {
     this.http.get(this.url).subscribe(result => {
       this.data = result
 
-      console.log(this.data)
+      //console.log(this.data)
     });
   }
   age = '10';

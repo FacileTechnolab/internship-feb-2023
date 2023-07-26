@@ -11,7 +11,7 @@ export class SliderchildComponent implements OnInit {
   constructor(private http: HttpClient) { }
   url: string = "/assets/json/slider.json"
   ngOnInit() {
-    console.log(this.slider);
+
 
   }
 

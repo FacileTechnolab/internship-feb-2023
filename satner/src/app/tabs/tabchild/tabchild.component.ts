@@ -12,8 +12,7 @@ export class TabchildComponent implements OnInit {
   url: string = "/assets/json/filter.json";
 
   ngOnInit() {
-    debugger
-    console.log(this.tab);
+    //debugger
 
   }
 

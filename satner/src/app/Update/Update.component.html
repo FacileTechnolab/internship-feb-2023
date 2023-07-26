@@ -10,7 +10,10 @@
           <div class="subcribe-form" id="mc_embed_signup">
             <form
               target="_blank"
+              [formGroup]="subscribe"
               novalidate="true"
+              #subForm="ngForm"
+              (ngSubmit)="onSub()"
               action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
               method="get"
               class="subscription relative"
@@ -18,11 +21,13 @@
               <input
                 name="EMAIL"
                 placeholder="Email address"
+                formControlName="email"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Email address'"
                 required=""
                 type="email"
               />
+
               <div style="position: absolute; left: -5000px">
                 <input
                   name="b_36c4fd991d266f23781ded980_aefe40901a"
@@ -31,9 +36,19 @@
                   type="text"
                 />
               </div>
-              <button class="primary-btn hover d-inline">
+
+              <button
+                class="primary-btn hover d-inline"
+                [disabled]="subscribe.invalid"
+              >
                 {{ from.title }}
               </button>
+              <br />
+              <span
+                style="color: red"
+                *ngIf="email && email.invalid && email.touched"
+                >Input field is required</span
+              >
               <div class="info"></div>
             </form>
           </div>

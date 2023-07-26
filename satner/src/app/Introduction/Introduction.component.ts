@@ -14,7 +14,7 @@ export class IntroductionComponent implements OnInit {
     this.http.get(this.url).subscribe(res => {
 
       this.intro = res;
-      console.log(this.intro);
+      // console.log(this.intro);
     })
 
   }

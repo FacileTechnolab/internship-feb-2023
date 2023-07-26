@@ -44,14 +44,13 @@
 
       <div class="col-lg-9">
         <form
+          [formGroup]="contact"
           href="#"
           class="row contact_form"
-          (ngSubmit)="onSubmit(userForm.value)"
-          method="post"
           id="contactForm"
           action-method="post"
           #userForm="ngForm"
-          (ngSubmit)="onSubmit(userForm.value)"
+          (ngSubmit)="onContact()"
         >
           <div class="col-md-6">
             <div class="form-group">
@@ -59,27 +58,38 @@
                 type="text"
                 class="form-control"
                 id="name"
-                name="name"
+                formControlName="name"
                 ngModel
                 placeholder="Enter your name"
               />
+
+              <span
+                style="color: red"
+                *ngIf="name && name.invalid && name.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="form-group">
               <input
                 type="email"
                 class="form-control"
                 id="email"
-                name="email"
+                formControlName="email"
                 ngModel
                 placeholder="Enter email address"
               />
+              <span
+                style="color: red"
+                *ngIf="email && email.invalid && email.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
                 id="subject"
-                name="subject"
+                formControlName="sub"
                 ngModel
                 placeholder="Enter Subject"
               />
@@ -89,7 +99,7 @@
             <div class="form-group">
               <textarea
                 class="form-control"
-                name="message"
+                formControlName="msg"
                 id="message"
                 rows="1"
                 ngModel
@@ -98,7 +108,12 @@
             </div>
           </div>
           <div class="col-md-12 text-right">
-            <button type="submit" value="submit" class="primary_btn">
+            <button
+              [disabled]="contact.invalid"
+              type="submit"
+              value="submit"
+              class="primary_btn"
+            >
               <span>Send Message</span>
             </button>
           </div>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-Blogdetails',
   templateUrl: './Blogdetails.component.html',
@@ -10,7 +10,13 @@ export class BlogdetailsComponent implements OnInit {
   url: string = "/assets/json/blogright.json";
   link: string = "/assets/json/news.json";
   news: any;
-  url2: string = "/assets/json/content.json"
+  url2: string = "/assets/json/content.json";
+  Leave = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    sub: new FormControl('', [Validators.required]),
+    msg: new FormControl('')
+  })
   constructor(private http: HttpClient) { }
   blogpost: any;
   content: any;
@@ -37,6 +43,21 @@ export class BlogdetailsComponent implements OnInit {
   }
   onblogdertail() {
     document.getElementById("blogdetails")?.scrollIntoView({ behavior: "smooth" });
+
+  }
+  onLeave() {
+    console.warn(this.Leave.value);
+  }
+  get name() {
+    return this.Leave.get('name');
+
+  }
+  get sub() {
+    return this.Leave.get('sub');
+
+  }
+  get email() {
+    return this.Leave.get('email');
 
   }
 

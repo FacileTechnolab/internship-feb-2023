@@ -27,8 +27,8 @@
 
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide *ngFor="let slider of main">
-        <div class="row">
-          <div class="testi_slider">
+        <div class="testi_item">
+          <div class="row">
             <app-sliderchild [slider]="slider"></app-sliderchild>
           </div>
         </div>

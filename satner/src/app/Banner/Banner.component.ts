@@ -12,7 +12,7 @@ export class BannerComponent implements OnInit {
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
       this.home = res;
-      console.log('icon', this.home)
+      //console.log('icon', this.home)
     })
   }
 

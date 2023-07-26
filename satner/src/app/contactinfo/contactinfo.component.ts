@@ -12,7 +12,7 @@ export class ContactinfoComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.contact);
+    //console.log(this.contact);
 
   }
 
