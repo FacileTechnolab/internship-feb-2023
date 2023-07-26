@@ -28,7 +28,7 @@ export class ProjectdetailsliderComponent implements OnInit {
     dots: true,
     navSpeed: 700,
     autoplay: true,
-    navText: ['', ''],
+    navText: ['<span class="bi bi-chevron-left" aria-hidden="true"></span>', '<span class="bi bi-chevron-right" aria-hidden="true"></span>'],
     responsive: {
       0: {
         items: 1
