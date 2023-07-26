@@ -167,8 +167,8 @@ ul {
 }
 
 p {
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 13px;
+  line-height: 31px;
   color: #4a4a4a;
 }
 
@@ -410,9 +410,9 @@ Header Style
 }
 
 .header-area .main-nav ul.nav {
-  border-radius: 0px 0px 25px 30px;
-  flex-basis: 88%;
-  margin-top: 1;
+  border-radius: 0px 0px 25px 25px;
+  flex-basis: 100%;
+  margin-top: 10px;
   justify-content: right;
   transition: all 0.3s ease 0s;
   position: relative;
@@ -737,7 +737,7 @@ Banner Style
   font-size: 48px;
   color: #fff;
   margin-top: 20px;
-  font-weight: bold;
+
   position: relative;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -750,7 +750,7 @@ Banner Style
   height: 12px;
   content: "";
   left: 125px;
-  bottom: -14px;
+  bottom: 0px;
 }
 
 .main-banner .caption p {
@@ -810,13 +810,13 @@ Banner Style
   position: absolute;
   right: 20px;
   top: 20px;
-  border-radius: 30px;
+  border-radius: 25px;
   background-color: #008af8;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 700;
   color: #fff;
-  padding: 10px 12px;
+  padding: 4px 15px;
 }
 
 .main-banner .right-image span.offer {
@@ -1431,6 +1431,11 @@ Single Page Style
   margin-top: 50px;
   margin-bottom: 60px;
 }
+p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
 
 .single-product form input {
   width: 80px;
@@ -1730,13 +1735,10 @@ body {
 html,
 body {
   height: 100%;
-
-  font-weight: bold;
 }
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* .tabs-content .nav-tabs .nav-link.active {
@@ -1758,7 +1760,6 @@ body {
   font-size: 17px;
   margin-top: 25px;
   text-transform: uppercase;
-  font-weight: 900;
 }
 .row {
   font-family: "Poppins", sans-serif;
@@ -1766,7 +1767,6 @@ body {
 .mat-h6,
 .mat-typography .mat-h6,
 .mat-typography h6 {
-  font: 400 calc(14px * 0.67) / 20px Roboto, sans-serif;
   margin: 0px 2px 37px;
   font-size: 15px;
 }
@@ -1822,4 +1822,16 @@ ul.nav li:last-child {
   right: 0;
   top: 0;
   transition: all 0.3s;
+}
+.mat-h2,
+.mat-headline-6,
+.mat-typography .mat-h2,
+.mat-typography .mat-headline-6,
+.mat-typography h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+
+  letter-spacing: 0.0125em;
+  margin: 0 0 16px;
 }
