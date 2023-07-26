@@ -1,5 +1,7 @@
 <div class="row gy-4">
-  <div *ngFor="let contactinfovalue of contactinfodata" >
-    <app-contactinfobox [contactinfovalue]="contactinfovalue"></app-contactinfobox>
-  </div>
-</div>
+ 
+    <app-contactinfobox [contactinfovalue]="contactinfovalue" *ngFor="let contactinfovalue of contactinfodata"  [class]="contactinfovalue.contactclass">
+      
+    </app-contactinfobox>
+
+</div> 
