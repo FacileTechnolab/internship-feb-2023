@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projectdetails.component.css']
 })
 export class ProjectdetailsComponent implements OnInit {
-
+  url: string = "/assets/json/projectdetailinfo.json";
+  url1: string = "/assets/json/projectdetailsideinfo.json";
   title: string
   brList: any
-  constructor() {
+  projectdetinfodata: any;
+  constructor(private http: HttpClient) {
     this.title = "Project Details"
     this.brList = [
       {
@@ -21,6 +24,7 @@ export class ProjectdetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+ 
   }
  
 }

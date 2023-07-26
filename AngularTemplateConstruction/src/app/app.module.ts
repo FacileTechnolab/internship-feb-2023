@@ -47,11 +47,13 @@ import { CommentformComponent } from './commentform/commentform.component';
 import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
 import { ProjectdetailsliderComponent } from './projectdetailslider/projectdetailslider.component';
 import { ProjedetasliderimgComponent } from './projedetasliderimg/projedetasliderimg.component';
+import { ProjectdetailinfoComponent } from './projectdetailinfo/projectdetailinfo.component';
+import { ProjectdetailsideinfoComponent } from './projectdetailsideinfo/projectdetailsideinfo.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [																																																
+  declarations: [																																																		
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -95,7 +97,9 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       CommentformComponent,
       ProjectdetailsComponent,
       ProjectdetailsliderComponent,
-      ProjedetasliderimgComponent
+      ProjedetasliderimgComponent,
+      ProjectdetailinfoComponent,
+      ProjectdetailsideinfoComponent
    ],
   imports: [
     BrowserModule,

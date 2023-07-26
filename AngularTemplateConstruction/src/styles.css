@@ -2746,6 +2746,8 @@
     background-color: #ffc107 !important;
   }
   .error-form-required{
-    color: red;
+     color: red;
     font-size: 12px;
+  
+
   }
