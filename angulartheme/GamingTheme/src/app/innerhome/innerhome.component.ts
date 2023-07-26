@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-innerhome',
@@ -28,7 +29,11 @@ url2: string ="assets/jsondata/feturesicon.json"
     
   }
  
- 
+  onSubmit(data:any) {
+    console.warn(data.value);
+   
+    data.reset();
+    }
 
 
 }

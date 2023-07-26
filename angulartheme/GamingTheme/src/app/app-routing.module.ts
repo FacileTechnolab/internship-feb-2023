@@ -14,13 +14,10 @@ component:HomeComponent},
 
 {
   path:'Shop',
-  component:ShopComponent, data:{breadcrumb:"Shop"}},
-  {path:'ProductDetails',component:ProductDetailsComponent , data:{breadcrumb:"ProductDetails"}},
-  {path:'ContactUs',component:ContactUsComponent , data:{breadcrumb:"ContactUs"}},
-  
- 
-
-];
+  component:ShopComponent},
+  {path:'ProductDetails',component:ProductDetailsComponent },
+  {path:'ContactUs',component:ContactUsComponent },
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

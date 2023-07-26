@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ShopComponent implements OnInit {
 shop:any;
 list:any;
+data:any;
+url1:string="assets/jsondata/breadcrum.json";
 url:string="assets/jsondata/innershop.json"
   constructor(private http:HttpClient) { }
 
@@ -18,9 +20,13 @@ url:string="assets/jsondata/innershop.json"
       this.list = this.shop;
       console.log('icon', this.shop)
     });
+    this.http.get(this.url1).subscribe(result=>{
+      this.data=result;
+     
+    })
   }
   onadv() {
- debugger
+
     this.list = this.shop.filter((x: any) => x.type == "adv")
     console.log("adv",this.list);
   }
@@ -38,12 +44,5 @@ url:string="assets/jsondata/innershop.json"
 
     this.list = this.shop
   }
-  // onevent() {
 
-  //   this.list = this.shop.filter((x: any) => x.type == "popular")
-  // }
-  // onevent() {
-
-  //   this.list = this.shop.filter((x: any) => x.type == "popular")
-  // }
 }

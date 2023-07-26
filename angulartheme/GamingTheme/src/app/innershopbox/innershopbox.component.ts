@@ -11,7 +11,7 @@ url:string="assets/jsondata/innershop.json"
   constructor() { }
 
   ngOnInit() {
-    debugger;
+
     console.log(this.value);
   }
 

@@ -1,5 +1,6 @@
-import { BreadcrumbModule } from 'angular-crumbs';
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-Breadcrumb',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Breadcrumb.component.css']
 })
 export class BreadcrumbComponent implements OnInit {
-
-  constructor() { }
+ @Input() crump:any;
+url:string="assets/jsondata/breadcrum.json";
+  constructor( private http:HttpClient) { }
 
   ngOnInit() {
+ console.log(this.crump);
+   
+
   }
 
 }

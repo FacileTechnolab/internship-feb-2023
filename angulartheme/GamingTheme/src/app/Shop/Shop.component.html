@@ -1,11 +1,10 @@
 <div class="page-heading header-text">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>Our Shop</h3>
-        <span class="breadcrumb"><a href="#">Home</a> > Our Shop</span>
-        <!-- <span class="breadcrumb"><app-Breadcrumb></app-Breadcrumb> </span> -->
-      </div>
+    <div class="row" *ngFor="let crump of data">
+      <app-Breadcrumb
+        [crump]="crump"
+        *ngIf="crump.id == 'Shop'"
+      ></app-Breadcrumb>
     </div>
   </div>
 </div>

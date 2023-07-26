@@ -1,0 +1,29 @@
+[
+  {
+    "id": "Shop",
+    "label": "Our Shop",
+    "routerLink1": "Home",
+    "routerLink2": "",
+    "label1": "Home",
+    "label2": " > Our Shop",
+    "label3": ""
+  },
+  {
+    "id": "Product details",
+    "label": "Modern Warfare® II",
+    "routerLink1": "Home",
+    "routerLink2": "Shop",
+    "label1": "Home",
+    "label2": " > Our Shop",
+    "label3": " > Assasin Creed"
+  },
+  {
+    "id": "Contactus",
+    "label": "Contact Us",
+    "routerLink1": "Home",
+    "routerLink2": "Shop",
+    "label1": "Home",
+    "label2": " > Contact Us",
+    "label3": ""
+  }
+]

@@ -24,6 +24,7 @@
     "angular-crumbs": "^3.0.1",
     "breadcrumb": "^1.0.0",
     "crumbs": "^0.0.5",
+    "primeicons": "^6.0.1",
     "primeng": "^15.4.6-lts",
     "rxjs": "~7.8.0",
     "swiper": "^7.4.1",

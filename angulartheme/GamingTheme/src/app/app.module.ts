@@ -22,11 +22,11 @@ import { InnertreadingboxComponent } from './innertreadingbox/innertreadingbox.c
 import { InnerplayedboxComponent } from './innerplayedbox/innerplayedbox.component';
 import { InnercategoryboxComponent } from './innercategorybox/innercategorybox.component';
 import { BreadcrumbComponent } from './Breadcrumb/Breadcrumb.component';
-import { BreadcrumbModule } from 'angular-crumbs';
+
 import { InnershopboxComponent } from './innershopbox/innershopbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailstabComponent } from './detailstab/detailstab.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -57,9 +57,9 @@ import { FormsModule } from '@angular/forms';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule, BrowserAnimationsModule, FormsModule
-   
-//  BreadcrumbModule
+    AppRoutingModule,HttpClientModule, BrowserAnimationsModule, FormsModule,
+    ReactiveFormsModule
+
   
 
   ],
