@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -49,10 +50,15 @@ import { ContactsboxComponent } from './Contacts/contactsbox/contactsbox.compone
 import { LogoboxComponent } from './Home/logobox/logobox.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { TestichildComponent } from './Home/testichild/testichild.component';
+import { SliderboxComponent } from './Home/sliderbox/sliderbox.component';
+import { CartinboxComponent } from './Page/cartinboxcolum/cartinbox.component';
+import { CartindetailComponent } from './Page/cartindetail/cartindetail.component';
+import { CartinheadComponent } from './Page/cartinhead/cartinhead.component';
+import { BreadcrumpComponent } from './breadcrump/breadcrump.component';
 
 @NgModule({
-  declarations: [						   
+  declarations: [							   
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -94,8 +100,13 @@ import { ReactiveFormsModule } from '@angular/forms';
       WhyboxComponent,
      OurteamboxComponent,
      ContactsboxComponent,
-     LogoboxComponent
- 
+     LogoboxComponent,
+     TestichildComponent,
+     SliderboxComponent,
+     CartinboxComponent,
+     CartindetailComponent,
+     CartinheadComponent,
+      BreadcrumpComponent
    ],
   imports: [
     BrowserModule,
@@ -104,6 +115,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

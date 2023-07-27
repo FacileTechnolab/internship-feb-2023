@@ -1,46 +1,46 @@
 [{
-    "slide.id": "1",
-    "img":"assets/img/avaters/avatar1.png",
+    
+    "img":"/assets/img/avaters/avatar1.png",
     "head":"Saira Hakim",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",
     "icon":"fas fa-quote-right"
 },
 {
-    "slide.id": "2",
-    "img":"assets/img/avaters/avatar2.png",
+   
+    "img":"/assets/img/avaters/avatar2.png",
     "head":"David Niph",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",
     "icon":"fas fa-quote-right"
 },
 {
-    "slide.id": "3",
-    "img":"assets/img/avaters/avatar3.png",
+  
+    "img":"/assets/img/avaters/avatar3.png",
     "head":"Jacob Sikim",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",
     "icon":"fas fa-quote-right"
 },
 {
-    "slide.id": "3",
-    "img":"assets/img/avaters/avatar3.png",
+  
+    "img":"/assets/img/avaters/avatar1.png",
     "head":"Jacob Sikim",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",
     "icon":"fas fa-quote-right"
 },
 {
-    "slide.id": "3",
-    "img":"assets/img/avaters/avatar3.png",
+  
+    "img":"/assets/img/avaters/avatar2.png",
     "head":"Jacob Sikim",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",
     "icon":"fas fa-quote-right"
 },
 {
-    "slide.id": "3",
-    "img":"assets/img/avaters/avatar3.png",
+    
+    "img":"/assets/img/avaters/avatar3.png",
     "head":"Jacob Sikim",
     "title":"Local shop owner",
     "dec":"Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ",

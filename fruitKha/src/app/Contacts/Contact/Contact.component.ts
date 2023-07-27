@@ -13,21 +13,28 @@ url: string="assets/json/form.json"
 data: any;
 loginForm = new FormGroup({
     name : new FormControl ('',[Validators.required]),
-    emailid :  new FormControl ('',[Validators.required]),
-    PhoneNo :  new FormControl ('',[Validators.required])
+    emailid :  new FormControl ('',[Validators.required, Validators.email]),
+    phoneno :  new FormControl ('',[Validators.required])
 })
 
   constructor() { }
 
   ngOnInit() {
   }
-  onSubmit(value:NgForm) {
-    console.log("formdata",value);
-    alert("success");
- }
+  onSubmit() {
+    console.warn(this.loginForm.value);
+  }
   get name()
   {
      return this.loginForm.get('name');
+  }
+  get emailid()
+  {
+     return this.loginForm.get('emailid');
+  }
+  get phoneno()
+  {
+     return this.loginForm.get('phoneno');
   }
 
 }

@@ -1,13 +1,30 @@
-<div class="logo-carousel-section">
-  <div class="container">
-    <div class="row">
+  <div class="logo-carousel-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+             
 
-
-      
-      <div class="col-lg-12" *ngFor="let logobox of logocarsoul">
-          <app-logobox [logo] = "logobox"></app-logobox>
+                <owl-carousel-o [options]="customOptions">
+                  <ng-template carouselSlide *ngFor="let logo of logocarsoul" >
+                    <div class="logo-carousel-inner">
+                  <div class="single-logo-item" >
+                    <app-logobox [logo] = "logo" ></app-logobox> 
+                  </div>
+                </div>
+                  </ng-template>
+                </owl-carousel-o>
+               
+               
+              
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
+    
+            
+         
+      
+   
+    
+
 

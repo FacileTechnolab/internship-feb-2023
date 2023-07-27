@@ -12,7 +12,7 @@ product:any
   constructor(private http: HttpClient) {}
 
   ngOnInit()
-  {this.http.get(this.url).subscribe(result=>{this.product =result});
+  {this.http.get(this.url).subscribe(result=>{this.product =result, console.log ( "result" ,result)});
   
 }
 }

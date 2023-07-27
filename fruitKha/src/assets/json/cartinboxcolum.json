@@ -1,0 +1,20 @@
+{
+    "th1" : "Total",
+    "th2" : "Price",
+    "td1" : "Subtotal:",
+    "price1" : "$500",
+    "td2" : "Shipping:",
+    "price2" : "$45" ,
+    "td3" : "Total:",
+    "price3" : "$545",
+
+    "btn1" : "Update Cart",
+    "btn2" : "Check Out",
+
+    "head" : "Apply Coupon",
+    "tag1" :"Coupon",
+    "tag2" :"Apply"
+
+
+
+}

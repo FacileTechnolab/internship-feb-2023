@@ -11,20 +11,33 @@
         
         </div>
           <div class="contact-form">
-          <form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );" action-method="post"  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-            
-            <p>
-              <input type="text" placeholder="Name" ngModel name="name" id="name" formControlName="name">
-              <span style="color: red" *ngIf=" name.invalid && name.touched">Fill this Feild</span>         
-              <input type="email" placeholder="Email" ngModel name="email" id="email">
-            </p>
-            <p>
-              <input type="tel" placeholder="Phone" ngModel name="phone" id="phone">
+          <form type="POST" id="fruitkha-contact" [formGroup]="loginForm" onSubmit="return valid_datas( this );" action-method="post"  #userForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" placeholder="Name" ngModel name="name" id="name" formControlName="name">  
+                <span style="color: red" *ngIf="name.invalid && name.touched">Fill this field</span>
+              </div>
+              
+            <div class="col-lg-6">
+              <input type="email" placeholder="Email" ngModel name="email" id="email" formControlName="emailid">
+              <span style="color: red" *ngIf="emailid.invalid && emailid.touched">Fill this field</span>   
+            </div>
+          </div>
+           
+
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="tel" placeholder="Phone" ngModel name="phone" id="phone" formControlName="phoneno">
+                <span style="color: red" *ngIf="phoneno.invalid && phoneno.touched">Fill this field</span>
+              </div>
+              <div class="col-lg-6">
               <input type="text" placeholder="Subject" ngModel name="subject" id="subject">
-            </p>
+              </div>
+            </div> 
+           
             <p><textarea name="message" id="message" cols="30" rows="10" ngModel placeholder="Message"></textarea></p>
             <input type="hidden" name="token" value="FsWga4&@f6aw" />
-            <p><input type="submit" value="Submit"></p>
+           <button type="submit" value="Submit" [disabled]="loginForm.invalid">Submit</button>
           </form>
         </div>
       </div>

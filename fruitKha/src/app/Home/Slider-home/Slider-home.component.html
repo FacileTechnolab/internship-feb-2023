@@ -1,24 +1,18 @@
-<div class="homepage-slider"  *ngFor="let sli of slider">
-  <!-- single home slider -->
-  <div class="single-homepage-slider" [class] ="sli.class" [style.backgroundImage]="'url(' + sli.img + ')'" >
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-          <div class="hero-text">
-            <div class="hero-text-tablecell">
-              <p class="subtitle">{{sli.subtitle}}</p>
-              <h1>{{sli.title}}</h1>
-              <div class="hero-btns">              
-                <a routerLink="/shop" class="boxed-btn">{{sli.btn1}}</a>
-								<a routerLink="/contactcome" class="bordered-btn">{{sli.btn2}}</a>
+
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide >
+    <div class="homepage-slider"  >
+     <div *ngFor="let sli of slider">
+      <div class="single-homepage-slider" [class]="sli.class"                                                             >
+                  <app-sliderbox [sli]="sli"></app-sliderbox>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  
+  </ng-template>
+</owl-carousel-o>
+
+
   <!-- single home slider
   <div class="single-homepage-slider homepage-bg-2">
     <div class="container">
