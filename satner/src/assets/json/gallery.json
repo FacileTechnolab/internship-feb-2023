@@ -1,27 +1,36 @@
 [{
+    "class":"col-md-4",
     "img":"assets/img/elements/g1.jpg",
     "src":"assets/img/elements/g1.jpg"
 },{
+    "class":"col-md-4",
     "img":"assets/img/elements/g2.jpg",
     "src":"assets/img/elements/g2.jpg"
 },{
+    "class":"col-md-4",
     "img":"assets/img/elements/g3.jpg",
     "src":"assets/img/elements/g3.jpg"
 },{
+    "class":"col-md-6",
     "img":"assets/img/elements/g4.jpg",
     "src":"assets/img/elements/g4.jpg"
 },{
+    "class":"col-md-6",
     "img":"assets/img/elements/g5.jpg",
     "src":"assets/img/elements/g5.jpg"
 },{
+    "class":"col-md-4",
     "img":"assets/img/elements/g6.jpg",
     "src":"assets/img/elements/g6.jpg"
 },
+
 {
+    "class":"col-md-4",
     "img":"assets/img/elements/g7.jpg",
     "src":"assets/img/elements/g7.jpg"
 },
 {
+    "class":"col-md-4",
     "img":"assets/img/elements/g8.jpg",
     "src":"assets/img/elements/g8.jpg"
 }

@@ -1,13 +1,11 @@
 <section class="banner_area" id="blogdetails">
   <div class="banner_inner d-flex align-items-center">
     <div class="container">
-      <div class="banner_content text-center">
-        <h2>Blog Details</h2>
-        <div class="page_link">
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="single-blog.html">Blog Details</a>
-        </div>
+      <div class="banner_content text-center" *ngFor="let bread of Fruit">
+        <app-breadcrumb
+          [bread]="bread"
+          *ngIf="bread.id == 'blogdetails'"
+        ></app-breadcrumb>
       </div>
     </div>
   </div>

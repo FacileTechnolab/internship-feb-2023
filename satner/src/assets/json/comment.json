@@ -16,7 +16,8 @@
     "desc":"Never say goodbye till the end comes!",
     "link":"/Blogdetails",
     "btn":"reply"
-},{
+}
+,{
     "class":"comment-list left-padding",
     "img":"assets/img/blog/c3.jpg",
     "name":"Annie Stephens",

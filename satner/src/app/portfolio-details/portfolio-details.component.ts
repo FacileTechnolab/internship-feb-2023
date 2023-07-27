@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioDetailsComponent implements OnInit {
   url: string = "/assets/json/portchild.json";
+  url1: string = "assets/json/breadcrumb.json";
+  Fruit: any;
   constructor(private http: HttpClient) { }
   port: any;
   ngOnInit() {
@@ -16,6 +18,13 @@ export class PortfolioDetailsComponent implements OnInit {
 
       console.log('icon', this.port)
     });
+    this.http.get(this.url1).subscribe(rel1 => {
+      this.Fruit = rel1;
+      console.log(this.Fruit);
+
+    });
   }
 
 }
+
+

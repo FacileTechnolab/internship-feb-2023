@@ -3308,3 +3308,42 @@ h6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+
+.footer_area {
+  background: #f9f9fd;
+  margin-top: 40px;
+
+}
+.footer_area:before {
+  display: none;
+}
+.selec-option{
+  display: block;
+    width: 100%;
+    line-height: 40px;
+    border: none;
+    outline: none;
+    background: #f9f9ff;
+    padding: 0 20px;
+    padding-left: 45px;
+    height: 42px;
+    color: #777777;
+}
+button.dismissButton {
+  padding: 4px 15px;
+  border-color: #ccc;
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  color: #1a73e8;
+  border-radius: 4px;
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  cursor: pointer;
+  padding: 0 24px;
+}
+button.dismissButton:hover{
+  background-color: rgba(66,133,244,.04);
+    border: 1px solid #d2e3fc;
+}

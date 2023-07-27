@@ -7,14 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./breadcrumb.component.css']
 })
 export class BreadcrumbComponent implements OnInit {
-  url: string = "/assets/json/breadcrumb.json"
-  constructor(private http: HttpClient) { }
+  url: string = "assets/json/breadcrumb.json"
+  constructor() { }
   @Input() bread: any;
   ngOnInit() {
-    // this.http.get(this.url).subscribe(rel => {
-    //   this.bread = rel;
 
-    console.log(this.bread);
 
   }
 }

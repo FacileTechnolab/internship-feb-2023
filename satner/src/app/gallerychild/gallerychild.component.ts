@@ -12,6 +12,8 @@ export class GallerychildComponent implements OnInit {
   @Input() gallerydata: any;
   ngOnInit() {
     console.log(this.gallerydata);
+
+
   }
 
 }

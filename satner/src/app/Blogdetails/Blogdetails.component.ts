@@ -9,6 +9,7 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 export class BlogdetailsComponent implements OnInit {
   url: string = "/assets/json/blogright.json";
   link: string = "/assets/json/news.json";
+  url3: string = "assets/json/breadcrumb.json";
   news: any;
   url2: string = "/assets/json/content.json";
   Leave = new FormGroup({
@@ -19,6 +20,7 @@ export class BlogdetailsComponent implements OnInit {
   })
   constructor(private http: HttpClient) { }
   blogpost: any;
+  Fruit: any;
   content: any;
   ngOnInit() {
     this.http.get(this.url).subscribe(rel1 => {
@@ -37,6 +39,11 @@ export class BlogdetailsComponent implements OnInit {
       this.content = rel3;
 
       console.log(this.content);
+
+    });
+    this.http.get(this.url3).subscribe(result => {
+      this.Fruit = result;
+      console.log(this.Fruit);
 
     });
 
@@ -62,3 +69,5 @@ export class BlogdetailsComponent implements OnInit {
   }
 
 }
+
+

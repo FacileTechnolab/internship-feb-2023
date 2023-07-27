@@ -1,11 +1,12 @@
 [{
-   
+   "class":"col-lg-4 col-md-6 all latest",
     "img1":"/assets/img/portfolio/p1.jpg",
     "name1":"minimal design",
     "desc1":"Animated, portfolio",
     "type":"latest"
 },
     { 
+        "class":"col-lg-4 col-md-6 all popular",
     "img1":"/assets/img/portfolio/p2.jpg",
     "name1":"Paint wall",
     "desc1":"Animated, portfolio",
@@ -13,6 +14,7 @@
 },
 
     {
+       "class":"col-lg-4 col-md-6 all latest",
         "img1":"/assets/img/portfolio/p3.jpg",
         "name1":"female light",
         "desc1":"Animated, portfolio",
@@ -20,38 +22,46 @@
     }
    
    ,{
+    "class":"col-lg-4 col-md-6 all popular",
     "img1":"/assets/img/portfolio/p4.jpg",
     "name1":"fourth air",
     "desc1":"Animated, portfolio",
     "type":"popular"
    }
    ,{
+    "class":"col-lg-4 col-md-6 all following",
     "img1":"/assets/img/portfolio/p5.jpg",
-    "name1":"together sign",
+    "name1":"multiply fowl",
     "desc1":"Animated, portfolio",
     "type":"upcoming"
    },{
+    
+    "class":"col-lg-4 col-md-6 all upcoming",
     "img1":"/assets/img/portfolio/p6.jpg",
-    "name1":"multiply fowl",
+    "name1":"together sign",
     "desc1":"Animated, portfolio",
     "type":"following"
    },{
+    "class":"col-lg-4 col-md-6 all following",
+
     "img1":"/assets/img/portfolio/p7.jpg",
     "name1":"green heaven",
     "desc1":"Animated, portfolio",
     "type":"following" 
     
    }
+  
    
    
    ,{
+    "class":"col-lg-4 col-md-6 all following",
     "img1":"/assets/img/portfolio/p8.jpg",
     "name1":"fly male",
     "desc1":"Animated, portfolio",
     "type":"following"
 
    },{
-
+    "class":"col-lg-4 col-md-6 all upcoming",
     "img1":"/assets/img/portfolio/p9.jpg",
     "name1":"season face",
     "desc1":"Animated, portfolio",

@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
   url: string = "/assets/json/blogcategory.json";
-
+  url1: string = "assets/json/breadcrumb.json";
   constructor(private http: HttpClient) { }
   blog: any;
-
+  Fruit: any;
   ngOnInit() {
     this.http.get(this.url).subscribe(result => {
       this.blog = result;
@@ -19,6 +19,12 @@ export class BlogComponent implements OnInit {
       console.log(this.blog);
 
     });
+    this.http.get(this.url1).subscribe(rel1 => {
+      this.Fruit = rel1;
+      console.log(this.Fruit);
+
+    });
 
   }
 }
+

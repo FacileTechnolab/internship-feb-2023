@@ -1,5 +1,5 @@
 <section class="portfolio_area section_gap_top" id="portfolio">
-  <div class="container" style="height: 2000px">
+  <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="main_title text-left">
@@ -12,19 +12,27 @@
     </div>
     <div class="filters portfolio-filter">
       <ul>
-        <li class="active" data-filter="*" (click)="alllist()">
+        <li class="" data-filter="*" (click)="filterImages('all')">
           {{ tab1 }}
         </li>
-        <li data-filter=".popular" (click)="onevent()">{{ tab2 }}</li>
-        <li data-filter=".latest" (click)="onlatest()">{{ tab3 }}</li>
-        <li data-filter=".following" (click)="onfollow()">{{ tab4 }}</li>
-        <li data-filter=".upcoming" (click)="onup()">{{ tab5 }}</li>
+        <li data-filter=".popular" (click)="filterImages('popular')">
+          {{ tab2 }}
+        </li>
+        <li data-filter=".latest" (click)="filterImages('latest')">
+          {{ tab3 }}
+        </li>
+        <li data-filter=".following" (click)="filterImages('following')">
+          {{ tab4 }}
+        </li>
+        <li data-filter=".upcoming" (click)="filterImages('upcoming')">
+          {{ tab5 }}
+        </li>
       </ul>
     </div>
 
     <div class="filters-content">
       <div class="row portfolio-grid justify-content-center">
-        <div class="col-lg-4 col-md-6 all" *ngFor="let tab of list">
+        <div class="col-lg-4 col-md-6 all" *ngFor="let tab of filteredImages">
           <app-tabchild [tab]="tab"></app-tabchild>
         </div>
       </div>

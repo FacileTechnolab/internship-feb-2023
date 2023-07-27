@@ -2,12 +2,11 @@
 <section class="banner_area">
   <div class="banner_inner d-flex align-items-center">
     <div class="container">
-      <div class="banner_content text-center">
-        <h2>Elements</h2>
-        <div class="page_link">
-          <a href="index.html">Home</a>
-          <a href="elements.html">Elements</a>
-        </div>
+      <div class="banner_content text-center" *ngFor="let bread of Fruit">
+        <app-breadcrumb
+          [bread]="bread"
+          *ngIf="bread.id == 'elements'"
+        ></app-breadcrumb>
       </div>
     </div>
   </div>
@@ -362,50 +361,82 @@
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <h3 class="mb-30 title_color">Form Element</h3>
-          <form action="#">
+          <form
+            [formGroup]="form"
+            href="#"
+            action-method="post"
+            #userForm="ngForm"
+            (ngSubmit)="onForm($event)"
+          >
             <div class="mt-10">
               <input
                 type="text"
-                name="first_name"
+                formControlName="fname"
                 placeholder="First Name"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'First Name'"
                 required
+                ngModel
                 class="single-input"
               />
+
+              <span
+                style="color: red"
+                *ngIf="fname && fname.invalid && fname.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="mt-10">
               <input
                 type="text"
-                name="last_name"
+                formControlName="mname"
+                placeholder="Middle Name"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Middle Name'"
+                required
+                ngModel
+                class="single-input"
+              />
+
+              <span
+                style="color: red"
+                *ngIf="mname && mname.invalid && mname.touched"
+                >Input field is required</span
+              >
+            </div>
+            <div class="mt-10">
+              <input
+                type="text"
+                formControlName="lname"
                 placeholder="Last Name"
+                ngModel
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Last Name'"
                 required
                 class="single-input"
               />
-            </div>
-            <div class="mt-10">
-              <input
-                type="text"
-                name="last_name"
-                placeholder="Last Name"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Last Name'"
-                required
-                class="single-input"
-              />
+              <span
+                style="color: red"
+                *ngIf="lname && lname.invalid && lname.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="mt-10">
               <input
                 type="email"
-                name="EMAIL"
+                formControlName="email"
                 placeholder="Email address"
+                ngModel
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Email address'"
                 required
                 class="single-input"
               />
+              <span
+                style="color: red"
+                *ngIf="email && email.invalid && email.touched"
+                >Input field is required</span
+              >
             </div>
             <div class="input-group-icon mt-10">
               <div class="icon">
@@ -426,7 +457,7 @@
                 <i class="fa fa-plane" aria-hidden="true"></i>
               </div>
               <div class="form-select" id="default-select">
-                <select>
+                <select class="selec-option">
                   <option value="1">City</option>
                   <option value="1">Dhaka</option>
                   <option value="1">Dilli</option>
@@ -440,7 +471,7 @@
                 <i class="fa fa-globe" aria-hidden="true"></i>
               </div>
               <div class="form-select" id="default-select2">
-                <select>
+                <select class="selec-option">
                   <option value="1">Country</option>
                   <option value="1">Bangladesh</option>
                   <option value="1">India</option>
@@ -464,8 +495,6 @@
                 type="text"
                 name="first_name"
                 placeholder="Primary color"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Primary color'"
                 required
                 class="single-input-primary"
               />
@@ -475,8 +504,6 @@
                 type="text"
                 name="first_name"
                 placeholder="Accent color"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Accent color'"
                 required
                 class="single-input-accent"
               />
@@ -486,11 +513,14 @@
                 type="text"
                 name="first_name"
                 placeholder="Secondary color"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Secondary color'"
                 required
                 class="single-input-secondary"
-              /><button>Submit</button>
+              />
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-primary btn-xl">
+                SUBMIT
+              </button>
             </div>
           </form>
         </div>

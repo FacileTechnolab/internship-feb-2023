@@ -11,7 +11,7 @@ export class CountryComponent implements OnInit {
   constructor(private http: HttpClient) { }
   @Input() value: any;
   ngOnInit() {
-    console.log(this.value);
+    // console.log(this.value);
   }
 
 }

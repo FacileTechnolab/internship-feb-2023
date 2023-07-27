@@ -4,14 +4,18 @@
     "label1":"Home",
     "link1":"/home",
     "label2":"About",
-    "link2":"/about"
+    "link2":"/about",
+    "label3":"",
+    "link3":""
 },{
     "id":"service",
     "title":"SERVICE",
     "label1":"Home",
     "link1":"/home",
     "label2":"Service",
-    "link2":"/Services"
+    "link2":"/Services",
+    "label3":"",
+    "link3":""
 },
 {
 
@@ -19,8 +23,10 @@
     "title":"PORTFOLIO",
     "label1":"Home",
     "link1":"/home",
-    "label2":"-Portfolio",
-    "link2":"/portfolio"
+    "label2":"Portfolio",
+    "link2":"/portfolio",
+    "label3":"",
+    "link3":""
 },
 {
     "id":"elements",
@@ -28,35 +34,32 @@
     "label1":"Home",
     "link1":"/home",
     "label2":"Elements",
-    "link2":"/elements"
+    "link2":"/elements",
+    "label3":"",
+    "link3":""
+    
 },
 {
     "id":"portfoliodetails",
     "title":"PORTFOLIO DETAILS" ,
     "label1":"Home",
     "link1":"/home",
-    "label2":"-Portfolio",
+    "label2":"Portfolio",
     "link2":"/portfolio",
-    "label3":"- Portfolio Details",
+    "label3":" Portfolio Details",
     "link3":"portfolio-details"
 },
-{
 
-    "id":"portfolio",
-    "title":"PORTFOLIO",
-    "label1":"Home",
-    "link1":"/home",
-    "label2":"Service",
-    "link2":"/service"
-},
 {
 
     "id":"blog",
     "title":"BLOG",
     "label1":"Home",
     "link1":"/home",
-    "label2":"- OUR BLOG",
-    "link2":"/Blog"
+    "label2":"OUR BLOG",
+    "link2":"/Blog",
+    "label3":"",
+    "link3":""
 },
 {
 
@@ -64,9 +67,9 @@
     "title":"BLOG DETAILS",
     "label1":"Home",
     "link1":"/home",
-    "label2":"- BLOG",
+    "label2":"Blog",
     "link2":"/Blog",
-    "label3":"- BLOG Details",
+    "label3":"Blog Details",
     "link3":"/Blogdetails"
 },
 {
@@ -75,5 +78,7 @@
     "label1":"Home",
     "link1":"/home",
     "label2":"Contact",
-    "link2":"/Contact"
+    "link2":"/Contact",
+    "label3":"",
+    "link3":""
 }]

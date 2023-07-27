@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  url: string = "/assets/json/breadcrumb.json"
+  url: string = "assets/json/breadcrumb.json"
   constructor(private http: HttpClient) { }
   Fruit: any;
   ngOnInit() {

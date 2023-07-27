@@ -9,6 +9,7 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   url: string = "/assets/json/contact.json";
+  url1: string = "assets/json/breadcrumb.json";
   cont: any;
   contact = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -24,8 +25,15 @@ export class ContactComponent implements OnInit {
 
       //console.log(this.cont);
     })
+    this.http.get(this.url1).subscribe(rel1 => {
+      this.Fruit = rel1;
+      console.log(this.Fruit);
 
+    });
   }
+
+  Fruit: any;
+
 
   // onSubmit(value: NgForm) {
   //   console.log("formdata", value);

@@ -15,6 +15,8 @@ export class GalleryComponent implements OnInit {
       this.gallery = result;
 
       console.log(this.gallery);
+
+
     });
   }
 
