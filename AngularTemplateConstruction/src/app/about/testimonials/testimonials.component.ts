@@ -14,7 +14,7 @@ export class TestimonialsComponent implements OnInit {
 
   ngOnInit() {
      this.http.get(this.url).subscribe(result=>{
-       debugger
+       
        this.testidata =result
     });
 console.log(this.testidata)
