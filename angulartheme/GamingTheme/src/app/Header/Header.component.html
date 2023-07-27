@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <nav class="main-nav" *ngFor="let data of home">
+        <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
-          <a [attr.href]="data.routerlink" class="logo">
-            <img [src]="data.src2" alt="" style="width: 158px" />
+          <a [attr.href]="home.routerlink" class="logo">
+            <img [src]="home.src2" alt="" style="width: 158px" />
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
@@ -18,7 +18,7 @@
           </ul>
 
           <a class="menu-trigger">
-            <span>{{ data.label2 }}</span>
+            <span>{{ home.label2 }}</span>
           </a>
           <!-- ***** Menu End ***** -->
         </nav>

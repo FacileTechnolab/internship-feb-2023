@@ -1,48 +1,62 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+interface Image{
+  category: string;
+  routerLink:string;
+  src:string;
+  price1:string;
+  price2:string;
+   label:string;
+  label2:string;
+  icon:string;
+}
+
 @Component({
   selector: 'app-Shop',
   templateUrl: './Shop.component.html',
   styleUrls: ['./Shop.component.css']
 })
 export class ShopComponent implements OnInit {
-shop:any;
-list:any;
+  home:any;
+
+Images:Image[]=[];
+filteredImages:Image[]=this.Images;
 data:any;
+data1:any;
+url2:string="assets/jsondata/home.json"
 url1:string="assets/jsondata/breadcrum.json";
 url:string="assets/jsondata/innershop.json"
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(res=>{
-      this.shop=res;
-      this.list = this.shop;
-      console.log('icon', this.shop)
-    });
-    this.http.get(this.url1).subscribe(result=>{
+    this.http.get(this.url).subscribe(result=>{
+    
       this.data=result;
+      
+  this.Images=this.data;
+    
+      
      
     })
+    this.http.get(this.url1).subscribe(result=>{
+      this.data1=result;
+     
+    });
+    this.http.get(this.url2).subscribe(result=>{
+      this.home=result;
+     
+    });
   }
-  onadv() {
-
-    this.list = this.shop.filter((x: any) => x.type == "adv")
-    console.log("adv",this.list);
-  }
-  onstr() {
-
-    this.list = this.shop.filter((x: any) => x.type == "str")
-    console.log("str",this.list);
-  }
-  onrac() {
-
-    this.list = this.shop.filter((x: any) => x.type == "rac")
-    console.log("rac",this.list);
-  }
-  listall() {
-
-    this.list = this.shop
-  }
+ 
+  filterImages(category:string):void{
+   if(category ==='all'){
+     this.filteredImages=this.Images;
+   }
+   else{
+     this.filteredImages=this.Images.filter(Image=>Image.category ===category);
+   }
 
 }
+}
+

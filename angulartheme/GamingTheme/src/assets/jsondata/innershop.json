@@ -1,26 +1,6 @@
 [
   {
-    "type": "adv",
-    "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-01.jpg",
-    "price1": "$36",
-    "price2": "$24",
-    "label": "Action",
-    "label2": "Assasin Creed",
-    "icon": "fa fa-shopping-bag"
-  },
-  {
-    "type": "str",
-    "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-02.jpg",
-    "price1": "$32",
-    "price2": "$22",
-    "label": "Action",
-    "label2": "Assasin Creed",
-    "icon": "fa fa-shopping-bag"
-  },
-  {
-    "type": "rac",
+    "category": "adv",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$45",
@@ -30,7 +10,58 @@
     "icon": "fa fa-shopping-bag"
   },
   {
-    "type": "str",
+    "category": "adv",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-01.jpg",
+    "price1": "$36",
+    "price2": "$24",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "adv",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-03.jpg",
+    "price1": "$45",
+    "price2": "$30",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+
+  {
+    "category": "adv",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-02.jpg",
+    "price1": "$32",
+    "price2": "$22",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "adv",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-03.jpg",
+    "price1": "$45",
+    "price2": "$30",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "str",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-02.jpg",
+    "price1": "$32",
+    "price2": "$22",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "str",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "$32",
@@ -41,7 +72,7 @@
   },
 
   {
-    "type": "rac",
+    "category": "str",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$38",
@@ -51,17 +82,7 @@
     "icon": "fa fa-shopping-bag"
   },
   {
-    "type": "adv",
-    "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-01.jpg",
-    "price1": "$30",
-    "price2": "$20",
-    "label": "Action",
-    "label2": "Assasin Creed",
-    "icon": "fa fa-shopping-bag"
-  },
-  {
-    "type": "rac",
+    "category": "str",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "$32",
@@ -71,7 +92,28 @@
     "icon": "fa fa-shopping-bag"
   },
   {
-    "type": "adv",
+    "category": "str",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-04.jpg",
+    "price1": "$32",
+    "price2": "$22",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "str",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-02.jpg",
+    "price1": "$32",
+    "price2": "$22",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+
+  {
+    "category": "adv",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-02.jpg",
     "price1": "$32",
@@ -81,7 +123,48 @@
     "icon": "fa fa-shopping-bag"
   },
   {
-    "type": "adv",
+    "category": "rac",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-03.jpg",
+    "price1": "$38",
+    "price2": "$26",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "rac",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-03.jpg",
+    "price1": "$38",
+    "price2": "$26",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "rac",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-01.jpg",
+    "price1": "$36",
+    "price2": "$24",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+  {
+    "category": "rac",
+    "routerLink": "ProductDetails",
+    "src": "assets/assets/images/trending-04.jpg",
+    "price1": "$32",
+    "price2": "$22",
+    "label": "Action",
+    "label2": "Assasin Creed",
+    "icon": "fa fa-shopping-bag"
+  },
+
+  {
+    "category": "rac",
     "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-02.jpg",
     "price1": "$28",
@@ -91,31 +174,11 @@
     "icon": "fa fa-shopping-bag"
   },
   {
-    "type": "str",
+    "category": "rac",
     "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-04.jpg",
-    "price1": "$26",
-    "price2": "$18",
-    "label": "Action",
-    "label2": "Assasin Creed",
-    "icon": "fa fa-shopping-bag"
-  },
-  {
-    "type": "adv",
-    "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-01.jpg",
-    "price1": "$32",
-    "price2": "$24",
-    "label": "Action",
-    "label2": "Assasin Creed",
-    "icon": "fa fa-shopping-bag"
-  },
-  {
-    "type": "str",
-    "routerLink": "ProductDetails",
-    "src": "assets/assets/images/trending-02.jpg",
-    "price1": "$45",
-    "price2": "$24",
+    "src": "assets/assets/images/trending-03.jpg",
+    "price1": "$38",
+    "price2": "$26",
     "label": "Action",
     "label2": "Assasin Creed",
     "icon": "fa fa-shopping-bag"

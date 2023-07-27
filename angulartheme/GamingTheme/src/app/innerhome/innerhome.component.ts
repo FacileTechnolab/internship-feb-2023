@@ -29,10 +29,10 @@ url2: string ="assets/jsondata/feturesicon.json"
     
   }
  
-  onSubmit(data:any) {
-    console.warn(data.value);
+  onSubmit(userForm:any) {
+    console.warn(userForm.value);
    
-    data.reset();
+    userForm.reset();
     }
 
 

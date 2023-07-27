@@ -1,17 +1,19 @@
-[
-  {
-    "title1": "Welcome to lugx",
-    "title2": "BEST GAMING SITE EVER!",
-    "paragraph": " LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.",
-    "serach": "Search Now",
-    "src": "assets/assets/images/banner-image.jpg",
-    "price": "$22",
-    "discount": "-40%",
-    "routerlink": "home",
-    "src2": "assets/assets/images/logo.png",
-    "label2": "Menu",
-    "label3": "Copyright © 2048 LUGX Gaming Company. All rights reserved.",
-    "path": "https://templatemo.com ",
-    "label4": "  Design: TemplateMo"
-  }
-]
+{
+  "title1": "Welcome to lugx",
+  "title2": "BEST GAMING SITE EVER!",
+  "paragraph": " LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.",
+  "serach": "Search Now",
+  "src": "assets/assets/images/banner-image.jpg",
+  "price": "$22",
+  "discount": "-40%",
+  "routerlink": "home",
+  "src2": "assets/assets/images/logo.png",
+  "label2": "Menu",
+  "label3": "Copyright © 2048 LUGX Gaming Company. All rights reserved.",
+  "path": "https://templatemo.com ",
+  "label4": "  Design: TemplateMo",
+
+  "pag1": "1",
+  "pag2": "2",
+  "pag3": "3"
+}

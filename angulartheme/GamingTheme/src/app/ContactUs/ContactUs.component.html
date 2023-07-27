@@ -52,19 +52,13 @@
             </div>
 
             <div class="col-lg-12">
-              <form
-                id="contact-form"
-                action-method="post"
-                [formGroup]="loginForm"
-                (ngSubmit)="loginUser()"
-              >
+              <form id="contact-form" action-method="post" ngNativeValidate>
                 <div class="row">
                   <div class="col-lg-6">
                     <fieldset>
                       <input
                         type="name"
                         name="name"
-                        formControlName="name"
                         id="name"
                         placeholder="Your Name..."
                         autocomplete="on"
@@ -72,19 +66,11 @@
                       />
                     </fieldset>
                   </div>
-                  <br />
-                  <span
-                    *ngIf="name.invalid && name.touched"
-                    class="alert alert-danger"
-                    >This input filed is not valid
-                  </span>
-                  <br />
                   <div class="col-lg-6">
                     <fieldset>
                       <input
                         type="surname"
                         name="surname"
-                        formControlName="surname"
                         id="surname"
                         placeholder="Your Surname..."
                         autocomplete="on"
@@ -92,19 +78,11 @@
                       />
                     </fieldset>
                   </div>
-                  <br />
-                  <span
-                    *ngIf="surname.invalid && surname.touched"
-                    class="alert alert-danger"
-                    >This input filed is not valid
-                  </span>
-                  <br />
                   <div class="col-lg-6">
                     <fieldset>
                       <input
                         type="text"
                         name="email"
-                        formControlName="email"
                         id="email"
                         pattern="[^ @]*@[^ @]*"
                         placeholder="Your E-mail..."
@@ -112,23 +90,14 @@
                       />
                     </fieldset>
                   </div>
-                  <br />
-                  <span
-                    *ngIf="email.invalid && email.touched"
-                    class="alert alert-danger"
-                    >This input filed is not valid
-                  </span>
-                  <br />
                   <div class="col-lg-6">
                     <fieldset>
                       <input
                         type="subject"
                         name="subject"
-                        ngModel
                         id="subject"
                         placeholder="Subject..."
                         autocomplete="on"
-                        required
                       />
                     </fieldset>
                   </div>
@@ -137,9 +106,7 @@
                       <textarea
                         name="message"
                         id="message"
-                        ngModel
                         placeholder="Your Message"
-                        required
                       ></textarea>
                     </fieldset>
                   </div>
