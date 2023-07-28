@@ -2740,8 +2740,6 @@
     color: var(--color-primary);
   }
 
-
-
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
     background-color: #ffc107 !important;
   }
@@ -2783,4 +2781,10 @@
   }
   .project_detail_slider_bg .owl-theme .owl-nav [class*=owl-] {
     font-size:30px !important
+  }
+  .marginbox{
+    margin-left: 40px;
+  }
+  .list-space{
+    padding-top: 10px;
   }

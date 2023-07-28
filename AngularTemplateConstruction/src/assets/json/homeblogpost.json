@@ -10,6 +10,8 @@
         "blogreadlink": "/blog-details",
         "blogreadlinktext": "Read More",
         "blogreadlinkicon": "bi bi-arrow-right"
+        
+        
     },
     {
         "blogimg": "assets/img/blog/blog-2.jpg",
@@ -71,4 +73,7 @@
         "blogreadlinktext": "Read More",
         "blogreadlinkicon": "bi bi-arrow-right"
     }
+
+
+    
 ]

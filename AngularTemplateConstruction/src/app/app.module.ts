@@ -49,11 +49,20 @@ import { ProjectdetailsliderComponent } from './projectdetailslider/projectdetai
 import { ProjedetasliderimgComponent } from './projedetasliderimg/projedetasliderimg.component';
 import { ProjectdetailinfoComponent } from './projectdetailinfo/projectdetailinfo.component';
 import { ProjectdetailsideinfoComponent } from './projectdetailsideinfo/projectdetailsideinfo.component';
+import { BlogdetaiartcalComponent } from './blogdetaiartcal/blogdetaiartcal.component';
+import { BlogdetailautorComponent } from './blogdetailautor/blogdetailautor.component';
+import { BlogdetailautorsocialComponent } from './blogdetailautorsocial/blogdetailautorsocial.component';
+import { BlogdetailcommentsComponent } from './blogdetailcomments/blogdetailcomments.component';
+import { BlogdetailcommentboxComponent } from './blogdetailcommentbox/blogdetailcommentbox.component';
+import { BlogdetailsidebarComponent } from './blogdetailsidebar/blogdetailsidebar.component';
+import { BldesidebarcategorylistComponent } from './bldesidebarcategorylist/bldesidebarcategorylist.component';
+import { BlogdetailsidebarpostComponent } from './blogdetailsidebarpost/blogdetailsidebarpost.component';
+import { BlogdetailsidebartagsComponent } from './blogdetailsidebartags/blogdetailsidebartags.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [																																																		
+  declarations: [																																																											
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -99,7 +108,16 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       ProjectdetailsliderComponent,
       ProjedetasliderimgComponent,
       ProjectdetailinfoComponent,
-      ProjectdetailsideinfoComponent
+      ProjectdetailsideinfoComponent,
+      BlogdetaiartcalComponent,
+      BlogdetailautorComponent,
+      BlogdetailautorsocialComponent,
+      BlogdetailcommentsComponent,
+      BlogdetailcommentboxComponent,
+      BlogdetailsidebarComponent,
+      BldesidebarcategorylistComponent,
+      BlogdetailsidebarpostComponent,
+      BlogdetailsidebartagsComponent
    ],
   imports: [
     BrowserModule,

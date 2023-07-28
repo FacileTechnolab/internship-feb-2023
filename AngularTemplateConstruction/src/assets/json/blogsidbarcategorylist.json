@@ -1,0 +1,32 @@
+[
+    {
+    
+        "text": "General",
+        "span": "(25)"
+    },
+    {
+        "class": "list-space",
+        "text": "Lifestyle",
+        "span": "(12)"
+    },
+    {
+        "class": "list-space",
+        "text": "Travel",
+        "span": "(5)"
+    },
+    {
+        "class": "list-space",
+        "text": "Design",
+        "span": "(22)"
+    },
+    {
+        "class": "list-space",
+        "text": "Creative",
+        "span": "(8)"
+    },
+    {
+        "class": "list-space",
+        "text": "Educaion",
+        "span": "(14)"
+    }
+]

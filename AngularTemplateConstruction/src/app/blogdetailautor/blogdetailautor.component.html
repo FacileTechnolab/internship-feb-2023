@@ -1,0 +1,13 @@
+<div class="post-author d-flex align-items-center">
+  <img src={{blogdetailauthordata.img}} class="rounded-circle flex-shrink-0" alt="">
+  <div>
+    <h4>{{blogdetailauthordata.title}}</h4>
+    <div class="social-links" >
+
+     <app-blogdetailautorsocial [blodetsociladta]="blodetsociladta" *ngFor="let blodetsociladta of blodetsocilvalue" ></app-blogdetailautorsocial>
+    </div>
+    <p>
+      {{blogdetailauthordata.desc}}
+    </p>
+  </div>
+</div><!-- End post author -->

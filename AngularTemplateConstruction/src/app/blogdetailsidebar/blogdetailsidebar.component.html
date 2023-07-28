@@ -1,0 +1,38 @@
+ <div class="sidebar">
+
+    <div class="sidebar-item search-form">
+      <h3 class="sidebar-title">{{blogsidbardata.title1}}</h3>
+      <form action="" class="mt-3">
+        <input type="text">
+        <button type="submit"><i [class]="blogsidbardata.iconserch"></i></button>
+      </form>
+    </div><!-- End sidebar search formn-->
+
+    <div class="sidebar-item categories">
+      <h3 class="sidebar-title">{{blogsidbardata.title2}}</h3>
+      <ul class="mt-3">
+      <app-bldesidebarcategorylist [sidebar]="sidebar" *ngFor="let sidebar of bsidbarcategorylist"></app-bldesidebarcategorylist>
+      </ul>
+    </div><!-- End sidebar categories-->
+
+    <div class="sidebar-item recent-posts">
+      <h3 class="sidebar-title">{{blogsidbardata.title3}}</h3>
+
+      <div class="mt-3">
+
+        <app-blogdetailsidebarpost [sidbarpostdata]="sidbarpostdata" *ngFor="let sidbarpostdata of bsidbarpost"></app-blogdetailsidebarpost>
+
+      </div>
+
+    </div><!-- End sidebar recent posts-->
+
+    <div class="sidebar-item tags">
+      <h3 class="sidebar-title">{{blogsidbardata.title4}}</h3>
+      <ul class="mt-3">
+         <app-blogdetailsidebartags [tags]="tags" *ngFor="let tags of bsidbartags"></app-blogdetailsidebartags>
+      </ul>
+    </div>
+    <!-- End sidebar tags-->
+
+  </div><!-- End Blog Sidebar -->
+
