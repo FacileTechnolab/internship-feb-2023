@@ -4,13 +4,13 @@
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
           <h6>
-            {{ home.title1 }}
+            {{ home?.title1 }}
           </h6>
           <h2>
-            {{ home.title2 }}
+            {{ home?.title2 }}
           </h2>
           <p>
-            {{ home.paragraph }}
+            {{ home?.paragraph }}
           </p>
           <div class="search-input">
             <form
@@ -18,6 +18,7 @@
               action="#"
               #userForm="ngForm"
               (ngSubmit)="onSubmit(userForm)"
+              ngNativeValidate
             >
               <input
                 type="text"
@@ -27,7 +28,7 @@
                 onkeypress="handle"
                 ngModel
               />
-              <button type="submit" role="button">
+              <button type="submit" href="#" role="button">
                 {{ home.serach }}
               </button>
             </form>

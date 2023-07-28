@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InnershopboxComponent implements OnInit {
 @Input() value:any;
-url:string="assets/jsondata/innershop.json"
+
   constructor() { }
 
   ngOnInit() {

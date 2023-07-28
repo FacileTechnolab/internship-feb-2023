@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TreadingComponent implements OnInit {
   treders:any;
   tred : any;
+  value:any;
   url: string = "assets/jsondata/treding.json"
   url2: string = "assets/jsondata/treadinglabel.json"
     constructor(private http: HttpClient) { }

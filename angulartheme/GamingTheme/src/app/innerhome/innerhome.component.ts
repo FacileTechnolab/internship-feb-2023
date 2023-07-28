@@ -19,12 +19,14 @@ url2: string ="assets/jsondata/feturesicon.json"
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
       this.home = res;
+      console.log(res);
      
     });
     this.http.get(this.url2).subscribe(res => {
       this.data = res;
       
     });
+    console.log("boxing",this.home);
    
     
   }

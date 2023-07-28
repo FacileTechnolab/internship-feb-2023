@@ -1265,7 +1265,7 @@ Shop Page Style
   transition: all 0.3s;
 }
 
-.trending ul.trending-filter li a.is_active {
+.trending ul.trending-filter li a:active {
   background-color: #ee626b;
   color: #fff;
 }

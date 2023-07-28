@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InnerboxComponent implements OnInit {
   @Input() value:any;
-  url: string = "assets/jsondata/feturesicon.json"
+
     constructor() { }
   
     ngOnInit() {

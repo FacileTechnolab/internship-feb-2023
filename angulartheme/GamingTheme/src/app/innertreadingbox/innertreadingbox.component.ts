@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InnertreadingboxComponent implements OnInit {
   @Input() treading:any;
-  url: string = "assets/jsondata/treding.json"
+
     constructor() { }
   
     ngOnInit() {

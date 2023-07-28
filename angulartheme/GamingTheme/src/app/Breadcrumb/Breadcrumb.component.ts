@@ -9,7 +9,7 @@ import { Component, OnInit ,Input} from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
  @Input() crump:any;
-url:string="assets/jsondata/breadcrum.json";
+
   constructor( private http:HttpClient) { }
 
   ngOnInit() {

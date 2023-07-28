@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InnercategoryboxComponent implements OnInit {
 @Input()categories:any;
-url:string="assets/jsondata/categories.json"
+
   constructor() { }
 
   ngOnInit() {

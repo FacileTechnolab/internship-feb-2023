@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 interface Image{
   category: string;
+  category1:string
   routerLink:string;
   src:string;
   price1:string;
@@ -35,6 +36,7 @@ url:string="assets/jsondata/innershop.json"
       this.data=result;
       
   this.Images=this.data;
+  this.filteredImages=this.Images;
     
       
      
@@ -54,7 +56,7 @@ url:string="assets/jsondata/innershop.json"
      this.filteredImages=this.Images;
    }
    else{
-     this.filteredImages=this.Images.filter(Image=>Image.category ===category);
+     this.filteredImages=this.Images.filter(Image=>Image.category ===category ||Image.category1 ===category );
    }
 
 }

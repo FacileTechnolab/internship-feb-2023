@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InnerplayedboxComponent implements OnInit {
   @Input()played:any;
-  url: string = "assets/jsondata/Mostplayed.json"
+
   constructor() { }
 
   ngOnInit() {
