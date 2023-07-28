@@ -1,0 +1,28 @@
+[{
+    "h1" : "Your order Details",
+    "h2" : "Price",
+
+   "r1": "Product",
+    "r2": "Total",
+
+   "fruit1": "Strawberry",
+    "price1" :"$85.00",
+
+    "fruit2":" Berry",
+    "price2" :"$70.00",
+
+    "fruit3" :"Lemon",
+    "price3" :" $35.00",
+
+    "t1": "Subtotal",
+    "p1": "$190",
+
+    "t2": "Shipping",
+    "p2": "$50",
+
+    "t3": "Total",
+    "p3": "$240",
+
+    "btn" : "Place Order"
+
+}]

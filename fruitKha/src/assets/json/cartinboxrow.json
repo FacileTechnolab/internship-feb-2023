@@ -1,0 +1,28 @@
+[{
+    "p1" : "Product Image",
+    "p2" :"Name",
+    "p3" : "Price",
+    "p4" :"Quantity",
+    "p5" :"Total",
+
+    "icon": "far fa-window-close",
+    "img" :"assets/img/products/product-img-1.jpg",
+    "name":"Strawberry",
+    "price": "$85",
+    "total" :"1",
+
+    "icon1": "far fa-window-close",
+    "img1" :"assets/img/products/product-img-1.jpg",
+    "name1":"Strawberry",
+    "price1": "$85",
+    "total1" :"1",
+
+    "icon2": "far fa-window-close",
+    "img2" :"assets/img/products/product-img-1.jpg",
+    "name2":"Strawberry",
+    "price2": "$85",
+    "total2" :"1"
+
+
+
+}]

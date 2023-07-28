@@ -2,4 +2,44 @@
     "id":"about",
     "head" :"We sale fresh fruits",
     "title" :"About Us"
+},
+{
+   "id":"contactus",
+    "head" :"GET 24/7 SUPPORT",
+    "title" :"Contact us"
+},
+{
+    "id":"shop",
+    "head" :"Fresh and Organic",
+    "title" :"Shop"
+},
+{
+    "id":"check out",
+    "head" :"FRESH AND ORGANIC",
+    "title" :"Check Out Product"
+},
+{
+    "id":"single product",
+    "head" :"SEE MORE DETAILS",
+    "title" :"Single Product"
+},
+{
+    "id":"cart",
+    "head" :"FRESH AND ORGANIC",
+    "title" :"Cart"
+},
+{
+    "id":"news",
+    "head" :"ORGANIC INFORMATION",
+    "title" :"News Article"
+},
+{
+    "id":"single news",
+    "head" :"READ THE DETAILS",
+    "title" :"Single Article"
+},
+{
+    "id":"Notfound",
+    "head" :"FRESH AND ORGANIC",
+    "title" :"404 - Not Found" 
 }]

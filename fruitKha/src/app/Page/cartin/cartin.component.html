@@ -1,17 +1,13 @@
 <div class="cart-section mt-150 mb-150">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-12">
-        <div class="cart-table-wrap">
-          <table class="cart-table">
-            <app-cartinhead></app-cartinhead>            
-              <app-cartindetail></app-cartindetail>
-            </table>
-        </div>
+      <div class="col-lg-8 col-md-12" *ngFor=" let row of boxrow">
+        <app-cartinboxrow [row]="row"></app-cartinboxrow>
       </div>
+
       <div class="col-lg-4">
-        <app-cartinbox></app-cartinbox>
-      </div>     
+       <app-cartinbox></app-cartinbox>
+      </div>
     </div>
   </div>
 </div>

@@ -1,9 +1,7 @@
 <div class="breadcrumb-section breadcrumb-bg">
-  <div class="container">
-    <div class="row">
-      
+  <div class="container" *ngFor="let bread of crumb ">          
+      <app-breadcrump [bread] = "bread" *ngIf="bread.id == 'contactus'" ></app-breadcrump>
     </div>
   </div>
-</div>
 <app-Contact></app-Contact>
 <app-Location></app-Location>

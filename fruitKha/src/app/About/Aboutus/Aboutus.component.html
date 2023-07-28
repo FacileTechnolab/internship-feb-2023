@@ -1,10 +1,9 @@
-<div class="breadcrumb-section breadcrumb-bg">
-  <div class="container">
-    <div class="row" *ngFor="let bread of crumb ">
-     <app-breadcrump [bread] = "bread"></app-breadcrump>
+<div class="breadcrumb-section breadcrumb-bg" id="about">
+  <div class="container" *ngFor="let bread of crumb ">    
+     <app-breadcrump [bread] = "bread"  *ngIf="bread.id == 'about'"></app-breadcrump>
     </div>
   </div>
-</div>
+
 
 <app-Why></app-Why>
 <app-Shopbanner></app-Shopbanner>

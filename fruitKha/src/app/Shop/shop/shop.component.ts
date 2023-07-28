@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-
-  constructor() { }
+  url: string ="assets/json/bread.json"
+  
+  crumb: any
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+this.http.get(this.url).subscribe(res => {this.crumb = res})
+
   }
 
 }

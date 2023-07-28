@@ -1,8 +1,6 @@
-import { NgModule } from '@angular/core';
-
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,12 +51,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TestichildComponent } from './Home/testichild/testichild.component';
 import { SliderboxComponent } from './Home/sliderbox/sliderbox.component';
 import { CartinboxComponent } from './Page/cartinboxcolum/cartinbox.component';
-import { CartindetailComponent } from './Page/cartindetail/cartindetail.component';
-import { CartinheadComponent } from './Page/cartinhead/cartinhead.component';
 import { BreadcrumpComponent } from './breadcrump/breadcrump.component';
+import { CheckoutrightComponent } from './Page/checkoutright/checkoutright.component';
+import { CheckoutleftComponent } from './Page/checkoutleft/checkoutleft.component';
+import { CartinboxrowComponent } from './Page/cartinboxrow/cartinboxrow.component';
+
+
 
 @NgModule({
-  declarations: [							   
+  declarations: [								   
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -103,10 +104,15 @@ import { BreadcrumpComponent } from './breadcrump/breadcrump.component';
      LogoboxComponent,
      TestichildComponent,
      SliderboxComponent,
-     CartinboxComponent,
-     CartindetailComponent,
-     CartinheadComponent,
-      BreadcrumpComponent
+     CartinboxComponent,   
+      BreadcrumpComponent,
+      CheckoutrightComponent,
+      CheckoutleftComponent,
+     CartinboxrowComponent
+
+      
+
+  
    ],
   imports: [
     BrowserModule,

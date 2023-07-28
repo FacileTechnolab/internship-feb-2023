@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cartin.component.css']
 })
 export class CartinComponent implements OnInit {
- 
+  url: string ="assets/json/cartinboxrow.json"
+  boxrow :any
 
-
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
+     this.http.get(this.url).subscribe(res =>{this.boxrow = res; console.log(this.boxrow);} )
   }
 
 }

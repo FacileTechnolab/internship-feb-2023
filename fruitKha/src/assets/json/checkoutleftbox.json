@@ -1,0 +1,15 @@
+[{
+    "head": "Billing Address",
+
+    "ph1" : "Name",
+    "ph2" : "Email",
+    "ph3" : "Address",
+    "ph4" : "Phone",
+    "ph5" :"Say Something",
+
+    "head2":"Shipping Address",
+    "dis" : "Your shipping address form is here.",
+
+    "head3" :" Card Details",
+    "dis2" :"Your card details goes here."
+}]
