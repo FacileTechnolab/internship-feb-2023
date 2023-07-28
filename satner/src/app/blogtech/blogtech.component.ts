@@ -11,7 +11,7 @@ export class BlogtechComponent implements OnInit {
   constructor(private http: HttpClient) { }
   @Input() tech: any;
   ngOnInit() {
-    console.log(this.tech);
+    //  console.log(this.tech);
 
   }
 

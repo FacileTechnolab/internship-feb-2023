@@ -15,7 +15,7 @@ export class BlogrightcategoryComponent implements OnInit {
     this.http.get(this.url).subscribe(rel => {
       this.category = rel;
 
-      console.log(this.category);
+      //console.log(this.category);
 
     });
   }

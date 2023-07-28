@@ -11,7 +11,7 @@ export class BlogrightchildComponent implements OnInit {
   constructor(private http: HttpClient) { }
   @Input() post: any;
   ngOnInit() {
-    console.log(this.post);
+    //console.log(this.post);
 
   }
 

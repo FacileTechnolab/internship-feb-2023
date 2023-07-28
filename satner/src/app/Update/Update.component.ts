@@ -22,7 +22,7 @@ export class UpdateComponent implements OnInit {
 
   }
   onSub() {
-    console.warn(this.subscribe.value);
+    console.log(this.subscribe.value);
   }
   get email() {
     return this.subscribe.get('email');

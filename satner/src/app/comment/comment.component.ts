@@ -14,7 +14,7 @@ export class CommentComponent implements OnInit {
     this.http.get(this.url).subscribe(rel => {
       this.con = rel;
 
-      console.log(this.con);
+      // console.log(this.con);
 
     });
   }

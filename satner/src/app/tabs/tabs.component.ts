@@ -1,13 +1,14 @@
 import { style } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+
 interface tab {
   class: string,
   img1: string,
   name1: string,
   desc1: string,
-  type: string
-
+  type: string,
+  type1: string;
 
 }
 @Component({
@@ -37,7 +38,9 @@ export class TabsComponent implements OnInit {
       this.filteredImages = this.Images;
     }
     else {
-      this.filteredImages = this.Images.filter(tab => tab.type === type);
+      debugger
+      this.filteredImages = this.Images.filter(tab => tab.type === type || tab.type1 === type);
+
     }
 
   }
@@ -45,34 +48,13 @@ export class TabsComponent implements OnInit {
     this.http.get(this.url).subscribe(res => {
 
       this.home = res;
-      // this.list = this.home;
+
       this.Images = this.home;
-      //debugger
-      // this.theight = this.theight;
+
 
       console.log('icon', this.home)
+      this.filteredImages = this.Images;
     });
   }
-  // }
-  // onevent() {
-  //   // debugger
-  //   this.list = this.home.filter((x: any) => x.type == "popular")
-
-  // }
-  // onlatest() {
-  //   this.list = this.home.filter((b: any) => b.type == "latest")
-  // }
-  // alllist() {
-  //   this
-  //     .list = this.home
-  //   debugger
-  //   this.list = this.theight
-  // }
-  // onfollow() {
-  //   this.list = this.home.filter((y: any) => y.type == "following")
-  // }
-  // onup() {
-  //   this.list = this.home.filter((a: any) => a.type == "upcoming")
-  // }
 
 }

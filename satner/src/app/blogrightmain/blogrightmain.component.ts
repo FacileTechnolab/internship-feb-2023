@@ -14,7 +14,7 @@ export class BlogrightmainComponent implements OnInit {
     this.http.get(this.url).subscribe(rel => {
       this.blogpost = rel;
 
-      console.log(this.blogpost);
+      // console.log(this.blogpost);
 
     });
   }

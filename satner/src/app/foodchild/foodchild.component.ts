@@ -11,7 +11,7 @@ export class FoodchildComponent implements OnInit {
   constructor(private http: HttpClient) { }
   @Input() food: any;
   ngOnInit() {
-    console.log(this.food);
+    // console.log(this.food);
 
   }
 

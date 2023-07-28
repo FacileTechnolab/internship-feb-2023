@@ -15,7 +15,7 @@ export class BlogtechmainComponent implements OnInit {
     this.http.get(this.url).subscribe(rel => {
       this.blogtech = rel;
 
-      console.log(this.blogtech);
+      // console.log(this.blogtech);
 
     });
   }

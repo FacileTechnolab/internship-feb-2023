@@ -52,8 +52,8 @@ export class BlogdetailsComponent implements OnInit {
     document.getElementById("blogdetails")?.scrollIntoView({ behavior: "smooth" });
 
   }
-  onLeave() {
-    console.warn(this.Leave.value);
+  onSubmit() {
+    console.log(this.Leave.value);
   }
   get name() {
     return this.Leave.get('name');

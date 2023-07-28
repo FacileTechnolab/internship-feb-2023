@@ -127,7 +127,13 @@
         </div>
         <div class="comment-form">
           <h4>Leave a Reply</h4>
-          <form [formGroup]="Leave" #userForm="ngForm" (ngSubmit)="onLeave()">
+          <form
+            [formGroup]="Leave"
+            onSubmit="return valid_datas( this );"
+            #userForm="ngForm"
+            (ngSubmit)="onSubmit()"
+            action-method="post"
+          >
             <div class="form-group form-inline">
               <div class="form-group col-lg-6 col-md-6 name">
                 <input
@@ -136,8 +142,6 @@
                   id="name"
                   formControlName="name"
                   placeholder="Enter Name"
-                  onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'Enter Name'"
                 />
                 <span
                   style="color: red"
@@ -152,8 +156,6 @@
                   id="email"
                   formControlName="email"
                   placeholder="Enter email address"
-                  onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'Enter email address'"
                 />
                 <span
                   style="color: red"
@@ -169,8 +171,6 @@
                 id="subject"
                 formControlName="sub"
                 placeholder="Subject"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Subject'"
               />
               <span style="color: red" *ngIf="sub && sub.invalid && sub.touched"
                 >Input field is required</span
@@ -178,18 +178,27 @@
             </div>
             <div class="form-group">
               <textarea
-                class="form-control mb-10"
+                type="text"
+                class="form-control"
                 rows="5"
-                formControlName="message"
+                formControlName="msg"
                 placeholder="Messege"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Messege'"
-                required=""
               ></textarea>
             </div>
-            <a href="#" class="primary-btn primary_btn" type="submit"
-              ><span type="submit">Post Comment</span></a
+            <button
+              type="submit"
+              value="submit"
+              class="primary-btn primary_btn"
             >
+              Post Comment
+            </button>
+            <!-- <a
+              href="#"
+              type="submit"
+              value="submit"
+              class="primary-btn primary_btn"
+              ><span>Post Comment</span></a
+            > -->
           </form>
         </div>
       </div>

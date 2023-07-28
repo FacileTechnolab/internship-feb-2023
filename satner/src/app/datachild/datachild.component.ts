@@ -12,7 +12,7 @@ export class DatachildComponent implements OnInit {
   @Input() datachild: any;
   ngOnInit() {
 
-    console.log(this.datachild);
+    //console.log(this.datachild);
 
   }
 

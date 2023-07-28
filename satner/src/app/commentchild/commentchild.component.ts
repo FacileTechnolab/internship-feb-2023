@@ -12,7 +12,7 @@ export class CommentchildComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.comment);
+    // console.log(this.comment);
 
   }
 

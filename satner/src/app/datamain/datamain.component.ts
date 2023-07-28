@@ -14,7 +14,7 @@ export class DatamainComponent implements OnInit {
     this.http.get(this.url).subscribe(rel1 => {
       this.datamain = rel1;
 
-      console.log(this.datamain);
+      //console.log(this.datamain);
 
     });
   }

@@ -13,7 +13,7 @@ export class BlogchildComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.child);
+    //console.log(this.child);
 
   }
 
