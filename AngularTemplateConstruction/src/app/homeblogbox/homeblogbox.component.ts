@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HomeblogboxComponent implements OnInit {
   url: string = "/assets/json/homeblogpost.json" ;
   @Input() homeblogvalue: any;
- 
+ @Input () showHome :boolean;
   @Input() isdisplay:boolean;
 
   ngOnInit() {

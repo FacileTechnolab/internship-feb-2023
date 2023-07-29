@@ -3,6 +3,21 @@
         "counticon": "bi bi-emoji-smile color-blue flex-shrink-0",
         "clientscout": "232",
         "counttitle": "Happy Clients"
+    },
+    {
+        "counticon": "bi bi-journal-richtext color-orange flex-shrink-0",
+        "clientscout": "521",
+        "counttitle": "Projects"
+    },
+    {
+        "counticon": "bi bi-headset color-green flex-shrink-0",
+        "clientscout": "1463",
+        "counttitle": "Hours Of Support"
+    },
+    {
+        "counticon": "bi bi-people color-pink flex-shrink-0",
+        "clientscout": "15",
+        "counttitle": "Hard Workers"
     }
   
 

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -7,13 +8,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  url: string = "/assets/json/homeblogpost.json" ;
+  homeblogdata: any;
   isdisplay:boolean;
-  constructor() {
+  showHome:boolean
+  constructor(private http:HttpClient) {
    
     console.log("home",this.isdisplay)
    }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(result=>{
+      this.homeblogdata =result
+    });
+    console.log(this.homeblogdata)
   }
   getstarted(){
     document.getElementById("get-started")?.scrollIntoView({behavior: "smooth"});

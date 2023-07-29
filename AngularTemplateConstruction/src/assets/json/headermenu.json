@@ -1,0 +1,39 @@
+[
+    {
+        "class": "",
+        "routerlink": "/" ,
+        "routerlinkactive": "",
+        "menu": "Home"
+    },
+    {
+        "class": "",
+        "routerlink": "/about" ,
+        "routerlinkactive": "active",
+        "menu": "About"
+    },
+    {
+        "class": "",
+        "routerlink": "/services" ,
+        "routerlinkactive": "active",
+        "menu": "Services"
+    },
+    {
+        "class": "",
+        "routerlink": "/blog" ,
+        "routerlinkactive": "active",
+        "menu": "Blog"
+    },
+    {
+        "class": "dropdown",
+        "routerlink": "/blog" ,
+        "routerlinkactive": "active",
+        "menu": "Blog"
+    },
+    {
+        "class": "",
+        "routerlink": "/contact" ,
+        "routerlinkactive": "active",
+        "menu": "Contact"
+    }
+
+]

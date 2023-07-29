@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-statecounterbox',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statecounterbox.component.css']
 })
 export class StatecounterboxComponent implements OnInit {
-
+  url: string = "/assets/json/counter.json" ;
+  @Input() countervalue: any;
   constructor() { }
 
   ngOnInit() {

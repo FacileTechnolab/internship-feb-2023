@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
 interface filter{
   index:string
         class: string
@@ -15,9 +16,14 @@ interface filter{
 @Component({
   selector: 'app-ourprojects',
   templateUrl: './ourprojects.component.html',
-  styleUrls: ['./ourprojects.component.css']
+  styleUrls: ['./ourprojects.component.css'],
+
 })
 export class OurprojectsComponent implements OnInit {
+
+ 
+
+
   url:string="/assets/json/ourprojectbox.json"
   ourvalue:any;
   TabImages:filter[]=[];

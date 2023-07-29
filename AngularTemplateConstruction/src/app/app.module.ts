@@ -35,7 +35,6 @@ import { TestimonialsComponent } from './about/testimonials/testimonials.compone
 import { TestiboxComponent } from './testibox/testibox.component';
 import { Altservices2Component } from './altservices2/altservices2.component';
 import { Altserbox2Component } from './altserbox2/altserbox2.component';
-import { StatcountboxComponent } from './statcountbox/statcountbox.component';
 import { ServicescardComponent } from './servicescard/servicescard.component';
 import { ServicescardboxComponent } from './servicescardbox/servicescardbox.component';
 import { ServidetasidemenuComponent } from './servidetasidemenu/servidetasidemenu.component';
@@ -62,10 +61,11 @@ import { OurprojectsComponent } from './ourprojects/ourprojects.component';
 import { OurprojectboxComponent } from './ourprojectbox/ourprojectbox.component';
 import { StatecounterboxComponent } from './statecounterbox/statecounterbox.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
 
 @NgModule({
-  declarations: [																																																														
+  declarations: [																																																															
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -98,7 +98,6 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       TestiboxComponent,
       Altservices2Component,
       Altserbox2Component,
-      StatcountboxComponent,
       ServicescardComponent,
       ServicescardboxComponent,
       ServidetasidemenuComponent,
@@ -123,7 +122,8 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       BlogdetailsidebartagsComponent,
       OurprojectsComponent,
       OurprojectboxComponent,
-      StatecounterboxComponent
+      StatecounterboxComponent,
+      HeadermenulistComponent
    ],
   imports: [
     BrowserModule,
@@ -131,7 +131,8 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     CarouselModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
