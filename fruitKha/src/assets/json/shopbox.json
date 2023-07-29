@@ -1,0 +1,52 @@
+[{
+    "class" :"col-lg-4 col-md-6 text-center strawberry",
+    "img": "assets/img/products/product-img-1.jpg",
+    "head": "Strawberry",
+    "h1": "Per Kg",
+    "h2": "85$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":"strawberry"
+},
+{
+    "class" :"col-lg-4 col-md-6 text-center berry",
+    "img": "assets/img/products/product-img-2.jpg",
+    "head": "Berry",
+    "h1": "Per Kg",
+    "h2": "70$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":"berry"
+},
+{
+    "class": "col-lg-4 col-md-6 text-center lemon",
+    "img": "assets/img/products/product-img-3.jpg",
+    "head": "Lemon",
+    "h1": "Per Kg",
+    "h2": "35$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":"lemon"
+},
+{ "class":"col-lg-4 col-md-6 text-center ",
+    "img": "assets/img/products/product-img-4.jpg",
+    "head": "Avocado",
+    "h1": "Per Kg",
+    "h2": "50$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":""
+},
+{ "class":"col-lg-4 col-md-6 text-center ",
+    "img": "assets/img/products/product-img-5.jpg",
+    "head": "Green Apple",
+    "h1": "Per Kg",
+    "h2": "45$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":""
+},
+ 
+{   "class":"col-lg-4 col-md-6 text-center strawberry",
+    "img": "assets/img/products/product-img-6.jpg",
+    "head": "Strawberry",
+    "h1": "Per Kg",
+    "h2": "80$ ",
+    "icon" :"fas fa-shopping-cart",
+    "file":"strawberry"
+}]

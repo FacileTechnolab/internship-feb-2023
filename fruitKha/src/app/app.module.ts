@@ -55,6 +55,7 @@ import { BreadcrumpComponent } from './breadcrump/breadcrump.component';
 import { CheckoutrightComponent } from './Page/checkoutright/checkoutright.component';
 import { CheckoutleftComponent } from './Page/checkoutleft/checkoutleft.component';
 import { CartinboxrowComponent } from './Page/cartinboxrow/cartinboxrow.component';
+import { ShopboxdataComponent } from './Shop/shopboxdata/shopboxdata.component';
 
 
 
@@ -108,8 +109,8 @@ import { CartinboxrowComponent } from './Page/cartinboxrow/cartinboxrow.componen
       BreadcrumpComponent,
       CheckoutrightComponent,
       CheckoutleftComponent,
-     CartinboxrowComponent
-
+     CartinboxrowComponent,
+     ShopboxdataComponent
       
 
   

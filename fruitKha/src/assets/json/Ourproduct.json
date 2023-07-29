@@ -3,19 +3,22 @@
     "head": "Strawberry",
     "price":" Per Kg",
     "$":"85$"  ,
-    "icon":"fas fa-shopping-cart"
+    "icon":"fas fa-shopping-cart",
+    "add": "Add to Cart"
 },
 {
     "img": "assets/img/products/product-img-2.jpg",
     "head": "Berry",
     "price":" Per Kg",
     "$":"70$"  ,
-    "icon":"fas fa-shopping-cart"
+    "icon":"fas fa-shopping-cart",
+    "add": "Add to Cart"
 },
 {
     "img": "assets/img/products/product-img-3.jpg",
     "head": "Lemon",
     "price":" Per Kg",
     "$":"35$"  ,
-    "icon":"fas fa-shopping-cart"
+    "icon":"fas fa-shopping-cart",
+    "add": "Add to Cart"
 }]

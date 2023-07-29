@@ -2771,3 +2771,6 @@ html {
 .contact-from-section button:focus{
   outline: inherit  ;
 }
+.product{
+  height:1151px;
+}

@@ -13,11 +13,12 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
             <div class="billing-address-form">
-              <form action="">
-                <p><input type="text" placeholder="{{left.ph1}}"></p>
-                <p><input type="email" placeholder="{{left.ph2}}"></p>
-                <p><input type="text" placeholder="{{left.ph3}}"></p>
-                <p><input type="tel" placeholder="{{left.ph4}}"></p>
+              <form action=""  action-method="post"  #checkoutForm="ngForm" (ngSubmit)="onSubmit()">
+                <p><input type="text" ngModel placeholder="{{left.ph1}}" formControlName="name"></p>
+                <span style="color: red" *ngIf="name.invalid && name.touched">Fill this field</span>
+                <p><input type="email" ngModel placeholder="{{left.ph2}}"></p>
+                <p><input type="text" ngModel placeholder="{{left.ph3}}"></p>
+                <p><input type="tel"  ngModel placeholder="{{left.ph4}}"></p>
                 <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="{{left.ph5}}"></textarea></p>
               </form>
             </div>
