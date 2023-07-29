@@ -7,10 +7,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  isdisplay= false;
+  isdisplay:boolean;
   constructor() {
    
-    
+    console.log("home",this.isdisplay)
    }
 
   ngOnInit() {

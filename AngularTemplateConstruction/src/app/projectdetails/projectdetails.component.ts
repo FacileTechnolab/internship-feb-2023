@@ -17,7 +17,7 @@ export class ProjectdetailsComponent implements OnInit {
     this.brList = [
       {
         title: 'Project Details',
-        url: "/projects-details",
+        url: "projects-details",
         active: true
       }
     ]

@@ -29,12 +29,18 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+   
+     
+    
   },
   {
+ 
     path: 'projects-details',
     component: ProjectdetailsComponent
-  },
+  
+},
+ 
   {
     path: 'blog',
     component:BlogComponent

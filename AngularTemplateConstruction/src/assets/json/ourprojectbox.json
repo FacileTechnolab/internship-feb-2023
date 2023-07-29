@@ -7,7 +7,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "projects/project-details",
         "iconlink": "bi bi-link-45deg"
 
     },

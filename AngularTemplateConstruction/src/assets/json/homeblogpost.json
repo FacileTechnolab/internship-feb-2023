@@ -1,6 +1,6 @@
 [
     {
-        "isdisplay":"",
+        
         "blogimg": "assets/img/blog/blog-1.jpg",
         "blogimgdate": "December 12",
         "blogposttitle": "Eum ad dolor et. Autem aut fugiat debitis",
@@ -15,7 +15,7 @@
         
         
     },
-    { "isdisplay":"",
+    { 
         "blogimg": "assets/img/blog/blog-2.jpg",
         "blogimgdate": "July 17",
         "blogposttitle": "Et repellendus molestiae qui est sed omnis",
@@ -29,7 +29,7 @@
         "blogpostdesc": "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta."
 
     },
-    { "isdisplay":"",
+    { 
         "blogimg": "assets/img/blog/blog-3.jpg",
         "blogimgdate": "September 05",
         "blogposttitle": "Quia assumenda est et veritati tirana ploder",
@@ -43,7 +43,7 @@
         "blogpostdesc": "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta."
 
     },
-    { "isdisplay":"",
+    { 
         "blogimg": "assets/img/blog/blog-4.jpg",
         "blogimgdate": "August 05",
         "blogposttitle": "Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.",
@@ -57,7 +57,7 @@
         "blogpostdesc": "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta."
 
     },
-    { "isdisplay":"",
+    { 
         "blogimg": "assets/img/blog/blog-5.jpg",
         "blogimgdate": "September 17",
         "blogposttitle": "Accusamus quaerat aliquam qui debitis facilis consequatur",
@@ -71,7 +71,7 @@
         "blogpostdesc": "Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta."
 
     },
-    { "isdisplay":"",
+    { 
         "blogimg": "assets/img/blog/blog-6.jpg",
         "blogimgdate": "December 07",
         "blogposttitle": "Distinctio provident quibusdam numquam aperiam aut",

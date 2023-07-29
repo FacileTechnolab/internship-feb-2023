@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-homeblogpost',
@@ -14,9 +16,14 @@ isdisplay:boolean;
 
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient , private router: Router) {
+    if(this.router.url === '/'){
 
-    this.isdisplay=true;
+      this.isdisplay=false;
+    }else{
+      this.isdisplay=true;
+
+    }
    
     
    }
