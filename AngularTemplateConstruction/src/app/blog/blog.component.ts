@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
+  isdisplay= true;
   title: string
   brList: any
   constructor() {
@@ -18,9 +18,12 @@ export class BlogComponent implements OnInit {
         active: true
       }
     ]
+   
+ 
   }
 
   ngOnInit() {
+   
   }
 
 }

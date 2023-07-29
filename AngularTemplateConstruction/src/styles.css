@@ -2788,3 +2788,6 @@
   .list-space{
     padding-top: 10px;
   }
+  .icon-none{
+    display: none;
+  }

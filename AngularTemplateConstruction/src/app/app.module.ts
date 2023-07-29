@@ -58,11 +58,13 @@ import { BlogdetailsidebarComponent } from './blogdetailsidebar/blogdetailsideba
 import { BldesidebarcategorylistComponent } from './bldesidebarcategorylist/bldesidebarcategorylist.component';
 import { BlogdetailsidebarpostComponent } from './blogdetailsidebarpost/blogdetailsidebarpost.component';
 import { BlogdetailsidebartagsComponent } from './blogdetailsidebartags/blogdetailsidebartags.component';
+import { OurprojectsComponent } from './ourprojects/ourprojects.component';
+import { OurprojectboxComponent } from './ourprojectbox/ourprojectbox.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [																																																											
+  declarations: [																																																													
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -117,7 +119,9 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
       BlogdetailsidebarComponent,
       BldesidebarcategorylistComponent,
       BlogdetailsidebarpostComponent,
-      BlogdetailsidebartagsComponent
+      BlogdetailsidebartagsComponent,
+      OurprojectsComponent,
+      OurprojectboxComponent
    ],
   imports: [
     BrowserModule,
