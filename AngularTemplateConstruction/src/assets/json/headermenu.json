@@ -1,39 +1,69 @@
 [
     {
         "class": "",
-        "routerlink": "/" ,
-        "routerlinkactive": "",
+        "routerlink": "/",
+        "routerLinkActive": "",
         "menu": "Home"
     },
     {
         "class": "",
-        "routerlink": "/about" ,
-        "routerlinkactive": "active",
+        "routerlink": "/about",
+        "routerLinkActive": "active",
         "menu": "About"
     },
     {
         "class": "",
-        "routerlink": "/services" ,
-        "routerlinkactive": "active",
+        "routerlink": "/services",
+        "routerLinkActive": "active",
         "menu": "Services"
     },
     {
         "class": "",
-        "routerlink": "/blog" ,
-        "routerlinkactive": "active",
-        "menu": "Blog"
+        "routerlink": "/projects",
+        "routerLinkActive": "active",
+        "menu": "Projects"
     },
     {
-        "class": "dropdown",
-        "routerlink": "/blog" ,
-        "routerlinkactive": "active",
+        "class": "",
+        "routerlink": "/blog",
+        "routerLinkActive": "active",
         "menu": "Blog"
     },
     {
         "class": "",
-        "routerlink": "/contact" ,
-        "routerlinkactive": "active",
+        "routerlink": "/dropdown",
+        "routerLinkActive": "active",
+        "menu": "Dropwdown",
+        "submenus": [
+            {
+                "class": "",
+                "routerlink": "",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 1"
+            },
+            {
+                "class": "",
+                "routerlink": "",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 2"            },
+            {
+                "class": "",
+                "routerlink": "",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 3"
+            },
+            {
+                "class": "",
+                "routerlink": "",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 4"
+            }
+        ]
+    },
+    {
+        "class": "",
+        "routerlink": "/contact",
+        "routerLinkActive": "active",
         "menu": "Contact"
     }
-
 ]

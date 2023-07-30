@@ -21,7 +21,8 @@ interface filter{
 })
 export class OurprojectsComponent implements OnInit {
 
- 
+ //filter tab acitve-color change
+ activeFilter: string = 'all';
 
 
   url:string="/assets/json/ourprojectbox.json"
@@ -40,6 +41,10 @@ export class OurprojectsComponent implements OnInit {
   }
 
   filtertab(index:string):void{
+
+    //filter tab acitve-color change
+    this.activeFilter = index;
+
     if(index=== 'all'){
       this.ourtabfilter=this.TabImages
     }

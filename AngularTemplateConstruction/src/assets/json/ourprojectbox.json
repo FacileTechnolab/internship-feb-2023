@@ -7,7 +7,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "projects/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
 
     },
@@ -19,7 +19,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -30,7 +30,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -41,7 +41,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -52,7 +52,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -63,7 +63,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -74,7 +74,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -85,7 +85,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -96,7 +96,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -107,7 +107,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -118,7 +118,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
@@ -129,7 +129,7 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/project-details",
+        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     }
 ]

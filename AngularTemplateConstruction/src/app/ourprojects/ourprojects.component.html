@@ -12,11 +12,11 @@
       data-portfolio-sort="original-order">
 
       <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-        <li (click)="filtertab('all')">All</li>
-        <li (click)="filtertab('remodeling')">Remodeling</li>
-        <li (click)="filtertab('construction')">Construction</li>
-        <li (click)="filtertab('repairs')">Repairs</li>
-        <li (click)="filtertab('design')">Design</li>
+        <li (click)="filtertab('all')" [class.filter-active]="activeFilter === 'all'">All</li>
+        <li (click)="filtertab('remodeling')" [class.filter-active]="activeFilter === 'remodeling'">Remodeling</li>
+        <li (click)="filtertab('construction')" [class.filter-active]="activeFilter === 'construction'">Construction</li>
+        <li (click)="filtertab('repairs')" [class.filter-active]="activeFilter === 'repairs'">Repairs</li>
+        <li (click)="filtertab('design')" [class.filter-active]="activeFilter === 'design'">Design</li>
       </ul><!-- End Projects Filters -->
 
       <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">

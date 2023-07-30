@@ -63,6 +63,7 @@ import { StatecounterboxComponent } from './statecounterbox/statecounterbox.comp
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
+import { CountoModule }  from 'angular2-counto';
 
 @NgModule({
   declarations: [																																																															
@@ -132,7 +133,9 @@ import { HeadermenulistComponent } from './headermenulist/headermenulist.compone
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+// CountoModule 
+
 
   ],
   providers: [],

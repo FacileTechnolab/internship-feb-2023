@@ -21,9 +21,6 @@ export class OurprojectboxComponent implements OnInit {
     this.isExpanded = !this.isExpanded;
   }
 
-
-
-
   url:string="/assets/json/ourprojectbox.json"
   @Input()  ourdata: any;
   constructor() { }

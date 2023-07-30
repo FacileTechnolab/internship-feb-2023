@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
-  preloader.remove();
+ 
 
   if (preloader) {
     window.addEventListener('load', () => {

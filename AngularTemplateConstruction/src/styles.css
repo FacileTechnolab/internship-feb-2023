@@ -2791,3 +2791,54 @@
   .icon-none{
     display: none;
   }
+
+
+  .portfolio-item {
+    animation: leaves 0.5s ease-in-out !important;
+    position: inherit !important;
+    left: inherit !important;
+    top: inherit !important;
+  }
+  
+  @keyframes leaves {
+    0% {
+      transform: scale(0.5);
+      -webkit-transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+    }
+  }
+  
+  .portfolio-container {
+    height: auto !important;
+  }
+
+
+  /*header menu start*/
+.navbar .menu > .list_item {
+  padding: 10px 0 10px 28px;
+  position: relative;
+}
+.navbar li {
+  position: static;
+}
+.navbar .menu .list_item > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--color-primary);
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar .menu .list_item > li > a.active:before,
+.navbar .menu .list_item > li > a:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+/*header menu end*/

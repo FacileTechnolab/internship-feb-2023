@@ -2,15 +2,16 @@
 <header id="header" class="header d-flex align-items-center">
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center">
-      <h1>UpConstruction<span>.</span></h1>
+    <a [routerLink]="header.routerLink" class="logo d-flex align-items-center">
+      <h1>{{header.headerlogo}}<span>{{header.headerlogodot}}</span></h1>
     </a>
 
-    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <i [className]="header.iconshow"></i>
+    <i [className]="header.iconhide"></i>
     <nav id="navbar" class="navbar">
-      <ul>
-        <app-headermenulist *ngFor="let headermenudata of headermenuvalue" [headermenudata]="headermenudata"></app-headermenulist>
+      <ul class="menu">
+        
+        <app-headermenulist *ngFor="let headermenudata of headermenuvalue" [headermenudata]="headermenudata" class="list_item"></app-headermenulist>
         <!-- <li><a routerLink="/"  >Home</a></li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
 

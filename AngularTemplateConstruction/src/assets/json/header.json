@@ -1,0 +1,7 @@
+{
+    "routerlink":"/",
+    "headerlogo": "UpConstruction",
+    "headerlogodot": ".",
+    "iconshow": "mobile-nav-toggle mobile-nav-show bi bi-list",
+    "iconhide": "mobile-nav-toggle mobile-nav-hide d-none bi bi-x"
+}
