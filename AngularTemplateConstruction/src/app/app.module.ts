@@ -64,9 +64,10 @@ import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
 import { CountoModule }  from 'angular2-counto';
+import { FootermenuComponent } from './footermenu/footermenu.component';
 
 @NgModule({
-  declarations: [																																																															
+  declarations: [																																																																
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -124,7 +125,8 @@ import { CountoModule }  from 'angular2-counto';
       OurprojectsComponent,
       OurprojectboxComponent,
       StatecounterboxComponent,
-      HeadermenulistComponent
+      HeadermenulistComponent,
+      FootermenuComponent
    ],
   imports: [
     BrowserModule,

@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 url:string="/assets/json/footer.json"
 footer:any
+url1:string="/assets/json/footermenu.json"
+footermenu:any;
+
+
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
@@ -16,6 +20,11 @@ footer:any
       this.footer =result
     });
  console.log(this.footer)
+
+ this.http.get(this.url1).subscribe(result=>{
+  this.footermenu =result
+});
+console.log(this.footermenu)
   }
 
 }
