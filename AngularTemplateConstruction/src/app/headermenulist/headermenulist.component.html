@@ -1,44 +1,16 @@
-<!-- <li><a [routerLink]="headermenudata.routerlink"  [routerLinkActive]="headermenudata?.routerLinkActive" >{{headermenudata.menu}}</a></li> -->
+
 
 <li [ngClass]="headermenudata.class" class="dropdown">
-  <a *ngIf="!headermenudata.submenus" [routerLink]="headermenudata.routerlink" [routerLinkActive]="headermenudata.routerLinkActive">{{ headermenudata.menu }}</a>
-  <a *ngIf="headermenudata.submenus" [routerLink]="headermenudata.routerlink" [routerLinkActive]="headermenudata.routerLinkActive">{{ headermenudata.menu }} <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+  <a [routerLink]="headermenudata.routerlink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    {{ headermenudata.menu }} <i *ngIf="headermenudata.submenus" class="bi bi-chevron-down dropdown-indicator"></i>
+  </a>
   <ul *ngIf="headermenudata.submenus">
     <li *ngFor="let submenu of headermenudata.submenus">
       <a [routerLink]="submenu.routerlink" [routerLinkActive]="submenu.routerLinkActive">{{ submenu.menu }}</a>
     </li>
   </ul>
 </li>
+
         
 
-<!-- <li><a routerLink="/about" routerLinkActive="active">About</a></li> -->
-
-        <!-- <li><a routerLink="/services" routerLinkActive="active" >Services</a></li> -->
  
-        <!-- <li><a routerLink="/projects" routerLinkActive="active" >Projects</a></li> -->
-        <!-- <li><a href="projects.html">Projects</a></li> -->
-
-        <!-- <li><a href="blog.html">Blog</a></li> -->
-        <!-- <li><a routerLink="/blog" routerLinkActive="active" >Blog</a></li> -->
-
-        <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-              class="bi bi-chevron-down dropdown-indicator"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                  class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
-        <!-- <li><a href="contact.html">Contact</a></li> -->
-        <!-- <li><a routerLink="/contact" routerLinkActive="active" >Contact</a></li> -->

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./blogdetailsidebarpost.component.css']
 })
 export class BlogdetailsidebarpostComponent implements OnInit {
-  url2: string="/assets/json/blogdetailsidebarpost.json"
+  url: string="/assets/json/blogdetailsidebarpost.json"
   @Input() sidbarpostdata: any;
   constructor() { }
 

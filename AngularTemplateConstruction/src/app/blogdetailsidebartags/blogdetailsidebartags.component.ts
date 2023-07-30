@@ -6,11 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./blogdetailsidebartags.component.css']
 })
 export class BlogdetailsidebartagsComponent implements OnInit {
-  url3:string = "/assets/json/blogdetailsidebartags.json"
+  url:string = "/assets/json/blogdetailsidebartags.json"
  @Input() tags: any;
   constructor() { }
 
   ngOnInit() {
   }
+  onblogdetail()
+  {
+    document.getElementById("main")?.scrollIntoView({behavior: "smooth"});
 
+  }
 }

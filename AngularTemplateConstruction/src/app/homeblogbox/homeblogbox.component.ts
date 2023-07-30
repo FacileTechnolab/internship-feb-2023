@@ -14,8 +14,5 @@ export class HomeblogboxComponent implements OnInit {
   ngOnInit() {
     console.log(this.isdisplay)
   }
-  value(){
-    
-  }
 
 }

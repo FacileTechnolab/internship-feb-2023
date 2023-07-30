@@ -65,6 +65,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
 import { CountoModule }  from 'angular2-counto';
 import { FootermenuComponent } from './footermenu/footermenu.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [																																																																
@@ -126,7 +127,8 @@ import { FootermenuComponent } from './footermenu/footermenu.component';
       OurprojectboxComponent,
       StatecounterboxComponent,
       HeadermenulistComponent,
-      FootermenuComponent
+      FootermenuComponent,
+      LoadingComponent
    ],
   imports: [
     BrowserModule,

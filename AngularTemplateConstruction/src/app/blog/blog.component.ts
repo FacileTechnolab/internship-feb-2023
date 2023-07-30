@@ -32,5 +32,8 @@ export class BlogComponent implements OnInit {
     });
     console.log(this.homeblogdata)
   }
+  onblog(){
+    document.getElementById("main")?.scrollIntoView({behavior: "smooth"});
+  }
 
 }

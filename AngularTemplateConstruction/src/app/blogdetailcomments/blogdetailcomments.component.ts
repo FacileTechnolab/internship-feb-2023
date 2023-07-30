@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blogdetailcomments.component.css']
 })
 export class BlogdetailcommentsComponent implements OnInit {
+  title="8 Comments"
   url: string= "/assets/json/blogdetailcommentbox.json"
   commentvalue : any;
   constructor(private http: HttpClient) { }

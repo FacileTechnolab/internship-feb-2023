@@ -37,24 +37,24 @@
         "submenus": [
             {
                 "class": "",
-                "routerlink": "",
+                "routerlink": "/dropdown",
                 "routerLinkActive": "active",
                 "menu": "Dropwdown 1"
             },
             {
                 "class": "",
-                "routerlink": "",
+                "routerlink": "/dropdown",
                 "routerLinkActive": "active",
                 "menu": "Dropwdown 2"            },
             {
                 "class": "",
-                "routerlink": "",
+                "routerlink": "/dropdown",
                 "routerLinkActive": "active",
                 "menu": "Dropwdown 3"
             },
             {
                 "class": "",
-                "routerlink": "",
+                "routerlink": "/dropdown",
                 "routerLinkActive": "active",
                 "menu": "Dropwdown 4"
             }
