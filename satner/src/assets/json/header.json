@@ -1,0 +1,30 @@
+{
+    "link1":"home",
+    "class1":"Home",
+
+    "link2":"about",
+    "class2":"About",
+
+    "link3":"Services",
+    "class3":"Services",
+
+    "link4":"portfolio",
+    "class4":"Portfolio",
+
+    "cls":"Pages",
+    "link5":"elements",
+    "class5":"Elements",
+
+    "link6":"portfolio-details",
+    "class6":"Portfolio Details",
+
+    "cls1":"Blog",
+    "link7":"Blog",
+    "class7":"Blog",
+
+    "link8":"Blogdetails",
+    "class8":"Blog Details",
+
+    "link9":"Contact",
+    "class9":"Contact"
+}

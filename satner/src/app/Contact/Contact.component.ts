@@ -40,7 +40,7 @@ export class ContactComponent implements OnInit {
   //   alert("success");
   // }
   onContact() {
-    console.warn(this.contact.value);
+    console.log(this.contact.value);
 
   }
   get name() {

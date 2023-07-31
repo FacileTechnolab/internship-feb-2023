@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
   url: string = "assets/json/breadcrumb.json"
-  constructor() { }
+  constructor(private http: HttpClient) { }
   @Input() bread: any;
   ngOnInit() {
 

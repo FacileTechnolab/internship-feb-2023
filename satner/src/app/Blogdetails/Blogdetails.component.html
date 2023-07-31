@@ -34,21 +34,21 @@
             </div>
           </div>
           <div class="col-lg-9 col-md-9 blog_details">
-            <h2>{{ content.title }}</h2>
+            <h2>{{ content?.title }}</h2>
             <p class="excert">
-              {{ content.desc }}
+              {{ content?.desc }}
             </p>
             <p>
-              {{ content.describe }}
+              {{ content?.describe }}
             </p>
             <p>
-              {{ content.describe }}
+              {{ content?.describe }}
             </p>
           </div>
           <div class="col-lg-12">
             <div class="quotes">
               <p class="excert">
-                {{ content.desc }}
+                {{ content?.desc }}
               </p>
             </div>
 
@@ -69,10 +69,10 @@
               </div>
               <div class="col-lg-12 mt-25">
                 <p>
-                  {{ content.desc }}
+                  {{ content?.desc }}
                 </p>
                 <p>
-                  {{ content.desc }}
+                  {{ content?.desc }}
                 </p>
               </div>
             </div>
@@ -192,13 +192,6 @@
             >
               Post Comment
             </button>
-            <!-- <a
-              href="#"
-              type="submit"
-              value="submit"
-              class="primary-btn primary_btn"
-              ><span>Post Comment</span></a
-            > -->
           </form>
         </div>
       </div>
@@ -223,19 +216,19 @@
           <aside class="single_sidebar_widget author_widget">
             <img
               class="author_img rounded-circle"
-              src="{{ blogpost.img }}"
+              src="{{ blogpost?.img }}"
               alt=""
             />
-            <h4>{{ blogpost.name }}</h4>
-            <p>{{ blogpost.desc }}</p>
+            <h4>{{ blogpost?.name }}</h4>
+            <p>{{ blogpost?.desc }}</p>
             <div class="social_icon">
-              <a href="#"><i class="{{ blogpost.face }}"></i></a>
-              <a href="#"><i class="{{ blogpost.twitter }}"></i></a>
-              <a href="#"><i class="{{ blogpost.git }}"></i></a>
-              <a href="#"><i class="{{ blogpost.behance }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.face }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.twitter }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.git }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.behance }}"></i></a>
             </div>
             <p>
-              {{ blogpost.describe }}
+              {{ blogpost?.describe }}
             </p>
             <div class="br"></div>
           </aside>
@@ -248,9 +241,9 @@
           </aside>
           <app-blogrightcategory></app-blogrightcategory>
           <aside class="single-sidebar-widget newsletter_widget">
-            <h4 class="widget_title">{{ news.title }}</h4>
+            <h4 class="widget_title">{{ news?.title }}</h4>
             <p>
-              {{ news.content }}
+              {{ news?.content }}
             </p>
             <div class="form-group d-flex flex-row">
               <div class="input-group">
@@ -264,13 +257,11 @@
                   class="form-control"
                   id="inlineFormInputGroup"
                   placeholder="Enter email"
-                  onfocus="this.placeholder = ''"
-                  onblur="this.placeholder = 'Enter email'"
                 />
               </div>
-              <a [attr.href]="news.link" class="bbtns">{{ news.btn }}</a>
+              <a [attr.href]="news?.link" class="bbtns">{{ news?.btn }}</a>
             </div>
-            <p class="text-bottom">{{ news.desc }}</p>
+            <p class="text-bottom">{{ news?.desc }}</p>
             <div class="br"></div>
           </aside>
           <app-blogtechmain></app-blogtechmain>

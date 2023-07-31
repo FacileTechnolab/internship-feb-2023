@@ -13,7 +13,7 @@ export class ServicesComponent implements OnInit {
   ngOnInit() {
     this.http.get(this.url).subscribe(rel => {
       this.Fruit = rel;
-      console.log(this.Fruit);
+      // console.log(this.Fruit);
 
     });
   }

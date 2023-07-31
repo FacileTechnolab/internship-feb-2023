@@ -5,15 +5,15 @@
         <div class="footer_top flex-column">
           <div class="footer_logo">
             <a href="#">
-              <img src="assets/img/logo.png" alt="" />
+              <img [src]="foot?.src" alt="" />
             </a>
-            <h4>Follow Me</h4>
+            <h4>{{ foot?.title }}</h4>
           </div>
           <div class="footer_social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-behance"></i></a>
+            <a href="{{ foot?.rlo }}"><i [class]="foot?.cls1"></i></a>
+            <a href="{{ foot?.rlo }}"><i [class]="foot?.cls2"></i></a>
+            <a href="{{ foot?.rlo }}"><i [class]="foot?.cls3"></i></a>
+            <a href="{{ foot?.rlo }}"><i [class]="foot?.cls4"></i></a>
           </div>
         </div>
       </div>

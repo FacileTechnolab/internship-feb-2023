@@ -1,4 +1,4 @@
-<section class="portfolio_area section_gap_top" id="portfolio">
+<section class="portfolio_area" id="portfolio">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -31,8 +31,8 @@
     </div>
 
     <div class="filters-content">
-      <div class="row portfolio-grid justify-content-center">
-        <div class="col-lg-4 col-md-6 all" *ngFor="let tab of filteredImages" .>
+      <div class="row portfolio-grid">
+        <div class="col-lg-4 col-md-6 all" *ngFor="let tab of filteredImages">
           <app-tabchild [tab]="tab"></app-tabchild>
         </div>
       </div>

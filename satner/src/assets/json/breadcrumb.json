@@ -5,8 +5,8 @@
     "link1":"/home",
     "label2":"About",
     "link2":"/about",
-    "label3":"",
-    "link3":""
+    "label3":""
+
 },{
     "id":"service",
     "title":"SERVICE",
@@ -14,8 +14,8 @@
     "link1":"/home",
     "label2":"Service",
     "link2":"/Services",
-    "label3":"",
-    "link3":""
+    "label3":""
+   
 },
 {
 
@@ -25,8 +25,8 @@
     "link1":"/home",
     "label2":"Portfolio",
     "link2":"/portfolio",
-    "label3":"",
-    "link3":""
+    "label3":""
+   
 },
 {
     "id":"elements",
@@ -35,8 +35,8 @@
     "link1":"/home",
     "label2":"Elements",
     "link2":"/elements",
-    "label3":"",
-    "link3":""
+    "label3":""
+
     
 },
 {
@@ -47,7 +47,7 @@
     "label2":"Portfolio",
     "link2":"/portfolio",
     "label3":" Portfolio Details",
-    "link3":"portfolio-details"
+    "link3":"/portfolio-details"
 },
 
 {

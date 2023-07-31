@@ -42,6 +42,7 @@ const routes: Routes = [{
 {
   path: 'Blog',
   component: BlogComponent
+
 },
 {
   path: 'Blogdetails',

@@ -38,7 +38,7 @@ export class TabsComponent implements OnInit {
       this.filteredImages = this.Images;
     }
     else {
-      debugger
+
       this.filteredImages = this.Images.filter(tab => tab.type === type || tab.type1 === type);
 
     }
@@ -52,7 +52,7 @@ export class TabsComponent implements OnInit {
       this.Images = this.home;
 
 
-      console.log('icon', this.home)
+      // console.log('icon', this.home)
       this.filteredImages = this.Images;
     });
   }

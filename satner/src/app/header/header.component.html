@@ -26,16 +26,24 @@
         >
           <ul class="nav navbar-nav menu_nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" routerLink="home">Home</a>
+              <a class="nav-link" [attr.href]="head?.link1">{{
+                head?.class1
+              }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="about">About</a>
+              <a class="nav-link" [attr.href]="head?.link2">{{
+                head?.class2
+              }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="Services">Services</a>
+              <a class="nav-link" [attr.href]="head?.link3">{{
+                head?.class3
+              }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="portfolio">Portfolio</a>
+              <a class="nav-link" [attr.href]="head?.link4">{{
+                head?.class4
+              }}</a>
             </li>
             <li class="nav-item submenu dropdown">
               <a
@@ -45,40 +53,48 @@
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
-                >Pages</a
+                >{{ head?.cls }}</a
               >
               <ul class="dropdown-menu">
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="elements">Elements</a>
+                  <a class="nav-link" [attr.href]="head?.link5">{{
+                    head?.class5
+                  }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="portfolio-details"
-                    >Portfolio Details</a
+                  <a class="nav-link" [attr.href]="head?.link6">{{
+                    head?.class6
+                  }}</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item submenu dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >{{ head?.cls1 }}</a
+              >
+              <ul class="dropdown-menu">
+                <li class="nav-item">
+                  <a class="nav-link" [attr.href]="head?.link7">{{
+                    head?.class7
+                  }}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" [attr.href]="head?.link8">
+                    {{ head?.class8 }}</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="nav-item submenu dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Blog</a
-              >
-              <ul class="dropdown-menu">
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="Blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="Blogdetails">Blog Details</a>
-                </li>
-              </ul>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="Contact">Contact</a>
+              <a class="nav-link" [attr.href]="head?.link9">{{
+                head?.class9
+              }}</a>
             </li>
           </ul>
         </div>
