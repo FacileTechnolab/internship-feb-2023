@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { state, style, transition, animate, trigger } from '@angular/animations';
 interface Image{
   category: string;
   category1:string

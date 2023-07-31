@@ -3,7 +3,7 @@
     <div class="row" *ngFor="let crump of data">
       <app-Breadcrumb
         [crump]="crump"
-        *ngIf="crump.id == 'Product details'"
+        *ngIf="crump?.id == 'Product details'"
       ></app-Breadcrumb>
     </div>
   </div>
@@ -14,16 +14,16 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="left-image">
-          <img [src]="details.src" alt="" />
+          <img [src]="details?.src" alt="" />
         </div>
       </div>
       <div class="col-lg-6 align-self-center">
-        <h4>{{ details.title }}</h4>
+        <h4>{{ details?.title }}</h4>
         <span class="price"
-          ><em>{{ details.price1 }}</em> {{ details.price2 }}</span
+          ><em>{{ details?.price1 }}</em> {{ details?.price2 }}</span
         >
         <p>
-          {{ details.pragraph }}
+          {{ details?.pragraph }}
         </p>
         <form id="qty" action="#">
           <input
@@ -34,25 +34,25 @@
             placeholder="1"
           />
           <button type="submit">
-            <i [class]="details.icon"></i> {{ details.label }}
+            <i [class]="details?.icon"></i> {{ details?.label }}
           </button>
         </form>
         <ul>
           <li>
-            <span>{{ details.label1 }}</span
-            >{{ details.label2 }}
+            <span>{{ details?.label1 }}</span
+            >{{ details?.label2 }}
           </li>
           <li>
-            <span>{{ details.label3 }}</span>
-            <a href="#">{{ details.label4 }}</a>
-            <a href="#">{{ details.label5 }}</a>
-            <a href="#">{{ details.label6 }}</a>
+            <span>{{ details?.label3 }}</span>
+            <a href="#">{{ details?.label4 }}</a>
+            <a href="#">{{ details?.label5 }}</a>
+            <a href="#">{{ details?.label6 }}</a>
           </li>
           <li>
-            <span>{{ details.label7 }}</span>
-            <a href="#">{{ details.label8 }}</a>
-            <a href="#">{{ details.tag }}</a>
-            <a href="#">{{ details.tag1 }}</a>
+            <span>{{ details?.label7 }}</span>
+            <a href="#">{{ details?.label8 }}</a>
+            <a href="#">{{ details?.tag }}</a>
+            <a href="#">{{ details?.tag1 }}</a>
           </li>
         </ul>
       </div>
@@ -76,18 +76,18 @@
         <div class="tab-content">
           <div *ngIf="activatedTabIndex == 0">
             <p>
-              {{ details.pragraph1 }}
+              {{ details?.pragraph1 }}
             </p>
             <br />
             <p>
-              {{ details.pragraph2 }}
+              {{ details?.pragraph2 }}
             </p>
           </div>
 
           <div *ngIf="activatedTabIndex == 1">
             <p>
-              {{ details.pragraph3 }}
-              <br /><br />{{ details.pragraph4 }}
+              {{ details?.pragraph3 }}
+              <br /><br />{{ details?.pragraph4 }}
             </p>
           </div>
         </div>
@@ -101,13 +101,13 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="section-heading">
-          <h6>{{ details.tag2 }}</h6>
-          <h2>{{ details.tag3 }}</h2>
+          <h6>{{ details?.tag2 }}</h6>
+          <h2>{{ details?.tag3 }}</h2>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="main-button">
-          <a [attr.href]="details.routerLink">{{ details.tag4 }}</a>
+          <a [attr.href]="details?.routerLink">{{ details?.tag4 }}</a>
         </div>
       </div>
       <div

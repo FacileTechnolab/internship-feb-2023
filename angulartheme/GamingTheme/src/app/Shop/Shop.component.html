@@ -3,7 +3,7 @@
     <div class="row" *ngFor="let crump of data1">
       <app-Breadcrumb
         [crump]="crump"
-        *ngIf="crump.id == 'Shop'"
+        *ngIf="crump?.id == 'Shop'"
       ></app-Breadcrumb>
     </div>
   </div>
@@ -12,16 +12,16 @@
   <div class="container">
     <ul class="trending-filter">
       <li>
-        <a data-filter="*" (click)="filterImages('all')">Show All</a>
+        <a data-filter="*" (click)="filterImages('all')">{{ home?.tab }}</a>
       </li>
       <li>
-        <a href="#!" (click)="filterImages('adv')">Adventure</a>
+        <a href="#!" (click)="filterImages('adv')">{{ home?.tab1 }}</a>
       </li>
       <li>
-        <a href="#!" (click)="filterImages('str')">Strategy</a>
+        <a href="#!" (click)="filterImages('str')">{{ home?.tab2 }}</a>
       </li>
       <li>
-        <a href="#!" (click)="filterImages('rac')">Racing</a>
+        <a href="#!" (click)="filterImages('rac')">{{ home?.tab3 }}</a>
       </li>
     </ul>
 
@@ -41,13 +41,13 @@
             <a href="#">&lt;</a>
           </li>
           <li>
-            <a href="#">{{ home.pag1 }}</a>
+            <a href="#">{{ home?.pag1 }}</a>
           </li>
           <li>
-            <a class="is_active" href="#">{{ home.pag2 }}</a>
+            <a class="is_active" href="#">{{ home?.pag2 }}</a>
           </li>
           <li>
-            <a href="#">{{ home.pag3 }}</a>
+            <a href="#">{{ home?.pag3 }}</a>
           </li>
           <li>
             <a href="#">&gt;</a>

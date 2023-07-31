@@ -6,7 +6,10 @@ import { ProductDetailsComponent } from './ProductDetails/ProductDetails.compone
 import { ContactUsComponent } from './ContactUs/ContactUs.component';
 
 const routes: Routes = [
+  {path:'**',component:HomeComponent},
+
    {path:'',component:HomeComponent},
+
 
 {
   path:'Home',

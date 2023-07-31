@@ -4,21 +4,25 @@
       <div class="col-12">
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
-          <a [attr.href]="home.routerlink" class="logo">
-            <img [src]="home.src2" alt="" style="width: 158px" />
+          <a [attr.href]="home?.routerlink" class="logo">
+            <img [src]="home?.src2" alt="" style="width: 158px" />
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
             <li *ngFor="let value of head">
-              <a [attr.href]="value.routerLink" [class]="value.class">{{
-                value.label
-              }}</a>
+              <a
+                [routerLink]="value?.routerLink"
+                [routerLinkActive]="'is - active'"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [class]="value?.class"
+                >{{ value?.label }}</a
+              >
             </li>
           </ul>
 
           <a class="menu-trigger">
-            <span>{{ home.label2 }}</span>
+            <span>{{ home?.label2 }}</span>
           </a>
           <!-- ***** Menu End ***** -->
         </nav>

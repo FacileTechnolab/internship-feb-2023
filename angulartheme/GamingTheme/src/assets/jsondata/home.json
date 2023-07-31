@@ -15,5 +15,9 @@
 
   "pag1": "1",
   "pag2": "2",
-  "pag3": "3"
+  "pag3": "3",
+  "tab": "Show All",
+  "tab1": "Adventure",
+  "tab2": "Strategy",
+  "tab3": "Racing"
 }

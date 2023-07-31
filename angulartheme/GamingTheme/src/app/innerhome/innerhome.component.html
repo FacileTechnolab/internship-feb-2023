@@ -29,7 +29,7 @@
                 ngModel
               />
               <button type="submit" href="#" role="button">
-                {{ home.serach }}
+                {{ home?.serach }}
               </button>
             </form>
           </div>
@@ -37,9 +37,9 @@
       </div>
       <div class="col-lg-4 offset-lg-2">
         <div class="right-image">
-          <img [src]="home.src" alt="" />
-          <span class="price">{{ home.price }}</span>
-          <span class="offer">{{ home.discount }}</span>
+          <img [src]="home?.src" alt="" />
+          <span class="price">{{ home?.price }}</span>
+          <span class="offer">{{ home?.discount }}</span>
         </div>
       </div>
     </div>

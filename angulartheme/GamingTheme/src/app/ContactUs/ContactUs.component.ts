@@ -34,25 +34,11 @@ url:string="assets/jsondata/contact.json";
       this.softwareWorkingVideoLink
     );
   }
-  
-  loginForm =new FormGroup({
-    name:new FormControl('',[Validators.required]),
-    surname:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.required])
-  })
-  loginUser(){
-console.warn(this.loginForm.value);
-
- }
- get name(){
-  return this.loginForm.get('name');
- }
- get surname(){
-  return this.loginForm.get('surname');
- }
- get email(){
-  return this.loginForm.get('email');
- }
 
 
+ onSubmit(userForm:any) {
+  console.warn(userForm.value);
+ 
+  userForm.reset();
+  }
 }

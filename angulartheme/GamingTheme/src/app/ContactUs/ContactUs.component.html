@@ -3,7 +3,7 @@
     <div class="row" *ngFor="let crump of data">
       <app-Breadcrumb
         [crump]="crump"
-        *ngIf="crump.id == 'Contactus'"
+        *ngIf="crump?.id == 'Contactus'"
       ></app-Breadcrumb>
     </div>
   </div>
@@ -15,22 +15,22 @@
       <div class="col-lg-6 align-self-center">
         <div class="left-text">
           <div class="section-heading">
-            <h6>{{ contact.label }}</h6>
-            <h2>{{ contact.label2 }}</h2>
+            <h6>{{ contact?.label }}</h6>
+            <h2>{{ contact?.label2 }}</h2>
           </div>
           <p>
-            {{ contact.paragraph }}
+            {{ contact?.paragraph }}
           </p>
           <ul>
             <li>
-              <span>{{ contact.label3 }}</span> {{ contact.label4 }}
+              <span>{{ contact?.label3 }}</span> {{ contact?.label4 }}
             </li>
             <li>
-              <span>{{ contact.label5 }}</span> {{ contact.tag }}
+              <span>{{ contact?.label5 }}</span> {{ contact?.tag }}
             </li>
             <li>
-              <span>{{ contact.tag2 }}</span
-              >{{ contact.tag3 }}
+              <span>{{ contact?.tag2 }}</span
+              >{{ contact?.tag3 }}
             </li>
           </ul>
         </div>
@@ -52,7 +52,13 @@
             </div>
 
             <div class="col-lg-12">
-              <form id="contact-form" action-method="post" ngNativeValidate>
+              <form
+                id="contact-form"
+                action-method="post"
+                ngNativeValidate
+                #userForm="ngForm"
+                (ngSubmit)="onSubmit(userForm)"
+              >
                 <div class="row">
                   <div class="col-lg-6">
                     <fieldset>
@@ -112,13 +118,8 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button
-                        type="submit"
-                        id="form-submit"
-                        class="orange-button"
-                        href="#"
-                      >
-                        {{ contact.buttonname }}
+                      <button type="submit" href="#" role="button">
+                        {{ contact?.buttonname }}
                       </button>
                     </fieldset>
                   </div>

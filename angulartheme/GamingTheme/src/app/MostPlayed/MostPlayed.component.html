@@ -3,13 +3,13 @@
     <div class="row" *ngFor="let data of treders">
       <div class="col-lg-6">
         <div class="section-heading">
-          <h6>{{ data.label3 }}</h6>
-          <h2>{{ data.label4 }}</h2>
+          <h6>{{ data?.label3 }}</h6>
+          <h2>{{ data?.label4 }}</h2>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="main-button">
-          <a [attr.href]="data.routerlink">{{ data.link }}</a>
+          <a [attr.href]="data?.routerlink">{{ data?.link }}</a>
         </div>
       </div>
       <div class="col-lg-2 col-md-6 col-sm-6" *ngFor="let played of Most">

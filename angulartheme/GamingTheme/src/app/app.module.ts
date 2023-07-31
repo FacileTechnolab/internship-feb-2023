@@ -9,7 +9,7 @@ import { ShopComponent } from './Shop/Shop.component';
 import { ProductDetailsComponent } from './ProductDetails/ProductDetails.component';
 import { ContactUsComponent } from './ContactUs/ContactUs.component';
 import { HttpClientModule} from '@angular/common/http';  
-
+import { state, style, transition, animate, trigger } from '@angular/animations';
 import { CategoryComponent } from './Category/Category.component';
 import { LastLayoutComponent } from './LastLayout/LastLayout.component';
 import { MostPlayedComponent } from './MostPlayed/MostPlayed.component';
@@ -27,13 +27,15 @@ import { InnershopboxComponent } from './innershopbox/innershopbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailstabComponent } from './detailstab/detailstab.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { TitleComponent } from './title/title.component';
+
 
 
 
 
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       HomeComponent,
       HeaderComponent,
@@ -53,7 +55,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
       BreadcrumbComponent,
       InnershopboxComponent,
       DetailstabComponent,
-     
+      TitleComponent
    ],
   imports: [
     BrowserModule,

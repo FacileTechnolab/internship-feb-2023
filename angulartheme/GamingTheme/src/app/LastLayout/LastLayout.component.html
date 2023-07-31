@@ -6,16 +6,16 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="section-heading">
-                <h6>{{ data.label }}</h6>
+                <h6>{{ data?.label }}</h6>
                 <h2>
-                  {{ data.label1 }} <em>{{ data.tag }}</em> {{ data.tag2 }}
+                  {{ data?.label1 }} <em>{{ data?.tag }}</em> {{ data?.tag2 }}
                 </h2>
               </div>
               <p>
-                {{ data.paragraph }}
+                {{ data?.paragraph }}
               </p>
               <div class="main-button">
-                <a [attr.href]="data.routerlink">{{ data.label2 }}</a>
+                <a [attr.href]="data?.routerlink">{{ data?.label2 }}</a>
               </div>
             </div>
           </div>
@@ -26,9 +26,9 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="section-heading">
-                <h6>{{ data.label3 }}</h6>
+                <h6>{{ data?.label3 }}</h6>
                 <h2>
-                  {{ data.label4 }}<em>{{ data.tag3 }}</em> {{ data.tag4 }}
+                  {{ data?.label4 }}<em>{{ data?.tag3 }}</em> {{ data?.tag4 }}
                 </h2>
               </div>
               <div class="search-input">
@@ -40,7 +40,7 @@
                     aria-describedby="emailHelp"
                     placeholder="Your email..."
                   />
-                  <button type="submit">{{ data.label5 }}</button>
+                  <button type="submit">{{ data?.label5 }}</button>
                 </form>
               </div>
             </div>
