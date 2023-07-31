@@ -15,42 +15,49 @@ const routes: Routes = [{
 },
 {
   path: 'home',
-  component: HomeComponent
+  component: HomeComponent,
+  title: 'Satner Portfolio'
 },
 {
   path: 'about',
-  component: AboutComponent
-}, {
-  path: 'Services',
-  component: ServicesComponent
+  component: AboutComponent,
+  title: 'About Us'
 },
 {
   path: 'Services',
-  component: ServicesComponent
+  component: ServicesComponent,
+  title: 'Services'
 },
+
 {
   path: 'portfolio',
-  component: PortfolioComponent
+  component: PortfolioComponent,
+  title: 'Portfolio'
 }, {
   path: 'elements',
-  component: ElementsComponent
+  component: ElementsComponent,
+  title: 'Elements'
 },
 {
   path: 'portfolio-details',
-  component: PortfolioDetailsComponent
+  component: PortfolioDetailsComponent,
+  title: 'Portfolio Details'
 },
 {
   path: 'Blog',
-  component: BlogComponent
+  component: BlogComponent,
+  title: 'Blog'
 
 },
 {
   path: 'Blogdetails',
-  component: BlogdetailsComponent
+  component: BlogdetailsComponent,
+  title: 'Blog Details'
 },
 {
   path: 'Contact',
-  component: ContactComponent
+  component: ContactComponent,
+  title: 'Contact Us'
 }
 ];
 
