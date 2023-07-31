@@ -12,7 +12,7 @@ export class BlogareaComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.area)
+    // console.log(this.area)
   }
 
 }

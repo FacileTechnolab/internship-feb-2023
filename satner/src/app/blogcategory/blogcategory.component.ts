@@ -12,7 +12,7 @@ export class BlogcategoryComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.blogcategory);
+    //console.log(this.blogcategory);
 
   }
 

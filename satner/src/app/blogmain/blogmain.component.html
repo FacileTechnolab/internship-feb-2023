@@ -60,19 +60,19 @@
           <aside class="single_sidebar_widget author_widget">
             <img
               class="author_img rounded-circle"
-              src="{{ blogpost.img }}"
+              src="{{ blogpost?.img }}"
               alt=""
             />
-            <h4>{{ blogpost.name }}</h4>
-            <p>{{ blogpost.desc }}</p>
+            <h4>{{ blogpost?.name }}</h4>
+            <p>{{ blogpost?.desc }}</p>
             <div class="social_icon">
-              <a href="#"><i class="{{ blogpost.face }}"></i></a>
-              <a href="#"><i class="{{ blogpost.twitter }}"></i></a>
-              <a href="#"><i class="{{ blogpost.git }}"></i></a>
-              <a href="#"><i class="{{ blogpost.behance }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.face }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.twitter }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.git }}"></i></a>
+              <a href="#"><i class="{{ blogpost?.behance }}"></i></a>
             </div>
             <p>
-              {{ blogpost.describe }}
+              {{ blogpost?.describe }}
             </p>
             <div class="br"></div>
           </aside>
@@ -85,9 +85,9 @@
           </aside>
           <app-blogrightcategory></app-blogrightcategory>
           <aside class="single-sidebar-widget newsletter_widget">
-            <h4 class="widget_title">{{ news.title }}</h4>
+            <h4 class="widget_title">{{ news?.title }}</h4>
             <p>
-              {{ news.content }}
+              {{ news?.content }}
             </p>
             <div class="form-group d-flex flex-row">
               <div class="input-group">
@@ -111,10 +111,10 @@
                 </form>
               </div>
               <a
-                [attr.href]="news.link"
+                [attr.href]="news?.link"
                 class="bbtns btn btn-primary"
                 type="submit"
-                >{{ news.btn }}</a
+                >{{ news?.btn }}</a
               >
             </div>
             <span
@@ -123,7 +123,7 @@
               >Input field is required</span
             >
 
-            <p class="text-bottom">{{ news.desc }}</p>
+            <p class="text-bottom">{{ news?.desc }}</p>
             <div class="br"></div>
           </aside>
           <app-blogtechmain></app-blogtechmain>

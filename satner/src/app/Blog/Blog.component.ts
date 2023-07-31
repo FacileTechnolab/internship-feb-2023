@@ -16,12 +16,12 @@ export class BlogComponent implements OnInit {
     this.http.get(this.url).subscribe(result => {
       this.blog = result;
 
-      console.log(this.blog);
+      // console.log(this.blog);
 
     });
     this.http.get(this.url1).subscribe(rel1 => {
       this.Fruit = rel1;
-      console.log(this.Fruit);
+      //console.log(this.Fruit);
 
     });
 

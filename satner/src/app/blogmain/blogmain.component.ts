@@ -23,19 +23,19 @@ export class BlogmainComponent implements OnInit {
     this.http.get(this.url1).subscribe(rel => {
       this.blogarea = rel;
 
-      console.log(this.blogarea);
+      //console.log(this.blogarea);
 
     });
     this.http.get(this.url).subscribe(rel1 => {
       this.blogpost = rel1;
 
-      console.log(this.blogpost);
+      // console.log(this.blogpost);
 
     });
     this.http.get(this.link).subscribe(rel2 => {
       this.news = rel2;
 
-      console.log(this.news);
+      //console.log(this.news);
 
     });
 
