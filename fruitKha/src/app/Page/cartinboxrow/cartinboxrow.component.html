@@ -11,7 +11,7 @@
         <th class="product-total">{{row.p5}}</th>
       </tr>
     </thead>
-    <tbody >
+    <!-- <tbody >
       <tr class="table-body-row"  *ngFor = "let rowde of rowdes">
         <td class="product-remove"><a (click)="oncart()"><i [class]="rowde.icon"></i></a></td>
         <td class="product-image"><img [src]="rowde.img" alt=""></td>
@@ -19,9 +19,18 @@
         <td class="product-price">{{rowde.price}}</td>
         <td class="product-quantity"><input type="number" placeholder="0"></td>
         <td class="product-total">{{rowde.total}}</td>
-        <!-- <app-cartinboxdetails [rowde] = "rowde"></app-cartinboxdetails> -->
+       <app-cartinboxdetails [rowde] = "rowde"></app-cartinboxdetails> 
       </tr>    
-    </tbody>
+    </tbody> -->
+
+<div class="center">
+  <h4>Your Cart is empty!</h4>
+  <h5>Add Fruits to it now</h5>
+  <button class="btn btn-primary">Shop Now</button>
+</div>
+
+
+
   </table>
 </div>
 

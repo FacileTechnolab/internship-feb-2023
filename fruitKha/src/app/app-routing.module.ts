@@ -50,7 +50,7 @@ const routes: Routes = [
     title : 'Checkout'
   },
   {
-    path:'contact',
+    path:'contactcome',
     component: ContactcomeComponent,
     title :'Contact '
   },
