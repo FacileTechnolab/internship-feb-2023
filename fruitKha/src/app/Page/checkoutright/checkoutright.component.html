@@ -1,5 +1,5 @@
 
-  <div class="order-details-wrap">
+  <div class="order-details-wrap" id="checkout">
     <table class="order-details">
       <thead>
         <tr>
@@ -40,5 +40,5 @@
         </tr>
       </tbody>
     </table>
-    <a routerLink="" class="boxed-btn">{{right.btn}}</a>
+    <a (click)="oncheckout()" class="boxed-btn">{{right.btn}}</a>
   </div>

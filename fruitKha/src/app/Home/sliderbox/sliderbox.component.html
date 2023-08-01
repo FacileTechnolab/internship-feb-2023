@@ -1,21 +1,21 @@
 
-
+<div [class]="sli.class" class="carousel-item active">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-        <div class="hero-text">
-          <div class="hero-text-tablecell">
-         
-            <p class="subtitle">{{sli.subtitle}}</p>
-            <h1>{{sli.title}}</h1>
-            <div class="hero-btns">              
-              <a routerLink="/shop" class="boxed-btn">{{sli.btn1}}</a>
-              <a routerLink="/contactcome" class="bordered-btn">{{sli.btn2}}</a>
-            </div>
+      <div [class]="sli.class2">
+      <div class="hero-text">
+        <div class="hero-text-tablecell">
+          <p class="subtitle">{{sli.subtitle}}</p>
+          <h1>{{sli.title}}</h1>
+          <div class="hero-btns">
+            <a routerLink="/shop" class="boxed-btn">{{sli.btn1}}</a>
+            <a routerLink="/contactcome" class="bordered-btn">{{sli.btn2}}</a>
           </div>
         </div>
       </div>
+      </div>
     </div>
   </div>
+</div>
+   
 
-        

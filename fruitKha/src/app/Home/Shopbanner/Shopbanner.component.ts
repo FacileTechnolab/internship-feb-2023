@@ -12,7 +12,7 @@ shop: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(res =>{this.shop = res;  console.log(this.shop);} )
+    this.http.get(this.url).subscribe(res =>{this.shop = res} )
   }
 
 }

@@ -13,7 +13,8 @@ url : string="assets/json/checkoutleftbox.json"
 checkoutForm = new FormGroup({
   name : new FormControl ('',[Validators.required]),
   emailid :  new FormControl ('',[Validators.required, Validators.email]),
-  phoneno :  new FormControl ('',[Validators.required]) 
+  phoneno :  new FormControl ('',[Validators.required]),
+  add : new FormControl ('',[Validators.required])
 })
   constructor() { }
 
@@ -29,6 +30,10 @@ checkoutForm = new FormGroup({
   get emailid()
   {
      return this.checkoutForm.get('emailid');
+  }
+  get add()
+  {
+     return this.checkoutForm.get('add');
   }
   get phoneno()
   {

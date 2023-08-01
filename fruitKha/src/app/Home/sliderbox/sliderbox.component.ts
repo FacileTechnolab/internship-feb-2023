@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-sliderbox',
@@ -6,12 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sliderbox.component.css']
 })
 export class SliderboxComponent implements OnInit {
-  url: string="/assets/json/sliderhome.json"
+ 
    @Input () sli: any
 
   constructor() { }
 
   ngOnInit() {
+    console.log("tetw", this.sli);
+    
   }
+
 
 }

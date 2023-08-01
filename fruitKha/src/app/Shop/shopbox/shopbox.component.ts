@@ -40,7 +40,7 @@ export class ShopboxComponent implements OnInit {
   }
 
   onShop(){
-    document.getElementById("onShop")?.scrollIntoView({behavior: 'smooth'})
+    document.getElementById("main")?.scrollIntoView({behavior: 'smooth'})
   }
   filter(file:string): void {
     if(file === 'all'){

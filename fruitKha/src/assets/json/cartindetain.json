@@ -1,0 +1,21 @@
+[{
+    "icon": "far fa-window-close",
+    "img" :"assets/img/products/product-img-1.jpg",
+    "name":"Strawberry",
+    "price": "$85",
+    "total" :"1"
+},
+{
+    "icon": "far fa-window-close",
+    "img" :"assets/img/products/product-img-2.jpg",
+    "name":"Berry",
+    "price": "$70 ",
+    "total" :"1"
+},
+{
+    "icon": "far fa-window-close",
+    "img" :"assets/img/products/product-img-3.jpg",
+    "name":"lemon",
+    "price": "$35",
+    "total" :"1"
+}]

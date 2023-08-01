@@ -17,6 +17,7 @@ slider:any
     this.http.get(this.url).subscribe(res => {this.slider = res; console.log(this.slider); })
   }
 
+ 
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

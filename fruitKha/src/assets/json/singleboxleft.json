@@ -1,0 +1,28 @@
+[{
+  "class" : "recent-posts",
+  "title" : "Recent Posts",
+  "rp" : "You will vainly look for fruit on it in autumn.",
+  "rp1" : "A man's worth has its season, like tomato.",     
+  "rp2" : "Good thoughts bear good fresh juicy fruit.",     
+  "rp3" : "Fall in love with the fresh orange.",            
+  "rp4" : "Why the berries always look delecious."
+
+},{  
+  "class" : "archive-posts",
+  "title" : "Archive Posts",
+    "rp" : "JAN 2019 (5)",
+    "rp1" : "FEB 2019 (3)",
+    "rp2" : "MAY 2019 (4)",
+    "rp3" : "SEP 2019 (4)",
+    "rp4":"DEC 2019 (3)"
+},
+{
+  "class" : "tag-section",
+  "title" : "Tags",
+   "rp" :"Apple",
+   "rp1" :"Strawberry",
+   "rp2" :"Berry",
+   "rp3" :"Orange",
+   "rp4" :"Lemon",
+   "rp5" :"Banana"
+}]

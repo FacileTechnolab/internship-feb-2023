@@ -57,9 +57,10 @@ import { CheckoutleftComponent } from './Page/checkoutleft/checkoutleft.componen
 import { CartinboxrowComponent } from './Page/cartinboxrow/cartinboxrow.component';
 import { ShopboxdataComponent } from './Shop/shopboxdata/shopboxdata.component';
 
+import { SingleboxleftComponent } from './News/singleboxleft/singleboxleft.component';
+import { SingleboxrightComponent } from './News/singleboxright/singleboxright.component';
 
-
-@NgModule({
+  @NgModule({
   declarations: [								   
     AppComponent,
     HeaderComponent,
@@ -110,7 +111,10 @@ import { ShopboxdataComponent } from './Shop/shopboxdata/shopboxdata.component';
       CheckoutrightComponent,
       CheckoutleftComponent,
      CartinboxrowComponent,
-     ShopboxdataComponent
+     ShopboxdataComponent,
+   
+     SingleboxleftComponent,
+     SingleboxrightComponent
       
 
   
@@ -122,7 +126,8 @@ import { ShopboxdataComponent } from './Shop/shopboxdata/shopboxdata.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+  
 
   ],
   providers: [],

@@ -15,5 +15,8 @@ constructor(private http:HttpClient) { }
 ngOnInit() {
   this.http.get(this.url).subscribe(res =>{this.column = res; console.log(this.column);} )
 }
+oncart(){
+  document.getElementById("cart")?.scrollIntoView({behavior: 'smooth'})
+}
 
 }

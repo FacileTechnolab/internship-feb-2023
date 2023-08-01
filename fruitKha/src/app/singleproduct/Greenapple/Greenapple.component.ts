@@ -14,4 +14,5 @@ constructor(private http:HttpClient) { }
 ngOnInit() {
   this.http.get(this.url).subscribe(res =>{this.apple = res; console.log(this.apple);} )
 }
+
 }

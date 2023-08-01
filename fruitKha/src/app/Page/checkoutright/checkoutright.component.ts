@@ -13,5 +13,8 @@ url: string ="assets/json/checkoutrightbox.json"
 
   ngOnInit() {
   }
+  oncheckout(){
+    document.getElementById("main")?.scrollIntoView({behavior: 'smooth'})
+  }
 
 }

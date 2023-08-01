@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CartinboxrowComponent implements OnInit {
 url: string ="assets/json/cartinboxrow.json"
-@Input () row: any
-  constructor() { }
+url1 :string ="assets/json/cartindetain.json"
+ rowdes: any
+row:any
 
-  ngOnInit() {
-  }
+constructor(private http:HttpClient) { }
 
+ngOnInit() {
+  this.http.get(this.url1).subscribe(res =>{this.rowdes = res; console.log(this.rowdes);} )
+  this.http.get(this.url).subscribe(res =>{this.row = res;} )
+  
+}
+oncart(){
+  document.getElementById("cart")?.scrollIntoView({behavior: 'smooth'})
+}
 }

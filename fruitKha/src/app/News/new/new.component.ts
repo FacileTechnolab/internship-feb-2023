@@ -20,7 +20,8 @@ constructor(private http: HttpClient) { }
     this.http.get(this.url1).subscribe(res=> {this.crumb=res})
 
   }
-  onnews(){
+  onnews(){   
     document.getElementById("new")?.scrollIntoView({behavior: 'smooth'})
+ 
   }
 }
