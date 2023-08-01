@@ -7,20 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servicesdetails.component.css']
 })
 export class ServicesdetailsComponent implements OnInit {
+  url1:string= "/assets/json/breadcrumbs.json"
+  breaddata: any;
   url: string = "/assets/json/servicesdetails.json"
   serdetaildata: any;
 
-  title: string
-  brList: any
+
   constructor(private http:HttpClient) {
-    this.title = "Service Details"
-    this.brList = [
-      {
-        title: 'Service Details',
-        url: "/services-details",
-        active: true
-      }
-    ]
+ 
    }
 
   ngOnInit() {
@@ -28,6 +22,12 @@ export class ServicesdetailsComponent implements OnInit {
       this.serdetaildata =result
     });
  console.log(this.serdetaildata)
+
+ this.http.get(this.url1).subscribe(result=>{
+       
+  this.breaddata =result
+});
+console.log(this.breaddata)
   }
 
 

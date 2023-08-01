@@ -8,6 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./testimonials.component.css']
 })
 export class TestimonialsComponent implements OnInit {
+  title="Testimonials"
+  desc= "Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti"
   url: string= "/assets/json/testimonial.json"
   testidata : any;
   constructor(private http: HttpClient) { }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ourteam.component.css']
 })
 export class OurteamComponent implements OnInit {
+  title="Our Team"
+  desc="Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop"
   url: string = "/assets/json/ourteam.json";
   ourteamdata: any;
   constructor(private http: HttpClient) { }

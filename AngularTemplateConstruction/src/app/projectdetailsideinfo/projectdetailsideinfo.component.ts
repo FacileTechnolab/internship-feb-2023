@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projectdetailsideinfo.component.css']
 })
 export class ProjectdetailsideinfoComponent implements OnInit {
- 
-  url1: string = "/assets/json/projectdetailsideinfo.json";
-
+  url: string = "/assets/json/projectdetailsideinfo.json";
   projectdetsideinfodata: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url1).subscribe(result=>{
+    this.http.get(this.url).subscribe(result=>{
 
       this.projectdetsideinfodata =result;
     });

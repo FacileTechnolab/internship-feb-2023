@@ -8,23 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogDetailsComponent implements OnInit {
   url: string= "/assets/json/blogdetailartical.json"
+  url1:string= "/assets/json/breadcrumbs.json"
+  breaddata: any;
 
-
-  title: string
-  brList: any
   constructor(private http: HttpClient) {
-    this.title = "Blog Details"
-    this.brList = [
-      {
-        title: 'Blog Details',
-        url: "/blog-details",
-        active: true
-      }
-    ]
+   
    }
 
   ngOnInit() {
-
+    this.http.get(this.url1).subscribe(result=>{
+       
+      this.breaddata =result
+   });
+console.log(this.breaddata)
   }
 
 }

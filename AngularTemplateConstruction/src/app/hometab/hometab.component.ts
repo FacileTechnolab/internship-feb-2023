@@ -8,71 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HometabComponent implements OnInit {
   // tabdata:any;
+ 
   tabdata : string [] = ['Modisit', 'Praesenti', 'Explica', 'Nostrum'];
   url: string = "/assets/json/tab.json" ;
   activatedTabIndex: number = 0;
-  sertabarry : Array<any>;
+  sertabarry : any;
   constructor(private http: HttpClient) { 
-    this.sertabarry = [
-        
-      {
-         sermenutitle: 'Voluptatem dignissimos provident',
-         sermenudesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-         sermenuicon: 'bi bi-check2-all',
-         sermenuicondesc1: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-         sermenuicondesc2: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-         sermenuicondesc3: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.',
-         sermenuicondesc4:'',
-         sermenuimg: 'assets/img/features-1.jpg',
-         class: 'icon-none',
-         index: 0
-      },
-      {
-        sermenutitle: 'Neque exercitationem debitis',
-        sermenudesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        sermenuicon: 'bi bi-check2-all',
-        sermenuicondesc1: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        sermenuicondesc2: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-        sermenuicondesc3: 'Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.',
-        sermenuicondesc4: ' Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.',
-        sermenuimg: 'assets/img/features-2.jpg',
-        index: 1
-     },
-     {
-      sermenutitle: 'Voluptatibus commodi accusamu',
-      sermenudesc: '',
-      sermenuicon: 'bi bi-check2-all',
-      sermenuicondesc1: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      sermenuicondesc2: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-      sermenuicondesc3: 'Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.',
-      sermenuicondesc4:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      sermenuimg: 'assets/img/features-3.jpg',
-      index: 2,
-      class: 'icon-none',
-
-   },
-   {
-    sermenutitle: 'Omnis fugiat ea explicabo sunt',
-    sermenudesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    sermenuicon: 'bi bi-check2-all',
-    sermenuicondesc1: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    sermenuicondesc2: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-    sermenuicondesc3: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.',
-    sermenuicondesc4:'',
-    sermenuimg: 'assets/img/features-4.jpg',
-    index: 3,
-    class: 'icon-none'
-
-   }
-  ]
+  
   }
 
   ngOnInit() {
-    // this.http.get(this.url).subscribe(result=>{
-    //   this.tabdata =result
-    // });
-//  console.log(this.tabdata)
-console.log("tabchange",this.sertabarry)
+    this.http.get(this.url).subscribe(result=>{
+      this.sertabarry =result
+    });
+ console.log(this.sertabarry)
   }
   tabChange(tabIndex: number){
     debugger;

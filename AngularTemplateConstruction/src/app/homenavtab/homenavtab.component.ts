@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class HomenavtabComponent implements OnInit {
   url: string = "/assets/json/tab.json" ;
-  // @Input() tabtext: any;
+ @Input() tabtext: any;
  
 
   @Input() tabsArray: string[] = [];

@@ -8,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
   url: string = "/assets/json/homeblogpost.json" ;
+  url1:string= "/assets/json/breadcrumbs.json"
+  breaddata: any;
   homeblogdata: any;
   isdisplay:boolean;
   showHome: boolean;
-  title: string
-  brList: any
+ 
   constructor(private http:HttpClient) {
-    this.title = "Blog"
-    this.brList = [
-      {
-        title: 'Blog',
-        url: "/blog",
-        active: true
-      }
-    ]
+   
     console.log("blog",this.isdisplay)
  
   }
@@ -31,6 +25,12 @@ export class BlogComponent implements OnInit {
       this.homeblogdata =result
     });
     console.log(this.homeblogdata)
+
+    this.http.get(this.url1).subscribe(result=>{
+       
+      this.breaddata =result
+   });
+console.log(this.breaddata)
   }
   onblog(){
     document.getElementById("main")?.scrollIntoView({behavior: "smooth"});

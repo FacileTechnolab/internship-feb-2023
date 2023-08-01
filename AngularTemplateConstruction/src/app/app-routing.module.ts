@@ -13,45 +13,52 @@ import { ProjectdetailsComponent } from './projectdetails/projectdetails.compone
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    title: 'UpConstruction - Home'
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    title: 'UpConstruction - About'
   },
   {
     path: 'services',
-    component: ServicesComponent
+    component: ServicesComponent,
+    title: 'UpConstruction - Services'
   },
   {
     path: 'services-details',
-    component: ServicesdetailsComponent
+    component: ServicesdetailsComponent,
+    title: 'UpConstruction - Services Details'
   },
   {
     path: 'projects',
     component: ProjectsComponent,
-   
-     
-    
+    title: 'UpConstruction - Projects'
   },
   {
- 
     path: 'projects-details',
-    component: ProjectdetailsComponent
-  
-},
+    component: ProjectdetailsComponent,
+    title: 'UpConstruction - Projects Details'
+  },
  
   {
     path: 'blog',
-    component:BlogComponent
+    component:BlogComponent,
+    title: 'UpConstruction - Blog'
+
   },
   {
     path: 'blog-details',
-    component: BlogDetailsComponent
+    component: BlogDetailsComponent,
+    title: 'UpConstruction - Blog Details'
+
   },
   {
     path: 'contact',
-    component:ContactComponent
+    component:ContactComponent,
+    title: 'UpConstruction - Contact'
+
   },
  
 ];

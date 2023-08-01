@@ -12,8 +12,6 @@ export class StatscounterComponent implements OnInit {
 
   arrayDataInterval: any = setInterval(() => {
     this.counterdata.forEach((element: any, index: number) => {
-
-
       if(element.number < element.maxNumber)
       {
         this.counterdata[index].number++;

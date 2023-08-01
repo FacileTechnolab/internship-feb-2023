@@ -7,12 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./bannerslider.component.css']
 })
 export class BannersliderComponent implements OnInit {
-  bannertitle= 'Welcome to'
-  bannertitle1='UpConstruction'
-  bannerdesc= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-  bannerbutton = 'Get Started'
-  getlink = '#get-started'
-
+  url1:string="/assets/json/bannerslidertext.json"
+  bannertext:any;
   url:string= "/assets/json/bannerslider.json" ;
   bannerbox: any;
   constructor(private http: HttpClient) { }
@@ -22,6 +18,13 @@ export class BannersliderComponent implements OnInit {
       this.bannerbox =result
     });
  console.log(this.bannerbox)
+
+
+ this.http.get(this.url1).subscribe(result=>{
+  this.bannertext =result
+});
+console.log(this.bannertext)
   }
 
 }
+

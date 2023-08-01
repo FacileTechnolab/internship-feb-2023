@@ -1,6 +1,6 @@
 
 
-<li [ngClass]="headermenudata.class" class="dropdown">
+<li  class="dropdown">
   <a [routerLink]="headermenudata.routerlink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     {{ headermenudata.menu }} <i *ngIf="headermenudata.submenus" class="bi bi-chevron-down dropdown-indicator"></i>
   </a>

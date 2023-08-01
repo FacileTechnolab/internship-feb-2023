@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AltservicesComponent implements OnInit {
   url: string = "/assets/json/altservices.json" ;
   altserboxdata: any;
-  sampledata : any;
+ 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {

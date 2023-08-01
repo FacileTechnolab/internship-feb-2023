@@ -1,0 +1,67 @@
+[
+    {
+        "id": "about",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "About",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "About"
+        
+    },
+    {
+        "id": "services",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Services",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Services"
+    },
+    {
+        "id": "services-details",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Service Details",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Service Details"
+    },
+    {
+        "id": "projects",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Projects",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Projects"
+    },
+    {
+        "id": "projects-details",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Project Details",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Project Details"
+    },
+    {
+        "id": "blog",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Blog",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Blog"
+    },
+    {
+        "id": "blog-details",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Blog Details",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Blog Details"
+    },
+    {
+        "id": "contact",
+        "img": "assets/img/breadcrumbs-bg.jpg",
+        "title": "Contact",
+        "routerlink": "",
+        "bread": "Home",
+        "breadtitle": "Contact"
+    }
+]

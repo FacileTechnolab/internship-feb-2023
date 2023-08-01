@@ -14,5 +14,5 @@ url: string = "/assets/json/ourteam.json";
   }
   onclickabout(){
     document.getElementById("main")?.scrollIntoView({behavior: "smooth"});
-     }
+  }
 }

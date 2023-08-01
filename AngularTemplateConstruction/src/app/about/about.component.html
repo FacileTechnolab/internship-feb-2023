@@ -1,6 +1,7 @@
 <main id="main">
-
-  <app-breadcrumbs [title]="title" [brList]="brList"></app-breadcrumbs>
+<div *ngFor="let breadcrumb of breaddata">
+  <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'about'"></app-breadcrumbs>
+</div>
 
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
@@ -40,7 +41,6 @@
   <!-- End About Section -->
 
   <app-statscounter></app-statscounter>
-  
   <app-altservices></app-altservices>
   <app-altservices2></app-altservices2>
   <app-ourteam></app-ourteam>

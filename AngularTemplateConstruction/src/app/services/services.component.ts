@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,21 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-
-   title: string
-    brList: any
-    constructor() {
-      this.title = "Service"
-      this.brList = [
-        {
-          title: 'Service',
-          url: "/services",
-          active: true
-        }
-      ]
+  url:string= "/assets/json/breadcrumbs.json"
+  breaddata: any;
+ 
+    constructor(private http : HttpClient) {
     }
 
   ngOnInit() {
+    this.http.get(this.url).subscribe(result=>{
+       
+      this.breaddata =result
+   });
+console.log(this.breaddata)
   }
 
 }

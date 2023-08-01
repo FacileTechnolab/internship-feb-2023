@@ -24,7 +24,6 @@ import { AltservicesComponent } from './altservices/altservices.component';
 import { AltserviceboxComponent } from './altservicebox/altservicebox.component';
 import { HometabComponent } from './hometab/hometab.component';
 import { HomenavtabComponent } from './homenavtab/homenavtab.component';
-import { HometabcontentComponent } from './hometabcontent/hometabcontent.component';
 import { HomeblogpostComponent } from './homeblogpost/homeblogpost.component';
 import { HomeblogboxComponent } from './homeblogbox/homeblogbox.component';
 import { StatscounterComponent } from './statscounter/statscounter.component';
@@ -63,12 +62,14 @@ import { StatecounterboxComponent } from './statecounterbox/statecounterbox.comp
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
-import { CountoModule }  from 'angular2-counto';
+// import { CountoModule }  from 'angular2-counto';
 import { FootermenuComponent } from './footermenu/footermenu.component';
 import { LoadingComponent } from './loading/loading.component';
+import { OurprojectfilterComponent } from './ourprojectfilter/ourprojectfilter.component';
+import { ServicedataComponent } from './servicedata/servicedata.component';
 
 @NgModule({
-  declarations: [																																																																
+  declarations: [																																																																			
     AppComponent,
       HeaderComponent,
       FooterComponent,
@@ -91,7 +92,6 @@ import { LoadingComponent } from './loading/loading.component';
       AltserviceboxComponent,
       HometabComponent,
       HomenavtabComponent,
-      HometabcontentComponent,
       HomeblogpostComponent,
       HomeblogboxComponent,
       StatscounterComponent,
@@ -128,7 +128,9 @@ import { LoadingComponent } from './loading/loading.component';
       StatecounterboxComponent,
       HeadermenulistComponent,
       FootermenuComponent,
-      LoadingComponent
+      LoadingComponent,
+      OurprojectfilterComponent,
+      ServicedataComponent
    ],
   imports: [
     BrowserModule,

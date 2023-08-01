@@ -1,5 +1,7 @@
 <main id="main">
-  <app-breadcrumbs [title]="title" [brList]="brList"></app-breadcrumbs>
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'contact'"></app-breadcrumbs>
+  </div>
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">

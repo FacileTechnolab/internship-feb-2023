@@ -1,18 +1,8 @@
 
 <main id="main">
-
-  <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
-    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
-      <h2>Service Details</h2>
-      <ol>
-        <li><a href="index.html">Home</a></li>
-        <li>Service Details</li>
-      </ol>
-
-    </div>
-  </div><!-- End Breadcrumbs -->
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'services-details'"></app-breadcrumbs>
+  </div>
 
   <!-- ======= Service Details Section ======= -->
   <section id="service-details" class="service-details">

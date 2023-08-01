@@ -9,22 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectdetailsComponent implements OnInit {
   url: string = "/assets/json/projectdetailinfo.json";
   url1: string = "/assets/json/projectdetailsideinfo.json";
-  title: string
-  brList: any
+  url2:string= "/assets/json/breadcrumbs.json"
+  breaddata: any;
   projectdetinfodata: any;
   constructor(private http: HttpClient) {
-    this.title = "Project Details"
-    this.brList = [
-      {
-        title: 'Project Details',
-        url: "projects-details",
-        active: true
-      }
-    ]
+   
   }
 
   ngOnInit() {
- 
+    this.http.get(this.url2).subscribe(result=>{
+       
+      this.breaddata =result
+   });
+console.log(this.breaddata)
   }
  
 }

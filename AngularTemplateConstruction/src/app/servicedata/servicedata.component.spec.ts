@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HometabcontentComponent } from './hometabcontent.component';
+import { ServicedataComponent } from './servicedata.component';
 
-describe('HometabcontentComponent', () => {
-  let component: HometabcontentComponent;
-  let fixture: ComponentFixture<HometabcontentComponent>;
+describe('ServicedataComponent', () => {
+  let component: ServicedataComponent;
+  let fixture: ComponentFixture<ServicedataComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HometabcontentComponent ]
+      declarations: [ ServicedataComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HometabcontentComponent);
+    fixture = TestBed.createComponent(ServicedataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
