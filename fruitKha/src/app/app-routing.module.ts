@@ -13,6 +13,8 @@ import { ShopboxComponent } from './Shop/shopbox/shopbox.component';
 import { ShopComponent } from './Shop/shop/shop.component';
 import { SingleproductComponent } from './singleproduct/singleproduct/singleproduct.component';
 import { SliderHomeComponent } from './Home/Slider-home/Slider-home.component';
+import { Title } from '@angular/platform-browser';
+import { ErrorComponent } from './Page/error/error.component';
 
 const routes: Routes = [
   {
@@ -21,43 +23,56 @@ const routes: Routes = [
   },
   {
     path: 'slider',
-    component: SliderHomeComponent 
+    component: SliderHomeComponent,
+    title : 'slider version' 
   },
   {
     path:'about',
-    component: AboutusComponent   
+    component: AboutusComponent,
+    title : 'About'   
   },
   {
     path:'page',
-    component: NotFoundeComponent 
+    component: NotFoundeComponent,
+    title : '404!'
+  
   },
+  
+
   {
     path:'cart',
-    component: CartComponent 
+    component: CartComponent,
+    title : 'Cart'
   },
   {
     path:'checkout',
-    component: CheckoutComponent
+    component: CheckoutComponent,
+    title : 'Checkout'
   },
   {
-    path:'contactcome',
-    component: ContactcomeComponent
+    path:'contact',
+    component: ContactcomeComponent,
+    title :'Contact '
   },
   {
     path:'news',
-    component: NewComponent
+    component: NewComponent,
+    title : 'News'
   },
   {
     path:'singlenews',
-    component: SinglenewsComponent
+    component: SinglenewsComponent,
+    title :'SingleNews'
   },  
   {
     path:'shop',
-    component: ShopComponent
+    component: ShopComponent,
+    title: 'Shop'
   },
   {
     path:'singleproduct',
-    component: SingleproductComponent
+    component: SingleproductComponent,
+    title: 'SingleProduct'
   },
 
  
