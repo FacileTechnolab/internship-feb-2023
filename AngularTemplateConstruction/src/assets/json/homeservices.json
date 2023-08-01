@@ -17,28 +17,28 @@
         "servicon": "fa-solid fa-compass-drafting",
         "servtitle" : "Ledo Markt",
         "servdesc" : "Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "103",
         "servlinktext" : "Learn more"
     },
     {
         "servicon": "fa-solid fa-trowel-bricks",
         "servtitle" : "Asperiores Commodit",
         "servdesc" : "Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "104",
         "servlinktext" : "Learn more"
     },
     {
         "servicon": "fa-solid fa-helmet-safety",
         "servtitle" : "Velit Doloremque",
         "servdesc" : "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "105",
         "servlinktext" : "Learn more"
     },
     {
         "servicon": "fa-solid fa-arrow-up-from-ground-water",
         "servtitle" : "Dolori Architecto",
         "servdesc" : "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "106",
         "servlinktext" : "Learn more"
     }
 
