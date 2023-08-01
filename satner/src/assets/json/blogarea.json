@@ -10,7 +10,8 @@
     "img":"assets/img/blog/main-blog/m-blog-1.jpg",
     "title":"Astronomy Binoculars A Great Alternative",
     "desc":"MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money  on boot camp when you can get the MCSE study materials yourself at a fraction.",
-    "button":"VIEW MORE"
+    "button":"VIEW MORE",
+    "id":"1"
 },
 {
     "type1":"Food",
@@ -24,7 +25,8 @@
     "img":"assets/img/blog/main-blog/m-blog-2.jpg",
     "title":"The Basics Of Buying A Telescope",
     "desc":"MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials  yourself at a fraction.",
-    "button":"VIEW MORE"
+    "button":"VIEW MORE",
+    "id":"2"
 },
 {
     "type1":"Food",
@@ -38,7 +40,8 @@
     "img":"assets/img/blog/main-blog/m-blog-3.jpg",
     "title":"The Glossary Of Telescopes",
     "desc":"MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials  yourself at a fraction.",
-    "button":"VIEW MORE"
+    "button":"VIEW MORE",
+    "id":"3"
 },
 {
     "type1":"Food",
@@ -52,7 +55,8 @@
     "img":"assets/img/blog/main-blog/m-blog-4.jpg",
     "title":"The Night Sky",
     "desc":"MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials  yourself at a fraction.",
-    "button":"VIEW MORE"
+    "button":"VIEW MORE",
+    "id":"4"
 },
 
 {
@@ -67,7 +71,8 @@
     "img":"assets/img/blog/main-blog/m-blog-5.jpg",
     "title":"Telescopes 101",
     "desc":"MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials  yourself at a fraction.",
-    "button":"VIEW MORE"
+    "button":"VIEW MORE",
+    "id":"5"
 }
 
 ]

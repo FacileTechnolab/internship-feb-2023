@@ -1,6 +1,7 @@
 import { style } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 interface tab {
   class: string,
@@ -22,7 +23,7 @@ export class TabsComponent implements OnInit {
   home: any;
   list: any;
   //tabs: string[] = ['ALL', 'POPULAR', 'LATEST', 'FOLLOWING', 'UPCOMMING'];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) { }
   url: string = "/assets/json/filter.json";
 
   tab1 = "all";
@@ -30,7 +31,8 @@ export class TabsComponent implements OnInit {
   tab3 = "latest";
   tab4 = "following";
   tab5 = "upcoming";
-
+  image: any;
+  imageid: any;
 
   // theight = "{'height': 2000px}"
   filterImages(type: string): void {
@@ -50,6 +52,8 @@ export class TabsComponent implements OnInit {
       this.home = res;
 
       this.Images = this.home;
+      this.imageid = this.activatedRoute.snapshot.params['id'];
+      this.image = this.home.find((x: any) => x.id == this.imageid)
 
 
       // console.log('icon', this.home)

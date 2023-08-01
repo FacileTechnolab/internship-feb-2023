@@ -43,16 +43,29 @@ const routes: Routes = [{
   component: PortfolioDetailsComponent,
   title: 'Portfolio Details'
 },
+
+
+{
+  path: 'portfolio-details/:id',
+  component: PortfolioDetailsComponent,
+  title: 'Portfolio Details'
+},
 {
   path: 'Blog',
   component: BlogComponent,
   title: 'Blog'
 
 },
+
 {
   path: 'Blogdetails',
   component: BlogdetailsComponent,
   title: 'Blog Details'
+}, {
+  path: 'Blogdetails/:id',
+  component: BlogComponent,
+  title: 'Blog Details'
+
 },
 {
   path: 'Contact',

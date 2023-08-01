@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-Blog',
@@ -9,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class BlogComponent implements OnInit {
   url: string = "/assets/json/blogcategory.json";
   url1: string = "assets/json/breadcrumb.json";
-  constructor(private http: HttpClient) { }
+  link2: string = "/assets/json/blogimage.json";
+  blogId: any;
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) { }
   blog: any;
   Fruit: any;
+  data: any;
+  data2: any;
   ngOnInit() {
     this.http.get(this.url).subscribe(result => {
       this.blog = result;
@@ -24,6 +29,13 @@ export class BlogComponent implements OnInit {
       //console.log(this.Fruit);
 
     });
+    this.http.get(this.link2).subscribe(rel2 => {
+      this.data = rel2;
+      //console.log(this.Fruit);
+      this.data2 = this.data.find((x: any) => x.id == this.blogId);
+
+    });
+    this.blogId = this.activatedRoute.snapshot.paramMap.get('id');
 
   }
 }

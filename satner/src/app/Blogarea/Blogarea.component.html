@@ -27,13 +27,13 @@
     <div class="blog_post">
       <img src="{{ area.img }}" alt="" />
       <div>
-        <a routerLink="Blogdetails"
+        <a routerLink="/Blogdetails"
           ><h2>{{ area.title }}</h2></a
         >
         <p>
           {{ area.desc }}
         </p>
-        <a routerLink="/Blogdetails" class="primary_btn"
+        <a routerLink="/Blogdetails/{{ area.id }}" class="primary_btn"
           ><span> {{ area.button }}</span></a
         >
       </div>
