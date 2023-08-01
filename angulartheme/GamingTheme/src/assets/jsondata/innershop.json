@@ -1,133 +1,144 @@
 [
   {
+    "id": "1",
     "category": "adv",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "Warframe",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "2",
     "category": "str",
     "category1": "rac",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-02.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "Tower Of Fantasy",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "4",
     "category": "str",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": " Fire Dinasaur",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "3",
     "category": "adv",
     "category1": "str",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$45",
     "price2": "$30",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "super people",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "4",
     "category": "str",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": " Fire Dinasaur",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "3",
     "category": "rac",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$38",
     "price2": "$26",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "super people",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "3",
     "category": "rac",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$38",
     "price2": "$26",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "super people",
     "icon": "fa fa-shopping-bag"
   },
   {
+    "id": "1",
     "category": "rac",
     "category1": "adv",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "Warframe",
     "icon": "fa fa-shopping-bag"
   },
 
   {
+    "id": "2",
     "category": "adv",
     "category1": "str",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-02.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "Tower Of Fantasy",
     "icon": "fa fa-shopping-bag"
   },
 
   {
+    "id": "4",
     "category": "rac",
     "category1": "str",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": " Fire Dinasaur",
     "icon": "fa fa-shopping-bag"
   },
 
   {
+    "id": "3",
     "category": "adv",
     "category1": "rac",
-    "routerLink": "ProductDetails",
+
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$45",
     "price2": "$30",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "super people",
     "icon": "fa fa-shopping-bag"
   },
 
   {
+    "id": "1",
     "category": "adv",
 
-    "routerLink": "ProductDetails",
     "src": "assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",
-    "label2": "Assasin Creed",
+    "label2": "Warframe",
     "icon": "fa fa-shopping-bag"
   }
 ]

@@ -36,9 +36,27 @@ url:string="assets/jsondata/contact.json";
   }
 
 
- onSubmit(userForm:any) {
-  console.warn(userForm.value);
- 
-  userForm.reset();
+  contactform= new FormGroup({
+    name: new FormControl('', [Validators.required,Validators.minLength(3)]),
+    email: new FormControl('', [Validators.required ,Validators.email]),
+    subject: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
+
+  })
+  collectData(){
+    console.log(this.contactform.value)
+    this.contactform.reset();
+  }
+  get name(){
+    return this.contactform.get('name')
+  }
+  get email(){
+    return this.contactform.get('email')
+  }
+  get subject(){
+    return this.contactform.get('subject')
+  }
+  get message(){
+    return this.contactform.get('message')
   }
 }

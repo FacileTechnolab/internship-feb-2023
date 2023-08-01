@@ -1,27 +1,32 @@
 [
   {
-    "label": "Action",
-    "routerlink": "ProductDetails",
+    "id": "11",
+    "label": "Brawlhalla",
+
     "src": "assets/assets/images/categories-01.jpg"
   },
   {
-    "label": "Action",
-    "routerlink": "ProductDetails",
+    "id": "12",
+    "label": "Veilbreaker",
+
     "src": "assets/assets/images/categories-05.jpg"
   },
   {
-    "label": "Action",
-    "routerlink": "ProductDetails",
+    "id": "13",
+    "label": "Tower Of Fantasy",
+
     "src": "assets/assets/images/categories-03.jpg"
   },
   {
-    "label": "Action",
-    "routerlink": "ProductDetails",
+    "id": "14",
+    "label": "Super People",
+
     "src": "assets/assets/images/categories-04.jpg"
   },
   {
-    "label": "Action",
-    "routerlink": "ProductDetails",
+    "id": "15",
+    "label": "Veilbreaker",
+
     "src": "assets/assets/images/categories-05.jpg"
   }
 ]

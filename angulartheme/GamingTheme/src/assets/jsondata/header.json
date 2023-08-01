@@ -1,7 +1,7 @@
 [
-  { "routerLink": "Home", "label": "Home" },
+  { "routerLink": "/Home", "label": "Home" },
   {
-    "routerLink": "Shop",
+    "routerLink": "/Shop",
     "label": "Our Shop"
   },
   {

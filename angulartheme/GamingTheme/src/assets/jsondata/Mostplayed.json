@@ -1,44 +1,50 @@
 [
   {
-    "routerlink": "ProductDetails",
+    "id": "5",
+
     "src": "assets/assets/images/top-game-01.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Warframe",
     "label2": "Explore"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "6",
+
     "src": "assets/assets/images/top-game-02.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Battlegrounds",
     "label2": "Explore"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "7",
+
     "src": "assets/assets/images/top-game-03.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Apex",
     "label2": "Explore"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "8",
+
     "src": "assets/assets/images/top-game-04.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Sims4",
     "label2": "Explore"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "9",
+
     "src": "assets/assets/images/top-game-05.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Lostark",
     "label2": "Explore"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "10",
+
     "src": "assets/assets/images/top-game-06.jpg",
     "label": "Adventure",
-    "label1": "Assasin Creed",
+    "label1": "Destiny",
     "label2": "Explore"
   }
 ]

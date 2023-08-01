@@ -27,7 +27,8 @@ import { InnershopboxComponent } from './innershopbox/innershopbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailstabComponent } from './detailstab/detailstab.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { TitleComponent } from './title/title.component';
+
+import { InnercontactComponent } from './innercontact/innercontact.component';
 
 
 
@@ -35,7 +36,7 @@ import { TitleComponent } from './title/title.component';
 
 
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
       HomeComponent,
       HeaderComponent,
@@ -55,7 +56,8 @@ import { TitleComponent } from './title/title.component';
       BreadcrumbComponent,
       InnershopboxComponent,
       DetailstabComponent,
-      TitleComponent
+   
+      InnercontactComponent
    ],
   imports: [
     BrowserModule,

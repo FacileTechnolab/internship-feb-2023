@@ -6,7 +6,7 @@ import { ProductDetailsComponent } from './ProductDetails/ProductDetails.compone
 import { ContactUsComponent } from './ContactUs/ContactUs.component';
 
 const routes: Routes = [
-  {path:'**',component:HomeComponent},
+
 
    {path:'',component:HomeComponent},
 
@@ -19,6 +19,7 @@ component:HomeComponent},
   path:'Shop',
   component:ShopComponent},
   {path:'ProductDetails',component:ProductDetailsComponent },
+  {path:'ProductDetails/:id',component:ProductDetailsComponent },
   {path:'ContactUs',component:ContactUsComponent },
  ];
 

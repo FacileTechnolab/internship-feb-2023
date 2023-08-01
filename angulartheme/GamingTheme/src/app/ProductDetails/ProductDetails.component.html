@@ -10,56 +10,12 @@
 </div>
 
 <div class="single-product section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="left-image">
-          <img [src]="details?.src" alt="" />
-        </div>
-      </div>
-      <div class="col-lg-6 align-self-center">
-        <h4>{{ details?.title }}</h4>
-        <span class="price"
-          ><em>{{ details?.price1 }}</em> {{ details?.price2 }}</span
-        >
-        <p>
-          {{ details?.pragraph }}
-        </p>
-        <form id="qty" action="#">
-          <input
-            type="qty"
-            class="form-control"
-            id="1"
-            aria-describedby="quantity"
-            placeholder="1"
-          />
-          <button type="submit">
-            <i [class]="details?.icon"></i> {{ details?.label }}
-          </button>
-        </form>
-        <ul>
-          <li>
-            <span>{{ details?.label1 }}</span
-            >{{ details?.label2 }}
-          </li>
-          <li>
-            <span>{{ details?.label3 }}</span>
-            <a href="#">{{ details?.label4 }}</a>
-            <a href="#">{{ details?.label5 }}</a>
-            <a href="#">{{ details?.label6 }}</a>
-          </li>
-          <li>
-            <span>{{ details?.label7 }}</span>
-            <a href="#">{{ details?.label8 }}</a>
-            <a href="#">{{ details?.tag }}</a>
-            <a href="#">{{ details?.tag1 }}</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-12">
-        <div class="sep"></div>
-      </div>
-    </div>
+  <div class="container" *ngFor="let details of detail">
+    <app-innercontact
+      [details]="details"
+      *ngIf="details.id"
+      class="row"
+    ></app-innercontact>
   </div>
 </div>
 
@@ -76,18 +32,18 @@
         <div class="tab-content">
           <div *ngIf="activatedTabIndex == 0">
             <p>
-              {{ details?.pragraph1 }}
+              {{ obj1?.pragraph1 }}
             </p>
             <br />
             <p>
-              {{ details?.pragraph2 }}
+              {{ obj1?.pragraph2 }}
             </p>
           </div>
 
           <div *ngIf="activatedTabIndex == 1">
             <p>
-              {{ details?.pragraph3 }}
-              <br /><br />{{ details?.pragraph4 }}
+              {{ obj1?.pragraph3 }}
+              <br /><br />{{ obj1?.pragraph4 }}
             </p>
           </div>
         </div>
@@ -101,13 +57,13 @@
     <div class="row">
       <div class="col-lg-6">
         <div class="section-heading">
-          <h6>{{ details?.tag2 }}</h6>
-          <h2>{{ details?.tag3 }}</h2>
+          <h6>{{ obj1?.tag2 }}</h6>
+          <h2>{{ obj1?.tag3 }}</h2>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="main-button">
-          <a [attr.href]="details?.routerLink">{{ details?.tag4 }}</a>
+          <a routerLink="ProductDetails">{{ obj1?.tag4 }}</a>
         </div>
       </div>
       <div

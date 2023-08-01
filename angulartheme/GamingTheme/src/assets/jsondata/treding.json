@@ -1,38 +1,42 @@
 [
   {
-    "routerlink": "ProductDetails",
+    "id": "1",
+
     "src": "assets/assets/images/trending-01.jpg",
     "price1": "$28",
     "price2": "$20",
     "Moment": "Action",
-    "label3": "Assasin Creed",
+    "label3": "Veilbreaker",
     "classname": "fa fa-shopping-bag"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "2",
+
     "src": "assets/assets/images/trending-02.jpg",
     "price1": "",
     "price2": "$44",
     "Moment": "Action",
-    "label3": "Assasin Creed",
+    "label3": "Tower Of Fantasy",
     "classname": "fa fa-shopping-bag"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "3",
+
     "src": "assets/assets/images/trending-03.jpg",
     "price1": "$64",
     "price2": "$44",
     "Moment": "Action",
-    "label3": "Assasin Creed",
+    "label3": "Super People",
     "classname": "fa fa-shopping-bag"
   },
   {
-    "routerlink": "ProductDetails",
+    "id": "4",
+
     "src": "assets/assets/images/trending-04.jpg",
     "price1": "",
     "price2": "$32",
     "Moment": "Action",
-    "label3": "Assasin Creed",
+    "label3": "Fire Dinasaur",
     "classname": "fa fa-shopping-bag"
   }
 ]
