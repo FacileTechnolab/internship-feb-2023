@@ -3,14 +3,14 @@
         "servicon": "fa-solid fa-mountain-city",
         "servtitle" : "Nesciunt Mete",
         "servdesc" : "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "101",
         "servlinktext" : "Learn more"
     },
     {
         "servicon": "fa-solid fa-arrow-up-from-ground-water",
         "servtitle" : "Eosle Commodi",
         "servdesc" : "Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.",
-        "servlink" : "/services-details",
+        "servicesdetailId" : "102",
         "servlinktext" : "Learn more"
     },
     {

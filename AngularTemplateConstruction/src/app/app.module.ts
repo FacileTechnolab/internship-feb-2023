@@ -18,7 +18,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { ConstructionsComponent } from './constructions/constructions.component';
 import { CoustructionboxComponent } from './coustructionbox/coustructionbox.component';
 import { HomeservicesComponent } from './homeservices/homeservices.component';
-import { ServicesdetailsComponent } from './servicesdetails/servicesdetails.component';
+import { ServicesdetailsComponent } from './services/servicesdetails/servicesdetails.component';
 import { HomesericesboxComponent } from './homesericesbox/homesericesbox.component';
 import { AltservicesComponent } from './altservices/altservices.component';
 import { AltserviceboxComponent } from './altservicebox/altservicebox.component';
@@ -62,7 +62,6 @@ import { StatecounterboxComponent } from './statecounterbox/statecounterbox.comp
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadermenulistComponent } from './headermenulist/headermenulist.component';
-// import { CountoModule }  from 'angular2-counto';
 import { FootermenuComponent } from './footermenu/footermenu.component';
 import { LoadingComponent } from './loading/loading.component';
 import { OurprojectfilterComponent } from './ourprojectfilter/ourprojectfilter.component';
@@ -139,8 +138,8 @@ import { ServicedataComponent } from './servicedata/servicedata.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-// CountoModule 
+    BrowserAnimationsModule
+
 
 
   ],
