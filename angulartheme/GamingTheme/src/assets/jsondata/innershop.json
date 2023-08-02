@@ -3,7 +3,7 @@
     "id": "1",
     "category": "adv",
 
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",
@@ -15,7 +15,7 @@
     "category": "str",
     "category1": "rac",
 
-    "src": "assets/assets/images/trending-02.jpg",
+    "src": "/assets/assets/images/trending-02.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
@@ -26,7 +26,7 @@
     "id": "4",
     "category": "str",
 
-    "src": "assets/assets/images/trending-04.jpg",
+    "src": "/assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
@@ -38,7 +38,7 @@
     "category": "adv",
     "category1": "str",
 
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "price1": "$45",
     "price2": "$30",
     "label": "Action",
@@ -49,7 +49,7 @@
     "id": "4",
     "category": "str",
 
-    "src": "assets/assets/images/trending-04.jpg",
+    "src": "/assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
@@ -60,7 +60,7 @@
     "id": "3",
     "category": "rac",
 
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "price1": "$38",
     "price2": "$26",
     "label": "Action",
@@ -71,7 +71,7 @@
     "id": "3",
     "category": "rac",
 
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "price1": "$38",
     "price2": "$26",
     "label": "Action",
@@ -83,7 +83,7 @@
     "category": "rac",
     "category1": "adv",
 
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",
@@ -96,7 +96,7 @@
     "category": "adv",
     "category1": "str",
 
-    "src": "assets/assets/images/trending-02.jpg",
+    "src": "/assets/assets/images/trending-02.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
@@ -109,7 +109,7 @@
     "category": "rac",
     "category1": "str",
 
-    "src": "assets/assets/images/trending-04.jpg",
+    "src": "/assets/assets/images/trending-04.jpg",
     "price1": "$32",
     "price2": "$22",
     "label": "Action",
@@ -122,7 +122,7 @@
     "category": "adv",
     "category1": "rac",
 
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "price1": "$45",
     "price2": "$30",
     "label": "Action",
@@ -134,7 +134,7 @@
     "id": "1",
     "category": "adv",
 
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "price1": "$36",
     "price2": "$24",
     "label": "Action",

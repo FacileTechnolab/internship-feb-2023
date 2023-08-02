@@ -2,7 +2,7 @@
   {
     "id": "1",
 
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "price1": "$28",
     "price2": "$20",
     "Moment": "Action",
@@ -12,7 +12,7 @@
   {
     "id": "2",
 
-    "src": "assets/assets/images/trending-02.jpg",
+    "src": "/assets/assets/images/trending-02.jpg",
     "price1": "",
     "price2": "$44",
     "Moment": "Action",
@@ -22,7 +22,7 @@
   {
     "id": "3",
 
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "price1": "$64",
     "price2": "$44",
     "Moment": "Action",
@@ -32,7 +32,7 @@
   {
     "id": "4",
 
-    "src": "assets/assets/images/trending-04.jpg",
+    "src": "/assets/assets/images/trending-04.jpg",
     "price1": "",
     "price2": "$32",
     "Moment": "Action",

@@ -20,7 +20,9 @@ interface Image{
 })
 export class ShopComponent implements OnInit {
   home:any;
-
+  totalLength:any;
+  page:number=1;
+  total:any;
 Images:Image[]=[];
 filteredImages:Image[]=this.Images;
 data:any;
@@ -30,6 +32,7 @@ url1:string="assets/jsondata/breadcrum.json";
 url:string="assets/jsondata/innershop.json"
   constructor(private http:HttpClient) { }
 
+
   ngOnInit() {
     this.http.get(this.url).subscribe(result=>{
     
@@ -38,7 +41,7 @@ url:string="assets/jsondata/innershop.json"
   this.Images=this.data;
   this.filteredImages=this.Images;
     
-      
+
      
     })
     this.http.get(this.url1).subscribe(result=>{

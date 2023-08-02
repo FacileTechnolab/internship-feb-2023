@@ -10,12 +10,14 @@
 </div>
 
 <div class="single-product section">
-  <div class="container" *ngFor="let details of detail">
-    <app-innercontact
-      [details]="details"
-      *ngIf="details.id"
-      class="row"
-    ></app-innercontact>
+  <div class="container">
+    <div class="row" *ngFor="let details of detail">
+      <app-innercontact
+        [details]="details"
+        *ngIf="details.id == id"
+        class="row"
+      ></app-innercontact>
+    </div>
   </div>
 </div>
 
@@ -66,10 +68,7 @@
           <a routerLink="ProductDetails">{{ obj1?.tag4 }}</a>
         </div>
       </div>
-      <div
-        class="col-lg col-sm-6 col-xs-12"
-        *ngFor="let categories of crockery"
-      >
+      <div class="col-lg col-sm-6 col-xs-12" *ngFor="let categories of apex">
         <app-innercategorybox [categories]="categories"></app-innercategorybox>
       </div>
     </div>

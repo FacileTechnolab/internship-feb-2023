@@ -31,7 +31,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { InnercontactComponent } from './innercontact/innercontact.component';
 
 
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -62,7 +62,7 @@ import { InnercontactComponent } from './innercontact/innercontact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule, BrowserAnimationsModule, FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,NgxPaginationModule
 
   
 

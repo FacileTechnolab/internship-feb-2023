@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "title": "Call of Duty®: Warframe",
     "price1": "$28",
     "price2": "$20",
@@ -19,7 +19,7 @@
   },
   {
     "id": "2",
-    "src": "assets/assets/images/trending-02.jpg",
+    "src": "/assets/assets/images/trending-02.jpg",
     "title": "Call of Duty®: Tower Of Fantasy",
     "price1": "",
     "price2": "$44",
@@ -37,7 +37,7 @@
   },
   {
     "id": "3",
-    "src": "assets/assets/images/trending-03.jpg",
+    "src": "/assets/assets/images/trending-03.jpg",
     "title": "Call of Duty®: Super People",
     "price1": "$64",
     "price2": "$44",
@@ -55,7 +55,7 @@
   },
   {
     "id": "4",
-    "src": "assets/assets/images/trending-04.jpg",
+    "src": "/assets/assets/images/trending-04.jpg",
     "title": "Call of Duty®: Fire Dinasaur",
     "price1": "",
     "price2": "32",
@@ -73,7 +73,7 @@
   },
   {
     "id": "5",
-    "src": "assets/assets/images/trending-01.jpg",
+    "src": "/assets/assets/images/trending-01.jpg",
     "title": "Call of Duty®: Warframe",
     "price1": "$28",
     "price2": "$22",
@@ -91,7 +91,7 @@
   },
   {
     "id": "6",
-    "src": "assets/assets/images/top-game-02.jpg",
+    "src": "/assets/assets/images/top-game-02.jpg",
     "title": "Call of Duty®: Battlegrounds ",
     "price1": "$28",
     "price2": "$24",
@@ -109,7 +109,7 @@
   },
   {
     "id": "7",
-    "src": "assets/assets/images/top-game-03.jpg",
+    "src": "/assets/assets/images/top-game-03.jpg",
     "title": "Call of Duty®: Apex",
     "price1": "$28",
     "price2": "$26",
@@ -127,7 +127,7 @@
   },
   {
     "id": "8",
-    "src": "assets/assets/images/top-game-04.jpg",
+    "src": "/assets/assets/images/top-game-04.jpg",
     "title": "Call of Duty®: Sims4  ",
     "price1": "$28",
     "price2": "$29",
@@ -145,7 +145,7 @@
   },
   {
     "id": "9",
-    "src": "assets/assets/images/top-game-05.jpg",
+    "src": "/assets/assets/images/top-game-05.jpg",
     "title": "Call of Duty®: Lostark ",
     "price1": "$28",
     "price2": "$30",
@@ -163,7 +163,7 @@
   },
   {
     "id": "10",
-    "src": "assets/assets/images/top-game-06.jpg",
+    "src": "/assets/assets/images/top-game-06.jpg",
     "title": "Call of Duty®: Destiny",
     "price1": "$28",
     "price2": "$15",
@@ -181,7 +181,7 @@
   },
   {
     "id": "11",
-    "src": "assets/assets/images/categories-01.jpg",
+    "src": "/assets/assets/images/categories-01.jpg",
     "title": "Call of Duty®: Brawlhalla",
     "price1": "$28",
     "price2": "$60",
@@ -199,7 +199,7 @@
   },
   {
     "id": "12",
-    "src": "assets/assets/images/categories-05.jpg",
+    "src": "/assets/assets/images/categories-05.jpg",
     "title": "Call of Duty®: Veilbreaker",
     "price1": "$30",
     "price2": "$22",
@@ -217,7 +217,7 @@
   },
   {
     "id": "13",
-    "src": "assets/assets/images/categories-03.jpg",
+    "src": "/assets/assets/images/categories-03.jpg",
     "title": "Call of Duty®: Tower Of Fantasy",
     "price1": "$28",
     "price2": "$67",
@@ -235,7 +235,7 @@
   },
   {
     "id": "14",
-    "src": "assets/assets/images/categories-04.jpg",
+    "src": "/assets/assets/images/categories-04.jpg",
     "title": "Call of Duty®: Super People",
     "price1": "$32",
     "price2": "$22",
@@ -253,7 +253,7 @@
   },
   {
     "id": "15",
-    "src": "assets/assets/images/categories-05.jpg",
+    "src": "/assets/assets/images/categories-05.jpg",
     "title": "Call of Duty®: Veilbreaker",
     "price1": "$28",
     "price2": "$40",

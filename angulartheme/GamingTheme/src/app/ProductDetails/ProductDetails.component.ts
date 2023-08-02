@@ -27,16 +27,16 @@ interface Image{
 })
 export class ProductDetailsComponent implements OnInit {
 detail:any;
-id;
+id:any;
 obj1:any;
 categories:any;
-crockery:any;
+apex:any;
 data:any;
-url3:string="assets/jsondata/innercontact.json"
+url3:string="/assets/jsondata/innercontact.json"
  tabs:string[]=[' Description',' Reviews '];
- url1:string="assets/jsondata/breadcrum.json";
-url2:string="assets/jsondata/categories.json"
-url:string="assets/jsondata/detailspage.json"
+ url1:string="/assets/jsondata/breadcrum.json";
+url2:string="/assets/jsondata/categories.json"
+url:string="/assets/jsondata/detailspage.json"
   constructor(private http:HttpClient, private route: ActivatedRoute) { }
 activatedTabIndex:number=0;
   ngOnInit() {
@@ -48,7 +48,7 @@ activatedTabIndex:number=0;
   
     })
     this.http.get(this.url2).subscribe(result=>{
-      this.crockery=result;
+      this.apex=result;
     })
     this.http.get(this.url1).subscribe(result=>{
       this.data=result;

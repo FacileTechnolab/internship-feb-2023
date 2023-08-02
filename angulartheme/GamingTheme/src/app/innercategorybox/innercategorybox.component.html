@@ -1,6 +1,8 @@
 <div class="item">
   <h4>{{ categories?.label }}</h4>
   <div class="thumb">
-    <a routerLink="/ProductDetails"><img [src]="categories?.src" alt="" /></a>
+    <a routerLink="/ProductDetails/{{ categories?.id }}"
+      ><img [src]="categories?.src" alt=""
+    /></a>
   </div>
 </div>

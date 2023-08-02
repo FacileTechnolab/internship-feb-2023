@@ -1,10 +1,12 @@
 <div class="item">
   <div class="thumb">
-    <a routerLink="ProductDetails"><img [src]="played?.src" alt="" /></a>
+    <a routerLink="/ProductDetails/{{ played?.id }}"
+      ><img [src]="played?.src" alt=""
+    /></a>
   </div>
   <div class="down-content">
     <span class="category">{{ played?.label }}</span>
     <h4>{{ played?.label1 }}</h4>
-    <a routerLink="ProductDetails">{{ played?.label2 }}</a>
+    <a routerLink="/ProductDetails/{{ played?.id }}">{{ played?.label2 }}</a>
   </div>
 </div>

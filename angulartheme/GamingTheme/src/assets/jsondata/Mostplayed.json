@@ -2,7 +2,7 @@
   {
     "id": "5",
 
-    "src": "assets/assets/images/top-game-01.jpg",
+    "src": "/assets/assets/images/top-game-01.jpg",
     "label": "Adventure",
     "label1": "Warframe",
     "label2": "Explore"
@@ -10,7 +10,7 @@
   {
     "id": "6",
 
-    "src": "assets/assets/images/top-game-02.jpg",
+    "src": "/assets/assets/images/top-game-02.jpg",
     "label": "Adventure",
     "label1": "Battlegrounds",
     "label2": "Explore"
@@ -18,7 +18,7 @@
   {
     "id": "7",
 
-    "src": "assets/assets/images/top-game-03.jpg",
+    "src": "/assets/assets/images/top-game-03.jpg",
     "label": "Adventure",
     "label1": "Apex",
     "label2": "Explore"
@@ -26,7 +26,7 @@
   {
     "id": "8",
 
-    "src": "assets/assets/images/top-game-04.jpg",
+    "src": "/assets/assets/images/top-game-04.jpg",
     "label": "Adventure",
     "label1": "Sims4",
     "label2": "Explore"
@@ -34,7 +34,7 @@
   {
     "id": "9",
 
-    "src": "assets/assets/images/top-game-05.jpg",
+    "src": "/assets/assets/images/top-game-05.jpg",
     "label": "Adventure",
     "label1": "Lostark",
     "label2": "Explore"
@@ -42,7 +42,7 @@
   {
     "id": "10",
 
-    "src": "assets/assets/images/top-game-06.jpg",
+    "src": "/assets/assets/images/top-game-06.jpg",
     "label": "Adventure",
     "label1": "Destiny",
     "label2": "Explore"

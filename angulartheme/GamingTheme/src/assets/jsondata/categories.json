@@ -3,30 +3,30 @@
     "id": "11",
     "label": "Brawlhalla",
 
-    "src": "assets/assets/images/categories-01.jpg"
+    "src": "/assets/assets/images/categories-01.jpg"
   },
   {
     "id": "12",
     "label": "Veilbreaker",
 
-    "src": "assets/assets/images/categories-05.jpg"
+    "src": "/assets/assets/images/categories-05.jpg"
   },
   {
     "id": "13",
     "label": "Tower Of Fantasy",
 
-    "src": "assets/assets/images/categories-03.jpg"
+    "src": "/assets/assets/images/categories-03.jpg"
   },
   {
     "id": "14",
     "label": "Super People",
 
-    "src": "assets/assets/images/categories-04.jpg"
+    "src": "/assets/assets/images/categories-04.jpg"
   },
   {
     "id": "15",
     "label": "Veilbreaker",
 
-    "src": "assets/assets/images/categories-05.jpg"
+    "src": "/assets/assets/images/categories-05.jpg"
   }
 ]

@@ -11,6 +11,8 @@
   <div class="down-content">
     <span class="category">{{ treading?.Moment }}</span>
     <h4>{{ treading?.label3 }}</h4>
-    <a routerLink="/ProductDetails"><i [class]="treading?.classname"></i></a>
+    <a routerLink="/ProductDetails/{{ treading?.id }}"
+      ><i [class]="treading?.classname"></i
+    ></a>
   </div>
 </div>

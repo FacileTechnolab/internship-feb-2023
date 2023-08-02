@@ -20,6 +20,8 @@ component:HomeComponent},
   component:ShopComponent},
   {path:'ProductDetails',component:ProductDetailsComponent },
   {path:'ProductDetails/:id',component:ProductDetailsComponent },
+  {path:'Shop/ProductDetails/:id',component:ProductDetailsComponent },
+
   {path:'ContactUs',component:ContactUsComponent },
  ];
 
