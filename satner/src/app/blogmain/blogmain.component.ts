@@ -18,6 +18,10 @@ export class BlogmainComponent implements OnInit {
   subscribe = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email])
   })
+
+  totalLength: any;
+  page: number = 1;
+  total: any;
   ngOnInit() {
 
     this.http.get(this.url1).subscribe(rel => {

@@ -512,7 +512,15 @@ mark {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: auto;
+}
+.img-fluid1{
+    width:97%;
+    height:490px;
+}
+.img-fluidpic{
+    width:97%;
+    height:490px;
 }
 
 .img-thumbnail {

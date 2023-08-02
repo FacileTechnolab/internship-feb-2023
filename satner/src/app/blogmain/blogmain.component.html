@@ -2,11 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div class="blog_left_sidebar" *ngFor="let area of blogarea">
+        <div
+          class="blog_left_sidebar"
+          *ngFor="
+            let area of blogarea
+              | paginate
+                : { itemsPerPage: 2, currentPage: page, totalItems: total }
+          "
+        >
           <app-Blogarea [area]="area"></app-Blogarea>
         </div>
         <nav class="blog-pagination justify-content-center d-flex">
-          <ul class="pagination">
+          <pagination-controls
+            (pageChange)="page = $event"
+          ></pagination-controls>
+          <!-- <ul class="pagination">
             <li class="page-item">
               <a href="#" class="page-link" aria-label="Previous">
                 <span aria-hidden="true">
@@ -36,7 +46,7 @@
                 </span>
               </a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
       </div>
       <div class="col-lg-4">

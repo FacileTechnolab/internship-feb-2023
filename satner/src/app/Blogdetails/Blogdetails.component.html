@@ -15,68 +15,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 posts-list">
-        <div class="single-post row">
-          <div class="col-lg-12">
-            <div class="feature-img">
-              <img
-                class="img-fluid"
-                src="assets/img/blog/feature-img1.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3">
-            <div class="blog_info text-right">
-              <app-foodmain></app-foodmain>
-
-              <app-datamain></app-datamain>
-              <app-symbolmain></app-symbolmain>
-            </div>
-          </div>
-          <div class="col-lg-9 col-md-9 blog_details">
-            <h2>{{ content?.title }}</h2>
-            <p class="excert">
-              {{ content?.desc }}
-            </p>
-            <p>
-              {{ content?.describe }}
-            </p>
-            <p>
-              {{ content?.describe }}
-            </p>
-          </div>
-          <div class="col-lg-12">
-            <div class="quotes">
-              <p class="excert">
-                {{ content?.desc }}
-              </p>
-            </div>
-
-            <div class="row">
-              <div class="col-6">
-                <img
-                  class="img-fluid"
-                  src="assets/img/blog/post-img1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-6">
-                <img
-                  class="img-fluid"
-                  src="assets/img/blog/post-img2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-lg-12 mt-25">
-                <p>
-                  {{ content?.desc }}
-                </p>
-                <p>
-                  {{ content?.desc }}
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="single-post row" *ngFor="let data of blogi">
+          <app-blogimage
+            [data]="data"
+            *ngIf="data.id == id"
+            class="row"
+          ></app-blogimage>
         </div>
         <div class="navigation-area">
           <div class="row">

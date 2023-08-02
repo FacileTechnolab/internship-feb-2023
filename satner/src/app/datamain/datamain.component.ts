@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-datamain',
@@ -10,6 +10,7 @@ export class DatamainComponent implements OnInit {
   url: string = "/assets/json/database.json"
   constructor(private http: HttpClient) { }
   datamain: any;
+  @Input() blogdata: any;
   ngOnInit() {
     this.http.get(this.url).subscribe(rel1 => {
       this.datamain = rel1;

@@ -57,6 +57,8 @@ import { SliderchildComponent } from './sliderchild/sliderchild.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { BlogimageComponent } from './blogimage/blogimage.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,7 +108,8 @@ import { CommonModule } from '@angular/common';
     CommentchildComponent,
     ContactinfoComponent,
     SliderchildComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    BlogimageComponent
   ],
   imports: [
     BrowserModule,
@@ -116,7 +119,8 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    NgxPaginationModule
 
 
   ],
