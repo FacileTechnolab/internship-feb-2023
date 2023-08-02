@@ -10,7 +10,7 @@ data-portfolio-sort="original-order">
 </ul><!-- End Projects Filters -->
 
 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-    <app-ourprojectbox [ourdata]="ourdata" *ngFor="let ourdata of ourtabfilter" [class]="ourdata.class"></app-ourprojectbox>
+    <app-ourprojectbox [ourdata]="ourdata" *ngFor="let ourdata of ourtabfilter; let i= index;" [showCount]="true"  [class]="ourdata.class"></app-ourprojectbox>
 </div>
 <!-- End Projects Container -->
 

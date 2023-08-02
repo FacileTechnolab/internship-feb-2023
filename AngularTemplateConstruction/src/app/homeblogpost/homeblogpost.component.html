@@ -1,6 +1,6 @@
 <div class="row gy-5">
   <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100" *ngFor="let homeblogvalue of homeblogdata |  paginate
-  : { itemsPerPage: 6, currentPage: page, totalItems: total }">
+  : { itemsPerPage: itemperpage, currentPage: page}">
    <app-homeblogbox  [homeblogvalue]="homeblogvalue" [isdisplay]="isdisplay" [showHome]="showHome"></app-homeblogbox>
   </div>
 <div class="blog-pagination">

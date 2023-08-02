@@ -14,9 +14,10 @@ export class HomeblogpostComponent implements OnInit {
   isdisplay:boolean;
   showHome:boolean
 
-  totalLength:any;
+
   page:number=1;
-  total:any;
+ 
+  itemperpage:number= 6;
 
   constructor(private http: HttpClient , private router: Router) {
     if(this.router.url === '/'){
@@ -29,6 +30,7 @@ export class HomeblogpostComponent implements OnInit {
   ngOnInit() {
     this.http.get(this.url).subscribe(result=>{
       this.homeblogdata =result
+      
     });
  console.log(this.homeblogdata)
 
