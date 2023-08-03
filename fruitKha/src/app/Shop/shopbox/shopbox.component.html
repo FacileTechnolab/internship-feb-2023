@@ -16,10 +16,10 @@
 
     <div class="row product-lists-product"   >
       <div class="col-lg-4 col-md-6 text-center " *ngFor="let shopdata of filimage ">
-       <app-shopboxdata [shopdata] = "shopdata" ></app-shopboxdata> 
+       <app-shopboxdata [shopdata] = "shopdata"  ></app-shopboxdata> 
       </div>
      
-    </div>  
+    </div>   *ngIf="pchild.id == id"
  
     <div class="row">
       <div class="col-lg-12 text-center">

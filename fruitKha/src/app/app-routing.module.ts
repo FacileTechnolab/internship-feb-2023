@@ -45,6 +45,11 @@ const routes: Routes = [
     title : 'Cart'
   },
   {
+    path:'cart/:id',
+    component: CartComponent,
+    title : 'Cart'
+  },
+  {
     path:'checkout',
     component: CheckoutComponent,
     title : 'Checkout'
@@ -71,6 +76,11 @@ const routes: Routes = [
   },
   {
     path:'singleproduct',
+    component: SingleproductComponent,
+    title: 'SingleProduct'
+  },
+  {
+    path:'singleproduct/:id',
     component: SingleproductComponent,
     title: 'SingleProduct'
   },

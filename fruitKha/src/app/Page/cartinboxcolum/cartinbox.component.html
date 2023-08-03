@@ -3,22 +3,22 @@
     <table class="total-table">
       <thead class="total-table-head">
         <tr class="table-total-row">
-          <th>{{column.th1}}</th>
-          <th>{{column.th2}}</th>
+          <th>{{column?.th1}}</th>
+          <th>{{column?.th2}}</th>
         </tr>
       </thead>
       <tbody>
         <tr class="total-data">
-          <td><strong>{{column.td1}} </strong></td>
-          <td>{{column.price1}}</td>
+          <td><strong>{{column?.td1}} </strong></td>
+          <td>{{column?.price1}}</td>
         </tr>
         <tr class="total-data">
-          <td><strong> {{column.td2}}</strong></td>
-          <td>{{column.price2}}</td>
+          <td><strong> {{column?.td2}}</strong></td>
+          <td>{{column?.price2}}</td>
         </tr>
         <tr class="total-data">
-          <td><strong>{{column.td3}} </strong></td>
-          <td>{{column.price3}}</td>
+          <td><strong>{{column?.td3}} </strong></td>
+          <td>{{column?.price3}}</td>
         </tr>
       </tbody>
     </table>
@@ -27,17 +27,17 @@
 
 
     <div class="cart-buttons">
-      <a (click)="oncart()" class="boxed-btn">{{column.btn1}}</a>
-      <a routerLink="/checkout" class="boxed-btn black">{{column.btn2}}</a>
+      <a (click)="oncart()" class="boxed-btn">{{column?.btn1}}</a>
+      <a routerLink="/checkout" class="boxed-btn black">{{column?.btn2}}</a>
     </div>  
   </div>
 
   <div class="coupon-section">
-    <h3>{{column.head}}</h3>
+    <h3>{{column?.head}}</h3>
     <div class="coupon-form-wrap">
       <form action="/">
-        <p><input type="text" placeholder="{{column.tag1}}"></p>
-        <p><input type="submit" value=" {{column.tag2}}"></p>
+        <p><input type="text" placeholder="{{column?.tag1}}"></p>
+        <p><input type="submit" value=" {{column?.tag2}}"></p>
       </form>
     </div>
   </div>

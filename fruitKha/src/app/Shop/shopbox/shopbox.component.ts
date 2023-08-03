@@ -1,7 +1,8 @@
+
 import { AnimationPlayer } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { CartService } from './../../service/cart.service';
 interface tab{
 
     img: string,
@@ -9,7 +10,7 @@ interface tab{
     h1: string,
     h2: string,
     icon :string,
-    file:string
+    file:string  
 }
 @Component({
   selector: 'app-shopbox',
@@ -22,23 +23,33 @@ export class ShopboxComponent implements OnInit {
   Images:tab[]=[];
   filimage:tab[]=this.Images;
 
-  url: string="assets/json/shopbox.json"
+  url: string="/assets/json/shopbox.json"
   boxdata:any
   sea:any
   fruit:any
-  constructor(private http: HttpClient) { }
+
+public shopItemList: any
+
+  constructor(private http: HttpClient, private CartService : CartService) { }
 
 
   ngOnInit() {
     this.http.get(this.url).subscribe(res => {
       this.boxdata = res; 
        this.Images = this.boxdata; 
-      this.filimage = this.Images;  
-
+      this.filimage = this.Images;
+      
+      
+    });
+    this.shopItemList.foreach((a:any)=> {
+      Object.assign(a,{quantity:1,total:a.price});
     });
    
   }
 
+  addtocart(shopdata:any){
+    this.CartService.addtoCart(shopdata);
+ }
   onShop(){
     document.getElementById("main")?.scrollIntoView({behavior: 'smooth'})
   }
@@ -55,5 +66,8 @@ export class ShopboxComponent implements OnInit {
      
     }
   }
+
+
+
 }
 

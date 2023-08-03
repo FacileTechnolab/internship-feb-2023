@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from './../../service/cart.service';
 
 @Component({
   selector: 'app-cartinboxrow',
@@ -12,14 +13,22 @@ url1 :string ="assets/json/cartindetain.json"
  rowdes: any
 row:any
 
-constructor(private http:HttpClient) { }
+public shop: any =[];
+public grandtotal !:number;
+constructor(private http:HttpClient, private CartService : CartService) { }
 
 ngOnInit() {
   this.http.get(this.url1).subscribe(res =>{this.rowdes = res; console.log(this.rowdes);} )
   this.http.get(this.url).subscribe(res =>{this.row = res;} )
+
+  this.CartService.getShop().subscribe(res =>{this.shop = res; this.grandtotal = this.CartService.getTotalPrice()})
   
 }
-oncart(){
-  document.getElementById("cart")?.scrollIntoView({behavior: 'smooth'})
+removeitem(rowde:any){
+  // document.getElementById("cart")?.scrollIntoView({behavior: 'smooth'})
+  this.CartService.removecartItem(rowde);
+}
+emptycart(){
+  this.CartService.removecartItem
 }
 }

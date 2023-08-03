@@ -1,38 +1,45 @@
-
-<div class="cart-table-wrap">
-  <table class="cart-table">
-    <thead class="cart-table-head">
-      <tr class="table-head-row">
-        <th class="product-remove"></th>
-        <th class="product-image">{{row.p1}}</th>
-        <th class="product-name">{{row.p2}}</th>
-        <th class="product-price">{{row.p3}}</th>
-        <th class="product-quantity">{{row.p4}}</th>
-        <th class="product-total">{{row.p5}}</th>
-      </tr>
-    </thead>
-    <!-- <tbody >
-      <tr class="table-body-row"  *ngFor = "let rowde of rowdes">
-        <td class="product-remove"><a (click)="oncart()"><i [class]="rowde.icon"></i></a></td>
-        <td class="product-image"><img [src]="rowde.img" alt=""></td>
-        <td class="product-name">{{rowde.name}}</td>
-        <td class="product-price">{{rowde.price}}</td>
-        <td class="product-quantity"><input type="number" placeholder="0"></td>
-        <td class="product-total">{{rowde.total}}</td>
-       <app-cartinboxdetails [rowde] = "rowde"></app-cartinboxdetails> 
-      </tr>    
-    </tbody> -->
-
-<div class="center">
-  <h4>Your Cart is empty!</h4>
-  <h5>Add Fruits to it now</h5>
-  <button class="btn btn-primary">Shop Now</button>
-</div>
+<ng-container *ngIf= "shop.length !=0">
+  <div class="cart-table-wrap">
+    <table class="cart-table">
+      <thead class="cart-table-head">
+        <tr class="table-head-row">
+          <th class="product-remove"></th>
+          <th class="product-image">{{row.p1}}</th>
+          <th class="product-name">{{row.p2}}</th>
+          <th class="product-price">{{row.p3}}</th>
+          <th class="product-quantity">{{row.p4}}</th>
+          <th class="product-total">{{row.p5}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-body-row" *ngFor = "let rowde of rowdes" >
+          <td class="product-remove"><a (click)="removeitem(rowde)"><i [class]="rowde.icon"></i></a></td>
+          <td class="product-image"><img [src]="rowde.img" alt=""></td>
+          <td class="product-name">{{rowde.name}}</td>
+          <td class="product-price">{{rowde.price}}</td>
+          <td class="product-quantity"><input type="number" placeholder="0"></td>
+          <td class="product-total">{{rowde.total}}</td>
+         <!-- <app-cartinboxdetails [rowde] = "rowde"></app-cartinboxdetails>  -->
+        </tr>    
+      </tbody>
+    </table>
+  </div>
+</ng-container>
 
 
 
-  </table>
-</div>
+
+<ng-container *ngIf= "shop.length == 0">
+  <div class="center">
+    <h4>Your Cart is empty!</h4>
+    <h5>Add Fruits to it now</h5>
+    <button class="btn"><a routerLink="/shop">Shop Now</a></button>
+  </div>
+</ng-container>
+
+
+
+
 
 
 
