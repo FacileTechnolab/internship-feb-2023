@@ -1,5 +1,6 @@
 [
     {
+        "projectdetailId": "Remodeling-1",
         "index":"remodeling",
         "class": "col-lg-4 col-md-6 portfolio-item filter-remodeling",
         "img": "assets/img/projects/remodeling-1.jpg",
@@ -7,11 +8,11 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
 
     },
     {
+        "projectdetailId": "Construction-1",
         "index":"construction",
         "class": "col-lg-4 col-md-6 portfolio-item filter-construction",
         "img": "assets/img/projects/construction-1.jpg",
@@ -19,10 +20,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Repairs-1",
         "index":"repairs",
         "class": "col-lg-4 col-md-6 portfolio-item filter-repairs",
         "img": "assets/img/projects/repairs-1.jpg",
@@ -30,10 +31,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Design-1",
         "index":"design",
         "class": "col-lg-4 col-md-6 portfolio-item filter-design",
         "img": "assets/img/projects/design-1.jpg",
@@ -41,10 +42,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-1.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Remodeling-2",
         "index":"remodeling",
         "class": "col-lg-4 col-md-6 portfolio-item filter-remodeling",
         "img": "assets/img/projects/remodeling-2.jpg",
@@ -52,10 +53,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Construction-2",
         "index":"construction",
         "class": "col-lg-4 col-md-6 portfolio-item filter-construction",
         "img": "assets/img/projects/construction-2.jpg",
@@ -63,10 +64,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Repairs-2",
         "index":"repairs",
         "class": "col-lg-4 col-md-6 portfolio-item filter-repairs",
         "img": "assets/img/projects/repairs-2.jpg",
@@ -74,10 +75,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Design-2",
         "index":"design",
         "class": "col-lg-4 col-md-6 portfolio-item filter-design",
         "img": "assets/img/projects/design-2.jpg",
@@ -85,10 +86,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-2.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Remodeling-3",
         "index":"remodeling",
         "class": "col-lg-4 col-md-6 portfolio-item filter-remodeling",
         "img": "assets/img/projects/remodeling-3.jpg",
@@ -96,10 +97,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Construction-3",
         "index":"construction",
         "class": "col-lg-4 col-md-6 portfolio-item filter-construction",
         "img": "assets/img/projects/construction-3.jpg",
@@ -107,10 +108,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Repairs-3",
         "index":"repairs",
         "class": "col-lg-4 col-md-6 portfolio-item filter-repairs",
         "img": "assets/img/projects/repairs-3.jpg",
@@ -118,10 +119,10 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     },
     {
+        "projectdetailId": "Design-3",
         "index":"design",
         "class": "col-lg-4 col-md-6 portfolio-item filter-design",
         "img": "assets/img/projects/design-3.jpg",
@@ -129,7 +130,6 @@
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-3.jpg",
         "iconzoom": "bi bi-zoom-in",
-        "href": "/projects-details",
         "iconlink": "bi bi-link-45deg"
     }
 ]

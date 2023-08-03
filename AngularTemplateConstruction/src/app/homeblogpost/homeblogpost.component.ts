@@ -14,6 +14,10 @@ export class HomeblogpostComponent implements OnInit {
   isdisplay:boolean;
   showHome:boolean
 
+  totalLength:any;
+  page:number=1;
+  total:any;
+
   constructor(private http: HttpClient , private router: Router) {
     if(this.router.url === '/'){
       this.isdisplay=false;

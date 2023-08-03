@@ -1,0 +1,23 @@
+<main id="main">
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'projects-details'"></app-breadcrumbs>
+  </div>
+
+  <!-- ======= Projet Details Section ======= -->
+  <section id="project-details" class="project-details">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div *ngFor="let data of  projectdetinfodata">
+        <div *ngIf="data.id == projectdetailId">
+          <div class="row justify-content-between gy-4 mt-4">
+            <app-projectdetailslider class="project_detail_slider_bg"></app-projectdetailslider>
+          </div> 
+          <div class="row justify-content-between ">
+            <app-projectdetailinfo class="col-lg-8 mt-5"></app-projectdetailinfo>
+            <app-projectdetailsideinfo class="col-lg-3 mt-5"></app-projectdetailsideinfo>
+          </div>
+        </div>
+    </div>
+  </div>
+  </section><!-- End Projet Details Section -->
+
+</main><!-- End #main -->

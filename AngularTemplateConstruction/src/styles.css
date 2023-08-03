@@ -2858,3 +2858,44 @@
   background-color: rgba(255, 255, 255, 0.7) !important;
   opacity: 1 ;
 }
+.display-none-slash:before{
+  display: none !important;
+}
+
+  .ngx-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .ngx-pagination li{
+    width: 35px;
+    height: 35px;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+
+  }
+  .ngx-pagination li:hover{
+    background: #feb900 !important;
+
+  }
+  .ngx-pagination .current{
+    background: #feb900 !important;
+  }
+  .ngx-pagination .small-screen{
+    display: none !important;
+  }
+  .ngx-pagination .pagination-previous a span{
+   width: 10%;
+  overflow: hidden;
+  color: #f0f1f2;
+  }
+  .ngx-pagination .pagination-next a span{
+    width: 10%;
+overflow: hidden;
+color: #f0f1f2;
+  }

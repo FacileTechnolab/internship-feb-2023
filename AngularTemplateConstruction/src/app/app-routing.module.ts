@@ -8,7 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { ServicesComponent } from './services/services.component';
 import { ServicesdetailsComponent } from './services/servicesdetails/servicesdetails.component';
-import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
+import { ProjectdetailsComponent } from './projects/projectdetails/projectdetails.component';
 
 const routes: Routes = [
   {
@@ -29,20 +29,16 @@ const routes: Routes = [
   {
     path: 'services/services-details/:id',
     component: ServicesdetailsComponent,
-    title: 'UpConstruction - Services Details'
+    title: 'UpConstruction -  Services - Services Details'
   },
-  // {
-  //   path: 'services-details',
-  //   component: ServicesdetailsComponent,
-  //   title: 'UpConstruction - Services Details'
-  // },
+  
   {
     path: 'projects',
     component: ProjectsComponent,
     title: 'UpConstruction - Projects'
   },
   {
-    path: 'projects-details',
+    path: 'projects/projects-details/:id',
     component: ProjectdetailsComponent,
     title: 'UpConstruction - Projects Details'
   },

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog-details',
@@ -11,7 +12,7 @@ export class BlogDetailsComponent implements OnInit {
   url1:string= "/assets/json/breadcrumbs.json"
   breaddata: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private activatedRouter: ActivatedRoute) {
    
    }
 

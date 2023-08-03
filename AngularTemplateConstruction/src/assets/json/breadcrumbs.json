@@ -5,7 +5,9 @@
         "title": "About",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "About"
+        "breadtitle": "About",
+        "routerlink1": "",
+        "title2": ""
         
     },
     {
@@ -14,15 +16,20 @@
         "title": "Services",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Services"
+        "breadtitle": "Services",
+        "routerlink1": "",
+        "title2": ""
+        
     },
     {
         "id": "services-details",
         "img": "assets/img/breadcrumbs-bg.jpg",
         "title": "Service Details",
+        "title2": " Service Details",
+        "routerlink1": "/services",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Service Details"
+        "breadtitle": "Services"
     },
     {
         "id": "projects",
@@ -30,15 +37,20 @@
         "title": "Projects",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Projects"
+        "breadtitle": "Projects",
+        "routerlink1": "",
+        "title2": ""
+        
     },
     {
         "id": "projects-details",
         "img": "assets/img/breadcrumbs-bg.jpg",
-        "title": "Project Details",
+        "title":"Project Details",
+        "title2": "Project Details",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Project Details"
+        "breadtitle": "Projects",
+        "routerlink1": "/projects"
     },
     {
         "id": "blog",
@@ -46,7 +58,10 @@
         "title": "Blog",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Blog"
+        "breadtitle": "Blog",
+        "routerlink1": "",
+        "title2": ""
+
     },
     {
         "id": "blog-details",
@@ -54,7 +69,9 @@
         "title": "Blog Details",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Blog Details"
+        "breadtitle": "Blog ",
+        "routerlink1": "/blog",
+        "title2": "Blog Details"
     },
     {
         "id": "contact",
@@ -62,6 +79,8 @@
         "title": "Contact",
         "routerlink": "",
         "bread": "Home",
-        "breadtitle": "Contact"
+        "breadtitle": "Contact",
+        "routerlink1": "",
+        "title2": ""
     }
 ]

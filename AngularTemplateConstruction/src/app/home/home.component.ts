@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   homeblogdata: any;
   isdisplay:boolean;
   showHome:boolean
+
+
+ 
   constructor(private http:HttpClient) {
    
     console.log("home",this.isdisplay)

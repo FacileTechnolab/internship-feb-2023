@@ -42,7 +42,7 @@ import { ServdetaillistlinkComponent } from './servdetaillistlink/servdetaillist
 import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 import { ContactinfoboxComponent } from './contactinfobox/contactinfobox.component';
 import { CommentformComponent } from './commentform/commentform.component';
-import { ProjectdetailsComponent } from './projectdetails/projectdetails.component';
+import { ProjectdetailsComponent } from './projects/projectdetails/projectdetails.component';
 import { ProjectdetailsliderComponent } from './projectdetailslider/projectdetailslider.component';
 import { ProjedetasliderimgComponent } from './projedetasliderimg/projedetasliderimg.component';
 import { ProjectdetailinfoComponent } from './projectdetailinfo/projectdetailinfo.component';
@@ -66,7 +66,7 @@ import { FootermenuComponent } from './footermenu/footermenu.component';
 import { LoadingComponent } from './loading/loading.component';
 import { OurprojectfilterComponent } from './ourprojectfilter/ourprojectfilter.component';
 import { ServicedataComponent } from './servicedata/servicedata.component';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [																																																																			
     AppComponent,
@@ -108,7 +108,6 @@ import { ServicedataComponent } from './servicedata/servicedata.component';
       ContactinfoComponent,
       ContactinfoboxComponent,
       CommentformComponent,
-      ProjectdetailsComponent,
       ProjectdetailsliderComponent,
       ProjedetasliderimgComponent,
       ProjectdetailinfoComponent,
@@ -129,7 +128,9 @@ import { ServicedataComponent } from './servicedata/servicedata.component';
       FootermenuComponent,
       LoadingComponent,
       OurprojectfilterComponent,
-      ServicedataComponent
+      ServicedataComponent,
+      ProjectdetailsComponent
+
    ],
   imports: [
     BrowserModule,
@@ -138,7 +139,8 @@ import { ServicedataComponent } from './servicedata/servicedata.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxPaginationModule
 
 
 

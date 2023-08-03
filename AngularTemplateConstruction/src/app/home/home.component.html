@@ -78,13 +78,14 @@
     <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
   </div>
  <div class="row">
-  <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100"  *ngFor="let homeblogvalue of homeblogdata">
+  <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100"  *ngFor="let homeblogvalue of homeblogdata ">
     <div *ngIf="homeblogvalue.showHome" >
 
       <app-homeblogbox   [homeblogvalue]="homeblogvalue" [isdisplay]="isdisplay" [showHome]="showHome"></app-homeblogbox>
     </div>
    </div>
  </div>
+
 
   </div>
 </section>

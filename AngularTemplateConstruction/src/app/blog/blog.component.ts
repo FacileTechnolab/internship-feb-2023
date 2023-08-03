@@ -14,6 +14,15 @@ export class BlogComponent implements OnInit {
   isdisplay:boolean;
   showHome: boolean;
  
+  totalLength:any;
+  page:number=1;
+  total:any;
+  // p: number = 1;
+  // collection:any[] = [];
+  // itemsperPage:number = 5;
+  // totalPost:any;
+  
+ 
   constructor(private http:HttpClient) {
    
     console.log("blog",this.isdisplay)
