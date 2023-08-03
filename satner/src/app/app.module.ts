@@ -59,6 +59,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BlogimageComponent } from './blogimage/blogimage.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LightboxModule } from 'ngx-lightbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,7 +122,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    LightboxModule
 
 
   ],

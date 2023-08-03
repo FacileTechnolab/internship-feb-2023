@@ -7,7 +7,7 @@
           *ngFor="
             let area of blogarea
               | paginate
-                : { itemsPerPage: 2, currentPage: page, totalItems: total }
+                : { itemsPerPage: 4, currentPage: page, totalItems: total }
           "
         >
           <app-Blogarea [area]="area"></app-Blogarea>

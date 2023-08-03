@@ -12,6 +12,7 @@ export class TabchildComponent implements OnInit {
   url: string = "/assets/json/filter.json";
   url1: string = "/assets/json/portchild.json";
   home: any;
+
   ngOnInit() {
     this.http.get(this.url1).subscribe(res => {
 
