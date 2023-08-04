@@ -3,7 +3,7 @@
   : { itemsPerPage: itemperpage, currentPage: page}">
    <app-homeblogbox  [homeblogvalue]="homeblogvalue" [isdisplay]="isdisplay" [showHome]="showHome"></app-homeblogbox>
   </div>
-<div class="blog-pagination">
+<div class="blog-pagination-custom  text-center">
   <pagination-controls
   (pageChange)="page = $event"
  ></pagination-controls>

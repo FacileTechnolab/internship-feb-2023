@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   url:string= "/assets/json/breadcrumbs.json"
+  
   breaddata: any;
  
   constructor(private http : HttpClient) {

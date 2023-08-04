@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blogdetailsidebar',
@@ -19,6 +19,8 @@ bsidbarpost:any;
 
 url3: string = "/assets/json/blogdetailsidebartags.json"
 bsidbartags: any;
+
+@Input() data:any;
   constructor(private http:HttpClient) { }
 
   ngOnInit() {

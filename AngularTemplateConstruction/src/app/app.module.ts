@@ -10,7 +10,7 @@ import { ServicesComponent } from './services/services.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
-import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { BannersliderComponent } from './bannerslider/bannerslider.component';
 import { BannerimgComponent } from './bannerimg/bannerimg.component';
@@ -45,11 +45,8 @@ import { CommentformComponent } from './commentform/commentform.component';
 import { ProjectdetailsComponent } from './projects/projectdetails/projectdetails.component';
 import { ProjectdetailsliderComponent } from './projectdetailslider/projectdetailslider.component';
 import { ProjedetasliderimgComponent } from './projedetasliderimg/projedetasliderimg.component';
-import { ProjectdetailinfoComponent } from './projectdetailinfo/projectdetailinfo.component';
 import { ProjectdetailsideinfoComponent } from './projectdetailsideinfo/projectdetailsideinfo.component';
-import { BlogdetaiartcalComponent } from './blogdetaiartcal/blogdetaiartcal.component';
 import { BlogdetailautorComponent } from './blogdetailautor/blogdetailautor.component';
-import { BlogdetailautorsocialComponent } from './blogdetailautorsocial/blogdetailautorsocial.component';
 import { BlogdetailcommentsComponent } from './blogdetailcomments/blogdetailcomments.component';
 import { BlogdetailcommentboxComponent } from './blogdetailcommentbox/blogdetailcommentbox.component';
 import { BlogdetailsidebarComponent } from './blogdetailsidebar/blogdetailsidebar.component';
@@ -67,6 +64,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { OurprojectfilterComponent } from './ourprojectfilter/ourprojectfilter.component';
 import { ServicedataComponent } from './servicedata/servicedata.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LightboxModule } from 'ngx-lightbox';
 @NgModule({
   declarations: [																																																																			
     AppComponent,
@@ -110,11 +108,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
       CommentformComponent,
       ProjectdetailsliderComponent,
       ProjedetasliderimgComponent,
-      ProjectdetailinfoComponent,
       ProjectdetailsideinfoComponent,
-      BlogdetaiartcalComponent,
       BlogdetailautorComponent,
-      BlogdetailautorsocialComponent,
       BlogdetailcommentsComponent,
       BlogdetailcommentboxComponent,
       BlogdetailsidebarComponent,
@@ -140,8 +135,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
-
+    NgxPaginationModule,
+LightboxModule
 
 
   ],

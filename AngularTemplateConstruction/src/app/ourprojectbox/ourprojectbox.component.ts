@@ -16,14 +16,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class OurprojectboxComponent implements OnInit {
   isExpanded = false;
-  i:number;
-previewImage= false;
-showMask=false;
-// currentLightboxImage: Item=  this.ourdata[0];
-currentIndex=0;
-controls= true;
-totalImageCount = 0;
-@Input() showCount : boolean;
+
 
   filterTab() {
     this.isExpanded = !this.isExpanded;
@@ -35,14 +28,10 @@ totalImageCount = 0;
     
    }
 
-  ngOnInit() : void {
-    this.totalImageCount = this.ourdata.length;
+  ngOnInit(){
+    
   }
-  onPreview(index:number):void{
-    this.previewImage = true;
-    this.showMask = true;
+ 
 
-this.currentIndex = index;
-// this.currentLightboxImage=this.ourdata[index]
   }
-}
+

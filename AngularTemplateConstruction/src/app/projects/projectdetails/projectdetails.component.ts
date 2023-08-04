@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProjectdetailsComponent implements OnInit {
   url: string = "/assets/json/projectdetailinfo.json";
-  url1: string = "/assets/json/projectdetailsideinfo.json";
-  url2:string= "/assets/json/breadcrumbs.json"
+  url2:string= "/assets/json/breadcrumbs.json";
+  url3: string="/assets/json/projectdetails.json"
   breaddata: any;
   projectdetinfodata: any;
 
@@ -28,8 +28,15 @@ export class ProjectdetailsComponent implements OnInit {
    });
 console.log(this.breaddata)
 
+this.http.get(this.url3).subscribe(result=>{
+       
+  this.projectdetinfodata =result
+});
+console.log(this.projectdetinfodata)
 
+debugger
 this.projectdetailId=this.activatedRouter.snapshot.paramMap.get('id');
+debugger
 this.projectdetails=this.projectdetinfodata.find(x => x.id == this.projectdetailId);
   }
 }

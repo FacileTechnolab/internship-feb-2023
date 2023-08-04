@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blogdetailcomments',
@@ -10,6 +10,7 @@ export class BlogdetailcommentsComponent implements OnInit {
   title="8 Comments"
   url: string= "/assets/json/blogdetailcommentbox.json"
   commentvalue : any;
+  @Input() data:any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {

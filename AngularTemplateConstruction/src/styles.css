@@ -2861,142 +2861,40 @@
 .display-none-slash:before{
   display: none !important;
 }
-
-  .ngx-pagination{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  .ngx-pagination li{
-    width: 35px;
-    height: 35px;
-    background: transparent !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    position: relative;
- 
-
-  }
-  .ngx-pagination li:hover{
-    background: #feb900 !important;
-
-  }
-  .ngx-pagination .current{
-    background: #feb900 !important;
-  }
-  .ngx-pagination .small-screen{
-    display: none !important;
-  }
-  .ngx-pagination .pagination-previous span{
-   width: 10%;
-  overflow: hidden;
-  color: #f0f1f2;
-  }
-  .ngx-pagination .pagination-next span{
-    width: 10%;
-overflow: hidden;
-color: #88a1ba;
-  }
-  .ngx-pagination .pagination-previous::before{
-    margin-right: 0px !important;
-    font-size: 26px;
-    margin-top: -8px
-  }
-  .ngx-pagination .pagination-next::before{
-    margin-right: 0px !important;
-    font-size: 26px;
-    margin-top: -8px
-  }
-  .ngx-pagination .pagination-previous.disabled::before{
-    margin-right: 0px !important;
-    font-size: 26px;
-    margin-top: -8px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .ngx-pagination .pagination-previous.disabled:hover{
-    background: #feb900 !important;
-  }
-  .ngx-pagination:hover{
-    background: inherit;
-  }
-  .ngx-pagination button:hover{
-    background: inherit;
-  }
-  .ngx-pagination .pagination-next::after{
-    display: none !important;
-  }
-  .ngx-pagination .pagination-next a:after{
-    font-size: 26px;
-  }
-  .ngx-pagination .pagination-next.disabled::before{
-    margin-right: 0px !important;
-    font-size: 26px;
-    margin-top: -8px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-   
-    
-  }
-  .blog .blog-pagination li{
-    margin: 0 18px !important;
-  }
-  .ngx-pagination .pagination-next.disabled:before{
-    content: '\bb';
-  }
-  .lightbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, .85);
-  }
-  .count{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 7%;
-    height: 10%;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px
-  
-  }
-.close-btn
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0;
-  color: #059652;
-  border: 0;
-  cursor: pointer;
-  width: 10%;
-  height: 20%;
-  z-index: 2;
-
-
+.blog-pagination-custom .ngx-pagination li.pagination-next,
+.blog-pagination-custom .ngx-pagination li.pagination-previous {
+ display: none !important;
 }
 
-.fa-items{
-  font-size: 30px;
+.blog-pagination-custom .ngx-pagination li.pagination-next {
+ width: auto;
+}
+
+.blog-pagination-custom .ngx-pagination li {
+ width: auto;
+ height: auto;
+ margin-right: 10px;
+}
+
+.blog-pagination-custom .ngx-pagination a,
+.blog-pagination-custom .ngx-pagination .disabled,
+.blog-pagination-custom .ngx-pagination .current {
+ padding: 7px 16px !important;
+}
+
+.blog-pagination-custom .ngx-pagination a:hover,
+.blog-pagination-custom .ngx-pagination button:hover {
+ background: #d4d4d4;
+ color: #000;
+}
+
+.blog-pagination-custom .ngx-pagination {
+ gap: 10px;
+ padding: 0;
+}
+.ngx-pagination .current {
+ 
+  background: #feb900 !important;
+  color: #fefefe;
+  cursor: pointer;
 }

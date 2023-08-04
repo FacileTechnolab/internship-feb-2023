@@ -5,7 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
-import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { BlogDetailsComponent } from './blog/blog-details/blog-details.component';
 import { ServicesComponent } from './services/services.component';
 import { ServicesdetailsComponent } from './services/servicesdetails/servicesdetails.component';
 import { ProjectdetailsComponent } from './projects/projectdetails/projectdetails.component';
@@ -40,7 +40,7 @@ const routes: Routes = [
   {
     path: 'projects/projects-details/:id',
     component: ProjectdetailsComponent,
-    title: 'UpConstruction - Projects Details'
+    title: 'UpConstruction - Projects - Projects Details'
   },
  
   {
@@ -50,7 +50,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'blog-details',
+    path: 'blog/blog-details/:id',
     component: BlogDetailsComponent,
     title: 'UpConstruction - Blog Details'
 
