@@ -17,8 +17,9 @@ import{InnerhomeComponent}from './Home/innerhome/innerhome.component';
 import { Innermembership1Component } from './Membership/innermembership1/innermembership1.component';
 import { Innermembeership2Component } from './Membership/innermembeership2/innermembeership2.component';
 import { InnerEventComponent } from './Events/innerEvent/innerEvent.component';
+
 @NgModule({
-  declarations: [									
+  declarations: [										
     AppComponent,
     InnerEventComponent ,
       HeaderComponent,
@@ -32,7 +33,8 @@ import { InnerEventComponent } from './Events/innerEvent/innerEvent.component';
       ContactusComponent,
       EventDetailsComponent,
       EventListingComponent,
-      Innermembeership2Component 
+      Innermembeership2Component,
+     
    ],
   imports: [
     BrowserModule,

@@ -5,10 +5,10 @@
     "label": "Our Shop"
   },
   {
-    "routerLink": "ProductDetails",
+    "routerLink": "/ProductDetails",
     "label": "Product Details"
   },
-  { "routerLink": "ContactUs", "label": "Contact Us" },
+  { "routerLink": "/ContactUs", "label": "Contact Us" },
   {
     "routerLink": "#",
     "label": "Sign In"

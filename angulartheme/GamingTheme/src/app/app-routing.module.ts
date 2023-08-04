@@ -8,21 +8,26 @@ import { ContactUsComponent } from './ContactUs/ContactUs.component';
 const routes: Routes = [
 
 
-   {path:'',component:HomeComponent},
+   {path:'',component:HomeComponent,title:'Home'},
 
 
 {
   path:'Home',
-component:HomeComponent},
+component:HomeComponent ,title:'Home'},
+{
+  path:'Home/Home/Shop',
+component:ShopComponent ,title:'Shop'},
 
 {
   path:'Shop',
-  component:ShopComponent},
-  {path:'ProductDetails',component:ProductDetailsComponent },
-  {path:'ProductDetails/:id',component:ProductDetailsComponent },
-  {path:'Shop/ProductDetails/:id',component:ProductDetailsComponent },
+  component:ShopComponent,title:'Shop'},
+  {path:'ProductDetails',component:ProductDetailsComponent  ,title:'Product Details'},
+  {path:'ProductDetails/:id',component:ProductDetailsComponent ,title:'Product Details'},
+  {path:'ProductDetails/:id/ProductDetails',component:ProductDetailsComponent,title:'Product Details' },
+ 
+  {path:'Shop/ProductDetails/:id',component:ProductDetailsComponent ,title:'Product Details'},
 
-  {path:'ContactUs',component:ContactUsComponent },
+  {path:'ContactUs',component:ContactUsComponent,title:'Contact' },
  ];
 
 @NgModule({

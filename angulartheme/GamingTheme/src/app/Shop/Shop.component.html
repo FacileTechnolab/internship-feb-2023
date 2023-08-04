@@ -31,7 +31,7 @@
         *ngFor="
           let value of filteredImages
             | paginate
-              : { itemsPerPage: 4, currentPage: page, totalItems: total }
+              : { itemsPerPage: 5, currentPage: page, totalItems: total }
         "
       >
         <app-innershopbox [value]="value"></app-innershopbox>

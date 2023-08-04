@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-LastLayout',
@@ -16,6 +17,28 @@ url:string="assets/jsondata/lastcontaine.json"
       this.layout=res;
     }
       );
+  }
+  onSubmit(userForm:any) {
+    console.warn(userForm.value);
+   
+    userForm.reset();
+    }
+    
+
+
+  contactform= new FormGroup({
+    
+    email: new FormControl('', [Validators.required ,Validators.email])
+
+
+  })
+  collectData(){
+    console.log(this.contactform.value)
+    this.contactform.reset();
+  }
+ 
+  get email(){
+    return this.contactform.get('email')
   }
 
 }

@@ -32,15 +32,33 @@
                 </h2>
               </div>
               <div class="search-input">
-                <form id="subscribe" action="#">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    placeholder="Your email..."
-                  />
-                  <button type="submit">{{ data?.label5 }}</button>
+                <form
+                  id="subscribe"
+                  action="#"
+                  [formGroup]="contactform"
+                  (ngSubmit)="collectData()"
+                >
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="exampleInputEmail1"
+                      formControlName="email"
+                      ngModel
+                      aria-describedby="emailHelp"
+                      placeholder="Your email..."
+                      required
+                    />
+                    <span
+                      *ngIf="email.invalid && email.touched"
+                      class="error-form-required"
+                      >Email is not a valid</span
+                    >
+                  </div>
+                  <button type="submit" [disabled]="contactform.invalid">
+                    {{ data?.label5 }}
+                  </button>
                 </form>
               </div>
             </div>

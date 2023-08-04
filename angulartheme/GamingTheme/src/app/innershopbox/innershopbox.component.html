@@ -1,6 +1,6 @@
 <div class="item">
   <div class="thumb">
-    <a routerLink="ProductDetails/{{ value?.id }}"
+    <a routerLink="/Shop/ProductDetails/{{ value?.id }}"
       ><img [src]="value?.src" alt=""
     /></a>
     <span class="price"
@@ -11,7 +11,7 @@
   <div class="down-content">
     <span class="category">{{ value?.label }}</span>
     <h4>{{ value?.label2 }}</h4>
-    <a routerLink="Productdetails/{{ value?.id }}"
+    <a routerLink="/Shop/ProductDetails/{{ value?.id }}"
       ><i [class]="value?.icon"></i
     ></a>
   </div>
