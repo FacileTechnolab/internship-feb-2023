@@ -46,7 +46,7 @@
     "link1":"/home",
     "label2":"Portfolio",
     "link2":"/portfolio",
-    "label3":" Portfolio Details",
+    "label3":" - Portfolio Details",
     "link3":"/portfolio-details"
 },
 
@@ -56,7 +56,7 @@
     "title":"BLOG",
     "label1":"Home",
     "link1":"/home",
-    "label2":"OUR BLOG",
+    "label2":"Our Blog",
     "link2":"/Blog",
     "label3":"",
     "link3":""
@@ -69,7 +69,7 @@
     "link1":"/home",
     "label2":"Blog",
     "link2":"/Blog",
-    "label3":"Blog Details",
+    "label3":" - Blog Details",
     "link3":"/Blogdetails"
 },
 {

@@ -1,21 +1,26 @@
-<div class="portfolio_box">
-  <div class="single_portfolio">
-    <img class="img-fluid w-100" src="{{ tab.img1 }}" alt="" />
-    <div class="overlay">
-      <!-- <div *ngFor="let image of _albums; let i = index">
-            <img [src]="image.thumb" (click)="open(i)" />
-          </div> -->
-    </div>
-    <a href="{{ tab.img2 }}" class="img-gal">
-      <div class="icon">
-        <span class="lnr lnr-cross"></span>
+<div class="filters-content">
+  <div class="row portfolio-grid justify-content-center">
+    <div
+      class="col-lg-4 col-md-6 all"
+      *ngFor="let tab of filteredImages; let i = index"
+    >
+      <div class="portfolio_box" (click)="open(i)">
+        <div class="single_portfolio">
+          <img class="img-fluid w-100" src="{{ tab.img1 }}" alt="" />
+          <div class="overlay"></div>
+          <a class="img-gal">
+            <div class="icon">
+              <span class="lnr lnr-cross"></span>
+            </div>
+          </a>
+        </div>
+        <div class="short_info" *ngIf="tab">
+          <h4>
+            <a routerLink="/portfolio-details/{{ tab.id }}">{{ tab.name1 }}</a>
+          </h4>
+          <p>{{ tab.desc1 }}</p>
+        </div>
       </div>
-    </a>
-  </div>
-  <div class="short_info" *ngIf="tab">
-    <h4>
-      <a routerLink="/portfolio-details/{{ tab.id }}">{{ tab.name1 }}</a>
-    </h4>
-    <p>{{ tab.desc1 }}</p>
+    </div>
   </div>
 </div>

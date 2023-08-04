@@ -20,7 +20,7 @@ interface tab {
 export class TabsComponent implements OnInit {
   Images: tab[] = [];
   private _album: Array<string> = [];
-  filteredImages: tab[] = this.Images;
+  filteredImages: any[] = this.Images;
   home: any;
   list: any;
   _albums: Array<any> = [];
@@ -36,18 +36,7 @@ export class TabsComponent implements OnInit {
   imageid: any;
   //tabs: string[] = ['ALL', 'POPULAR', 'LATEST', 'FOLLOWING', 'UPCOMMING'];
   constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private _lightbox: Lightbox) {
-    for (let i = 1; i <= 10; i++) {
-      const src = '/assets/img/portfolio/p' + i + '.jpg';
-      const caption = 'Image ' + i + ' caption here';
-      const thumb = '/assets/img/portfolio/' + i + '-portfolio-details.jpg';
-      const album = {
-        src: src,
-        caption: caption,
-        thumb: thumb
-      };
 
-      this._albums.push(album);
-    }
   }
 
   filterImages(type: string): void {
@@ -69,12 +58,7 @@ export class TabsComponent implements OnInit {
     });
 
   }
-  open(index: number): void {
-    this._lightbox.open(this._albums, index);
-  }
-  close(): void {
-    this._lightbox.close();
-  }
+
 
 
 }

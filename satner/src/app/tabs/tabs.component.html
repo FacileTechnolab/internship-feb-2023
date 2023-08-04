@@ -30,19 +30,6 @@
       </ul>
     </div>
 
-    <div class="filters-content">
-      <div class="row portfolio-grid">
-        <div class="col-lg-4 col-md-6 all" *ngFor="let tab of filteredImages">
-          <app-tabchild [tab]="tab"></app-tabchild>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div *ngFor="let image of _albums; let i = index">
-    <img [src]="image.thumb" (click)="open(i)" />
-  </div> -->
-  <div *ngFor="let image of _albums; let i = index">
-    <img [src]="image.thumb" (click)="open(i)" />
+    <app-tabchild [filteredImages]="filteredImages"></app-tabchild>
   </div>
 </section>

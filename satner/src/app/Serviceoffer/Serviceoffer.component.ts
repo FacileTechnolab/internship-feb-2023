@@ -10,7 +10,8 @@ export class ServiceofferComponent implements OnInit {
   service: any;
   constructor(private http: HttpClient) { }
   title = "service offers";
-  desc = " Is give may shall likeness made yielding spirit a itself togethcreated after sea <br />is in beast beginning signs open god you're gathering ithe"
+  desc = " Is give may shall likeness made yielding spirit a itself togeth created after sea";
+  desc2 = " is in beast beginning signs open god you're gathering ithe";
   ngOnInit() {
     this.http.get(this.url).subscribe(result => {
       this.service = result
