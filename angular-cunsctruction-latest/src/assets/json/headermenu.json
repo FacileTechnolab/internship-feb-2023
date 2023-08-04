@@ -1,0 +1,70 @@
+[
+    {
+        
+        "routerlink": "/",
+        "routerLinkActive": "",
+        "menu": "Home"
+    },
+    {
+        
+        "routerlink": "/about",
+        "routerLinkActive": "active",
+        "menu": "About"
+    },
+    {
+        
+        "routerlink": "/services",
+        "routerLinkActive": "active",
+        "menu": "Services"
+    },
+    {
+        
+        "routerlink": "/projects",
+        "routerLinkActive": "active",
+        "menu": "Projects"
+    },
+    {
+        "class": "",
+        "routerlink": "/blog",
+        "routerLinkActive": "active",
+        "menu": "Blog"
+    },
+    {
+        
+        "routerlink": "/dropdown",
+        "routerLinkActive": "active",
+        "menu": "Dropwdown",
+        "submenus": [
+            {
+               
+                "routerlink": "/dropdown",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 1"
+            },
+            {
+                
+                "routerlink": "/dropdown",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 2"           
+            },
+            {
+                
+                "routerlink": "/dropdown",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 3"
+            },
+            {
+                
+                "routerlink": "/dropdown",
+                "routerLinkActive": "active",
+                "menu": "Dropwdown 4"
+            }
+        ]
+    },
+    {
+        
+        "routerlink": "/contact",
+        "routerLinkActive": "active",
+        "menu": "Contact"
+    }
+]

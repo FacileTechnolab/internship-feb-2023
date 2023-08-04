@@ -1,0 +1,64 @@
+[
+    {
+        "id": 101,
+        "servicdetailsidetitle": "Enim qui eos rerum in delectus",
+        "servicdetailsidedesc": "Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.",
+        "servicdetailrightimg": "assets/img/services.jpg",
+        "servicdetailrighttile": "Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas",
+        "servicdetailrightdesc": "Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.",
+        "servicdetailrightdesc1":"Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.",
+        "servicdetailrightdesc2" : "Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea."
+    },
+    {
+        "id": 102,
+        "servicdetailsidetitle": "Nesciunt Mete",
+        "servicdetailsidedesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "servicdetailrightimg": "assets/img/services-1.jpg",
+        "servicdetailrighttile": "Nesciunt Mete",
+        "servicdetailrightdesc": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "servicdetailrightdesc1":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+        "servicdetailrightdesc2" : "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+        "id": 103,
+        "servicdetailsidetitle": "Ledo Markt",
+        "servicdetailsidedesc": "Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.",
+        "servicdetailrightimg": "assets/img/services-2.jpg",
+        "servicdetailrighttile": "Ledo Markt",
+        "servicdetailrightdesc": "Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.",
+        "servicdetailrightdesc1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "servicdetailrightdesc2" : "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+        "id": 104,
+        "servicdetailsidetitle": "Asperiores Commodit",
+        "servicdetailsidedesc": "Sunt rem odit accusantium omnis perspiciatis officia.Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. ",
+        "servicdetailrightimg": "assets/img/services-3.jpg",
+        "servicdetailrighttile": "Asperiores Commodit",
+        "servicdetailrightdesc": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        "servicdetailrightdesc1":" Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "servicdetailrightdesc2" : "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+        "id": 105,
+        "servicdetailsidetitle": "Velit Doloremquet",
+        "servicdetailsidedesc": "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
+        "servicdetailrightimg": "assets/img/services-4.jpg",
+        "servicdetailrighttile": "Asperiores Commodit",
+        "servicdetailrightdesc": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "servicdetailrightdesc1":"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+        "servicdetailrightdesc2" : "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    },
+    {
+        "id": 106,
+        "servicdetailsidetitle": "Dolori Architecto",
+        "servicdetailsidedesc": "Sunt rem odit accusantium omnis perspiciatis officia.Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. ",
+        "servicdetailrightimg": "assets/img/services-5.jpg",
+        "servicdetailrighttile": "Dolori Architecto Counstruction",
+        "servicdetailrightdesc": "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
+        "servicdetailrightdesc1":"Construction of the church was begun in 1643 with plans by Francesco Borromini,[1] annexed to an Augustinian nunnery that was founded by Camilla-Virginia Savelli Farnese, Duchess of Latera. However, when the fortunes of the House of Farnese declined, so did the funding for the church, and by 1655 the work was stopped.",
+        "servicdetailrightdesc2" : "More recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+
+]
+

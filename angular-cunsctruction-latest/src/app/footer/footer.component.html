@@ -1,0 +1,51 @@
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+  <div class="footer-content position-relative">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <h3>{{footer.head}}</h3>
+            <p>
+              {{footer.desc}} <br>
+              {{footer.desc1}}<br><br>
+              <strong>{{footer.bold}}</strong>{{footer.boldtext}}<br>
+              <strong>{{footer.bold1}}</strong>{{footer.boldtext1}}<br>
+            </p>
+            <div class="social-links d-flex mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i [className]="footer.icontwitter"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i [className]="footer.iconface"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i [className]="footer.iconinsta"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i [className]="footer.iconlind"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- End footer info column-->
+
+        <app-footermenu [footermenudata]="footermenudata" *ngFor="let footermenudata of footermenu" class="col-lg-2 col-md-3 footer-links"></app-footermenu>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal text-center position-relative">
+    <div class="container">
+      <div class="copyright">
+        &copy;{{footer.copytext}}<strong><span> {{footer.copytext1}}</span></strong> {{footer.copytextdot}}
+      </div>
+      <div class="credits">
+        {{footer.desinby}}<a [attr.href]="footer.hreaf"> {{footer.hrreftext}}</a> {{footer.hrreftext1}}<a
+        [attr.href]="footer.href1"> {{footer.href1text}}</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
+
+

@@ -1,0 +1,46 @@
+
+<main id="main">
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id === 'services-details' "></app-breadcrumbs>
+  </div>
+
+  <!-- ======= Service Details Section ======= -->
+  <section id="service-details" class="service-details">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div *ngFor="let data of  serdetaildata" >
+        <div class="row gy-4"  *ngIf="data.id == servicesdetailId" >
+
+          <div class="col-lg-4">
+            <app-servcesdetaillist></app-servcesdetaillist>
+
+            <h4>{{data.servicdetailsidetitle}}</h4>
+            <p>{{data.servicdetailsidedesc}}</p>
+          </div>
+
+          <div class="col-lg-8">
+            <img src={{data.servicdetailrightimg}} alt="" class="img-fluid services-img">
+            <h3>{{data.servicdetailrighttile}}</h3>
+            <p>
+              {{data.servicdetailrightdesc}}
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span>
+              </li>
+              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+            </ul>
+            <p>
+              {{data.servicdetailrightdesc1}}
+            </p>
+            <p>
+              {{data.servicdetailrightdesc2}}
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+  </div>
+  </section><!-- End Service Details Section -->
+
+</main><!-- End #main -->

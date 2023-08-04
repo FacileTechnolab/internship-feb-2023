@@ -1,0 +1,45 @@
+[
+    {
+        "servicon": "fa-solid fa-mountain-city",
+        "servtitle" : "Nesciunt Mete",
+        "servdesc" : "Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.",
+        "servicesdetailId" : "101",
+        "servlinktext" : "Learn more"
+    },
+    {
+        "servicon": "fa-solid fa-arrow-up-from-ground-water",
+        "servtitle" : "Eosle Commodi",
+        "servdesc" : "Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.",
+        "servicesdetailId" : "102",
+        "servlinktext" : "Learn more"
+    },
+    {
+        "servicon": "fa-solid fa-compass-drafting",
+        "servtitle" : "Ledo Markt",
+        "servdesc" : "Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.",
+        "servicesdetailId" : "103",
+        "servlinktext" : "Learn more"
+    },
+    {
+        "servicon": "fa-solid fa-trowel-bricks",
+        "servtitle" : "Asperiores Commodit",
+        "servdesc" : "Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.",
+        "servicesdetailId" : "104",
+        "servlinktext" : "Learn more"
+    },
+    {
+        "servicon": "fa-solid fa-helmet-safety",
+        "servtitle" : "Velit Doloremque",
+        "servdesc" : "Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.",
+        "servicesdetailId" : "105",
+        "servlinktext" : "Learn more"
+    },
+    {
+        "servicon": "fa-solid fa-arrow-up-from-ground-water",
+        "servtitle" : "Dolori Architecto",
+        "servdesc" : "Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.",
+        "servicesdetailId" : "106",
+        "servlinktext" : "Learn more"
+    }
+
+]

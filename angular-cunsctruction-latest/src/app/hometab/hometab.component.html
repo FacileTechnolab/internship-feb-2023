@@ -1,0 +1,31 @@
+ <!-- ======= Features Section ======= -->
+ <section id="features" class="features section-bg">
+  <div class="container" data-aos="fade-up">
+    <app-homenavtab [tabsArray]="tabdata" (onTabChange)="tabChange($event)" ></app-homenavtab>
+
+    <div class="tab-content">
+      <div *ngFor="let sertabcont of sertabarry" >
+        <div *ngIf="activatedTabIndex == sertabcont.index" class="tab-pane">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+              data-aos="fade-up" data-aos-delay="100">
+              <h3>  {{sertabcont.sermenutitle}}</h3>
+              <p class="fst-italic">
+                {{sertabcont.sermenudesc}}
+              </p>
+              <ul>
+                <li><i [className]="sertabcont.sermenuicon"></i> {{sertabcont.sermenuicondesc1}}</li>
+                <li><i class="bi bi-check2-all"></i> {{sertabcont.sermenuicondesc2}}</li>
+                <li><i class="bi bi-check2-all"></i> {{sertabcont.sermenuicondesc3}}</li>
+                <li><i class="bi bi-check2-all" [class]="sertabcont.class"></i> {{sertabcont.sermenuicondesc4}}</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+              <img src={{sertabcont.sermenuimg}} alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Features Section -->

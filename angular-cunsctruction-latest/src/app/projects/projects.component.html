@@ -1,0 +1,10 @@
+<main id="main">
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'projects'"></app-breadcrumbs>
+  </div>
+  <section id="projects" class="projects">
+    <div class="container" data-aos="fade-up">
+      <app-ourprojectfilter></app-ourprojectfilter>
+    </div>
+  </section>
+</main><!-- End #main -->

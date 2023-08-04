@@ -1,0 +1,31 @@
+<div class="post-item position-relative h-100" >
+
+  <div class="post-img position-relative overflow-hidden">
+    <img src={{homeblogvalue.blogimg}} class="img-fluid" alt="">
+    <span class="post-date">{{homeblogvalue.blogimgdate}}</span>
+  </div>
+
+  <div class="post-content d-flex flex-column">
+
+    <h3 class="post-title">{{homeblogvalue.blogposttitle}}</h3>
+
+    <div class="meta d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <i [className]="homeblogvalue.blogpersonicon"></i> <span class="ps-2">{{homeblogvalue.blogpersontitle}}</span>
+      </div>
+      <span class="px-3 text-black-50">/</span>
+      <div class="d-flex align-items-center">
+        <i [className]="homeblogvalue.blogfoldericon"></i> <span class="ps-2">{{homeblogvalue.blogfoldertitle}}</span>
+      </div>
+    </div>
+ 
+    <p *ngIf="isdisplay" >
+      {{homeblogvalue.blogpostdesc}}
+    </p>
+    <hr>
+    <a routerLink="/blog/blog-details/{{homeblogvalue.blogdetailId}}" class="readmore stretched-link"><span>{{homeblogvalue.blogreadlinktext}}</span><i
+      [className]="homeblogvalue.blogreadlinkicon"></i></a>
+
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="position-relative h-100">
+  <div class="slides-1 portfolio-details-slider swiper">
+      <owl-carousel-o [options]="customOptions" >
+        <ng-template carouselSlide *ngFor="let sliderimg of sliderdata"> 
+          <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide" >
+          <app-projedetasliderimg [sliderimg]="sliderimg" ></app-projedetasliderimg>
+        </div>
+          </div>
+        </ng-template> 
+      </owl-carousel-o>
+  </div>
+</div>
+ 
+

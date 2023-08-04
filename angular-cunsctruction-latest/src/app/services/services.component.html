@@ -1,0 +1,21 @@
+<main id="main">
+
+  <div *ngFor="let breadcrumb of breaddata">
+    <app-breadcrumbs [breadcrumb]="breadcrumb" *ngIf="breadcrumb?.id == 'services'"></app-breadcrumbs>
+  </div>
+  
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4">
+        <app-homeservices></app-homeservices>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+
+  <app-servicescard></app-servicescard>
+  <app-altservices2></app-altservices2>
+  <app-altservices></app-altservices>
+  <app-testimonials></app-testimonials>
+
+</main><!-- End #main -->
