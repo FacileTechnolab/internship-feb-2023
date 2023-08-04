@@ -2786,3 +2786,12 @@ html {
     padding: 15px 25px;
     border-radius: 50px;
 }
+
+
+.ngx-pagination .current {
+  padding: 9px 18px !important;
+  background: #f98233 !important;
+  color: #fefefe;
+  cursor: pointer;
+  border-radius: 50% !important; 
+}

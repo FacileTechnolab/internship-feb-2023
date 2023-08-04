@@ -65,7 +65,7 @@ const routes: Routes = [
     title : 'News'
   },
   {
-    path:'singlenews',
+    path:'singlenews/:id',
     component: SinglenewsComponent,
     title :'SingleNews'
   },  

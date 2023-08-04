@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShopboxdataComponent implements OnInit {
 @Input () shopdata:any
+data:any
 
 public shopItemList: any
 
@@ -21,7 +22,9 @@ url: string="assets/json/shopbox.json"
 
 
   addtocart(shopdata:any){
-    this.CartService.addtoCart(shopdata);
+   return this.CartService.addtoCart(shopdata);
+    
+    
  }
  
 

@@ -3,7 +3,7 @@
 <div class="row" >	
     <div class="single-product-item">
       <div class="product-image">
-        <a routerLink="/singleproduct"><img [src]="ourproductbox.img" alt=""></a>
+        <a routerLink="/singleproduct/{{ourproductbox.productdetailid}}"><img [src]="ourproductbox.img" alt=""></a>
       </div>
       <h3>{{ourproductbox.head}}</h3>
       <p class="product-price"><span>{{ourproductbox.price}}</span>{{ourproductbox.$}}</p>

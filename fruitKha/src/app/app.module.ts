@@ -56,9 +56,10 @@ import { CheckoutrightComponent } from './Page/checkoutright/checkoutright.compo
 import { CheckoutleftComponent } from './Page/checkoutleft/checkoutleft.component';
 import { CartinboxrowComponent } from './Page/cartinboxrow/cartinboxrow.component';
 import { ShopboxdataComponent } from './Shop/shopboxdata/shopboxdata.component';
-
+import { CartinboxrowdetailComponent } from './Page/cartinboxrowdetail/cartinboxrowdetail.component';
 import { SingleboxleftComponent } from './News/singleboxleft/singleboxleft.component';
 import { SingleboxrightComponent } from './News/singleboxright/singleboxright.component';
+import {NgxPaginationModule} from 'ngx-pagination'
 
   @NgModule({
   declarations: [								   
@@ -112,9 +113,11 @@ import { SingleboxrightComponent } from './News/singleboxright/singleboxright.co
       CheckoutleftComponent,
      CartinboxrowComponent,
      ShopboxdataComponent,
+   CartinboxrowdetailComponent,
    
      SingleboxleftComponent,
-     SingleboxrightComponent
+     SingleboxrightComponent,
+
       
 
   
@@ -127,7 +130,7 @@ import { SingleboxrightComponent } from './News/singleboxright/singleboxright.co
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-  
+    NgxPaginationModule
 
   ],
   providers: [],

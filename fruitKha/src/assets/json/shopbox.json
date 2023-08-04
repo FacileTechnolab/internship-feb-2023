@@ -1,5 +1,6 @@
 [{
-    "id": "1",
+    "productdetailid" : "strawbarry",
+    "id":"1",
     "class" :"col-lg-4 col-md-6 text-center strawberry",
     "img": "assets/img/products/product-img-1.jpg",
     "head": "Strawberry",
@@ -9,7 +10,8 @@
     "file":"strawberry"
 },
 {
-    "id": "2",
+    "productdetailid" : "berry",
+    "id":"2",
     "class" :"col-lg-4 col-md-6 text-center berry",
     "img": "assets/img/products/product-img-2.jpg",
     "head": "Berry",
@@ -19,7 +21,8 @@
     "file":"berry"
 },
 {
-    "id": "3",
+    "productdetailid" : "lemon",
+    "id":"3",
     "class": "col-lg-4 col-md-6 text-center lemon",
     "img": "assets/img/products/product-img-3.jpg",
     "head": "Lemon",
@@ -29,7 +32,7 @@
     "file":"lemon"
 },
 { 
-    "id": "4",
+    "productdetailid" : "Avocado",
     "class":"col-lg-4 col-md-6 text-center ",
     "img": "assets/img/products/product-img-4.jpg",
     "head": "Avocado",
@@ -39,7 +42,7 @@
     "file":""
 },
 {
-    "id": "5",
+    "productdetailid" : "Green Apple",
     "class":"col-lg-4 col-md-6 text-center ",
     "img": "assets/img/products/product-img-5.jpg",
     "head": "Green Apple",
@@ -49,9 +52,9 @@
     "file":""
 },
  
-{ 
-    "id": "6",    
-"class":"col-lg-4 col-md-6 text-center strawberry",
+{    
+    "productdetailid" : "strawberry",
+    "class":"col-lg-4 col-md-6 text-center strawberry",
     "img": "assets/img/products/product-img-6.jpg",
     "head": "Strawberry",
     "h1": "Per Kg",

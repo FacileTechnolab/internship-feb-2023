@@ -1,7 +1,7 @@
 <div class="single-latest-news">
-  <a routerLink="/singlenews" >
-    <div [class] ="news.class" [style.backgroundImage]="'url(' + news.img + ')'"></div>
- </a>
+  <a routerLink="/singlenews/{{news.singledetailid}}" >
+    <div [class]="news.class" [style.backgroundImage]="'url(' + news.img + ')'"></div>
+ </a> 
   <div class="news-text-box">
     <h3><a routerLink="/singlenews">{{news.head}}</a></h3>
     <p class="blog-meta">
@@ -9,7 +9,7 @@
       <span class="date"><i [class]= "news.icon2"></i> {{news.s2}}</span>
     </p>
     <p class="excerpt">{{news.dec}}</p>
-    <a routerLink="/singlenews" class="read-more-btn">{{news.btn}}<i [class]="news.s3"></i></a>
+    <a routerLink="/singlenews/{{news.singledetailid}}" class="read-more-btn">{{news.btn}}<i [class]="news.s3"></i></a>
   </div>
 </div>
 

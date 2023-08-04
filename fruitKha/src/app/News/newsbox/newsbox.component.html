@@ -1,5 +1,5 @@
 <div class="single-latest-news">
-  <a routerLink="/singlenews">
+  <a routerLink="/singlenews/{{news1.singledetailid}}">
     <div [class]="news1.class" [style.backgroundImage]="'url(' + news1.img + ')'"></div>
   </a>
   <div class="news-text-box">
@@ -9,7 +9,7 @@
       <span class="date"><i [class]="news1.icon2"></i> {{news1.s2}}</span>
     </p>
     <p class="excerpt">{{news1.dec}}</p>
-    <a routerLink="/singlenews" class="read-more-btn">{{news1.btn}}<i [class]="news1.s3"></i></a>
+    <a routerLink="/singlenews/{{news1.singledetailid}}" class="read-more-btn">{{news1.btn}}<i [class]="news1.s3"></i></a>
   </div>
 </div>
 

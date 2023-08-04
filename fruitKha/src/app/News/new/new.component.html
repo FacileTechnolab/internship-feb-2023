@@ -7,7 +7,7 @@
 <div class="latest-news mt-150 mb-150">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6" *ngFor="let news1box of news1">
+      <div class="col-lg-4 col-md-6" *ngFor="let news1box of news1 |  paginate : { itemsPerPage: 3, currentPage: page, totalItems: total } ">
         <app-newsbox [news1]="news1box "></app-newsbox>
       </div>
     </div>
@@ -19,13 +19,9 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="pagination-wrap">
-              <ul>
-                <li><a (click)="onnews()">Prev</a></li>
-                <li><a (click)="onnews()">1</a></li>
-                <li><a (click)="onnews()" class="active">2</a></li>
-                <li><a (click)="onnews()">3</a></li>
-                <li><a (click)="onnews()">Next</a></li>
-              </ul>
+              <div class="pagination-center">
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
+              </div>     
             </div>
           </div>
         </div>

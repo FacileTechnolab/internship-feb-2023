@@ -1,0 +1,6 @@
+          <td class="product-remove"><a (click)="removeitem(rowde)"><i [class]="rowde?.icon"></i></a></td>
+          <td class="product-image"><img [src]="rowde?.img" alt=""></td>
+          <td class="product-name">{{rowde?.name}}</td>
+          <td class="product-price">{{rowde?.price}}</td>
+          <td class="product-quantity"><input type="number" placeholder="0"></td>
+          <td class="product-total">{{rowde?.total}}</td>

@@ -13,6 +13,11 @@ url1: string ="assets/json/bread.json"
 news1:any
 crumb : any
 
+
+totalLength:any;
+page:number=1;
+total:any;
+
 constructor(private http: HttpClient) { }
 
   ngOnInit() {

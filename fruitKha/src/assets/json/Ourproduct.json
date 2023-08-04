@@ -1,4 +1,5 @@
 [{
+    "productdetailid" : "strawbarry",
     "img": "assets/img/products/product-img-1.jpg",
     "head": "Strawberry",
     "price":" Per Kg",
@@ -7,6 +8,7 @@
     "add": "Add to Cart"
 },
 {
+    "productdetailid" : "berry",
     "img": "assets/img/products/product-img-2.jpg",
     "head": "Berry",
     "price":" Per Kg",
@@ -15,6 +17,7 @@
     "add": "Add to Cart"
 },
 {
+    "productdetailid" : "lemon",
     "img": "assets/img/products/product-img-3.jpg",
     "head": "Lemon",
     "price":" Per Kg",

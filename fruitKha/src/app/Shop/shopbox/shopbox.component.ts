@@ -28,6 +28,11 @@ export class ShopboxComponent implements OnInit {
   sea:any
   fruit:any
 
+  
+totalLength:any;
+page:number=1;
+total:any;
+
 public shopItemList: any
 
   constructor(private http: HttpClient, private CartService : CartService) { }

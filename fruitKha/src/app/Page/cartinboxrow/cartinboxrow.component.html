@@ -1,4 +1,4 @@
-<ng-container *ngIf= "shop.length !=0">
+<ng-container *ngIf="shop.length !=0">
   <div class="cart-table-wrap">
     <table class="cart-table">
       <thead class="cart-table-head">
@@ -12,14 +12,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-body-row" *ngFor = "let rowde of rowdes" >
-          <td class="product-remove"><a (click)="removeitem(rowde)"><i [class]="rowde.icon"></i></a></td>
-          <td class="product-image"><img [src]="rowde.img" alt=""></td>
-          <td class="product-name">{{rowde.name}}</td>
-          <td class="product-price">{{rowde.price}}</td>
-          <td class="product-quantity"><input type="number" placeholder="0"></td>
-          <td class="product-total">{{rowde.total}}</td>
-         <!-- <app-cartinboxdetails [rowde] = "rowde"></app-cartinboxdetails>  -->
+        <tr class="table-body-row" *ngFor="let rowde of data" >          
+         <app-cartinboxrowdetail [rowde]="rowde"></app-cartinboxrowdetail>
         </tr>    
       </tbody>
     </table>
@@ -27,9 +21,7 @@
 </ng-container>
 
 
-
-
-<ng-container *ngIf= "shop.length == 0">
+<ng-container *ngIf="shop.length == 0">
   <div class="center">
     <h4>Your Cart is empty!</h4>
     <h5>Add Fruits to it now</h5>
@@ -42,20 +34,3 @@
 
 
 
-
-  <!-- <tr class="table-body-row">
-        <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-        <td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt=""></td>
-        <td class="product-name">Berry</td>
-        <td class="product-price">$70</td>
-        <td class="product-quantity"><input type="number" placeholder="0"></td>
-        <td class="product-total">1</td>
-      </tr> -->
-      <!-- <tr class="table-body-row">
-        <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-        <td class="product-image"><img src="assets/img/products/product-img-3.jpg" alt=""></td>
-        <td class="product-name">Lemon</td>
-        <td class="product-price">$35</td>
-        <td class="product-quantity"><input type="number" placeholder="0"></td>
-        <td class="product-total">1</td>
-      </tr> -->
