@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import lgFullscreen from 'lightgallery/plugins/fullscreen';
+import lgZoom from 'lightgallery/plugins/zoom';
 interface filter{
   index:string
         class: string
@@ -14,10 +16,18 @@ interface filter{
 @Component({
   selector: 'app-ourprojectfilter',
   templateUrl: './ourprojectfilter.component.html',
-  styleUrls: ['./ourprojectfilter.component.css']
+  styleUrls: ['./ourprojectfilter.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class OurprojectfilterComponent implements OnInit {
 
+
+  settings = {
+    counter: false,
+    plugins: [lgZoom, lgFullscreen]
+  }
+
+  
    //filter tab acitve-color change
  activeFilter: string = 'all';
  
@@ -49,5 +59,7 @@ export class OurprojectfilterComponent implements OnInit {
       console.log(this.ourtabfilter)
     }
   }
+
+  
 
 }

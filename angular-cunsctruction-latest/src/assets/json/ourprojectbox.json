@@ -7,8 +7,26 @@
         "head": "Remodeling 1",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-1.jpg",
+        "zoomicontitle": "Remodeling 1",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/remodeling-1.jpg",
+            "caption": "assets/img/projects/remodeling-1.jpg",
+            "thumb":"assets/img/projects/remodeling-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/remodeling-2.jpg",
+                "caption":"assets/img/projects/remodeling-2.jpg",
+                "thumb":"assets/img/projects/remodeling-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/remodeling-3.jpg",
+                "caption": "assets/img/projects/remodeling-3.jpg",
+                "thumb":"assets/img/projects/remodeling-3.jpg"                  
+            }
+        ]
 
     },
     {
@@ -19,8 +37,26 @@
         "head": "Construction 1",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-1.jpg",
+        "zoomicontitle": "Construction 1",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/construction-1.jpg",
+            "caption": "assets/img/projects/construction-1.jpg",
+            "thumb":"assets/img/projects/construction-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/construction-2.jpg",
+                "caption":"assets/img/projects/construction-2.jpg",
+                "thumb":"assets/img/projects/construction-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/construction-3.jpg",
+                "caption": "assets/img/projects/construction-3.jpg",
+                "thumb":"assets/img/projects/construction-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Repairs-1",
@@ -30,8 +66,26 @@
         "head": "Repairs 1",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-1.jpg",
+        "zoomicontitle": "Repairs 1",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/repairs-1.jpg",
+            "caption": "assets/img/projects/repairs-1.jpg",
+            "thumb":"assets/img/projects/repairs-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/repairs-2.jpg",
+                "caption":"assets/img/projects/repairs-2.jpg",
+                "thumb":"assets/img/projects/repairs-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/repairs-3.jpg",
+                "caption": "assets/img/projects/repairs-3.jpg",
+                "thumb":"assets/img/projects/repairs-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Design-1",
@@ -41,8 +95,26 @@
         "head": "Design 1",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-1.jpg",
+        "zoomicontitle": "Design 1",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/design-1.jpg",
+            "caption": "assets/img/projects/design-1.jpg",
+            "thumb":"assets/img/projects/design-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/design-2.jpg",
+                "caption":"assets/img/projects/design-2.jpg",
+                "thumb":"assets/img/projects/design-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/design-3.jpg",
+                "caption": "assets/img/projects/design-3.jpg",
+                "thumb":"assets/img/projects/design-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Remodeling-2",
@@ -52,8 +124,26 @@
         "head": "Remodeling 2",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-2.jpg",
+        "zoomicontitle": "Remodeling 2",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/remodeling-1.jpg",
+            "caption": "assets/img/projects/remodeling-1.jpg",
+            "thumb":"assets/img/projects/remodeling-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/remodeling-2.jpg",
+                "caption":"assets/img/projects/remodeling-2.jpg",
+                "thumb":"assets/img/projects/remodeling-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/remodeling-3.jpg",
+                "caption": "assets/img/projects/remodelin-3.jpg",
+                "thumb":"assets/img/projects/remodeling-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Construction-2",
@@ -63,8 +153,26 @@
         "head": "Construction 2",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/construction-2.jpg",
+        "zoomicontitle": "Construction 2",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/construction-1.jpg",
+            "caption": "assets/img/projects/construction-1.jpg",
+            "thumb":"assets/img/projects/construction-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/construction-2.jpg",
+                "caption":"assets/img/projects/construction-2.jpg",
+                "thumb":"assets/img/projects/construction-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/construction-3.jpg",
+                "caption": "assets/img/projects/construction-3.jpg",
+                "thumb":"assets/img/projects/construction-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Repairs-2",
@@ -74,8 +182,26 @@
         "head": "Repairs 2",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-2.jpg",
+        "zoomicontitle": "Repairs 2",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/repairs-1.jpg",
+            "caption": "assets/img/projects/repairs-1.jpg",
+            "thumb":"assets/img/projects/repairs-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/repairs-2.jpg",
+                "caption":"assets/img/projects/repairs-2.jpg",
+                "thumb":"assets/img/projects/repairs-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/repairs-3.jpg",
+                "caption": "assets/img/projects/repairs-3.jpg",
+                "thumb":"assets/img/projects/repairs-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Design-2",
@@ -85,8 +211,26 @@
         "head": "Design 2",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-2.jpg",
+        "zoomicontitle": "Design 2",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/design-1.jpg",
+            "caption": "assets/img/projects/design-1.jpg",
+            "thumb":"assets/img/projects/design-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/design-2.jpg",
+                "caption":"assets/img/projects/design-2.jpg",
+                "thumb":"assets/img/projects/design-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/design-3.jpg",
+                "caption": "assets/img/projects/design-3.jpg",
+                "thumb":"assets/img/projects/design-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Remodeling-3",
@@ -96,8 +240,26 @@
         "head": "Remodeling 3",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
+        "zoomicontitle": "Remodeling 3",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/remodeling-1.jpg",
+            "caption": "assets/img/projects/remodeling-1.jpg",
+            "thumb":"assets/img/projects/remodeling-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/remodeling-2.jpg",
+                "caption":"assets/img/projects/remodeling-2.jpg",
+                "thumb":"assets/img/projects/remodeling-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/remodeling-3.jpg",
+                "caption": "assets/img/projects/remodeling-3.jpg",
+                "thumb":"assets/img/projects/remodeling-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Construction-3",
@@ -107,8 +269,26 @@
         "head": "Construction 3",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/remodeling-3.jpg",
+        "zoomicontitle": "Construction 3",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/remodeling-1.jpg",
+            "caption": "assets/img/projects/remodeling-1.jpg",
+            "thumb":"assets/img/projects/remodeling-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/remodeling-2.jpg",
+                "caption":"assets/img/projects/remodeling-2.jpg",
+                "thumb":"assets/img/projects/remodeling-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/remodeling-3.jpg",
+                "caption": "assets/img/projects/remodeling-3.jpg",
+                "thumb":"assets/img/projects/remodeling-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Repairs-3",
@@ -118,8 +298,26 @@
         "head": "Repairs 3",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/repairs-3.jpg",
+        "zoomicontitle": "Repairs 3",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/repairs-1.jpg",
+            "caption": "assets/img/projects/repairs-1.jpg",
+            "thumb":"assets/img/projects/repairs-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/repairs-2.jpg",
+                "caption":"assets/img/projects/repairs-2.jpg",
+                "thumb":"assets/img/projects/repairs-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/repairs-3.jpg",
+                "caption": "assets/img/projects/repairs-3.jpg",
+                "thumb":"assets/img/projects/repairs-3.jpg"                  
+            }
+        ]
     },
     {
         "projectdetailId": "Design-3",
@@ -129,7 +327,25 @@
         "head": "Design 3",
         "desc": "Lorem ipsum, dolor sit amet consectetur",
         "hrefimg": "assets/img/projects/design-3.jpg",
+        "zoomicontitle": "Design 3",
         "iconzoom": "bi bi-zoom-in",
-        "iconlink": "bi bi-link-45deg"
+        "iconlink": "bi bi-link-45deg",
+        "album": [
+            {
+            "src":  "assets/img/projects/design-1.jpg",
+            "caption": "assets/img/projects/design-1.jpg",
+            "thumb":"assets/img/projects/design-1.jpg"
+            },
+            {
+                "src": "assets/img/projects/design-2.jpg",
+                "caption":"assets/img/projects/design-2.jpg",
+                "thumb":"assets/img/projects/design-2.jpg"
+            },
+            {
+                "src":  "assets/img/projects/design-3.jpg",
+                "caption": "assets/img/projects/design-3.jpg",
+                "thumb":"assets/img/projects/design-3.jpg"                  
+            }
+        ]
     }
 ]
