@@ -7,25 +7,32 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./shopboxdata.component.css']
 })
 export class ShopboxdataComponent implements OnInit {
+url: string="assets/json/shopbox.json"
 @Input () shopdata:any
 data:any
 
-public shopItemList: any
+// public shopItemList: any
 
-url: string="assets/json/shopbox.json"
-  constructor( private CartService : CartService) { }
+constructor( private CartService : CartService) { }
 
-  ngOnInit(): void {
+ngOnInit(): void {   }
 
- 
-  }
-
+  itemsCart:any
 
   addtocart(shopdata:any){
-   return this.CartService.addtoCart(shopdata);
-    
-    
- }
- 
+   console.log("string",shopdata);   
+   let cartDataNull = localStorage.getItem('localcart');
+   if(cartDataNull == null){
+    let storeDataGet:any = [];
+    storeDataGet.push(shopdata);
+    localStorage.setItem('localcart', JSON.stringify(storeDataGet));
+   }
+   else{
+    var id = shopdata.productdetailid;
+    let index :number = -1;
+    this.itemsCart= JSON.parse(localStorage.getItem('localcart')) ;
+  }
+     localStorage.setItem('localcart', JSON.stringify(shopdata));
 
+ }
 } 

@@ -10,11 +10,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class SliderHomeComponent implements OnInit {
 url: string="/assets/json/sliderhome.json"
 slider:any
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-
-    this.http.get(this.url).subscribe(res => {this.slider = res; console.log(this.slider); })
+    this.http.get(this.url).subscribe(res => {this.slider = res; console.log("sliderbox",this.slider); })
   }
 
  
@@ -23,7 +23,7 @@ slider:any
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    autoplay:true,
+    autoplay:false,
     dots: false, 
     navSpeed: 700,
     navText: ['', ''],
@@ -32,13 +32,13 @@ slider:any
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 4
+        items: 1
       },
       940: {
-        items: 4
+        items: 1
       }
     },
     nav: true

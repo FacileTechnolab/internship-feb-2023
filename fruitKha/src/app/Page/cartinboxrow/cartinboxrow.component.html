@@ -1,4 +1,4 @@
-<ng-container *ngIf="shop.length !=0">
+<ng-container >
   <div class="cart-table-wrap">
     <table class="cart-table">
       <thead class="cart-table-head">
@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-body-row" *ngFor="let rowde of data" >          
+        <tr class="table-body-row" *ngFor="let rowde of data">          
          <app-cartinboxrowdetail [rowde]="rowde"></app-cartinboxrowdetail>
         </tr>    
       </tbody>
@@ -21,7 +21,7 @@
 </ng-container>
 
 
-<ng-container *ngIf="shop.length == 0">
+<ng-container >
   <div class="center">
     <h4>Your Cart is empty!</h4>
     <h5>Add Fruits to it now</h5>
@@ -29,7 +29,7 @@
   </div>
 </ng-container>
 
-
+<!-- *ngIf="shop.length == 0" -->
 
 
 

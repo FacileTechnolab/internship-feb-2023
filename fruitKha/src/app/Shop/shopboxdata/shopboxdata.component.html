@@ -7,6 +7,6 @@
   </div>
   <h3>{{shopdata.head}}</h3>
   <p class="product-price"><span>{{shopdata.h1}}</span>{{shopdata.h2}}</p>
-  <a  class="cart-btn" routerLink="/cart/{{shopdata.productdetailid}}" (click)=addtocart(shopdata)><i [class]="shopdata.icon"></i> Add to Cart</a>
+  <a  class="cart-btn" routerLink="/cart/{{shopdata.productdetailid}}" (click)="addtocart(shopdata)"><i [class]="shopdata.icon"></i> Add to Cart</a>
   </div>
 

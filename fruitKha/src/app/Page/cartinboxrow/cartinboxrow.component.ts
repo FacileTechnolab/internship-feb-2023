@@ -20,7 +20,7 @@ public grandtotal !:number;
 constructor(private http:HttpClient) { }
 
 ngOnInit() {
-debugger
+
   this.http.get(this.url).subscribe(res => {this.row = res });
   console.log(this.row);
 }

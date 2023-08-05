@@ -13,7 +13,7 @@ export class SliderboxComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("tetw", this.sli);
+    console.log("test", this.sli);
     
   }
 
