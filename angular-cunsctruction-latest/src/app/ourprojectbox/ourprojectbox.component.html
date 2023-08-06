@@ -8,7 +8,7 @@
       <a  [attr.href]="ourdata.hrefimg" title="Remodeling 1" 
         data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i
           [class]="ourdata.iconzoom"></i></a>
-          <div *ngFor="let image of ourdata.album; let i=index " >
+          <div *ngFor="let image of ourdata.album; let i=index " class="gallery_item">
             <img [src]="image.thumb" (click)="open(i)" />
           </div>
       <a routerLink="/projects/projects-details/{{ourdata.projectdetailId}}" title="More Details" class="details-link"><i

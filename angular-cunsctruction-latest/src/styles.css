@@ -2917,3 +2917,65 @@ section {
 .projects .portfolio-content {
   display: block !important;
 }
+
+
+.portfolio-info .gallery_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+
+
+.blog-pagination-custom .ngx-pagination li.pagination-next,
+.blog-pagination-custom .ngx-pagination li.pagination-previous {
+  position: relative;
+  vertical-align: top;
+}
+.blog-pagination-custom .ngx-pagination li.pagination-next a,
+.blog-pagination-custom .ngx-pagination li.pagination-previous a {
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 43px;
+  height: 38px;
+  padding: 0 !important;
+}
+.blog-pagination-custom .ngx-pagination li.pagination-next span,
+.blog-pagination-custom .ngx-pagination li.pagination-next a:after,
+.blog-pagination-custom .ngx-pagination li.pagination-previous span,
+.blog-pagination-custom .ngx-pagination li.pagination-previous a:after {
+  display: none;
+}
+.blog-pagination-custom .ngx-pagination li.pagination-next a::before {
+  content: "\f280";
+  font-family: "bootstrap-icons" !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-indent: 0;
+}
+.blog-pagination-custom .ngx-pagination li.pagination-previous a::before {
+  content: "\f27f";
+  font-family: "bootstrap-icons" !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-indent: 0;
+}
+.blog-pagination-custom .ngx-pagination .pagination-previous a:before,
+.blog-pagination-custom .ngx-pagination .pagination-previous.disabled:before {
+  content: "\f27f";
+  font-family: "bootstrap-icons" !important;
+  margin: 0 !important;
+}
+.blog-pagination-custom .ngx-pagination .pagination-next a:after,
+.blog-pagination-custom .ngx-pagination .pagination-next.disabled:after {
+  content: "\f280";
+  font-family: "bootstrap-icons" !important;
+  margin: 0 !important;
+}
