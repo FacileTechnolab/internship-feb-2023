@@ -2795,3 +2795,36 @@ html {
   cursor: pointer;
   border-radius: 50% !important; 
 }
+
+/*banner*/
+.single-homepage-slider {
+  height: 100vh;
+}
+.single-homepage-slider {
+  display: flex !important;
+  align-items: center;
+}
+.homepage-bg-3 .hero-text {
+  margin-left:auto;
+}
+.homepage-bg-2 .hero-text {
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.slider-home-owal .owl-theme .owl-nav i {
+  font-size: 45px;
+  color: #F28123;
+  }
+  .slider-home-owal .owl-theme .owl-nav div:hover{
+    opacity: 0.7;
+  }
+  .slider-home-owal .owl-theme .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+  }
+  .slider-home-owal .owl-theme .owl-nav .owl-next{
+    right: 60px;
+  }

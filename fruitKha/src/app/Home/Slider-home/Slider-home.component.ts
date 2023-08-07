@@ -23,10 +23,10 @@ slider:any
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    autoplay:false,
+    autoplay:true,
     dots: false, 
     navSpeed: 700,
-    navText: ['', ''],
+    navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
     responsive: {
       0: {
         items: 1

@@ -15,8 +15,7 @@ url1 :string ="/assets/json/cartindetain.json"
 data:any;
 row:any
 
-public shop: any =[];
-public grandtotal !:number;
+
 constructor(private http:HttpClient) { }
 
 ngOnInit() {
@@ -26,3 +25,16 @@ ngOnInit() {
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+// public shop: any =[];
+// public grandtotal !:number;
