@@ -2979,3 +2979,8 @@ section {
   font-family: "bootstrap-icons" !important;
   margin: 0 !important;
 }
+.lb-data .lb-close{
+  right: 12px;
+    position: absolute;
+    top: 0;
+}

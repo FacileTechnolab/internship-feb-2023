@@ -12,24 +12,26 @@
         "iconlink": "bi bi-link-45deg",
         "album": [
             {
+                
             "src":  "assets/img/projects/remodeling-1.jpg",
-            "caption": "assets/img/projects/remodeling-1.jpg",
+            "caption": "Remodeling-1",
             "thumb":"assets/img/projects/remodeling-1.jpg"
             },
             {
                 "src": "assets/img/projects/remodeling-2.jpg",
-                "caption":"assets/img/projects/remodeling-2.jpg",
+                "caption":"Remodeling-2",
                 "thumb":"assets/img/projects/remodeling-2.jpg"
             },
             {
                 "src":  "assets/img/projects/remodeling-3.jpg",
-                "caption": "assets/img/projects/remodeling-3.jpg",
+                "caption": "Remodeling-3",
                 "thumb":"assets/img/projects/remodeling-3.jpg"                  
             }
         ]
 
     },
     {
+       
         "projectdetailId": "Construction-1",
         "index":"construction",
         "class": "col-lg-4 col-md-6 portfolio-item filter-construction",
@@ -43,17 +45,17 @@
         "album": [
             {
             "src":  "assets/img/projects/construction-1.jpg",
-            "caption": "assets/img/projects/construction-1.jpg",
+            "caption": "Construction-1",
             "thumb":"assets/img/projects/construction-1.jpg"
             },
             {
                 "src": "assets/img/projects/construction-2.jpg",
-                "caption":"assets/img/projects/construction-2.jpg",
+                "caption":"Construction-2",
                 "thumb":"assets/img/projects/construction-2.jpg"
             },
             {
                 "src":  "assets/img/projects/construction-3.jpg",
-                "caption": "assets/img/projects/construction-3.jpg",
+                "caption": "Construction-3",
                 "thumb":"assets/img/projects/construction-3.jpg"                  
             }
         ]
@@ -72,17 +74,17 @@
         "album": [
             {
             "src":  "assets/img/projects/repairs-1.jpg",
-            "caption": "assets/img/projects/repairs-1.jpg",
+            "caption": "Repairs-1",
             "thumb":"assets/img/projects/repairs-1.jpg"
             },
             {
                 "src": "assets/img/projects/repairs-2.jpg",
-                "caption":"assets/img/projects/repairs-2.jpg",
+                "caption":"Repairs-2",
                 "thumb":"assets/img/projects/repairs-2.jpg"
             },
             {
                 "src":  "assets/img/projects/repairs-3.jpg",
-                "caption": "assets/img/projects/repairs-3.jpg",
+                "caption": "Repairs-3",
                 "thumb":"assets/img/projects/repairs-3.jpg"                  
             }
         ]
@@ -101,17 +103,17 @@
         "album": [
             {
             "src":  "assets/img/projects/design-1.jpg",
-            "caption": "assets/img/projects/design-1.jpg",
+            "caption": "Design-1",
             "thumb":"assets/img/projects/design-1.jpg"
             },
             {
                 "src": "assets/img/projects/design-2.jpg",
-                "caption":"assets/img/projects/design-2.jpg",
+                "caption":"Design-2",
                 "thumb":"assets/img/projects/design-2.jpg"
             },
             {
                 "src":  "assets/img/projects/design-3.jpg",
-                "caption": "assets/img/projects/design-3.jpg",
+                "caption": "Design-3",
                 "thumb":"assets/img/projects/design-3.jpg"                  
             }
         ]
@@ -130,17 +132,17 @@
         "album": [
             {
             "src":  "assets/img/projects/remodeling-1.jpg",
-            "caption": "assets/img/projects/remodeling-1.jpg",
+            "caption": "Remodeling-1",
             "thumb":"assets/img/projects/remodeling-1.jpg"
             },
             {
                 "src": "assets/img/projects/remodeling-2.jpg",
-                "caption":"assets/img/projects/remodeling-2.jpg",
+                "caption":"Remodeling-2",
                 "thumb":"assets/img/projects/remodeling-2.jpg"
             },
             {
                 "src":  "assets/img/projects/remodeling-3.jpg",
-                "caption": "assets/img/projects/remodelin-3.jpg",
+                "caption": "Remodeling-3",
                 "thumb":"assets/img/projects/remodeling-3.jpg"                  
             }
         ]
@@ -159,17 +161,17 @@
         "album": [
             {
             "src":  "assets/img/projects/construction-1.jpg",
-            "caption": "assets/img/projects/construction-1.jpg",
+            "caption": "Construction-1",
             "thumb":"assets/img/projects/construction-1.jpg"
             },
             {
                 "src": "assets/img/projects/construction-2.jpg",
-                "caption":"assets/img/projects/construction-2.jpg",
+                "caption":"Construction-2",
                 "thumb":"assets/img/projects/construction-2.jpg"
             },
             {
                 "src":  "assets/img/projects/construction-3.jpg",
-                "caption": "assets/img/projects/construction-3.jpg",
+                "caption": "Construction-3",
                 "thumb":"assets/img/projects/construction-3.jpg"                  
             }
         ]
@@ -188,17 +190,17 @@
         "album": [
             {
             "src":  "assets/img/projects/repairs-1.jpg",
-            "caption": "assets/img/projects/repairs-1.jpg",
+            "caption": "Repairs-1",
             "thumb":"assets/img/projects/repairs-1.jpg"
             },
             {
                 "src": "assets/img/projects/repairs-2.jpg",
-                "caption":"assets/img/projects/repairs-2.jpg",
+                "caption":"Repairs-2",
                 "thumb":"assets/img/projects/repairs-2.jpg"
             },
             {
                 "src":  "assets/img/projects/repairs-3.jpg",
-                "caption": "assets/img/projects/repairs-3.jpg",
+                "caption": "Repairs-3",
                 "thumb":"assets/img/projects/repairs-3.jpg"                  
             }
         ]
@@ -217,17 +219,17 @@
         "album": [
             {
             "src":  "assets/img/projects/design-1.jpg",
-            "caption": "assets/img/projects/design-1.jpg",
+            "caption": "Design-1",
             "thumb":"assets/img/projects/design-1.jpg"
             },
             {
                 "src": "assets/img/projects/design-2.jpg",
-                "caption":"assets/img/projects/design-2.jpg",
+                "caption":"Design-2",
                 "thumb":"assets/img/projects/design-2.jpg"
             },
             {
                 "src":  "assets/img/projects/design-3.jpg",
-                "caption": "assets/img/projects/design-3.jpg",
+                "caption": "Design-3",
                 "thumb":"assets/img/projects/design-3.jpg"                  
             }
         ]
@@ -246,17 +248,17 @@
         "album": [
             {
             "src":  "assets/img/projects/remodeling-1.jpg",
-            "caption": "assets/img/projects/remodeling-1.jpg",
+            "caption": "Remodeling-1",
             "thumb":"assets/img/projects/remodeling-1.jpg"
             },
             {
                 "src": "assets/img/projects/remodeling-2.jpg",
-                "caption":"assets/img/projects/remodeling-2.jpg",
+                "caption":"Remodeling-2",
                 "thumb":"assets/img/projects/remodeling-2.jpg"
             },
             {
                 "src":  "assets/img/projects/remodeling-3.jpg",
-                "caption": "assets/img/projects/remodeling-3.jpg",
+                "caption": "Remodeling-3",
                 "thumb":"assets/img/projects/remodeling-3.jpg"                  
             }
         ]
@@ -275,17 +277,17 @@
         "album": [
             {
             "src":  "assets/img/projects/remodeling-1.jpg",
-            "caption": "assets/img/projects/remodeling-1.jpg",
+            "caption": "Construction-1",
             "thumb":"assets/img/projects/remodeling-1.jpg"
             },
             {
                 "src": "assets/img/projects/remodeling-2.jpg",
-                "caption":"assets/img/projects/remodeling-2.jpg",
+                "caption":"Construction-2",
                 "thumb":"assets/img/projects/remodeling-2.jpg"
             },
             {
                 "src":  "assets/img/projects/remodeling-3.jpg",
-                "caption": "assets/img/projects/remodeling-3.jpg",
+                "caption": "Construction-3",
                 "thumb":"assets/img/projects/remodeling-3.jpg"                  
             }
         ]
@@ -304,17 +306,17 @@
         "album": [
             {
             "src":  "assets/img/projects/repairs-1.jpg",
-            "caption": "assets/img/projects/repairs-1.jpg",
+            "caption": "Repairs-1",
             "thumb":"assets/img/projects/repairs-1.jpg"
             },
             {
                 "src": "assets/img/projects/repairs-2.jpg",
-                "caption":"assets/img/projects/repairs-2.jpg",
+                "caption":"Repairs-2",
                 "thumb":"assets/img/projects/repairs-2.jpg"
             },
             {
                 "src":  "assets/img/projects/repairs-3.jpg",
-                "caption": "assets/img/projects/repairs-3.jpg",
+                "caption": "Repairs-3",
                 "thumb":"assets/img/projects/repairs-3.jpg"                  
             }
         ]
@@ -333,17 +335,17 @@
         "album": [
             {
             "src":  "assets/img/projects/design-1.jpg",
-            "caption": "assets/img/projects/design-1.jpg",
+            "caption": "Design-1",
             "thumb":"assets/img/projects/design-1.jpg"
             },
             {
                 "src": "assets/img/projects/design-2.jpg",
-                "caption":"assets/img/projects/design-2.jpg",
+                "caption":"Design-2",
                 "thumb":"assets/img/projects/design-2.jpg"
             },
             {
                 "src":  "assets/img/projects/design-3.jpg",
-                "caption": "assets/img/projects/design-3.jpg",
+                "caption": "Design-3",
                 "thumb":"assets/img/projects/design-3.jpg"                  
             }
         ]

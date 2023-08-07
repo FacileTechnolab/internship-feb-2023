@@ -1,9 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgFullscreen from 'lightgallery/plugins/fullscreen';
-import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import { Lightbox } from 'ngx-lightbox';
 
 
@@ -53,7 +49,6 @@ export class OurprojectboxComponent implements OnInit {
   
   open(index: number): void {
     // open lightbox
-    debugger
     this._lightbox.open(this.ourdata.album, index);
   }
 
@@ -62,14 +57,5 @@ export class OurprojectboxComponent implements OnInit {
     this._lightbox.close();
   }
 
-  // settings = {
-  //   counter: false,
-  //   plugins: [lgZoom, lgFullscreen]
-  // }
-
-  //  onBeforeSlide = (detail: BeforeSlideDetail): void => {
-  // const { index, prevIndex } = detail;
-  // console.log(index, prevIndex);
-  // };
   }
 

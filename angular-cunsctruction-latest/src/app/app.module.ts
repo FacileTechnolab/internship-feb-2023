@@ -66,8 +66,6 @@ import { ServicedataComponent } from './servicedata/servicedata.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { LightboxModule } from 'ngx-lightbox';
 
-import { LightgalleryModule } from 'lightgallery/angular';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -140,7 +138,6 @@ import { LightgalleryModule } from 'lightgallery/angular';
     BrowserAnimationsModule,
     NgxPaginationModule,
     LightboxModule,
-    LightgalleryModule
 
 
   ],
